@@ -28,6 +28,49 @@
 
 }
 
+.tabNavContainer {
+    display: none;
+}
+
+@media (max-width: 1033px) {
+    .navContainer {
+        display: none;
+    }
+}
+
+@media (max-width: 1033px) {
+    .tabNavContainer {
+        display: block;
+        height: 60px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+.tabNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.tabNavItem1 {
+    flex-basis: 10%;
+}
+
+.tabNavItem2 {
+    flex-basis: 70%;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.tabNavItem2 img {
+    height: 45px;
+    cursor: pointer;
+}
+
 .navbar a {
     font-size: 16px;
     color: white;
