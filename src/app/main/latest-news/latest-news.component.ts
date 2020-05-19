@@ -1,9 +1,20 @@
 import { Component } from '@angular/core';
+import { trigger, transition, style, animate, query } from '@angular/animations';
 
 @Component({
     selector: 'latest-news',
     templateUrl: 'latest-news.component.html',
-    styleUrls: ['latest-news.component.css']
+    styleUrls: ['latest-news.component.css'],
+    animations: [
+        trigger('fadeIn', [
+            transition(':enter', [
+              style({ opacity: 0 }), animate('0.5s ease-in', style({ opacity: 1 }))]
+            ),
+            transition(':leave',
+              [style({ opacity: 1 }), animate('0.2s ease-out', style({ opacity: 0 }))]
+            )
+          ])
+    ]
 })
 
 export class LatestNewsComponent {

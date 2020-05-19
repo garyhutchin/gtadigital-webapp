@@ -14,25 +14,27 @@
         <div class="latestNewsText">
             <h3>Online Now: GTA Digital Podcast #26</h3>
             <p>The GTA Digital Podcast is back, following this months show on Fnoob Techno Radio, which saw Leeds(UK) based DJ, Bushby, take the reins, laying down an hour of some excellent techno. Starting off with something a bit more breaky, but soon into the straight up bangers.</p>
-            <div class="collapsible-TL" *ngIf="!isCollapsed1">
-                <ul>    
-                    <li>Palekh - Jungle Calling [Get Busy]</li>
-                    <li>Fear-E - Puro [Dark Entries]</li>
-                    <li>Lukes Anger ft. Death of Death of Discoteque - When Will You Take [Varvet]</li>
-                    <li>Carpainter - Shock Out [Trekkie -trax]</li>
-                    <li>Dave Mono - All Aboard [Digital Distortions]</li>
-                    <li>DJ Boss - Zaba [Dole-Gate]</li>
-                    <li>Diabla Diezco - LSD TV [Mord]</li>
-                    <li>Asquith - Gang [Who's Susan]</li>
-                    <li>Viers - Four [Steel City Dance Discs]</li>
-                    <li>Cassegrain - First Words [Arcing Seas]</li>
-                    <li>Mall Grab - Hidden Worlds (Rave Mix) [Looking For Trouble]</li>
-                    <li>less Instructions - Upload Your Mask [Get Busy]</li>
-                    <li>Chris Moss Acid - Machine Heavy [Balkan Vinyl]</li>
-                    <li>Signum - What Ya Got For Me (JoeFarr Re-edit)</li>
-                </ul>
+            <div class="trackList">
+                <div class="collapsible-TL" @fadeIn *ngIf="!isCollapsed1">
+                    <ul>    
+                        <li>Palekh - Jungle Calling [Get Busy]</li>
+                        <li>Fear-E - Puro [Dark Entries]</li>
+                        <li>Lukes Anger ft. Death of Death of Discoteque - When Will You Take [Varvet]</li>
+                        <li>Carpainter - Shock Out [Trekkie -trax]</li>
+                        <li>Dave Mono - All Aboard [Digital Distortions]</li>
+                        <li>DJ Boss - Zaba [Dole-Gate]</li>
+                        <li>Diabla Diezco - LSD TV [Mord]</li>
+                        <li>Asquith - Gang [Who's Susan]</li>
+                        <li>Viers - Four [Steel City Dance Discs]</li>
+                        <li>Cassegrain - First Words [Arcing Seas]</li>
+                        <li>Mall Grab - Hidden Worlds (Rave Mix) [Looking For Trouble]</li>
+                        <li>less Instructions - Upload Your Mask [Get Busy]</li>
+                        <li>Chris Moss Acid - Machine Heavy [Balkan Vinyl]</li>
+                        <li>Signum - What Ya Got For Me (JoeFarr Re-edit)</li>
+                    </ul>
+                </div>
+                <button type="button" class="trackList-Button" (click)="toggleCollapse1()">{{btn1DefaultStatus}}</button>
             </div>
-            <button type="button" class="trackList-Button" (click)="toggleCollapse1()">{{btn1DefaultStatus}}</button>
         </div>
     </div>
 
@@ -41,7 +43,7 @@
         <div class="latestNewsText">
             <h3>Online Now: GTA Digital Podcast #25</h3>
             <p>The GTA Digital Podcast is back, with myself, Gary The Apprentice, laying down some techno for ya'll. This time something a bit different, and something that I've never done before. For this show I've decided to put a set together in Ableton, with over 40 tracks spread out across 4 channels, and performed using a Novation Launchpad and Launchcontrol XL.</p>
-            <div class="collapsible-TL" *ngIf="!isCollapsed2">
+            <div class="collapsible-TL" @fadeIn *ngIf="!isCollapsed2">
                 <ul>    
                     <li>Surgeon - Depart (Original Mix)</li>
                     <li>The Anxious, Brainshaker - Draw Out Your Breeches (Original Mix)</li>
