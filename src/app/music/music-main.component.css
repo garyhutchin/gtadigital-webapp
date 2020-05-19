@@ -1,0 +1,29 @@
+.podcastContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.podcastCover {
+    flex-basis: 20%;
+    display: block;
+    height: 300px;
+}
+
+.podcastCover img {
+    width: 300px;
+}
+
+.podcastPlayer {
+    flex-basis: 73%;
+    padding-left: 10px;
+}
+
+h3 {
+    margin-left: 20px;
+    padding-top: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}

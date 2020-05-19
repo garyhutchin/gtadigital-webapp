@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0 !important;
+}
+
+.pageElement {
+    flex-basis: 30%;
+}
+
+.latestNewsImg {
+    width: 400px;
+}
+
+.latestNewsText p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.latestNewsText h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.trackList-Button {
+    padding: 5px 8px 5px 8px;
+    background-color: #0193b7;
+    box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.3);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    outline: none;
+}
+  
+.trackList-Button:hover {
+    background-color: #0193b7b4;  
+}
+
+.collapsible-TL ul {
+    list-style-type: none;
+    padding-left: 0;
+}
