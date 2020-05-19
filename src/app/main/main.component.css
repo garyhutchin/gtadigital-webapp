@@ -1,0 +1,10 @@
+.pageHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.headerIcon {
+    margin-right: 10px;
+}

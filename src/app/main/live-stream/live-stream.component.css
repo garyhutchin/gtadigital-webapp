@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between !important;
+    background-color: rgb(240, 240, 240) !important;
+}
+
+.pageElement {
+    flex-basis: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pageElementText {
+    flex-basis: 54%;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}

@@ -20,6 +20,7 @@ import { GTA19Component } from './music/releases/release-details/gta019/gta019.c
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
 import { GTA17Component } from './music/releases/release-details/gta017/gta017.component';
 import { YouMayLikeComponent } from './music/you-may-like/you-may-like.component';
+import { LiveStreamComponent } from './main/live-stream/live-stream.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { YouMayLikeComponent } from './music/you-may-like/you-may-like.component
     GTA19Component,
     GTA18Component,
     GTA17Component,
-    YouMayLikeComponent
+    YouMayLikeComponent,
+    LiveStreamComponent
   ],
   imports: [
     BrowserModule,
