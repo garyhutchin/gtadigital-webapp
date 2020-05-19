@@ -2,12 +2,27 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 0;
-    margin-right: 0 !important;
+    justify-content: space-between !important;
 }
 
 .pageElement {
-    flex-basis: 30%;
+    flex-basis: 30% !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+@media (max-width: 1079px) {
+    .pageElement {
+        flex-basis: 45%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 756px) {
+    .pageElement {
+        flex-basis: 100%;
+    }
 }
 
 .latestNewsImg {
@@ -46,4 +61,12 @@
 .collapsible-TL ul {
     list-style-type: none;
     padding-left: 0;
+}
+
+.trackList {
+    margin-bottom: 10px;
+}
+
+.date {
+    color: rgb(121, 121, 121);
 }

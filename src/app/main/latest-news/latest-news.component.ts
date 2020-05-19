@@ -19,8 +19,8 @@ import { trigger, transition, style, animate, query } from '@angular/animations'
 
 export class LatestNewsComponent {
     
-    btn1DefaultStatus = 'Track List';
-    btn2DefaultStatus = 'Track List';
+    btn1DefaultStatus = 'Expand';
+    btn2DefaultStatus = 'Expand';
 
     isCollapsed1: boolean = true;    
     
@@ -28,10 +28,10 @@ export class LatestNewsComponent {
         this.isCollapsed1 = !this.isCollapsed1;
 
         if (!this.isCollapsed1)
-        return this.btn1DefaultStatus = 'Close'
+        return this.btn1DefaultStatus = 'Collapse'
         
         if (this.isCollapsed1)
-        return this.btn1DefaultStatus = 'Track List'
+        return this.btn1DefaultStatus = 'Expand'
     }
 
     isCollapsed2: boolean = true;    
@@ -40,9 +40,9 @@ export class LatestNewsComponent {
         this.isCollapsed2 = !this.isCollapsed2;
 
         if (!this.isCollapsed2)
-        return this.btn2DefaultStatus = 'Close'
+        return this.btn2DefaultStatus = 'Collapse'
         
         if (this.isCollapsed2)
-        return this.btn2DefaultStatus = 'Track List'
+        return this.btn2DefaultStatus = 'Expand'
     }
 }
