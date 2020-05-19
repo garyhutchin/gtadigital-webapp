@@ -6,7 +6,7 @@
 }
 
 .pageElement {
-    flex-basis: 30% !important;
+    flex-basis: 30%;
     margin-left: 10px;
     margin-right: 10px;
     
@@ -14,7 +14,7 @@
 
 @media (max-width: 1079px) {
     .pageElement {
-        flex-basis: 45%;
+        flex-basis: 47%;
         margin: 10px;
     }
 }
