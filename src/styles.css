@@ -12,6 +12,7 @@
     width: 100%;
     padding-right: 0;
     padding-left: 0;
+    box-sizing: unset;
   }
   
   .pointable {
