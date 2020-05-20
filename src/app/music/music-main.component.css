@@ -21,11 +21,30 @@
     padding-left: 10px;
 }
 
+.podcastInfo {
+    margin-top: 0;
+}
+
 h3 {
     margin-left: 20px;
     padding-top: 20px;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.pageHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.headerIcon {
+    margin-right: 10px;
+}
+
+.headerIcon img {
+    height: 40px;
 }
 
 .liveStreamContainer {
