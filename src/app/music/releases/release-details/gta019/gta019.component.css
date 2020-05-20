@@ -1,4 +1,4 @@
-.wrapper {
+.releaseDetailsWrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -30,4 +30,8 @@ h3 {
 
 .releaseDate {
     color: rgb(121, 121, 121);
+}
+
+.mat-slider-thumb {
+    border: 3px solid solid;
 }

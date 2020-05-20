@@ -12,6 +12,7 @@
     width: 100%;
     padding-right: 0;
     padding-left: 0;
+    box-sizing: unset;
   }
   
   .pointable {
@@ -112,4 +113,23 @@ h2 {
 
 .viewAll-button:hover {
   background-color: #00a1c9;  
+}
+
+.buyNow {
+  padding: 5px;
+  margin-left: 5px;
+  background-color: #0193b7;
+  box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.3);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  outline: none;
+}
+
+.buyNow:hover {
+  background-color: #00a1c9;
 }

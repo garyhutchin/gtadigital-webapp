@@ -16,21 +16,30 @@ export class GTA18Component implements OnInit {
       // Material Style Advance Audio Player Playlist
       msaapPlaylist: Track[] = [
         {
-            title: 'Mv (Original Mix) by Gary The Apprentice',
-            link: './assets/audio/samples/unixEP/mv.mp3'
+            title: 'What Have We Become (Original Mix) by Gary The Apprentice',
+            link: './assets/audio/samples/whatHaveWeBecomeEP/whatHaveWeBecome.mp3'
         },
         {
-            title: 'Grep (Original Mix) by Gary The Apprentice',
-            link: './assets/audio/samples/unixEP/grep.mp3'
+            title: 'What Have We Become (Vincent De Wit Hard Mix) by Gary The Apprentice',
+            link: './assets/audio/samples/whatHaveWeBecomeEP/whatHaveWeBecome_vincentHardMix.mp3'
         },
         {
-            title: 'TraceRoute (Original Mix) by Gary The Apprentice',
-            link: './assets/audio/samples/unixEP/traceroute.mp3'
+            title: 'What Have We Become (Vincent De Wit Dub Mix) by Gary The Apprentice',
+            link: './assets/audio/samples/whatHaveWeBecomeEP/whatHaveWeBecome_vincentDubMix.mp3'
         },
         {
-            title: 'TraceRoute (DJ Ze MigL Remix) by Gary The Apprentice',
-            link: './assets/audio/samples/unixEP/tracerouteZeMigL.mp3'
+            title: 'The End of Time As We Know It (Original Mix) by Gary The Apprentice',
+            link: './assets/audio/samples/whatHaveWeBecomeEP/theEndOfTimeAsWeKnowIt.mp3'
+        },
+        {
+            title: 'The Outcome (Original Mix) by Gary The Apprentice',
+            link: './assets/audio/samples/whatHaveWeBecomeEP/theOutcome.mp3'
+        },
+        {
+            title: 'The Outcome (Car-D Remix) by Gary The Apprentice',
+            link: './assets/audio/samples/whatHaveWeBecomeEP/theOutcome_carDremix.mp3'
         }
+
     ];
 
     msaapDisplayTitle = true;
