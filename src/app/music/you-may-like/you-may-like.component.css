@@ -5,8 +5,9 @@
     border: 1px solid lightgrey;
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     margin-top: 20px;
-    background-color: rgb(240, 240, 240) !important;
-    border-radius: 10px;
+    /*background-color: rgb(240, 240, 240) !important;*/
+    background-color: white;
+    border-radius: 5px;
 }
 
 .pageElement {
