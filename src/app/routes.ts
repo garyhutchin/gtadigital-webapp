@@ -7,6 +7,7 @@ import { GTA18Component } from './music/releases/release-details/gta018/gta018.c
 import { GTA17Component } from './music/releases/release-details/gta017/gta017.component';
 
 export const appRoutes:Routes = [
+    { path: '', component: MainComponent },
     { path: 'home', component: MainComponent },
     { path: 'music', component: MusicMainComponent},
     { path: 'releases', component: AllReleasesComponent},
