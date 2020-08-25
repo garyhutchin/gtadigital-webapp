@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <div class="tabNavContainer">
+        <div class="tabNav">
+            <div class="tabNavItem1" (click)="toggleTabNav()">
+                <img src="assets/images/small-images/icons/menu-icon.png">
+            </div>
+            <div class="tabNavItem2">
+                <img src="assets/images/small-images/gtaDigital-Header.jpg">
+            </div>
+        </div>
+        <div class="tabNav-MenuItems" @fadeIn *ngIf="!isCollapsed">
+            <ul>
+                <li><a [routerLink]="['home']">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a [routerLink]="['music']">Music</a></li>
+                <li><a href="#">Merch</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

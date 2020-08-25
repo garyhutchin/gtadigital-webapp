@@ -1,0 +1,13 @@
+.liveStreamContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    text-align: center;
+}
+
+.videoItem {
+    flex-basis: 46%;
+    margin-left: 20px;
+    margin-right: 20px;;
+}
