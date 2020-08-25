@@ -42,9 +42,7 @@
     .tabNavContainer {
         display: block;
         height: 60px;
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        width: 100%;
     }
 }
 
@@ -58,6 +56,8 @@
 
 .tabNavItem1 {
     flex-basis: 10%;
+    cursor: pointer;
+    padding-left: 35px;
 }
 
 .tabNavItem2 {
@@ -69,6 +69,21 @@
 .tabNavItem2 img {
     height: 45px;
     cursor: pointer;
+}
+
+.tabNav-MenuItems {
+    background-color: #0193B7;
+    width: 100%;
+    color: white;
+}
+
+.tabNav-MenuItems ul {
+    margin-top: 0;
+    padding-left: 35px;
+}
+
+.tabNav-MenuItems li {
+    list-style-type: none;
 }
 
 .navbar a {

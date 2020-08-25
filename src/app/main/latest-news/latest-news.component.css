@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between !important;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .pageElement {
