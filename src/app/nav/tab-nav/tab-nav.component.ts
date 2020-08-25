@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { trigger, transition, style, animate, query } from '@angular/animations';
 
 @Component ({
-    selector: 'nav-bar',
-    templateUrl: 'navbar.component.html',
-    styleUrls: ['navbar.component.css'],
+    selector: 'tab-nav',
+    templateUrl: 'tab-nav.component.html',
+    styleUrls: ['tab-nav.component.css'],
     animations: [
         trigger('fadeIn', [
             transition(':enter', [
@@ -17,7 +17,7 @@ import { trigger, transition, style, animate, query } from '@angular/animations'
     ]
 })
 
-export class NavBarComponent {
+export class TabNavComponent {
     isCollapsed: boolean = true;
 
     toggleTabNav() {

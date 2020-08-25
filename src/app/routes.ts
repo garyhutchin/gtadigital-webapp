@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
-import { MusicMainComponent } from './music/music-main.component';
+import { MusicMainComponent } from './music/mainComponent/music-main.component';
 import { ReleaseContainerComponent } from './music/releases/release-container.component';
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
