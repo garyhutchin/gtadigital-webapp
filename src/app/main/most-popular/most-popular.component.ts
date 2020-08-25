@@ -11,7 +11,7 @@ export class MostPopularComponent {
     constructor(private router:Router) {
 
     }
-    goToGTA19() {
+    goToGTA20() {
         this.router.navigate(['/releases/gta19'])
     }
 }
