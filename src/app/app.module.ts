@@ -13,8 +13,8 @@ import { NavBarComponent } from './nav/navbar.component';
 import { MostPopularComponent } from './main/most-popular/most-popular.component';
 import { MusicMainComponent } from './music/music-main.component';
 import { ReleaseListSmallComponent } from './music/release-list-small.component';
-import { ReleaseListComponent } from './music/releases/release-list.component';
-import { AllReleasesComponent } from './music/all-releases.component';
+import { ReleaseListComponent } from './music/releases/release-list/release-list.component';
+import { ReleaseContainerComponent } from './music/releases/release-container.component';
 import { LatestNewsComponent } from './main/latest-news/latest-news.component';
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
@@ -31,7 +31,7 @@ import { LiveStreamComponent } from './main/live-stream/live-stream.component';
     MusicMainComponent,
     ReleaseListSmallComponent,
     ReleaseListComponent,
-    AllReleasesComponent,
+    ReleaseContainerComponent,
     LatestNewsComponent,
     GTA19Component,
     GTA18Component,
