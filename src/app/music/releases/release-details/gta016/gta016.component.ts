@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-gta016',
+  selector: 'gta16-details',
   templateUrl: './gta016.component.html',
   styleUrls: ['./gta016.component.css']
 })
-export class Gta016Component implements OnInit {
+export class GTA16Component implements OnInit {
 
   constructor() { }
 

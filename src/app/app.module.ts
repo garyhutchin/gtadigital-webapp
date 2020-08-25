@@ -17,29 +17,29 @@ import { ReleaseListTileComponent } from './music/mainComponent/release-list-til
 import { ReleaseListComponent } from './music/releases/release-list/release-list.component';
 import { ReleaseContainerComponent } from './music/releases/release-container.component';
 import { LatestNewsComponent } from './main/latest-news/latest-news.component';
-import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
-import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
-import { GTA17Component } from './music/releases/release-details/gta017/gta017.component';
 import { YouMayLikeComponent } from './music/you-may-like/you-may-like.component';
 import { LiveStreamComponent } from './main/live-stream/live-stream.component';
 import { PodcastTileComponent } from './music/mainComponent/podcast-tile/podcast-tile.component';
 import { LiveStreamArchiveComponent } from './music/mainComponent/live-stream-archive/live-stream-archive.component';
-import { Gta016Component } from './music/releases/release-details/gta016/gta016.component';
-import { Gta015Component } from './music/releases/release-details/gta015/gta015.component';
-import { Gta014Component } from './music/releases/release-details/gta014/gta014.component';
-import { Gta013Component } from './music/releases/release-details/gta013/gta013.component';
-import { Gta012Component } from './music/releases/release-details/gta012/gta012.component';
-import { Gta011Component } from './music/releases/release-details/gta011/gta011.component';
-import { Gta010Component } from './music/releases/release-details/gta010/gta010.component';
-import { Gta009Component } from './music/releases/release-details/gta009/gta009.component';
-import { Gta008Component } from './music/releases/release-details/gta008/gta008.component';
-import { Gta007Component } from './music/releases/release-details/gta007/gta007.component';
-import { Gta006Component } from './music/releases/release-details/gta006/gta006.component';
-import { Gta005Component } from './music/releases/release-details/gta005/gta005.component';
-import { Gta004Component } from './music/releases/release-details/gta004/gta004.component';
-import { Gta003Component } from './music/releases/release-details/gta003/gta003.component';
-import { Gta002Component } from './music/releases/release-details/gta002/gta002.component';
-import { Gta001Component } from './music/releases/release-details/gta001/gta001.component'
+import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
+import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
+import { GTA17Component } from './music/releases/release-details/gta017/gta017.component';
+import { GTA16Component } from './music/releases/release-details/gta016/gta016.component';
+import { GTA15Component } from './music/releases/release-details/gta015/gta015.component';
+import { GTA14Component } from './music/releases/release-details/gta014/gta014.component';
+import { GTA13Component } from './music/releases/release-details/gta013/gta013.component';
+import { GTA12Component } from './music/releases/release-details/gta012/gta012.component';
+import { GTA11Component } from './music/releases/release-details/gta011/gta011.component';
+import { GTA10Component } from './music/releases/release-details/gta010/gta010.component';
+import { GTA9Component } from './music/releases/release-details/gta009/gta009.component';
+import { GTA8Component } from './music/releases/release-details/gta008/gta008.component';
+import { GTA7Component } from './music/releases/release-details/gta007/gta007.component';
+import { GTA6Component } from './music/releases/release-details/gta006/gta006.component';
+import { GTA5Component } from './music/releases/release-details/gta005/gta005.component';
+import { GTA4Component } from './music/releases/release-details/gta004/gta004.component';
+import { GTA3Component } from './music/releases/release-details/gta003/gta003.component';
+import { GTA2Component } from './music/releases/release-details/gta002/gta002.component';
+import { GTA1Component } from './music/releases/release-details/gta001/gta001.component'
 
 @NgModule({
   declarations: [
@@ -53,29 +53,29 @@ import { Gta001Component } from './music/releases/release-details/gta001/gta001.
     ReleaseListComponent,
     ReleaseContainerComponent,
     LatestNewsComponent,
-    GTA19Component,
-    GTA18Component,
-    GTA17Component,
     YouMayLikeComponent,
     LiveStreamComponent,
     PodcastTileComponent,
     LiveStreamArchiveComponent,
-    Gta016Component,
-    Gta015Component,
-    Gta014Component,
-    Gta013Component,
-    Gta012Component,
-    Gta011Component,
-    Gta010Component,
-    Gta009Component,
-    Gta008Component,
-    Gta007Component,
-    Gta006Component,
-    Gta005Component,
-    Gta004Component,
-    Gta003Component,
-    Gta002Component,
-    Gta001Component
+    GTA19Component,
+    GTA18Component,
+    GTA17Component,
+    GTA16Component,
+    GTA15Component,
+    GTA14Component,
+    GTA13Component,
+    GTA12Component,
+    GTA11Component,
+    GTA10Component,
+    GTA9Component,
+    GTA8Component,
+    GTA7Component,
+    GTA6Component,
+    GTA5Component,
+    GTA4Component,
+    GTA3Component,
+    GTA2Component,
+    GTA1Component
   ],
   imports: [
     BrowserModule,
