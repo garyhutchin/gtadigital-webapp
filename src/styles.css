@@ -40,7 +40,7 @@
     background-color: #f89406;
   }
   
-body { margin: 0; font-family: 'Titillium Web', sans-serif; overflow-y: scroll;}
+body { margin: 0; font-family: 'Titillium Web', sans-serif; overflow-y: scroll; color: rgb(65, 65, 65);}
 
 .pageContent {
   width: 100%;
@@ -132,4 +132,29 @@ h2 {
 
 .buyNow:hover {
   background-color: #00a1c9;
+}
+
+.external-link {
+  width: 18px;
+  margin-left: 3px;
+}
+
+a:link {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+}
+
+a:active {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
 }
