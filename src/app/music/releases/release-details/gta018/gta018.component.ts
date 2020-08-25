@@ -3,8 +3,8 @@ import { Track } from 'ngx-audio-player';
 
 @Component({
   selector: 'gta18-details',
-  templateUrl: './gta018.component.html',
-  styleUrls: ['./gta018.component.css']
+  templateUrl: 'gta018.component.html',
+  styleUrls: ['gta018.component.css']
 })
 export class GTA18Component implements OnInit {
 
