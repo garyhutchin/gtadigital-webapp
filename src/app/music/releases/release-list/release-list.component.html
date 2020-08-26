@@ -22,27 +22,17 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA17()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta017.jpg">
                 <h3 class="cardHeader">Longitudinal Axis EP</h3>
                 <div class="releaseDetails">
-                    <p class="catNo">[GTA018]</p>
+                    <p class="catNo">[GTA017]</p>
                     <h3 class="title">Longitudinal Axis EP</h3>
                     <p class="artistName">Twistedbrain74</p>
                 </div>
             </div>
 
-            <div class="releaseCardElement">
-                <img class="artwork" src="./assets/images/card-images/release-artwork/gta017.jpg">
-                <h3 class="cardHeader">Longitudinal Axis EP</h3>
-                <div class="releaseDetails">
-                    <p class="catNo">[GTA018]</p>
-                    <h3 class="title">Longitudinal Axis EP</h3>
-                    <p class="artistName">Twistedbrain74</p>
-                </div>
-            </div>
-
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA16()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta016.jpg">
                 <h3 class="cardHeader">Of Little Significance</h3>
                 <div class="releaseDetails">
@@ -52,7 +42,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA15()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta015.jpg">
                 <h3 class="cardHeader">A New Dimension</h3>
                 <div class="releaseDetails">
@@ -61,14 +51,8 @@
                     <p class="artistName">Gary The Apprentice</p>
                 </div>
             </div>
-        </div>
-    </div> <!--First Six Ends Here-->
 
-    <div class="collapsedReleases" @fadeIn *ngIf="!isCollapsed">
-
-        <div class="releaseListContainer">
-
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA14()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta014.jpg">
                 <h3 class="cardHeader">Back In The Burgh EP</h3>
                 <div class="releaseDetails">
@@ -78,7 +62,14 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+        </div>
+    </div> <!--First Six Ends Here-->
+
+    <div class="collapsedReleases" @fadeIn *ngIf="!isCollapsed">
+
+        <div class="releaseListContainer">
+
+            <div class="releaseCardElement" (click)="goToGTA13()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta013.jpg">
                 <h3 class="cardHeader">Mindfullness EP</h3>
                 <div class="releaseDetails">
@@ -88,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA12()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta012.jpg">
                 <h3 class="cardHeader">Roffa EP</h3>
                 <div class="releaseDetails">
@@ -98,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA11()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta011.jpg">
                 <h3 class="cardHeader">Abstrakt Riddims EP</h3>
                 <div class="releaseDetails">
@@ -108,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA10()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta010.jpg">
                 <h3 class="cardHeader">The Next Chapter EP</h3>
                 <div class="releaseDetails">
@@ -118,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA9()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta009.jpg">
                 <h3 class="cardHeader">Open Box EP</h3>
                 <div class="releaseDetails">
@@ -128,7 +119,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA8()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta008.jpg">
                 <h3 class="cardHeader">Mornaaan! EP</h3>
                 <div class="releaseDetails">
@@ -138,7 +129,7 @@
                 </div>
             </div>    
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA7()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta007.jpg">
                 <h3 class="cardHeader">Mind Warp EP</h3>
                 <div class="releaseDetails">
@@ -148,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA6()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta006.jpg">
                 <h3 class="cardHeader">Organised Kaos EP</h3>
                 <div class="releaseDetails">
@@ -158,7 +149,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA5()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta005.jpg">
                 <h3 class="cardHeader">Mechanical Lifeforms EP</h3>
                 <div class="releaseDetails">
@@ -168,7 +159,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA4()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta004.jpg">
                 <h3 class="cardHeader">The Dunny Collection</h3>
                 <div class="releaseDetails">
@@ -178,7 +169,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA3()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta003.jpg">
                 <h3 class="cardHeader">Timespace EP</h3>
                 <div class="releaseDetails">
@@ -188,7 +179,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA2()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta002.jpg">
                 <h3 class="cardHeader">The Brass Continent</h3>
                 <div class="releaseDetails">
@@ -198,7 +189,7 @@
                 </div>
             </div>
 
-            <div class="releaseCardElement">
+            <div class="releaseCardElement" (click)="goToGTA1()">
                 <img class="artwork" src="./assets/images/card-images/release-artwork/gta001.jpg">
                 <h3 class="cardHeader">Recharged EP</h3>
                 <div class="releaseDetails">

@@ -7,12 +7,12 @@
   
   .wrapper {
     padding-top: 0;
-    background-color: white !important;
-    margin: 0;
-    width: 100%;
+    margin: auto;
+    max-width: 1440px;
     padding-right: 0;
     padding-left: 0;
     box-sizing: unset;
+    overflow-y: scroll; 
   }
   
   .pointable {
@@ -40,13 +40,18 @@
     background-color: #f89406;
   }
   
-body { margin: 0; font-family: 'Titillium Web', sans-serif; overflow-y: scroll;}
+body { 
+  margin: 0; 
+  font-family: 'Titillium Web', sans-serif; 
+  color: rgb(65, 65, 65);
+  background-color: rgb(240, 240, 240);
+}
 
 .pageContent {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
+  margin-top: 65px;
 }
 
 h1 {
@@ -61,37 +66,20 @@ h2 {
   margin: 0;
 }
 
-.pageHeader {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  padding-left: 40px;
-}
-
-.pageSpan-grayBG {
+.pageSpan {
   width: 100%;
-  background-color: rgb(240, 240, 240) !important;
   padding-bottom: 15px;
-  padding-top: 15px;
-}
-
-.pageSpan-whiteBG {
-  width: 100%;
-  background-color: white !important;
-  padding-bottom: 15px;
-  padding-top: 15px;
 }
 
 .pageElement {
-  width: 70%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 1110px) {
   .pageElement {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -132,4 +120,29 @@ h2 {
 
 .buyNow:hover {
   background-color: #00a1c9;
+}
+
+.external-link {
+  width: 18px;
+  margin-left: 3px;
+}
+
+a:link {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+}
+
+a:active {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
 }
