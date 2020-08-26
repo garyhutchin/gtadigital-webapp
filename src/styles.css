@@ -14,6 +14,13 @@
     box-sizing: unset;
     overflow-y: scroll; 
   }
+
+  @media (max-width: 801px) {
+    .wrapper {
+      max-width: 100%;
+      overflow-x: hidden !important;
+    }
+  }
   
   .pointable {
     cursor: pointer;
