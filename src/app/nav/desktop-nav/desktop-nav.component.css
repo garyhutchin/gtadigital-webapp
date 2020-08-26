@@ -1,21 +1,26 @@
-.wrapper {
-    width: 100%;
+.nav-wrapper {
+    width: 100% !important;
     background-color: #0193B7 !important;
     position: fixed;
     top: 0;
 }
 
 .navContainer {
-    width: 80%;
+    max-width: 1440px;
     height: 60px;
     background-color: #0193B7;
     margin-left: auto;
     margin-right: auto;
+
+}
+
+.nav-bar-element {
+    width: 97%;
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
-
 }
 
 .navbar {
@@ -28,7 +33,7 @@
 
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 854px) {
     .navContainer {
         display: none;
     }

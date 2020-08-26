@@ -9,7 +9,7 @@
     display: none;
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 854px) {
     .tabNavContainer {
         display: block;
         height: 60px;
@@ -34,7 +34,6 @@
 .tabNavItem2 {
     flex-basis: 70%;
     text-align: center;
-    margin-left: 40px;
 }
 
 .tabNavItem2 img {
