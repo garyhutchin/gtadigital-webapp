@@ -47,6 +47,12 @@ body {
   background-color: rgb(240, 240, 240);
 }
 
+@media (max-width:801px) {
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
 .pageContent {
   width: 100%;
   margin-left: auto;
