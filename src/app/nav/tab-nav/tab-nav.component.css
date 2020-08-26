@@ -1,4 +1,4 @@
-.wrapper {
+.tab-nav-wrapper {
     width: 100%;
     background-color: #0193B7 !important;
     position: fixed;
@@ -25,6 +25,12 @@
     padding-top: 5px;
 }
 
+.tabNav-MenuItems a {
+    font-size: 20px;
+    color: white;
+    padding-left: 100%;
+}
+
 .tabNavItem1 {
     flex-basis: 10%;
     cursor: pointer;
@@ -49,9 +55,10 @@
 
 .tabNav-MenuItems ul {
     margin-top: 0;
-    padding-left: 35px;
+    padding: 0px 0px 15px 35px;
 }
 
 .tabNav-MenuItems li {
     list-style-type: none;
+    margin: 0px 0px 20px 0px;
 }
