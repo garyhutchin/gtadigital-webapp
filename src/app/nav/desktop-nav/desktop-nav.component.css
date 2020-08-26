@@ -78,6 +78,10 @@
     display: inline;
 }
 
+.socialMediaIcons {
+    padding-right: 10px;
+}
+
 .socialMediaIcons ul {
     text-align: right;
     vertical-align: top;
