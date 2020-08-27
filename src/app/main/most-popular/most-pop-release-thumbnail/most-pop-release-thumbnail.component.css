@@ -1,3 +1,7 @@
+.routerLink:active {
+    outline: 0;
+}
+
 .releaseDetails {
     text-align: left !important;
     padding: 10px;
