@@ -12,7 +12,6 @@
     padding-right: 0;
     padding-left: 0;
     box-sizing: unset;
-    overflow-y: scroll; 
   }
 
   @media (max-width: 801px) {
