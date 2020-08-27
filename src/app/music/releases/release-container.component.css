@@ -1,0 +1,19 @@
+.pageHeader {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+    /*border-bottom: #0193B7 solid 3px;*/
+}
+
+.headerIcon {
+    margin-right: 10px;
+}
+
+.headerIcon img {
+    height: 30px;
+    margin: 5px 0px 5px 10px;
+    display: block;
+}

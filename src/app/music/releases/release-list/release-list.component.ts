@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, query } from '@angular/animations';
+import { ReleaseService } from '../shared/releases.service';
 
 @Component ({
     selector: 'release-list',
@@ -18,98 +18,14 @@ import { trigger, transition, style, animate, query } from '@angular/animations'
     ]
 })
 
-export class ReleaseListComponent {
-    btnDefaultStatus = 'View All';
-    isCollapsed: boolean = true;
-    
-    constructor(private router:Router) {
-        
-    }
-    
-    toggleCollapse() {
-        this.isCollapsed = !this.isCollapsed;
-        
-        if (!this.isCollapsed)
-        return this.btnDefaultStatus = 'Close'
-        
-        if (this.isCollapsed)
-        return this.btnDefaultStatus = 'View All'
+export class ReleaseListComponent implements OnInit {
+    releases:any[]
+
+    constructor(private releaseService: ReleaseService) {
     }
 
-    goToGTA19() {
-        this.router.navigate(['/releases/gta19'])
-    }
-
-    goToGTA18() {
-        this.router.navigate(['/releases/gta18'])
-    }
-
-    goToGTA17() {
-        this.router.navigate(['/releases/gta17'])
-    }
-
-    goToGTA16() {
-        this.router.navigate(['/releases/gta16'])
-    }
-
-    goToGTA15() {
-        this.router.navigate(['/releases/gta15'])
-    }
-
-    goToGTA14() {
-        this.router.navigate(['/releases/gta14'])
-    }
-
-    goToGTA13() {
-        this.router.navigate(['/releases/gta13'])
-    }
-
-    goToGTA12() {
-        this.router.navigate(['/releases/gta12'])
-    }
-
-    goToGTA11() {
-        this.router.navigate(['/releases/gta11'])
-    }
-
-    goToGTA10() {
-        this.router.navigate(['/releases/gta10'])
-    }
-
-    goToGTA9() {
-        this.router.navigate(['/releases/gta09'])
-    }
-
-    goToGTA8() {
-        this.router.navigate(['/releases/gta08'])
-    }
-
-    goToGTA7() {
-        this.router.navigate(['/releases/gta07'])
-    }
-
-    goToGTA6() {
-        this.router.navigate(['/releases/gta06'])
-    }
-
-    goToGTA5() {
-        this.router.navigate(['/releases/gta05'])
-    }
-
-    goToGTA4() {
-        this.router.navigate(['/releases/gta04'])
-    }
-
-    goToGTA3() {
-        this.router.navigate(['/releases/gta03'])
-    }
-
-    goToGTA2() {
-        this.router.navigate(['/releases/gta02'])
-    }
-
-    goToGTA1() {
-        this.router.navigate(['/releases/gta01'])
+    ngOnInit() {
+        this.releases = this.releaseService.getReleases()
     }
 
 }
