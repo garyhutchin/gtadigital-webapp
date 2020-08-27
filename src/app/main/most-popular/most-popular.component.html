@@ -1,39 +1,10 @@
 <div class="most-pop-wrapper">
 
-    <div class="cardElement" (click)="goToGTA20()">
-        <img class="artwork" src="./assets/images/card-images/most-popular-images/newRelease.jpg">
-        <h3 class="cardHeader">Latest Release</h3>
-        <div class="releaseDetails">
-            <h3 class="title">Purist EP</h3>
-            <p class="artistName">Ungrateful Ambassador</p>
-        </div>
+    <div class="cardElement" *ngFor="let releaseItem of releaseItems">
+        <most-pop-release-thumbnail [releaseItem]="releaseItem"></most-pop-release-thumbnail>
     </div>
-
-    <div class="cardElement" (click)="goToGTA20()">
-        <img class="artwork" src="./assets/images/card-images/most-popular-images/newRelease.jpg">
-        <h3 class="cardHeader">Latest Release</h3>
-        <div class="releaseDetails">
-            <h3 class="title">Purist EP</h3>
-            <p class="artistName">Ungrateful Ambassador</p>
-        </div>
-    </div>
-
-    <div class="cardElement">
-        <img class="artwork" src="./assets/images/card-images/most-popular-images/mostPopRelease.jpg">
-        <h3 class="cardHeader">Most Popular Release</h3>
-        <div class="releaseDetails">
-            <h3 class="title">The Brass Continent</h3>
-            <p class="artistName">Jamie Ball</p>
-        </div>
-    </div>
-
-    <div class="cardElement">
-        <img class="artwork" src="./assets/images/card-images/most-popular-images/podcast7.jpg">
-        <h3 class="cardHeader">Most Popular Podcast</h3>
-        <div class="releaseDetails">
-            <h3 class="title">GTA Digital Podcast #7</h3>
-            <p class="artistName">Gary The Apprentice</p>
-        </div>
+    <div class="cardElement" *ngFor="let podcastItem of podcastItems">
+        <most-pop-podcast-thumbnail [podcastItem]="podcastItem"></most-pop-podcast-thumbnail>
     </div>
 
 </div>

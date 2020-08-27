@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MostPopularService } from '../shared/most-pop.service';
 
 @Component ({
     selector: 'most-popular',
@@ -7,10 +8,19 @@ import { Router } from '@angular/router';
     styleUrls: ['most-popular.component.css']
 })
 
-export class MostPopularComponent {
-    constructor(private router:Router) {
+export class MostPopularComponent implements OnInit {
+    releaseItems:any[]
+    podcastItems:any[]
+
+    constructor(private router:Router, private mostPopularService: MostPopularService) {
 
     }
+
+    ngOnInit() {
+        this.releaseItems = this.mostPopularService.getReleaseItems()
+        this.podcastItems = this.mostPopularService.getPodcastItems()
+    }
+
     goToGTA20() {
         this.router.navigate(['/releases/gta19'])
     }
