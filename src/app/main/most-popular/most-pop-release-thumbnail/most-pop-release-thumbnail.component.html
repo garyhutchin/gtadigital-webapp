@@ -1,0 +1,9 @@
+<div [routerLink]="['/releases', releaseItem.id]">
+    <img [src]="releaseItem.imageUrl" [alt]="releaseItem.title" class="artwork">
+    <h3 class="cardHeader">{{releaseItem.cardHeader}}</h3>
+    <div class="releaseDetails">
+        <p class="catNo">{{releaseItem.catNo}}</p>
+        <h3 class="title">{{releaseItem.title}}</h3>
+        <p class="artistName">{{releaseItem.artistName}}</p>
+    </div>
+</div>

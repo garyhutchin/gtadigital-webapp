@@ -1,36 +1,5 @@
 <div class="latest-news-wrapper">
-
-    <div class="cardElement">
-        <img class="latestNewsImg" src="./assets/images/card-images/latest-news-images/item1.jpg">
-        <h3 class="cardHeader">GTA Digital Presents - September 2020</h3>
-        <div class="latest-news-details">
-            <p>GTA Digital Presents returns for the September installment of the show. If you have tuned in to previous shows you'll know what to expect by now, straight up, solid techno.<br><br>
-            The show airs on 15 September from 10-11pm, over at <a href="https://fnoobtechno.com" target="blank">Fnoob Techno Radio<img class="external-link" src="../../../assets/images/small-images/icons/external-link.png"></a></p>
-        </div>
+    <div class="cardElement" *ngFor="let newsItem of newsItems">
+        <latest-news-thumbnail [newsItem]="newsItem"></latest-news-thumbnail>
     </div>
-
-    <div class="cardElement">
-        <img class="latestNewsImg" src="./assets/images/card-images/latest-news-images/item2.jpg">
-        <h3 class="cardHeader">GTA Digital Podcast #30</h3>
-        <div class="latest-news-details">
-            <p>Podcast Info</p>
-        </div>
-    </div>
-
-    <div class="cardElement">
-        <img class="latestNewsImg" src="./assets/images/card-images/latest-news-images/item3.jpg">
-        <h3 class="cardHeader">GTA Digital Podcast #29</h3>
-        <div class="latest-news-details">
-            <p>Podcast Info</p>
-        </div>
-    </div>
-
-    <div class="cardElement">
-        <img class="latestNewsImg" src="./assets/images/card-images/latest-news-images/item3.jpg">
-        <h3 class="cardHeader">News Item 4</h3>
-        <div class="latest-news-details">
-            <p>New item info</p>
-        </div>
-    </div>
-
 </div>

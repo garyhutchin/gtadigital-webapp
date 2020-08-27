@@ -12,11 +12,16 @@ import { appRoutes } from './routes';
 import { DesktopNavComponent } from './nav/desktop-nav/desktop-nav.component';
 import { TabNavComponent } from './nav/tab-nav/tab-nav.component';
 import { MostPopularComponent } from './main/most-popular/most-popular.component';
+import { MostPopularReleaseThumbnail } from './main/most-popular/most-pop-release-thumbnail/most-pop-release-thumbnail.component';
+import { MostPopularPodcastThumbnail } from './main/most-popular/most-pop-podcast-thumbnail/most-pop-podcast-thumbnail.component';
+import { MostPopularService } from './main/shared/most-pop.service';
 import { MusicMainComponent } from './music/mainComponent/music-main.component';
 import { ReleaseListTileComponent } from './music/mainComponent/release-list-tile/release-list-tile.component';
 import { ReleaseListComponent } from './music/releases/release-list/release-list.component';
 import { ReleaseContainerComponent } from './music/releases/release-container.component';
 import { LatestNewsComponent } from './main/latest-news/latest-news.component';
+import { LatestNewsService } from './main/shared/latest-news.service';
+import { LatestNewsThumbnail } from './main/latest-news/latest-news-thumbnail/latest-news-thumbnail.component';
 import { YouMayLikeComponent } from './music/you-may-like/you-may-like.component';
 import { LiveStreamComponent } from './main/live-stream/live-stream.component';
 import { PodcastTileComponent } from './music/mainComponent/podcast-tile/podcast-tile.component';
@@ -51,12 +56,15 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     DesktopNavComponent,
     TabNavComponent,
     MostPopularComponent,
+    MostPopularReleaseThumbnail,
+    MostPopularPodcastThumbnail,
     MusicMainComponent,
     ReleaseListTileComponent,
     ReleaseListComponent,
     ReleaseThumbnailComponent,
     ReleaseContainerComponent,
     LatestNewsComponent,
+    LatestNewsThumbnail,
     YouMayLikeComponent,
     LiveStreamComponent,
     PodcastTileComponent,
@@ -83,7 +91,9 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
   ],
 
   providers: [
-    ReleaseService
+    ReleaseService,
+    MostPopularService,
+    LatestNewsService
   ],
 
   imports: [
