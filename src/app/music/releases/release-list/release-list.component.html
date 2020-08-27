@@ -1,10 +1,8 @@
 <div class="release-list-wrapper">
-    <div class="firstSix">
-        <div class="releaseListContainer">
-            <div class="releaseCardElement" *ngFor="let release of releases">
-                <release-thumbnail [release]="release"></release-thumbnail>
-            </div>
+    <div class="releaseListContainer">
+        <div class="releaseCardElement" *ngFor="let release of releases">
+            <release-thumbnail [release]="release"></release-thumbnail>
         </div>
-    </div> 
+    </div>
 </div>
 
