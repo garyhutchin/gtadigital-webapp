@@ -23,6 +23,9 @@ import { PodcastTileComponent } from './music/mainComponent/podcast-tile/podcast
 import { LiveStreamArchiveComponent } from './music/mainComponent/live-stream-archive/live-stream-archive.component';
 import { ReleaseService } from './music/releases/shared/releases.service';
 import { ReleaseThumbnailComponent } from './music/releases/release-list/release-thumbnail/release-thumbnail.component';
+import { MostPopularReleaseThumbnail } from './main/most-popular/most-pop-release-thumbnail/most-pop-release-thumbnail.component';
+import { MostPopularPodcastThumbnail } from './main/most-popular/most-pop-podcast-thumbnail/most-pop-podcast-thumbnail.component';
+import { MostPopularService } from './main/shared/most-pop.service';
 
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
@@ -51,6 +54,8 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     DesktopNavComponent,
     TabNavComponent,
     MostPopularComponent,
+    MostPopularReleaseThumbnail,
+    MostPopularPodcastThumbnail,
     MusicMainComponent,
     ReleaseListTileComponent,
     ReleaseListComponent,
@@ -83,7 +88,8 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
   ],
 
   providers: [
-    ReleaseService
+    ReleaseService,
+    MostPopularService
   ],
 
   imports: [
