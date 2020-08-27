@@ -3,17 +3,77 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between !important;
-    background-color: rgb(240, 240, 240) !important;
-    padding: 10px 20px 20px 20px;
+    background-color: white;
+    margin: 10px 20px 20px 20px;
+    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
 }
 
-.pageElement {
+@media (max-width: 1110px) {
+    .live-stream-wrapper {
+        margin: 10px;
+    }
+}
+
+.youTube-vid-desktop {
     flex-basis: 30%;
+    margin: 0px;
+    display: block;
+    max-height: 315px;
+
+}
+
+@media (max-width: 801px) {
+    .youTube-vid-desktop {
+        display: none;
+    }
+}
+
+.youTubeEmbed {
+    width: 560px; 
+    height:315px
+}
+
+@media (max-width: 1422px) {
+    .youTube-vid-desktop {
+        flex-basis: 100%;
+    }
+
+    .youTubeEmbed {
+        width: 100%;
+    }
+
+    .youTube-vid-text {
+        padding: 0px 0px 10px 10px;
+    }
+}
+
+.youTube-vid-mobile {
+    display: none;
+    flex-basis: 100%;
     margin: 0px
 }
 
-.pageElementText {
+@media (max-width: 801px) {
+    .youTube-vid-mobile {
+        display: block;
+        flex-basis: 100%;
+        margin: 0px
+    }
+}
+
+.youTube-vid-text {
     flex-basis: 59%;
-    margin: 0px
+    margin: 0px;
     
+}
+
+@media (max-width: 801px) {
+    .youTube-vid-text {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+
+    .youTube-vid-text p {
+        margin-top: 0px;
+    }
 }
