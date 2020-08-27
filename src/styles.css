@@ -154,7 +154,8 @@ a:hover {
   text-decoration: none;
 }
 
-a:active {
+a:active a:focus {
   color: rgb(65, 65, 65);
   text-decoration: none;
+  outline: 0;
 }
