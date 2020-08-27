@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { trigger, transition, style, animate, query } from '@angular/animations';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component ({
     selector: 'tab-nav',
@@ -18,6 +18,7 @@ import { trigger, transition, style, animate, query } from '@angular/animations'
 })
 
 export class TabNavComponent {
+
     isCollapsed: boolean = true;
 
     toggleTabNav() {
