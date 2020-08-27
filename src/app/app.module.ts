@@ -21,6 +21,9 @@ import { YouMayLikeComponent } from './music/you-may-like/you-may-like.component
 import { LiveStreamComponent } from './main/live-stream/live-stream.component';
 import { PodcastTileComponent } from './music/mainComponent/podcast-tile/podcast-tile.component';
 import { LiveStreamArchiveComponent } from './music/mainComponent/live-stream-archive/live-stream-archive.component';
+import { ReleasesService } from './music/releases/shared/releases.service';
+import { ReleaseThumbnailComponent } from './music/releases/release-list/release-thumbnail/release-thumbnail.component';
+
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
 import { GTA17Component } from './music/releases/release-details/gta017/gta017.component';
@@ -39,7 +42,7 @@ import { GTA5Component } from './music/releases/release-details/gta005/gta005.co
 import { GTA4Component } from './music/releases/release-details/gta004/gta004.component';
 import { GTA3Component } from './music/releases/release-details/gta003/gta003.component';
 import { GTA2Component } from './music/releases/release-details/gta002/gta002.component';
-import { GTA1Component } from './music/releases/release-details/gta001/gta001.component'
+import { GTA1Component } from './music/releases/release-details/gta001/gta001.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,7 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     MusicMainComponent,
     ReleaseListTileComponent,
     ReleaseListComponent,
+    ReleaseThumbnailComponent,
     ReleaseContainerComponent,
     LatestNewsComponent,
     YouMayLikeComponent,
@@ -77,6 +81,11 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     GTA2Component,
     GTA1Component
   ],
+
+  providers: [
+    ReleasesService
+  ],
+
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
