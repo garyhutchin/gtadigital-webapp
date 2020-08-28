@@ -10,6 +10,11 @@ export class LatestNewsService {
 
 const NEWSITEMS = [
     {
+        title: 'New Item',
+        info: 'New Item',
+        imageUrl: './assets/images/card-images/latest-news-images/item1.jpg'    
+    },
+    {
         title: 'GTA Digital Presents - September 2020',
         info: 'GTA Digital Presents returns for the September installment of the show. If you have tuned in to previous shows you know what to expect by now, straight up, solid techno. The show airs on 15 September from 10-11pm, over at Fnoob Techno Radio',
         imageUrl: './assets/images/card-images/latest-news-images/item1.jpg'    
