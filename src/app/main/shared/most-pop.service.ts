@@ -13,7 +13,7 @@ export class MostPopularService {
 }
 
 const RELEASEITEMS = [
-    {
+    {   /*Add latest release first*/
         id: 'gta20',
         cardHeader: 'Latest Release',
         title: 'Purist EP',
