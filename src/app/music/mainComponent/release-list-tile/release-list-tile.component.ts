@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ReleaseService } from '../../releases/shared/releases.service';
 
 @Component ({
     selector: 'release-list-tile',
@@ -7,21 +8,18 @@ import { Router } from '@angular/router';
     styleUrls: ['release-list-tile.component.css']
 })
 
-export class ReleaseListTileComponent {
-    
-    constructor(private router:Router){
+export class ReleaseListTileComponent implements OnInit {
+    releases:any[]
 
+    constructor(private router:Router, private releaseService: ReleaseService){
+
+    }
+
+    ngOnInit() {
+        this.releases = this.releaseService.getReleases()
     }
 
     viewReleases() {
         this.router.navigate(['/releases'])
-    }
-
-    goToGTA19() {
-        this.router.navigate(['/releases/gta19'])
-    }
-
-    goToGTA18() {
-        this.router.navigate(['/releases/gta18'])
     }
 }
