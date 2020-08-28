@@ -18,6 +18,7 @@ import { MostPopularService } from './main/shared/most-pop.service';
 import { MusicMainComponent } from './music/mainComponent/music-main.component';
 import { ReleaseListTileComponent } from './music/mainComponent/release-list-tile/release-list-tile.component';
 import { ReleaseListComponent } from './music/releases/release-list/release-list.component';
+import { ReleaseListThumbnail } from './music/mainComponent/release-list-tile/release-list-thumbnail/release-list-thumbnail.component';
 import { ReleaseContainerComponent } from './music/releases/release-container.component';
 import { LatestNewsComponent } from './main/latest-news/latest-news.component';
 import { LatestNewsService } from './main/shared/latest-news.service';
@@ -60,6 +61,7 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     MostPopularPodcastThumbnail,
     MusicMainComponent,
     ReleaseListTileComponent,
+    ReleaseListThumbnail,
     ReleaseListComponent,
     ReleaseThumbnailComponent,
     ReleaseContainerComponent,

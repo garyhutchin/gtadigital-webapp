@@ -96,7 +96,6 @@ h2 {
 }
 
 .viewAll-button {
-  margin: 20px 20px 0px 20px;
   padding: 10px;
   background-color: #0193b7;
   box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.3);
@@ -105,7 +104,8 @@ h2 {
   color: white;
   text-decoration: none;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
   outline: none;
