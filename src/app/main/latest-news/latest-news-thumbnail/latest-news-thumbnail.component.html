@@ -3,6 +3,6 @@
 <div class="latest-news-details">
     <p>{{newsItem.info}}
         <a *ngIf="newsItem?.externalUrl" [href]="newsItem.externalUrl" target="blank">{{newsItem.externalUrlTitle}}</a>
-        <a *ngIf="newsItem?.internalUrl" [href]="newsItem.internalUrl">{{newsItem.internalUrlTitle}}</a>
+        <a *ngIf="newsItem?.internalUrl" [href]="newsItem.internalUrl"><br>{{newsItem.internalUrlTitle}}</a>
     </p>
 </div>
