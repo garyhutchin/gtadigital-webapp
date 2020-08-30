@@ -4,7 +4,7 @@ import { Track } from 'ngx-audio-player';
 @Component({
   selector: 'gta1-details',
   templateUrl: 'gta001.component.html',
-  styleUrls: ['gta001.component.css']
+  styleUrls: ['../release-details.component.css']
 })
 export class GTA1Component {
 

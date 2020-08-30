@@ -1,24 +1,17 @@
 <div class="pageContent">
-    <div class="pageSpan-whiteBG">
+    <div class="pageSpan">
         <div class="pageElement">
-            <div class="wrapper">
+            <div class="releaseDetailsWrapper">
                 <div class="image">
-                    <img class="artwork" src="assets/images/artwork/releases/gta018.jpg">
+                    <img class="artwork" [src]="release.artwork">
                 </div>
                 <div class="text">
-                    <h3>GTA018 What Have We Become</h3>
-                    <p class="releaseDate">Released 31 August 2018 <a href="https://gtadigital.bandcamp.com/album/gta018-what-have-we-become" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
-                    <p>Supported by:<br>
-
-                    Dax J (Monnom Black), Spartaque, Patrick DSP, Ian Void, DJ Ze Mig L, Dr Motte, Luigi Madonna, Tony Verdi, Gemma Furbank, A Morgan (Rhythm Theory), Africa Islam, Clarkee (Area 51), DJ K.N (Mass United), DJ Warp (Japan) / Takashi Watanabe, Danny Slade (Zone Magazine/Herald Radio), Frank Bauduin, Gavin Quiet (Dark Knights), Gerard Russchenberg (House Of Fun), Hidden Reflection, Jon E Thin Bremmar, Josh Moseley (Chicago Jaxxx), Kereni (Forte), Kerstin Eden (Electric Eden), Louk/Hidden Identity, Mark Greene, Matteo (Different Grooves), NX1, Newks, Nori (Posivision), Zuni (Tribal Waves)</p>
-                        
-                    <p>Tracks 1, 4 & 5 Written by Gary Hutchin<br>
-                    Tracks 2 & 3 Written by Gary Hutchin & Vincent de Wit<br>
-                    Track 6 Written by Gary Hutchin & Nicola Scarano<br>
-                    Mastered by Steve Loss - Black Monolith Studio</p>
-                    <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" 
-                    [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions" 
-                    [displayVolumeControls]="msaapDisplayVolumeControls" [expanded]="true"></mat-advanced-audio-player> 
+                    <h3>{{release.catNo}} {{release.title}}</h3>
+                    <p class="releaseDate">Released 13 May 2019 <a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
+                    <p>Supported by:<br>{{release.releaseInfo}}</p>
+                        <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" 
+                        [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions" 
+                        [displayVolumeControls]="msaapDisplayVolumeControls" [expanded]="true"></mat-advanced-audio-player>
                 </div>
             </div>
             <div class="youMayLike">

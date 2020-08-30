@@ -5,6 +5,10 @@ export class ReleaseService {
     getReleases() {
         return RELEASES
     }
+
+    getRelease(id:string) {
+        return RELEASES.find(release => release.id === id)
+    }
 }
 
 const RELEASES = [
@@ -13,21 +17,30 @@ const RELEASES = [
         title: 'Purist EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA020]',
-        imageUrl: './assets/images/card-images/release-artwork/gta020.jpg'
+        imageUrl: './assets/images/card-images/release-artwork/gta020.jpg',
+        artwork: './assets/images/artwork/releases/gta020.jpg',
+        releaseUrl: 'https://gtadigital.bandcamp.com/album/gta019-unix-ep'
     },
     {
         id: 'gta19',
         title: 'Unix EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA019]',
-        imageUrl: './assets/images/card-images/release-artwork/gta019.jpg'
+        imageUrl: './assets/images/card-images/release-artwork/gta019.jpg',
+        artwork: './assets/images/artwork/releases/gta019.jpg',
+        releaseUrl: 'https://gtadigital.bandcamp.com/album/gta019-unix-ep',
+        releaseInfo: 'Perc, Patrick DSP, Wetworks, Dr Motte, Ian Void, Ike Dusk, Millhouse, Raymundo Rodriguez [Jaded / London Techno], Julez Wyl [Jaded], Clarkee [Area 51], DJ K.N (Mass United), Africa Islam, DJ Warp (Japan) / Takashi Watanabe, DJ Ze Mig L, Danny Slade [Zone Magazine / Herald Radio], Daz Furey, Drop-E, Fausto [Dance Valley], Gemma Furbank, Hidden Reflection, John Rowe [Hypnohouse Trax], Julian Rutherford [Technoscene], Kereni [Forte], Luca Agnelli, Luigi Madonna, Mark Neenan, Matteo (Different Grooves), Newks, Nori [Posivision], Ray Marshall, Rondell Adams, Verschwender, Wayne DJC [Beyond Control] Zuni [Tribal Waves] & John Warwick [Primate Recordings]',
+        releaseDate: '13 May 2019'
     },
     {
         id: 'gta18',
         title: 'What Have We Become',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA018]',
-        imageUrl: './assets/images/card-images/release-artwork/gta018.jpg'
+        imageUrl: './assets/images/card-images/release-artwork/gta018.jpg',
+        artwork: './assets/images/artwork/releases/gta018.jpg',
+        releaseUrl: 'https://gtadigital.bandcamp.com/album/gta019-unix-ep',
+        releaseInfo: 'Perc, Patrick DSP, Wetworks, Dr Motte, Ian Void, Ike Dusk, Millhouse, Raymundo Rodriguez [Jaded / London Techno], Julez Wyl [Jaded], Clarkee [Area 51], DJ K.N (Mass United), Africa Islam, DJ Warp (Japan) / Takashi Watanabe, DJ Ze Mig L, Danny Slade [Zone Magazine / Herald Radio], Daz Furey, Drop-E, Fausto [Dance Valley], Gemma Furbank, Hidden Reflection, John Rowe [Hypnohouse Trax], Julian Rutherford [Technoscene], Kereni [Forte], Luca Agnelli, Luigi Madonna, Mark Neenan, Matteo (Different Grooves), Newks, Nori [Posivision], Ray Marshall, Rondell Adams, Verschwender, Wayne DJC [Beyond Control] Zuni [Tribal Waves] & John Warwick [Primate Recordings]'
     },
     {
         id: 'gta17',

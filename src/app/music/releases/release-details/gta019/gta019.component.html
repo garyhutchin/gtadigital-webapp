@@ -1,20 +1,14 @@
 <div class="pageContent">
-    <div class="pageSpan-whiteBG">
+    <div class="pageSpan">
         <div class="pageElement">
             <div class="releaseDetailsWrapper">
                 <div class="image">
-                    <img class="artwork" src="assets/images/artwork/releases/gta019.jpg">
+                    <img class="artwork" [src]="release.artwork">
                 </div>
                 <div class="text">
-                    <h3>GTA019 Unix EP</h3>
-                    <p class="releaseDate">Released 13 May 2019 <a href="https://gtadigital.bandcamp.com/album/gta019-unix-ep" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
-                    <p>Supported by:<br>
-            
-                        Perc, Patrick DSP, Wetworks, Dr Motte, Ian Void, Ike Dusk, Millhouse, Raymundo Rodriguez [Jaded / London Techno], Julez Wyl [Jaded], Clarkee [Area 51], DJ K.N (Mass United), Africa Islam, DJ Warp (Japan) / Takashi Watanabe, DJ Ze Mig L, Danny Slade [Zone Magazine / Herald Radio], Daz Furey, Drop-E, Fausto [Dance Valley], Gemma Furbank, Hidden Reflection, John Rowe [Hypnohouse Trax], Julian Rutherford [Technoscene], Kereni [Forte], Luca Agnelli, Luigi Madonna, Mark Neenan, Matteo (Different Grooves), Newks, Nori [Posivision], Ray Marshall, Rondell Adams, Verschwender, Wayne DJC [Beyond Control] Zuni [Tribal Waves] & John Warwick [Primate Recordings]</p>
-                        
-                        <p>Tracks 1, 2 & 3 written by Gary The Apprentice<br>
-                        Track 4 written by Gary The Apprentice and DJ Ze MigL<br>
-                        Mastered by Jon Doe - CLSM Mastering</p>
+                    <h3>{{release.catNo}} {{release.title}}</h3>
+                    <p class="releaseDate">Released: {{release.releaseDate}} <a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
+                    <p>Supported by:<br>{{release.releaseInfo}}</p>
                         <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" 
                         [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions" 
                         [displayVolumeControls]="msaapDisplayVolumeControls" [expanded]="true"></mat-advanced-audio-player>
