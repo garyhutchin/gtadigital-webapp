@@ -21,32 +21,34 @@ import { GTA4Component } from './music/releases/release-details/gta004/gta004.co
 import { GTA2Component } from './music/releases/release-details/gta002/gta002.component';
 import { GTA3Component } from './music/releases/release-details/gta003/gta003.component';
 import { GTA1Component } from './music/releases/release-details/gta001/gta001.component';
+import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.component';
 
 export const appRoutes:Routes = [
     { path: '', component: MainComponent },
     { path: 'home', component: MainComponent },
-    { path: 'music', component: MusicMainComponent},
-    { path: 'releases', component: ReleaseContainerComponent},
+    { path: 'music', component: MusicMainComponent },
+    { path: 'music/releases', component: ReleaseContainerComponent },
+    { path: 'music/podcasts', component:PodcastsContainerComponent },
 
-    { path: 'releases/gta19', component: GTA19Component },
-    { path: 'releases/gta18', component: GTA18Component },
-    { path: 'releases/gta17', component: GTA17Component },
-    { path: 'releases/gta16', component: GTA16Component },
-    { path: 'releases/gta15', component: GTA15Component },
-    { path: 'releases/gta14', component: GTA14Component },
-    { path: 'releases/gta13', component: GTA13Component },
-    { path: 'releases/gta12', component: GTA12Component },
-    { path: 'releases/gta11', component: GTA11Component },
-    { path: 'releases/gta10', component: GTA10Component },
-    { path: 'releases/gta09', component: GTA9Component },
-    { path: 'releases/gta08', component: GTA8Component },
-    { path: 'releases/gta07', component: GTA7Component },
-    { path: 'releases/gta06', component: GTA6Component },
-    { path: 'releases/gta05', component: GTA5Component },
-    { path: 'releases/gta04', component: GTA4Component },
-    { path: 'releases/gta03', component: GTA3Component },
-    { path: 'releases/gta02', component: GTA2Component },
-    { path: 'releases/gta01', component: GTA1Component },
+    { path: 'music/releases/gta19', component: GTA19Component },
+    { path: 'music/releases/gta18', component: GTA18Component },
+    { path: 'music/releases/gta17', component: GTA17Component },
+    { path: 'music/releases/gta16', component: GTA16Component },
+    { path: 'music/releases/gta15', component: GTA15Component },
+    { path: 'music/releases/gta14', component: GTA14Component },
+    { path: 'music/releases/gta13', component: GTA13Component },
+    { path: 'music/releases/gta12', component: GTA12Component },
+    { path: 'music/releases/gta11', component: GTA11Component },
+    { path: 'music/releases/gta10', component: GTA10Component },
+    { path: 'music/releases/gta09', component: GTA9Component },
+    { path: 'music/releases/gta08', component: GTA8Component },
+    { path: 'music/releases/gta07', component: GTA7Component },
+    { path: 'music/releases/gta06', component: GTA6Component },
+    { path: 'music/releases/gta05', component: GTA5Component },
+    { path: 'music/releases/gta04', component: GTA4Component },
+    { path: 'music/releases/gta03', component: GTA3Component },
+    { path: 'music/releases/gta02', component: GTA2Component },
+    { path: 'music/releases/gta01', component: GTA1Component },
     
     { path: '', redirectTo: '/home', pathMatch: 'full'}
 ]

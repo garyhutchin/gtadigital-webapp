@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Track } from 'ngx-audio-player';
+import { ReleaseService } from '../../shared/releases.service';
 
 @Component({
   selector: 'gta18-details',
   templateUrl: 'gta018.component.html',
-  styleUrls: ['gta018.component.css']
+  styleUrls: ['../release-details.component.css']
 })
 export class GTA18Component implements OnInit {
 
-  constructor() { }
+    release:any
 
-  ngOnInit(): void {
-  }
+    constructor(private releaseService:ReleaseService) {
+    }
+
+    ngOnInit() {
+        this.release = this.releaseService.getRelease('gta18')
+    }
 
       // Material Style Advance Audio Player Playlist
       msaapPlaylist: Track[] = [

@@ -20,6 +20,6 @@ export class ReleaseListTileComponent implements OnInit {
     }
 
     viewReleases() {
-        this.router.navigate(['/releases'])
+        this.router.navigate(['music/releases'])
     }
 }
