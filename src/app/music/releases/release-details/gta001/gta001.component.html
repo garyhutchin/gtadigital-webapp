@@ -1,16 +1,15 @@
 <div class="pageContent">
-    <div class="pageSpan-whiteBG">
+    <div class="pageSpan">
         <div class="pageElement">
             <div class="releaseDetailsWrapper">
                 <div class="image">
-                    <img class="artwork" src="assets/images/artwork/releases/gta001.jpg">
+                    <img class="artwork" [src]="release.artwork">
                 </div>
                 <div class="text">
-                    <h3>GTA001 Recharged EP</h3>
-                    <p class="releaseDate">Released 26 March 2013 <a href="https://gtadigital.bandcamp.com/album/gta001-recharged-ep" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
-                    <p>The very first release on GTA Digital. For this EP Gary has put together a 3 track EP of some straight up, banging techno.</p>
-
-                    <p>Download the full EP for FREE, by clicking the "Buy now" tab and enter 0.00 in the amount box, or more if you would like to leave a donation!</p>
+                    <h3>{{release.catNo}} {{release.title}}</h3>
+                    <p class="releaseDate">Released: {{release.releaseDate}} <a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
+                    <p>Supported by:<br>{{release.releaseInfoP1}}</p>
+                    <p>{{release.releaseInfoP2}}<br>{{release.releaseInfoP3}}<br>{{release.releaseInfoP4}}<br>{{release.releaseInfoP5}}</p>
                         <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" 
                         [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions" 
                         [displayVolumeControls]="msaapDisplayVolumeControls" [expanded]="true"></mat-advanced-audio-player>

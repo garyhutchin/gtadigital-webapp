@@ -1,1 +1,23 @@
-<p>gta016 works!</p>
+<div class="pageContent">
+    <div class="pageSpan">
+        <div class="pageElement">
+            <div class="releaseDetailsWrapper">
+                <div class="image">
+                    <img class="artwork" [src]="release.artwork">
+                </div>
+                <div class="text">
+                    <h3>{{release.catNo}} {{release.title}}</h3>
+                    <p class="releaseDate">Released: {{release.releaseDate}} <a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
+                    <p>Supported by:<br>{{release.releaseInfoP1}}</p>
+                    <p>{{release.releaseInfoP2}}<br>{{release.releaseInfoP3}}<br>{{release.releaseInfoP4}}<br>{{release.releaseInfoP5}}</p>
+                        <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" 
+                        [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions" 
+                        [displayVolumeControls]="msaapDisplayVolumeControls" [expanded]="true"></mat-advanced-audio-player>
+                </div>
+            </div>
+            <div class="youMayLike">
+                <you-may-like></you-may-like>
+            </div>
+        </div>
+    </div>
+</div>
