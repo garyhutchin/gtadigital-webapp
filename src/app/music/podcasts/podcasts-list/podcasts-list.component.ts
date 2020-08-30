@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { PodcastService } from '../shared/podcast.service';
 
 @Component({
   selector: 'podcasts-list',
-  templateUrl: './podcasts-list.component.html',
-  styleUrls: ['./podcasts-list.component.css']
+  templateUrl: 'podcasts-list.component.html',
+  styleUrls: ['podcasts-list.component.css']
 })
 export class PodcastsListComponent implements OnInit {
+podcasts:any[]
 
-  constructor() { }
+  constructor(private podcastService: PodcastService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+      this.podcasts = this.podcastService.getPodcasts()
   }
 
 }

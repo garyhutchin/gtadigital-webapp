@@ -29,6 +29,8 @@ import { PodcastTileComponent } from './music/mainComponent/podcast-tile/podcast
 import { LiveStreamArchiveComponent } from './music/mainComponent/live-stream-archive/live-stream-archive.component';
 import { ReleaseService } from './music/releases/shared/releases.service';
 import { ReleaseThumbnailComponent } from './music/releases/release-list/release-thumbnail/release-thumbnail.component';
+import { PodcastsListComponent } from './music/podcasts/podcasts-list/podcasts-list.component';
+import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.component';
 
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
@@ -49,8 +51,8 @@ import { GTA4Component } from './music/releases/release-details/gta004/gta004.co
 import { GTA3Component } from './music/releases/release-details/gta003/gta003.component';
 import { GTA2Component } from './music/releases/release-details/gta002/gta002.component';
 import { GTA1Component } from './music/releases/release-details/gta001/gta001.component';
-import { PodcastsListComponent } from './music/podcasts/podcasts-list/podcasts-list.component';
-import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.component';
+import { PodcastThumbnailComponent } from './music/podcasts/podcasts-list/podcast-thumbnail/podcast-thumbnail.component';
+import { PodcastService } from './music/podcasts/shared/podcast.service';
 
 @NgModule({
   declarations: [
@@ -93,13 +95,15 @@ import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.
     GTA2Component,
     GTA1Component,
     PodcastsListComponent,
-    PodcastsContainerComponent
+    PodcastsContainerComponent,
+    PodcastThumbnailComponent
   ],
 
   providers: [
     ReleaseService,
     MostPopularService,
-    LatestNewsService
+    LatestNewsService,
+    PodcastService
   ],
 
   imports: [
