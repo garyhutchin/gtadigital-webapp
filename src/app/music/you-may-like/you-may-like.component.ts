@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ReleaseService } from '../releases/shared/releases.service';
 import { ActivatedRoute } from '@angular/router';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'you-may-like',
@@ -12,6 +13,7 @@ export class YouMayLikeComponent implements OnInit {
 
   start : number = 0;
   end : number = 5;
+  releaseNumber: number;
 
   @Input() urlId: any
 
@@ -23,7 +25,16 @@ export class YouMayLikeComponent implements OnInit {
 
   ngOnInit() {
     this.releases = this.releaseService.getReleases()
+    this.activatedRoute.url.subscribe(activeUrl =>{
+      this.url=window.location.pathname.split(";")[0].split('/music/releases/gta').pop();
+    });
+    
+    this.releaseNumber = parseInt(this.url, 10)
+    console.log(this.releaseNumber)
 
+    if (this.releaseNumber > 15) {
+      return this.end = 6
+    }
   }
   
 }

@@ -1,4 +1,4 @@
-.wrapper {
+.inner-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,11 +6,13 @@
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     /*background-color: rgb(240, 240, 240) !important;*/
     background-color: white;
-    margin: 20px 20px 5px 20px;
+    margin: 5px 20px 5px 20px;
+    padding-left: 80px;
 }
 
 .header {
     width: 100%;
+    margin-top: 20px;
 }
 
 .header h3 {

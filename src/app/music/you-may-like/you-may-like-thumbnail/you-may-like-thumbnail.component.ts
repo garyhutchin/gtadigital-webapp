@@ -23,7 +23,6 @@ export class YouMayLikeThumbnailComponent implements OnInit {
     });
     
     this.urlId = this.url
-    console.log (this.urlId)
   }
 
 }

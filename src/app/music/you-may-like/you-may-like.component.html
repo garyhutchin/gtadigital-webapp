@@ -1,8 +1,10 @@
-<div class="wrapper">
+<div class="you-may-like-wrapper">
     <div class="header">
         <h3 class="youMayAlsoLike">You May Also Like</h3>
     </div>
-    <ng-container *ngFor="let release of releases | slice:start:end; let i=index">
-        <you-may-like-thumbnail [release]="release"></you-may-like-thumbnail>
-    </ng-container>
+    <div class="inner-wrapper">
+        <ng-container *ngFor="let release of releases | slice:start:end; let i=index">
+            <you-may-like-thumbnail [release]="release"></you-may-like-thumbnail>
+        </ng-container>
+    </div>
 </div>
