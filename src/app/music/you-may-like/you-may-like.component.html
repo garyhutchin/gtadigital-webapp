@@ -2,19 +2,7 @@
     <div class="header">
         <h3 class="youMayAlsoLike">You May Also Like</h3>
     </div>
-    <div class="pageElement">
-        <img class="youMayAlsoLikeImg" src="assets/images/artwork/podcasts/podcast26.jpg">
-    </div>
-    <div class="pageElement">
-        <img class="youMayAlsoLikeImg" src="assets/images/artwork/podcasts/podcast25.jpg">
-    </div>
-    <div class="pageElement" (click)="goToGTA18()">
-        <img class="youMayAlsoLikeImg" src="assets/images/artwork/releases/gta018.jpg">
-    </div>
-    <div class="pageElement">
-        <img class="youMayAlsoLikeImg" src="assets/images/artwork/releases/gta016.jpg">
-    </div>
-    <div class="pageElement">
-        <img class="youMayAlsoLikeImg" src="assets/images/artwork/releases/gta002.jpg">
-    </div>
+    <ng-container *ngFor="let release of releases | slice:start:end; let i=index">
+        <you-may-like-thumbnail [release]="release"></you-may-like-thumbnail>
+    </ng-container>
 </div>

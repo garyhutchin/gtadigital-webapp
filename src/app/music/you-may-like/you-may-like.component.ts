@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { ReleaseService } from '../releases/shared/releases.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'you-may-like',
@@ -7,14 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./you-may-like.component.css']
 })
 export class YouMayLikeComponent implements OnInit {
+  releases:any[]
 
-  constructor(private router:Router) { }
+  start : number = 0;
+  end : number = 5;
 
-  ngOnInit(): void {
+  @Input() urlId: any
+
+  url: string
+
+  constructor(private releaseService: ReleaseService, private activatedRoute: ActivatedRoute) {
+
   }
 
-  goToGTA18(){
-    this.router.navigate(['/releases/gta18'])
+  ngOnInit() {
+    this.releases = this.releaseService.getReleases()
+
   }
   
 }
