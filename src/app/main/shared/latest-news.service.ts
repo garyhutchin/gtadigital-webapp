@@ -14,7 +14,7 @@ const NEWSITEMS = [
         info: 'The GTA Digital Podcast is back with the 30th installment. As always you can expect an hour of straight up, straight forward, hard banging techno. Tracks by the likes of Vincent de Wit, Mattias Fridell, Lars Klein & Concrete Djz. ',
         imageUrl: './assets/images/card-images/latest-news-images/podcast30.jpg',    
         internalUrl: '/music/podcasts/podcast-30',
-        internalUrlTitle: 'Listen now.'    
+        internalUrlTitle: 'Listen here.'    
     },
     {
         title: 'GTA Digital Presents - September 2020',
@@ -28,7 +28,7 @@ const NEWSITEMS = [
         info: 'Podcast 29, you know the score, straight up banging techno. For this podcast I put together an hour set using tracks released on Armatura Clandestine. Some real solid, seriously banging hard techno. ',
         imageUrl: './assets/images/card-images/latest-news-images/podcast29.jpg',
         internalUrl: '/music/podcasts/podcast-29',
-        internalUrlTitle: 'Listen now.'  
+        internalUrlTitle: 'Listen here.'  
     },
     {
         title: 'News Item 3',

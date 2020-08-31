@@ -1,0 +1,5 @@
+<div class="pageElement" *ngIf="release.id!=urlId">
+    <div class="routerLink" [routerLink]="['/music/releases', release.id]">
+        <img class="youMayAlsoLikeImg" img [src]="release.artwork" [alt]="release.title">
+    </div>
+</div>

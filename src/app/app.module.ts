@@ -53,6 +53,7 @@ import { GTA2Component } from './music/releases/release-details/gta002/gta002.co
 import { GTA1Component } from './music/releases/release-details/gta001/gta001.component';
 import { PodcastThumbnailComponent } from './music/podcasts/podcasts-list/podcast-thumbnail/podcast-thumbnail.component';
 import { PodcastService } from './music/podcasts/shared/podcast.service';
+import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-thumbnail/you-may-like-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import { PodcastService } from './music/podcasts/shared/podcast.service';
     GTA1Component,
     PodcastsListComponent,
     PodcastsContainerComponent,
-    PodcastThumbnailComponent
+    PodcastThumbnailComponent,
+    YouMayLikeThumbnailComponent
   ],
 
   providers: [
