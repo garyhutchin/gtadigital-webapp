@@ -22,6 +22,7 @@ import { GTA2Component } from './music/releases/release-details/gta002/gta002.co
 import { GTA3Component } from './music/releases/release-details/gta003/gta003.component';
 import { GTA1Component } from './music/releases/release-details/gta001/gta001.component';
 import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.component';
+import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 
 export const appRoutes:Routes = [
     { path: '', component: MainComponent },
@@ -50,5 +51,8 @@ export const appRoutes:Routes = [
     { path: 'music/releases/gta02', component: GTA2Component },
     { path: 'music/releases/gta01', component: GTA1Component },
     
-    { path: '', redirectTo: '/home', pathMatch: 'full'}
+    { path: '', redirectTo: '/home', pathMatch: 'full'},
+
+    { path: 'page-not-found', component: PageNotFoundComponent },
+    { path: '**', redirectTo: '/page-not-found' }
 ]

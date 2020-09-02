@@ -1,0 +1,24 @@
+.page-not-found-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between !important;
+    padding: 10px 20px 5px 20px;
+    margin-top: 80px;
+}
+
+@media (max-width: 1110px) {
+    .page-not-found-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.pageElement {
+    flex-basis: 100%;   
+}
+
+.notFound {
+    font-size: 100px;
+    margin: 20px auto 10px auto;
+}
