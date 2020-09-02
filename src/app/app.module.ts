@@ -31,6 +31,10 @@ import { ReleaseService } from './music/releases/shared/releases.service';
 import { ReleaseThumbnailComponent } from './music/releases/release-list/release-thumbnail/release-thumbnail.component';
 import { PodcastsListComponent } from './music/podcasts/podcasts-list/podcasts-list.component';
 import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.component';
+import { PodcastThumbnailComponent } from './music/podcasts/podcasts-list/podcast-thumbnail/podcast-thumbnail.component';
+import { PodcastService } from './music/podcasts/shared/podcast.service';
+import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-thumbnail/you-may-like-thumbnail.component';
+import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
@@ -51,9 +55,6 @@ import { GTA4Component } from './music/releases/release-details/gta004/gta004.co
 import { GTA3Component } from './music/releases/release-details/gta003/gta003.component';
 import { GTA2Component } from './music/releases/release-details/gta002/gta002.component';
 import { GTA1Component } from './music/releases/release-details/gta001/gta001.component';
-import { PodcastThumbnailComponent } from './music/podcasts/podcasts-list/podcast-thumbnail/podcast-thumbnail.component';
-import { PodcastService } from './music/podcasts/shared/podcast.service';
-import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-thumbnail/you-may-like-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,11 @@ import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-
     LiveStreamComponent,
     PodcastTileComponent,
     LiveStreamArchiveComponent,
+    PodcastsListComponent,
+    PodcastsContainerComponent,
+    PodcastThumbnailComponent,
+    YouMayLikeThumbnailComponent,
+    PageNotFoundComponent,
     GTA19Component,
     GTA18Component,
     GTA17Component,
@@ -94,11 +100,7 @@ import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-
     GTA4Component,
     GTA3Component,
     GTA2Component,
-    GTA1Component,
-    PodcastsListComponent,
-    PodcastsContainerComponent,
-    PodcastThumbnailComponent,
-    YouMayLikeThumbnailComponent
+    GTA1Component
   ],
 
   providers: [

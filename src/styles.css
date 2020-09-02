@@ -51,6 +51,7 @@ body {
   font-family: 'Titillium Web', sans-serif; 
   color: rgb(65, 65, 65);
   background-color: rgb(240, 240, 240);
+  overflow-y: scroll;
 }
 
 @media (max-width:801px) {
