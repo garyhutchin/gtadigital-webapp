@@ -17,7 +17,7 @@ const RELEASEITEMS = [
         id: 'gta20',
         cardHeader: 'Latest Release',
         title: 'Purist EP',
-        artistName: 'Gary The Apprentice',
+        artistName: 'Ungrateful Ambassador',
         catNo: '[GTA020]',
         imageUrl: './assets/images/card-images/most-popular-images/newRelease.jpg'
     },

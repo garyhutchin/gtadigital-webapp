@@ -1,17 +1,33 @@
-h3 {
-    margin-left: 20px;
-    padding-top: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.pageHeader {
+.mainPageHeader {
     max-width: 1440px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     margin: 0px 20px 0px 20px;
+    background-image: url(../../../assets/images/homebanner2.jpg);
+    height: 250px;
+    position: relative;
+    z-index: -1;
+}
+
+.mainPageHeader-text {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+h2 {
+    color: white;
+    padding-left: 15px;
+    font-size: 30px;
+}
+
+h3 {
+    margin-left: 20px;
+    padding-top: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .headerIcon {
