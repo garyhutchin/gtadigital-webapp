@@ -16,7 +16,7 @@
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .releaseCardElement:hover {
