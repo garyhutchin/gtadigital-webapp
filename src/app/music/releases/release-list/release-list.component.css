@@ -1,13 +1,20 @@
 .release-list-wrapper {
     background-color: rgb(240, 240, 240) !important;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 0.25% 10px 20px;
+}
+
+@media (max-width: 1110px) {
+    .release-list-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 
 .releaseListContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .releaseCardElement {
@@ -16,10 +23,24 @@
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;
-    margin-bottom: 20px;
+    margin: 0 1% 1% 0;
 }
 
 .releaseCardElement:hover {
     background-color: #0193b728;
     cursor: pointer;
+}
+
+@media (max-width: 1110px) {
+    .releaseCardElement {
+        flex-basis: 47%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 801px) {
+    .releaseCardElement {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
 }
