@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component ({
     selector: 'podcast-tile',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 
 export class PodcastTileComponent {
 
+    constructor(private router: Router) {
+
+    }
+
+    viewPodcasts() {
+        this.router.navigate(['music/podcasts'])
+    }
 }

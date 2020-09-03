@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { trigger, transition, style, animate, query } from '@angular/animations';
 
 @Component ({
     selector: 'desktop-nav',

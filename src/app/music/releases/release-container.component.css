@@ -1,14 +1,23 @@
 .mainPageHeader {
     max-width: 1440px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 1.25% 0px 20px;
     background-image: url(../../../assets/images/homebanner2.jpg);
     height: 250px;
     position: relative;
     z-index: -1;
+}
+
+@media (max-width: 1110px) {
+    .mainPageHeader {
+        max-width: 96%;
+        margin: 0px 1.25% 0px 1.25%;
+    }
+}
+
+@media (max-width: 801px) {
+    .mainPageHeader {
+        display: none;
+    }
 }
 
 .mainPageHeader-text {
@@ -19,6 +28,6 @@
 
 h2 {
     color: white;
-    padding-left: 15px;
+    padding-left: 10px;
     font-size: 30px;
 }
