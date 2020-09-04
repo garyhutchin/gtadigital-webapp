@@ -1,12 +1,12 @@
-<div class="podcastContainer">
-    <div class="podcastCover">
-        <img src="assets/images/artwork/podcasts/podcast26.jpg">
-    </div>
-    <div class="podcastPlayer">
-        <iframe scrolling="no" width="100%" height="130" src="https://app.hearthis.at/embed/4672202/transparent/?hcolor=666666&color=0193b7&style=1&block_size=2&block_space=1&background=0&waveform=0&cover=1&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"></iframe>
-        
-        <p class="podcastInfo">The GTA Digital Podcast is back, following this months show on Fnoob Techno Radio, which saw Leeds(UK) based DJ, Bushby, take the reins, laying down an hour of some excellent techno. Starting off with something a bit more breaky, but soon into the straight up bangers.</p>
+<div class="podcast-list-tile-wrapper">
 
+    <div class="podcastListContainer">
+
+        <div class="podcastCard" *ngFor="let podcast of podcasts | slice:0:4; let i=index">
+            <podcast-tile-thumbnail [podcast]="podcast"></podcast-tile-thumbnail>
+        </div>
+        
+        <span><button type="button" class="viewAll-button" (click)="viewPodcasts()">View All Podcasts</button></span>
     </div>
+
 </div>
-<span><button type="button" class="viewAll-button" (click)="viewPodcasts()">View All Podcasts</button></span>

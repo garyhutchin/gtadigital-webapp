@@ -37,3 +37,7 @@ h3 {
 .mat-slider-thumb {
     border: 3px solid solid;
 }
+
+.mat-card {
+    font-family: 'Titillium Web', sans-serif !important; 
+}

@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core'
+import { Subject } from 'rxjs'
 
 @Injectable()
 export class ReleaseService {
     getReleases() {
-        return RELEASES
+        let subject = new Subject()
+        setTimeout(() => {subject.next(RELEASES); subject.complete(); }, 100)
+        return subject
     }
 
     getRelease(id:string) {

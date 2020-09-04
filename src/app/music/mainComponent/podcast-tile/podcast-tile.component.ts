@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PodcastService } from '../../podcasts/shared/podcast.service'
 
 @Component ({
     selector: 'podcast-tile',
@@ -7,10 +8,16 @@ import { Router } from '@angular/router';
     styleUrls: ['podcast-tile.component.css']
 })
 
-export class PodcastTileComponent {
+export class PodcastTileComponent implements OnInit {
+    
+    podcasts:any[]
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private podcastService: PodcastService) {
 
+    }
+
+    ngOnInit() {
+        this.podcasts = this.podcastService.getPodcasts()
     }
 
     viewPodcasts() {

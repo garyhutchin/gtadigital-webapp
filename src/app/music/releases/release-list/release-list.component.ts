@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReleaseService } from '../shared/releases.service';
+import { ActivatedRoute } from '@angular/router'
 
 @Component ({
     selector: 'release-list',
@@ -8,13 +9,13 @@ import { ReleaseService } from '../shared/releases.service';
 })
 
 export class ReleaseListComponent implements OnInit {
-    releases:any[]
+    releases:any
 
-    constructor(private releaseService: ReleaseService) {
+    constructor(private releaseService: ReleaseService, private route: ActivatedRoute) {
     }
 
     ngOnInit() {
-        this.releases = this.releaseService.getReleases()
+        this.releases = this.route.snapshot.data['releases']
     }
 
 }
