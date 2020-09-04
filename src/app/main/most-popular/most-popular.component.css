@@ -8,8 +8,7 @@
 
 @media (max-width: 1110px) {
     .most-pop-wrapper {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding: 0;
     }
 }
 
