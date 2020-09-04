@@ -27,12 +27,13 @@
     background-color: #0193B7;
     font-family: 'Titillium Web', sans-serif;
     margin-bottom: 0;
+    margin-left: 110px;
     font-weight: 700 !important; 
     text-align: center;
 
 }
 
-@media (max-width: 854px) {
+@media (max-width: 904px) {
     .navContainer {
         display: none;
     }

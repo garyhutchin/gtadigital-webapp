@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ReleaseService } from '../releases/shared/releases.service';
 import { ActivatedRoute } from '@angular/router';
-import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'you-may-like',
@@ -19,12 +18,13 @@ export class YouMayLikeComponent implements OnInit {
 
   url: string
 
-  constructor(private releaseService: ReleaseService, private activatedRoute: ActivatedRoute) {
+  constructor(private releaseService: ReleaseService, private activatedRoute: ActivatedRoute, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-    this.releases = this.releaseService.getReleases()
+    this.releases = this.route.snapshot.data['releaseDetails']
+
     this.activatedRoute.url.subscribe(activeUrl =>{
       this.url=window.location.pathname.split(";")[0].split('/music/releases/gta').pop();
     });

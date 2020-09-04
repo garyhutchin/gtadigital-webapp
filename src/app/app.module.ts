@@ -26,6 +26,7 @@ import { LatestNewsThumbnail } from './main/latest-news/latest-news-thumbnail/la
 import { YouMayLikeComponent } from './music/you-may-like/you-may-like.component';
 import { LiveStreamComponent } from './main/live-stream/live-stream.component';
 import { PodcastTileComponent } from './music/mainComponent/podcast-tile/podcast-tile.component';
+import { PodcastTileThumbnail } from './music/mainComponent/podcast-tile/podcast-tile-thumbnail/podcast-tile-thumbnail.component'
 import { LiveStreamArchiveComponent } from './music/mainComponent/live-stream-archive/live-stream-archive.component';
 import { ReleaseService } from './music/releases/shared/releases.service';
 import { ReleaseThumbnailComponent } from './music/releases/release-list/release-thumbnail/release-thumbnail.component';
@@ -35,6 +36,7 @@ import { PodcastThumbnailComponent } from './music/podcasts/podcasts-list/podcas
 import { PodcastService } from './music/podcasts/shared/podcast.service';
 import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-thumbnail/you-may-like-thumbnail.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
+import { ReleaseListResolver } from './music/releases/shared/release-list-resolver.service';
 
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
@@ -76,6 +78,7 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     YouMayLikeComponent,
     LiveStreamComponent,
     PodcastTileComponent,
+    PodcastTileThumbnail,
     LiveStreamArchiveComponent,
     PodcastsListComponent,
     PodcastsContainerComponent,
@@ -107,7 +110,8 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     ReleaseService,
     MostPopularService,
     LatestNewsService,
-    PodcastService
+    PodcastService,
+    ReleaseListResolver
   ],
 
   imports: [

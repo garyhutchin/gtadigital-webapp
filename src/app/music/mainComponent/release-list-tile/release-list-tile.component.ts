@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ReleaseService } from '../../releases/shared/releases.service';
 
 @Component ({
@@ -9,14 +9,14 @@ import { ReleaseService } from '../../releases/shared/releases.service';
 })
 
 export class ReleaseListTileComponent implements OnInit {
-    releases:any[]
+    releases:any
 
-    constructor(private router:Router, private releaseService: ReleaseService){
+    constructor(private router:Router, private releaseService: ReleaseService, private route: ActivatedRoute){
 
     }
 
     ngOnInit() {
-        this.releases = this.releaseService.getReleases()
+        this.releases = this.route.snapshot.data['musicReleases']
     }
 
     viewReleases() {

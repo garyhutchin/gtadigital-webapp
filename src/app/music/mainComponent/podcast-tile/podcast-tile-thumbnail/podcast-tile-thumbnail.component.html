@@ -1,0 +1,9 @@
+<div class="routerLink" [routerLink]="['/music/podcasts', podcast.id]">
+    <img [src]="podcast.thumbnailUrl" [alt]="podcast.title" class="artwork">
+    <h3 class="cardHeader">{{podcast.title}}</h3>
+    <div class="podcastDetails">
+        <p class="catNo">{{podcast.catNo}}</p>
+        <h3 class="title">{{podcast.title}}</h3>
+        <p class="artistName">{{podcast.artistName}}</p>
+    </div>
+</div>
