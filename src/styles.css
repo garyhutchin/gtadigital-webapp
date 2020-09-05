@@ -8,7 +8,7 @@
   .wrapper {
     padding-top: 0;
     margin: auto;
-    max-width: 1440px;
+    max-width: 100%;
     padding-right: 0;
     padding-left: 0;
     box-sizing: unset;
@@ -64,7 +64,6 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 65px;
 }
 
 h1 {
@@ -81,7 +80,6 @@ h2 {
 
 .pageSpan {
   width: 100%;
-  padding-bottom: 5px;
 }
 
 .pageElement {
@@ -97,23 +95,18 @@ h2 {
 }
 
 .viewAll-button {
-  padding: 10px;
-  background-color: #0193b7;
-  box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.3);
-  border: none;
-  border-radius: 5px;
-  color: white;
+  padding: 0 0 0 10px;
+  border-left: 3px solid #B72501;
+  color: rgb(65, 65, 65);
   text-decoration: none;
   text-align: center;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 540;
   cursor: pointer;
   transition: background-color 0.2s ease;
   outline: none;
-}
-
-.viewAll-button:hover {
-  background-color: #00a1c9;  
+  transition: box-shadow 0.2s ease;
+  letter-spacing: 2px;
 }
 
 .buyNow {

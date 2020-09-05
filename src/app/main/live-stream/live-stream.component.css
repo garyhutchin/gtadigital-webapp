@@ -5,7 +5,7 @@
     justify-content: space-between !important;
     background-color: white;
     margin: 10px 20px 20px 20px;
-    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    box-shadow: 0 1px 6px 0 hsla(0, 0%, 0%, 0.3);
 }
 
 @media (max-width: 1110px) {
@@ -64,6 +64,7 @@
 .youTube-vid-text {
     flex-basis: 59%;
     margin: 0px;
+    letter-spacing: 0.5px;
     
 }
 
@@ -75,5 +76,6 @@
 
     .youTube-vid-text p {
         margin-top: 0px;
+
     }
 }

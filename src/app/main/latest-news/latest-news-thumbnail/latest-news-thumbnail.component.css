@@ -20,4 +20,19 @@
     padding: 10px;
     margin-bottom: 0;
     margin-top: 0;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+
+.internalUrl {
+    padding: 0px 0 10px 10px !important;
+}
+
+.internalUrl a {
+    color: #B72501;
+    display: inline-block;
+    padding-top: 0px !important;
+    height: 15px;
+    cursor: pointer !important;
+    letter-spacing: 2px;
 }

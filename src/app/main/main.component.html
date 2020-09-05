@@ -1,33 +1,37 @@
-<div class="mainComponentContainer">
-    <div class="pageContent">
-        <div class="pageHeader">
+<div class="pageHeroWrapper">
+    <div class="heroContainer">
+        <div class="heroText">
+            <h1>Underground Techno</h1>
+            <p>GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has expanded, adding a podcast series and more recently a monthly show on Fnoob Techno Radio</p>
+
+            <span class="listenNow-button" (click)="listenNow()">Listen Now</span>
+
         </div>
+        <div class="heroLogo">
+            <img src="../../assets/images/logo.png">
+        </div>
+    </div>
+</div>
+<div class="componentContainer">
+    <div class="pageContent">
         <div class="pageSpan">
             <div class="pageElement">
                 <most-popular></most-popular>
             </div>
         </div>
         <div class="pageSpan">
+            <span class="borderTop"></span>
             <div class="secondaryHeader">
-                <div class="headerIcon">
-                    <img src="../../assets/images/small-images/icons/announcement-icon.png">
-                </div>
-                <div class="headerItem">
-                    <h2>Latest News</h2>
-                </div>
+                <h3>Latest News</h3>
             </div>
             <div class="pageElement">
                 <latest-news></latest-news>
             </div>
         </div>
         <div class="pageSpan">
+            <span class="borderTop"></span>
             <div class="secondaryHeader">
-                <div class="headerIcon">
-                    <img src="../../assets/images/small-images/icons/youtubeIcon.png">
-                </div>
-                <div class="headerItem">
-                    <h2>GTA Digital Live</h2>
-                </div>
+                <h3>GTA Digital Live</h3>
             </div>
             <div class="pageElement">
                 <live-stream></live-stream>

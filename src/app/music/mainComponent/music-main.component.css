@@ -1,3 +1,8 @@
+.componentContainer {
+    max-width: 1440px;
+    margin: auto;
+}
+
 .pageHeader {
     max-width: 1440px;
     min-height: 250px;
@@ -5,7 +10,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0px 18px 0px 20px;
+    margin: 70px 18px 30px 20px;
     background-image: url(../../../assets/images/homebanner2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -37,6 +42,7 @@ h2 {
     color: white;
     padding-left: 10px;
     font-size: 30px;
+    letter-spacing: 2px;
 }
 
 .secondaryHeader {
@@ -49,17 +55,29 @@ h2 {
     /*border-bottom: #0193B7 solid 3px;*/
 }
 
+.secondaryHeader {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px 20px 10px 20px;
+}
+
 h3 {
+    color:  rgb(65, 65, 65);
+    padding-right: 10px;
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+.borderTop {
+    display: block;
+    width: 25px;
+    background-color: #0193b7;
+    padding: 2px;
     margin-left: 20px;
-    padding-top: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.headerIcon {
-    margin-right: 10px;
-}
-
-.headerIcon img {
-    height: 40px;
+    margin-bottom: 0px;
 }
