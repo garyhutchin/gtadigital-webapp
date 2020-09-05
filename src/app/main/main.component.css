@@ -24,12 +24,12 @@
 .heroText h1 {
     font-size: 50px;
     margin-left: 200px;
+    line-height: 50px;
 }
 
 .heroText p {
     line-height: 28px;
-    margin-left: 200px;
-    margin-bottom: 25px;
+    margin: 25px 0 25px 200px;
 }
 
 .listenNow-button {
