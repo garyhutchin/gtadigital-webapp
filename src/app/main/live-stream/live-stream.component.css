@@ -64,6 +64,7 @@
 .youTube-vid-text {
     flex-basis: 59%;
     margin: 0px;
+    letter-spacing: 0.5px;
     
 }
 
@@ -75,5 +76,6 @@
 
     .youTube-vid-text p {
         margin-top: 0px;
+
     }
 }

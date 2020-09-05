@@ -106,6 +106,7 @@ h2 {
   transition: background-color 0.2s ease;
   outline: none;
   transition: box-shadow 0.2s ease;
+  letter-spacing: 2px;
 }
 
 .buyNow {

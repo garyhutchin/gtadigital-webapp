@@ -1,3 +1,8 @@
+.componentContainer {
+    max-width: 1440px;
+    margin: auto;
+}
+
 .pageHeader {
     max-width: 1440px;
     min-height: 250px;
@@ -5,14 +10,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0px 18px 0px 20px;
+    margin: 70px 18px 30px 20px;
     background-image: url(../../../assets/images/homebanner2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: -1;
-    margin-bottom: 30px;
     /*border-bottom: #0193B7 solid 3px;*/
 }
 
@@ -38,6 +42,7 @@ h2 {
     color: white;
     padding-left: 10px;
     font-size: 30px;
+    letter-spacing: 2px;
 }
 
 .secondaryHeader {
@@ -66,4 +71,5 @@ h3 {
     padding-right: 10px;
     margin: 0;
     font-size: 22px;
+    letter-spacing: 2px;
 }
