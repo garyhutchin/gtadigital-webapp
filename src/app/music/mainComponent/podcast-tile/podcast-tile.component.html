@@ -2,11 +2,11 @@
 
     <div class="podcastListContainer">
 
-        <div class="podcastCard" *ngFor="let podcast of podcasts | slice:0:4; let i=index">
+        <div class="podcastCardElement" *ngFor="let podcast of podcasts | slice:0:4; let i=index">
             <podcast-tile-thumbnail [podcast]="podcast"></podcast-tile-thumbnail>
         </div>
         
-        <span><button type="button" class="viewAll-button" (click)="viewPodcasts()">View All Podcasts</button></span>
+        <span class="viewAll-button" (click)="viewPodcasts()">View All Podcasts</span>
     </div>
 
 </div>

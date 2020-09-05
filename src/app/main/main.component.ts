@@ -21,4 +21,8 @@ export class MainComponent implements OnInit {
         });
     }
 
+    listenNow() {
+        this.router.navigate(['music'])
+    }
+
 }

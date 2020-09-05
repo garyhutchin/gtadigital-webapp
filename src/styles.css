@@ -8,7 +8,7 @@
   .wrapper {
     padding-top: 0;
     margin: auto;
-    max-width: 1440px;
+    max-width: 100%;
     padding-right: 0;
     padding-left: 0;
     box-sizing: unset;
@@ -64,7 +64,6 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 65px;
 }
 
 h1 {
@@ -97,7 +96,7 @@ h2 {
 
 .viewAll-button {
   padding: 0 0 0 10px;
-  border-left: 3px solid #0193b7;
+  border-left: 3px solid #B72501;
   color: rgb(65, 65, 65);
   text-decoration: none;
   text-align: center;
@@ -112,7 +111,7 @@ h2 {
 .buyNow {
   padding: 5px;
   margin-left: 5px;
-  background-color: ;
+  background-color: #0193b7;
   box-shadow: 0 3px 6px 0 hsla(0, 0%, 0%, 0.3);
   border: none;
   border-radius: 5px;
