@@ -1,6 +1,6 @@
 .release-list-tile-wrapper {
     background-color: rgb(240, 240, 240) !important;
-    padding: 10px 0.25% 10px 20px;
+    padding: 0 0.25% 30px 20px;
 }
 
 @media (max-width: 1110px) {
@@ -24,7 +24,7 @@
 
 .releaseCardElement {
     flex-basis: 24%;
-    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    box-shadow: 0 1px 6px 0 hsla(0, 0%, 0%, 0.3);
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;

@@ -3,6 +3,8 @@
 <div class="latest-news-details">
     <p>{{newsItem.info}}
         <a *ngIf="newsItem?.externalUrl" [href]="newsItem.externalUrl" target="blank">{{newsItem.externalUrlTitle}} <img class="external-link" src="../../../../assets/images/small-images/icons/external-link.png"></a>
-        <a *ngIf="newsItem?.internalUrl" [href]="newsItem.internalUrl"><br>{{newsItem.internalUrlTitle}}</a>
     </p>
+    <div class="internalUrl">     
+        <a *ngIf="newsItem?.internalUrl" [href]="newsItem.internalUrl" class="linkText">{{newsItem.internalUrlTitle}}  <span class="greaterThan">&gt;</span></a>
+    </div>
 </div>
