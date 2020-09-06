@@ -38,6 +38,7 @@ import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 import { ReleaseListResolver } from './music/releases/shared/release-list-resolver.service';
 
+import { GTA20Component } from './music/releases/release-details/gta020/gta020.component';
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
 import { GTA17Component } from './music/releases/release-details/gta017/gta017.component';
@@ -85,6 +86,7 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     PodcastThumbnailComponent,
     YouMayLikeThumbnailComponent,
     PageNotFoundComponent,
+    GTA20Component,
     GTA19Component,
     GTA18Component,
     GTA17Component,

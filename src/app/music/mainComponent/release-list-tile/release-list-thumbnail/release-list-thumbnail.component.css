@@ -1,6 +1,8 @@
 .releaseDetails {
     text-align: left !important;
     padding: 10px;
+    letter-spacing: 0.05rem;
+    font-size: 1.4rem;
 }
 
 .cardHeader {
@@ -11,6 +13,7 @@
     color: white;
     font-weight: 500;
     background-color: #0193b7;
+    font-size: 1.8rem;
 }
 
 .title {
