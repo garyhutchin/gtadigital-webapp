@@ -5,6 +5,6 @@
         <a *ngIf="newsItem?.externalUrl" [href]="newsItem.externalUrl" target="blank">{{newsItem.externalUrlTitle}} <img class="external-link" src="../../../../assets/images/small-images/icons/external-link.png"></a>
     </p>
     <div class="internalUrl">     
-        <a *ngIf="newsItem?.internalUrl" [href]="newsItem.internalUrl" class="linkText">{{newsItem.internalUrlTitle}}</a>
+        <a *ngIf="newsItem?.internalUrl" [href]="newsItem.internalUrl" class="linkText">&#8594; {{newsItem.internalUrlTitle}}</a>
     </div>
 </div>

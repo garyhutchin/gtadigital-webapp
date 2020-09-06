@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router'
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
+import { ReleaseService } from '../releases/shared/releases.service';
 
 @Component ({
     selector: 'music-main',
@@ -9,7 +10,9 @@ import { Router, NavigationEnd } from '@angular/router'
 
 export class MusicMainComponent implements OnInit {
 
-    constructor(private router: Router) {
+    releases:any
+
+    constructor(private router: Router, private route: ActivatedRoute, private releaseService: ReleaseService) {
         
     }
 
@@ -20,6 +23,8 @@ export class MusicMainComponent implements OnInit {
             }
             window.scrollTo(0, 0)
         });
+
+        this.releases = this.route.snapshot.data['musicReleases']
     }
 
 }

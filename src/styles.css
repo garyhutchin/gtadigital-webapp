@@ -26,6 +26,7 @@ body {
   color: rgb(65, 65, 65);
   background-color: rgb(240, 240, 240);
   overflow-y: scroll;
+  font-size: 1.4rem;
 }
 
 @media (max-width:801px) {
@@ -113,7 +114,7 @@ a:active a:focus {
 
 .borderTop {
   display: block;
-  width: 4rem;
+  width: 3rem;
   background-color: #0193b7;
   padding: 0.2rem;
   margin-left: 1.3%;
