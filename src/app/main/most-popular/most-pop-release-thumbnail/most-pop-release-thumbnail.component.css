@@ -4,31 +4,33 @@
 
 .releaseDetails {
     text-align: left !important;
-    padding: 10px;
-    letter-spacing: 0.5px;
+    padding: 1rem;
+    letter-spacing: 0.05rem;
+    font-size: 1.6rem;
 }
 
 .cardHeader {
     margin-top: 0 !important;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     color: white;
     font-weight: 500;
     background-color: #0193b7;
+    font-size: 1.8rem;
 }
 
 .title {
-    margin-top: 1px;
-    margin-bottom: 1px;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
     color: rgb(65, 65, 65);
     font-weight: 800;
 }
 
 .catNo {
-    margin-bottom: 1px;
+    margin-bottom: 0.1rem;
     color: rgb(65, 65, 65);
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .artistName {

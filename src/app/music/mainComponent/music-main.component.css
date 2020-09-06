@@ -72,12 +72,3 @@ h3 {
     letter-spacing: 2px;
     line-height: 22px;
 }
-
-.borderTop {
-    display: block;
-    width: 25px;
-    background-color: #0193b7;
-    padding: 2px;
-    margin-left: 20px;
-    margin-bottom: 0px;
-}
