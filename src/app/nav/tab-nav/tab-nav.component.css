@@ -33,7 +33,7 @@
 .tabNavItem1 {
     flex-basis: 10%;
     cursor: pointer;
-    padding-left: 35px;
+    padding-left: 0.8rem;
 }
 
 .tabNavItem2 {
@@ -54,7 +54,7 @@
 
 .tabNav-MenuItems ul {
     margin-top: 0;
-    padding: 0px 0px 15px 35px;
+    padding: 0px 0px 1.5rem 1rem;
 }
 
 .tabNav-MenuItems li {
