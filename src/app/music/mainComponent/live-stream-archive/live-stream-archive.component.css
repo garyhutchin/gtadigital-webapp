@@ -1,13 +1,62 @@
-.liveStreamContainer {
+.live-stream-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between !important;
-    text-align: center;
+    background-color: white;
+    margin: 1rem 2rem 2rem 2rem;
+    box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);
 }
 
-.videoItem {
-    flex-basis: 46%;
-    margin-left: 20px;
-    margin-right: 20px;;
+@media (max-width: 1110px) {
+    .live-stream-wrapper {
+        margin: 1rem;
+    }
+}
+
+.youTube-vid-desktop {
+    flex-basis: 30%;
+    margin: 0;
+    display: block;
+    max-height: 31.5rem;
+
+}
+
+.youTubeEmbed {
+    width: 56rem; 
+    height: 31.5rem;
+}
+
+@media (max-width: 1422px) {
+    .youTube-vid-desktop {
+        flex-basis: 100%;
+    }
+
+    .youTubeEmbed {
+        width: 100%;
+    }
+
+    .youTube-vid-text {
+        padding: 0 0 1rem 1rem;
+    }
+}
+
+.youTube-vid-text {
+    flex-basis: 59%;
+    margin: 0;
+    letter-spacing: 0.05rem;
+    font-size: 1.4rem; 
+    font-weight: 500;   
+}
+
+@media (max-width: 801px) {
+    .youTube-vid-text {
+        flex-basis: 100%;
+        padding: 1rem;
+    }
+
+    .youTube-vid-text p {
+        margin-top: 0;
+
+    }
 }

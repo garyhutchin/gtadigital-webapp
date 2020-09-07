@@ -5,7 +5,7 @@ import { ReleaseService } from '../releases/shared/releases.service';
 @Component ({
     selector: 'music-main',
     templateUrl: 'music-main.component.html',
-    styleUrls: ['music-main.component.css']
+    styleUrls: ['../../css/main-structure.component.css']
 })
 
 export class MusicMainComponent implements OnInit {

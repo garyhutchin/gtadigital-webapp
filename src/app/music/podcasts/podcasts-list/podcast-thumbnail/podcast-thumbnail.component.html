@@ -1,9 +1,9 @@
 <div class="routerLink" [routerLink]="['/music/podcasts', podcast.id]">
     <img [src]="podcast.thumbnailUrl" [alt]="podcast.title" class="artwork">
     <h3 class="cardHeader">{{podcast.title}}</h3>
-    <div class="releaseDetails">
-        <p class="details">{{podcast.artistName}}</p>
-        <p class="details">Style: {{podcast.style}}</p>
-        <p class="details">Duration: {{podcast.duration}}</p>
+    <div class="cardDetails">
+        <p class="artistName">Mixed by: {{podcast.artistName}}</p>
+        <p class="musicStyle">Style: {{podcast.style}}</p>
+        <p class="duration">Duration: {{podcast.duration}}</p>
     </div>
 </div>
