@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router'
 @Component ({
     selector: 'release-list',
     templateUrl: 'release-list.component.html',
-    styleUrls: ['release-list.component.css']
+    styleUrls: ['../../../css/card-structure.component.css']
 })
 
 export class ReleaseListComponent implements OnInit {

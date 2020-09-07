@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 
 @Component ({
     selector: 'release-container',
     templateUrl: 'release-container.component.html',
-    styleUrls: ['release-container.component.css']
+    styleUrls: ['../../css/main-structure.component.css']
 })
 
-export class ReleaseContainerComponent {
+export class ReleaseContainerComponent implements OnInit {
+
+    releases:any
+
+    constructor(private route: ActivatedRoute) {
+        
+    }
+
+    ngOnInit() {
+        this.releases = this.route.snapshot.data['releases']
+    }
 
 }

@@ -1,12 +1,22 @@
+<div class="pageHeroWrapper">
+    <div class="heroContainer">
+        <div class="heroText">
+            <h1>Releases</h1>
+            <p>Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...</p>
+
+            <span class="listenNow-button" *ngFor="let release of releases | slice:0:1; let i=index" [routerLink]="['/music/releases', release.id]">Check out the latest release</span>
+
+        </div>
+        
+        <div class="heroLogo" *ngFor="let release of releases | slice:0:1; let i=index">
+            <img [src]="release.artwork" [alt]="release.title">
+        </div>
+    </div>
+</div>
+
 <div class="componentContainer">
 
     <div class="componentContent">
-
-        <div class="pageHeader">
-            <span class="pageHeader-text">
-                <h2>Releases</h2>
-            </span>
-        </div>
 
         <release-list></release-list>
         
