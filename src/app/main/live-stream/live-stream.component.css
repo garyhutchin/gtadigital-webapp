@@ -22,12 +22,6 @@
 
 }
 
-@media (max-width: 801px) {
-    .youTube-vid-desktop {
-        display: none;
-    }
-}
-
 .youTubeEmbed {
     width: 56rem; 
     height: 31.5rem;
@@ -44,20 +38,6 @@
 
     .youTube-vid-text {
         padding: 0 0 1rem 1rem;
-    }
-}
-
-.youTube-vid-mobile {
-    display: none;
-    flex-basis: 100%;
-    margin: 0px
-}
-
-@media (max-width: 801px) {
-    .youTube-vid-mobile {
-        display: block;
-        flex-basis: 100%;
-        margin: 0;
     }
 }
 
