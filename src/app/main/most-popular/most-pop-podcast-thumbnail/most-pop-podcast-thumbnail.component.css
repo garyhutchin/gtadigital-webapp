@@ -12,14 +12,15 @@
 
 .cardHeader {
     margin-top: 0 !important;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     padding-bottom: 1rem;
     padding-top: 1rem;
     color: white;
     font-weight: 500;
     background-color: #0193b7;
+    text-align: left;
+    padding-left: 1rem;
     font-size: 1.8rem;
-    font-weight: 600;
 }
 
 .title {

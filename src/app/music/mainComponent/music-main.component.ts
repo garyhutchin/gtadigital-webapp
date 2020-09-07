@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
-import { ReleaseService } from '../releases/shared/releases.service';
 
 @Component ({
     selector: 'music-main',
@@ -12,7 +11,7 @@ export class MusicMainComponent implements OnInit {
 
     releases:any
 
-    constructor(private router: Router, private route: ActivatedRoute, private releaseService: ReleaseService) {
+    constructor(private router: Router, private route: ActivatedRoute) {
         
     }
 

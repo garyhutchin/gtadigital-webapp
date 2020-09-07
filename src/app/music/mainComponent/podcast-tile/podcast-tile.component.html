@@ -1,8 +1,8 @@
-<div class="podcast-list-tile-wrapper">
+<div class="list-wrapper">
 
-    <div class="podcastListContainer">
+    <div class="listContainer">
 
-        <div class="podcastCardElement" *ngFor="let podcast of podcasts | slice:0:4; let i=index">
+        <div class="cardElement" *ngFor="let podcast of podcasts | slice:0:4; let i=index">
             <podcast-tile-thumbnail [podcast]="podcast"></podcast-tile-thumbnail>
         </div>
         

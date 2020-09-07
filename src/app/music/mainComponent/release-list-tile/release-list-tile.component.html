@@ -1,8 +1,8 @@
-<div class="release-list-tile-wrapper">
+<div class="list-wrapper">
 
-    <div class="releaseListContainer">
+    <div class="listContainer">
 
-        <div class="releaseCardElement" *ngFor="let release of releases | slice:0:4; let i=index">
+        <div class="cardElement" *ngFor="let release of releases | slice:0:4; let i=index">
             <release-list-thumbnail [release]="release"></release-list-thumbnail>
         </div>
         
