@@ -65,7 +65,8 @@
     flex-basis: 59%;
     margin: 0;
     letter-spacing: 0.05rem;
-    font-size: 1.4rem;    
+    font-size: 1.4rem; 
+    font-weight: 500;   
 }
 
 @media (max-width: 801px) {

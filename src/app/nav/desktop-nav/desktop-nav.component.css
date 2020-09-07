@@ -78,6 +78,10 @@
     display: inline;
 }
 
+.active {
+    font-weight: 700;
+}
+
 .socialMediaIcons ul {
     text-align: right;
     vertical-align: top;
@@ -91,8 +95,8 @@
 }
 
 .socialMediaIcons img {
-    height: 40px;
-    padding: 5px;
+    height: 35px;
+    padding: 0.8rem;
     opacity: 1;
     transition: opacity 0.2s ease;
     box-sizing: border-box !important;
