@@ -5,7 +5,7 @@ import { MostPopularService } from '../shared/most-pop.service';
 @Component ({
     selector: 'most-popular',
     templateUrl: 'most-popular.component.html',
-    styleUrls: ['most-popular.component.css']
+    styleUrls: ['../../css/card-structure.component.css']
 })
 
 export class MostPopularComponent implements OnInit {

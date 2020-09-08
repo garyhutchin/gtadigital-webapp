@@ -1,5 +1,7 @@
-<div class="latest-news-wrapper">
-    <div class="cardElement" *ngFor="let newsItem of newsItems | slice:0:4; let i=index">
-        <latest-news-thumbnail [newsItem]="newsItem"></latest-news-thumbnail>
+<div class="list-wrapper">
+    <div class="listContainer">
+        <div class="cardElement" *ngFor="let newsItem of newsItems | slice:0:4; let i=index">
+            <latest-news-thumbnail [newsItem]="newsItem"></latest-news-thumbnail>
+        </div>
     </div>
 </div>

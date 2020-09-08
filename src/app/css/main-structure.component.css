@@ -111,13 +111,29 @@
     }
 }
 
+.componentContainer-white {
+    background-color: white;
+}
+
+.componentContent-white {
+    max-width: 144rem;
+    margin: auto;
+    padding: 4rem 0 2rem 0;
+}
+
+@media (max-width: 638px) {
+    .componentContent-white {
+        margin: 1rem auto auto auto !important;
+    }
+}
+
 .secondaryHeader {
     max-width: 144rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0 1% 0 1.3%;
+    margin: 0 1% 0.5rem 1.3%;
 }
 
 h3 {

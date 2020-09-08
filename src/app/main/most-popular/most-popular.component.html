@@ -1,10 +1,12 @@
-<div class="most-pop-wrapper">
-
-    <div class="cardElement" *ngFor="let releaseItem of releaseItems">
-        <most-pop-release-thumbnail [releaseItem]="releaseItem"></most-pop-release-thumbnail>
-    </div>
-    <div class="cardElement" *ngFor="let podcastItem of podcastItems">
-        <most-pop-podcast-thumbnail [podcastItem]="podcastItem"></most-pop-podcast-thumbnail>
+<div class="list-wrapper">
+    
+    <div class="listContainer">
+        <div class="cardElement" *ngFor="let releaseItem of releaseItems">
+            <most-pop-release-thumbnail [releaseItem]="releaseItem"></most-pop-release-thumbnail>
+        </div>
+        <div class="cardElement" *ngFor="let podcastItem of podcastItems">
+            <most-pop-podcast-thumbnail [podcastItem]="podcastItem"></most-pop-podcast-thumbnail>
+        </div>
     </div>
 
 </div>

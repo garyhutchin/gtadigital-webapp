@@ -10,6 +10,27 @@
     }
 }
 
+@media (max-width: 801px) {
+    .list-wrapper {
+        overflow-x: scroll !important;
+        max-width: unset !important;
+        min-height: 210px;
+    }
+}
+
+@media (max-width: 801px) {
+    .list-wrapper::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+@media (max-width: 801px) {
+    .listContainer {
+        flex-wrap: nowrap !important;
+        padding-right: 1rem;
+    }
+}
+
 .listContainer {
     display: flex;
     flex-direction: row;
@@ -45,9 +66,17 @@
     }
 }
 
-@media (max-width: 801px) {
+/*@media (max-width: 801px) {
     .cardElement {
         flex-basis: 100%;
         margin-bottom: 10px;
+    }
+}*/
+
+@media (max-width: 801px) {
+    .cardElement {
+        flex-basis: unset;
+        margin-bottom: 10px;
+        min-width: 34rem;
     }
 }
