@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { appRoutes } from './routes';
 import { DesktopNavComponent } from './nav/desktop-nav/desktop-nav.component';
 import { TabNavComponent } from './nav/tab-nav/tab-nav.component';
+import { BottomNavComponent } from './nav/bottom-mob-nav/bottom-mob-nav.component'
 import { MostPopularComponent } from './main/most-popular/most-popular.component';
 import { MostPopularReleaseThumbnail } from './main/most-popular/most-pop-release-thumbnail/most-pop-release-thumbnail.component';
 import { MostPopularPodcastThumbnail } from './main/most-popular/most-pop-podcast-thumbnail/most-pop-podcast-thumbnail.component';
@@ -65,6 +66,7 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     MainComponent,
     DesktopNavComponent,
     TabNavComponent,
+    BottomNavComponent,
     MostPopularComponent,
     MostPopularReleaseThumbnail,
     MostPopularPodcastThumbnail,
