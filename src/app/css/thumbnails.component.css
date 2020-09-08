@@ -48,6 +48,11 @@
     display: block;
 }
 
+img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .musicStyle {
     margin-bottom: 0.1rem;
     color: rgb(121, 121, 121);

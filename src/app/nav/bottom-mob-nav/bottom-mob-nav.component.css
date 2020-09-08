@@ -1,0 +1,56 @@
+.bottom-nav-wrapper {
+    width: 100%;
+    background-color: #0193B7;
+    bottom: 0;
+    position: fixed;
+}
+
+@media (min-width: 801px) {
+    .bottom-nav-wrapper {
+        display: none;
+    }
+}
+
+.navLinks {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.left {
+    color: white;
+    background-color: #0193B7;
+    border: none;
+    font-size: 2rem;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.right {
+    color: white;
+    background-color: #0193B7;
+    border: none;
+    font-size: 2rem;
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.left:active {
+    outline: 0;
+}
+
+.right:active {
+    outline: 0;
+}
+
+.left:focus{
+    outline: 0;
+}
+
+.right:focus {
+    outline: 0;
+}
