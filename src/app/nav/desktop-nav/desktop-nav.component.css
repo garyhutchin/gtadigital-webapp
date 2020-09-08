@@ -28,12 +28,12 @@
     background-color: #0193B7;
     font-family: 'Titillium Web', sans-serif;
     margin-bottom: 0;
-    margin-left: 110px; 
+    margin-left: 80px; 
     text-align: center;
 
 }
 
-@media (max-width: 904px) {
+@media (max-width: 849px) {
     .navContainer {
         display: none;
     }
@@ -107,6 +107,6 @@
 }
 
 .navLogo {
-    height: 45px;
+    height: 55px;
     cursor: pointer;
 }

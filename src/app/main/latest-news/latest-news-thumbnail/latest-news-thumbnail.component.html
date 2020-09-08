@@ -1,6 +1,6 @@
-<img [src]="newsItem.imageUrl" class="latestNewsImg">
+<img [src]="newsItem.imageUrl" class="artwork">
 <h3 class="cardHeader">{{newsItem.title}}</h3>
-<div class="latest-news-details">
+<div class="cardDetails">
     <p>{{newsItem.info}}
         <a *ngIf="newsItem?.externalUrl" [href]="newsItem.externalUrl" target="blank">{{newsItem.externalUrlTitle}} <img class="external-link" src="../../../../assets/images/small-images/icons/external-link.png"></a>
     </p>

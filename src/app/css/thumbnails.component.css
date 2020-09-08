@@ -2,14 +2,6 @@
     outline: 0;
 }
 
-.cardDetails {
-    text-align: left !important;
-    padding: 1rem;
-    letter-spacing: 0.05rem;
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-
 .cardHeader {
     margin-top: 0 !important;
     margin-bottom: 0px;
@@ -21,6 +13,18 @@
     text-align: left;
     padding-left: 1rem;
     font-size: 1.8rem;
+}
+
+.cardDetails {
+    text-align: left !important;
+    padding: 1rem;
+    letter-spacing: 0.05rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.cardDetails p {
+    margin: 0;
 }
 
 .title {
@@ -63,4 +67,19 @@ img {
     margin-bottom: 0.1rem;
     color: rgb(121, 121, 121);
     margin-top: 0;
+}
+
+.internalUrl {
+    padding: 0.9rem 0 1rem 0;
+}
+
+.internalUrl a {
+    color: #B72501;
+    display: inline-block;
+    padding-top: 0;
+    height: 1.5rem;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
