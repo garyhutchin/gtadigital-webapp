@@ -60,6 +60,7 @@ import { GTA4Component } from './music/releases/release-details/gta004/gta004.co
 import { GTA3Component } from './music/releases/release-details/gta003/gta003.component';
 import { GTA2Component } from './music/releases/release-details/gta002/gta002.component';
 import { GTA1Component } from './music/releases/release-details/gta001/gta001.component';
+import { Podcast30Component } from './music/podcasts/podcast-details/podcast30/podcast30.component';
 
 @NgModule({
   declarations: [
@@ -109,7 +110,8 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     GTA4Component,
     GTA3Component,
     GTA2Component,
-    GTA1Component
+    GTA1Component,
+    Podcast30Component,
   ],
 
   providers: [

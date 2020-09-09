@@ -5,6 +5,10 @@ export class PodcastService {
     getPodcasts() {
         return PODCASTS
     }
+
+    getPodcast(id:string) {
+        return PODCASTS.find(podcast => podcast.id === id)
+    }
 }
 
 const PODCASTS = [
@@ -13,9 +17,10 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #30',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast30.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast30.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast30.jpg',
         style: 'Hard Techno',
-        duration: '1hr'
+        duration: '1hr',
+        tracklist: '<li>Artist Name: Track Title</li><li>Artist Name: Track Title</li><li>Artist Name: Track Title</li> <li>Artist Name: Track Title</li><li>Artist Name: Track Title</li> <li>Artist Name: Track Title</li><li>Artist Name: Track Title</li> <li>Artist Name: Track Title</li><li>Artist Name: Track Title</li> <li>Artist Name: Track Title</li><li>Artist Name: Track Title</li> <li>Artist Name: Track Title</li>'
     },
     {
         id: 'podcast-29',
