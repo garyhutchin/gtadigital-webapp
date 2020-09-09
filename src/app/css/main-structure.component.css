@@ -70,15 +70,14 @@
 .listenNow-button {
     padding: 0 0 0 1rem;
     border-left: 0.3rem solid #0193b7;
+    background-color: white;
     color: rgb(65, 65, 65);
     text-decoration: none;
     text-align: center;
     font-size: 1.7rem;
     font-weight: 540;
     cursor: pointer !important;
-    transition: background-color 0.2s ease;
     outline: none;
-    transition: box-shadow 0.2s ease;
     margin-left: 31%;
     letter-spacing: 0.2rem;
 }
@@ -98,6 +97,10 @@
     width: 30rem;
     margin-left: 20%;
     margin-bottom: 1.5rem;
+}
+
+img {
+    border-radius: 0.5rem !important;
 }
 
 .componentContainer {
@@ -146,6 +149,34 @@ h3 {
     font-weight: 600;
 }
 
+.aboutSection {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: 0 1.3% 5rem 2rem;
+    padding: 1.7rem;
+}
+
 .pageText {
-    padding: 1rem 0.25% 5rem 2rem;
+    flex-basis: 70%;
+    max-width: 100%;
+    margin: 2.5rem 1.3% 2.5rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+
+}
+
+.pageText p {
+    padding: 0 1.7rem 1.7rem 1.7rem;
+    margin: 0;
+}
+
+.photo {
+    flex-basis: 20%;
+    padding-top: 1.5rem;
+    padding-left: 2rem;
 }

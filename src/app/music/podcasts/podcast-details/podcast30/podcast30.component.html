@@ -1,0 +1,29 @@
+<div class="podcastDetailsWrapper">
+    <div class="podcastDetailsContainer">
+        <div class="image">
+            <img class="artwork" [src]="podcast.artwork">
+        </div>
+        <div class="text">
+            <h3>{{podcast.catNo}} {{podcast.title}}</h3>
+            <p class="releaseDate">Released: {{podcast.releaseDate}}</p>
+            <p>{{podcast.releaseInfoP1}}</p>
+            <p>{{podcast.releaseInfoP2}}<br>{{podcast.releaseInfoP3}}<br>{{podcast.releaseInfoP4}}<br>{{podcast.releaseInfoP5}}</p>
+            <div class="player">
+                <iframe scrolling="no" id="hearthis_at_track_5049644" width="100%" height="130" src="https://app.hearthis.at/embed/5049644/transparent/?hcolor=333333&color=0193b7&style=1&block_size=2&block_space=1&background=0&waveform=0&cover=1&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"></iframe>
+            </div>
+            <span class="tracklist-button" (click)="OpenModal()">TrackList</span>
+        </div>
+    </div>
+</div>
+
+<div class="tracklist-wrapper" (click)="OpenModal()" *ngIf="!isClosed">
+    <div class="tracklist-content">
+        <ul [innerHTML]="podcast.tracklist">
+        </ul>
+        <span class="tracklist-button" (click)="OpenModal()">Close</span>
+    </div>
+</div>
+
+<div class="youMayLike">
+    <you-may-like></you-may-like>
+</div>

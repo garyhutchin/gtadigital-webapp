@@ -1,0 +1,82 @@
+.podcastDetailsWrapper {
+    max-width: 144rem;
+    margin: 80px auto 5px auto;
+}
+
+.podcastDetailsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    margin: 0 2rem 5rem 2rem;
+}
+
+.image {
+    flex-basis: 30%;
+}
+
+.text {
+    flex-basis: 60%;
+    margin-left: 20px;
+}
+
+.artwork {
+    width: 500px;
+    display: block;
+}
+
+p {
+    margin: 10px;
+    letter-spacing: 0.05rem;
+    font-size: 1.4rem;
+}
+
+h3 {
+    margin: 10px;
+    font-size: 1.8rem;
+}
+
+.releaseDate {
+    color: rgb(121, 121, 121);
+}
+
+.tracklist-wrapper {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #33333346;
+    z-index: 2;
+
+}
+
+.tracklist-content {
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    margin: 25% auto 25% auto;
+    padding: 2rem;
+}
+
+.tracklist-content ul {
+    list-style-type: none;
+}
+
+.tracklist-button {
+    margin: 3rem 0 3rem 0;
+    padding: 0 0 0 1rem;
+    border-left: 0.3rem solid #0193B7;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 540;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+    letter-spacing: 0.2rem;
+}
