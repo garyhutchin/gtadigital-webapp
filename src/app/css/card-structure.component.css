@@ -27,7 +27,7 @@
 @media (max-width: 801px) {
     .listContainer {
         flex-wrap: nowrap !important;
-        padding-right: 1rem;
+        width: 144rem;
     }
 }
 
