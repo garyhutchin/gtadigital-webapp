@@ -145,3 +145,7 @@ h3 {
     line-height: 2.2rem;
     font-weight: 600;
 }
+
+.pageText {
+    padding: 1rem 0.25% 5rem 2rem;
+}
