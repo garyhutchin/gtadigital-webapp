@@ -1,7 +1,7 @@
 .list-wrapper {
     max-width: 100%;
     background-color: rgb(240, 240, 240) !important;
-    padding: 1rem 0.25% 5rem 2rem;
+    padding: 1rem 0.25% 4rem 2rem;
 }
 
 @media (max-width: 1110px) {
@@ -50,7 +50,7 @@
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;
-    margin: 0 1.4rem 3rem 0;
+    margin: 0 1% 1% 0;
     border-radius: 5px;
 }
 

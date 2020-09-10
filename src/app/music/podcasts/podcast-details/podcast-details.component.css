@@ -1,6 +1,6 @@
 .podcastDetailsWrapper {
     max-width: 144rem;
-    margin: 80px auto 5px auto;
+    margin: 12rem auto 5px auto;
 }
 
 .podcastDetailsContainer {
@@ -20,6 +20,7 @@
 .text {
     flex-basis: 60%;
     margin-left: 20px;
+    position: relative;
 }
 
 .artwork {
@@ -56,12 +57,13 @@ h3 {
 .tracklist-content {
     background-color: white;
     width: 70rem;
-    height: 80rem;
+    min-height: 65rem;
     margin: 3% auto 3% auto;
     padding: 2rem;
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     border-radius: 0.5rem;
     overflow-y: auto;
+    position: relative;
 }
 
 .tracklist-content::-webkit-scrollbar {
@@ -81,7 +83,7 @@ h3 {
     width: 50rem;
     list-style-type: none;
     line-height: 2.8rem;
-    margin: 0.2rem auto 3.2rem auto;
+    margin: 0.2rem auto 2rem auto;
     font-size: 1.4rem;
     font-weight: 500;
     letter-spacing: 0.05rem;
@@ -130,4 +132,12 @@ h3 {
     .tracklist-close-button {
         margin: 3rem auto 3.2rem 0.4rem;
     }
+}
+
+.player {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    margin-bottom: 1rem;
 }
