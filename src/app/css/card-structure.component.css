@@ -1,7 +1,7 @@
 .list-wrapper {
     max-width: 100%;
     background-color: rgb(240, 240, 240) !important;
-    padding: 1rem 0.25% 5rem 2rem;
+    padding: 1rem 0.25% 4rem 2rem;
 }
 
 @media (max-width: 1110px) {
@@ -24,13 +24,6 @@
     }
 }
 
-@media (max-width: 801px) {
-    .listContainer {
-        flex-wrap: nowrap !important;
-        width: 144rem;
-    }
-}
-
 .listContainer {
     display: flex;
     flex-direction: row;
@@ -44,13 +37,20 @@
     }
 }
 
+@media (max-width: 801px) {
+    .listContainer {
+        flex-wrap: nowrap !important;
+        width: 144rem;
+    }
+}
+
 .cardElement {
     flex-basis: 24%;
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;
-    margin: 0 1.4rem 3rem 0;
+    margin: 0 1% 1% 0;
     border-radius: 5px;
 }
 
@@ -66,15 +66,80 @@
     }
 }
 
-/*@media (max-width: 801px) {
-    .cardElement {
-        flex-basis: 100%;
-        margin-bottom: 10px;
-    }
-}*/
-
 @media (max-width: 801px) {
     .cardElement {
+        flex-basis: unset;
+        margin-bottom: 10px;
+        min-width: 34rem;
+    }
+}
+
+.item1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 50%;
+}
+
+.item2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 50%;
+}
+
+@media (max-width: 1110px) {
+    .item1 {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 801px) {
+    .item1 {
+        flex-wrap: nowrap !important;
+        width: 144rem;
+    }
+}
+
+@media (max-width: 1110px) {
+    .item2 {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 801px) {
+    .item2 {
+        flex-wrap: nowrap !important;
+        width: 144rem;
+    }
+}
+
+.cardElement-most-pop {
+    flex-basis: 48%;
+    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    text-align: center;
+    background-color: white;
+    transition: background-color 0.2s ease;
+    margin: 0 2% 2% 0;
+    border-radius: 5px;
+}
+
+.cardElement-most-pop:hover {
+    background-color: #0193b728;
+    cursor: pointer;
+}
+
+@media (max-width: 1110px) {
+    .cardElement-most-pop {
+        flex-basis: 94%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 801px) {
+    .cardElement-most-pop {
         flex-basis: unset;
         margin-bottom: 10px;
         min-width: 34rem;

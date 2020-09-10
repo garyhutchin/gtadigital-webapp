@@ -2,7 +2,7 @@
 <h3 class="cardHeader">{{newsItem.title}}</h3>
 <div class="cardDetails">
     <p>{{newsItem.info}}
-        <a *ngIf="newsItem?.externalUrl" [href]="newsItem.externalUrl" target="blank">{{newsItem.externalUrlTitle}} <img class="external-link" src="../../../../assets/images/small-images/icons/external-link.png"></a>
+        <a class="externalUrl" *ngIf="newsItem?.externalUrl" [href]="newsItem.externalUrl" target="blank">{{newsItem.externalUrlTitle}} <img class="external-link" src="../../../../assets/images/small-images/icons/external-link.png"></a>
     </p>
     <p *ngIf="newsItem?.moreInfo" class="moreInfo">{{newsItem.moreInfo}}</p>
     <div class="internalUrl">     
