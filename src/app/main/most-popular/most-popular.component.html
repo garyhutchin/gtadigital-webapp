@@ -1,7 +1,7 @@
 <div class="list-wrapper">
     
     <div class="listContainer">
-        <div class="item1" [@mostPopReleaseAnim]="releaseItems.length">
+        <div class="item1" [@mostPopReleaseAnim]="releaseItems.length" *ngIf="releaseItems.length > 0">
             <div class="cardElement-most-pop" *ngFor="let releaseItem of releaseItems">
                 <most-pop-release-thumbnail [releaseItem]="releaseItem"></most-pop-release-thumbnail>
             </div>
