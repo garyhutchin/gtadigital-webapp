@@ -44,5 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-src/assets/images/raw images/retro-vinyl-record-icon-vector-illustration.jpg
-src/assets/images/editable/homebanner2.png
+src/assets/images/raw images
+src/assets/images/editable
+src/assets/images/small-images/gtaDigital-Header.png
+src/assets/images/small-images/gtaDigital-HeaderBK.png
