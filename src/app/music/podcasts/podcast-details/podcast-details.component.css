@@ -11,6 +11,7 @@
     background-color: white;
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     margin: 0 2rem 5rem 2rem;
+    border-radius: 0.5rem;
 }
 
 @media (max-width: 1356px) {
@@ -44,11 +45,14 @@
 .artwork {
     width: 500px;
     display: block;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
 @media (max-width: 1356px) {
     .artwork {
         margin: 4rem auto 4rem auto;
+        border-radius: 0.5rem;
     }
 }
 
@@ -56,6 +60,8 @@
     .artwork {
         width: 100%;
         margin: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
 
