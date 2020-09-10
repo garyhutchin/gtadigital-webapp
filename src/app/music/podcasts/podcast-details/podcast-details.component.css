@@ -13,8 +13,20 @@
     margin: 0 2rem 5rem 2rem;
 }
 
+@media (max-width: 1339px) {
+    .podcastDetailsContainer {
+        flex-direction: column;
+    }
+}
+
 .image {
     flex-basis: 30%;
+}
+
+@media (max-width: 1339px) {
+    .image {
+        flex-basis: 100%;
+    }
 }
 
 .text {
@@ -23,9 +35,28 @@
     position: relative;
 }
 
+@media (max-width: 1339px) {
+    .text {
+        position: unset;
+    }
+}
+
 .artwork {
     width: 500px;
     display: block;
+}
+
+@media (max-width: 1339px) {
+    .artwork {
+        margin: 4rem auto 4rem auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .artwork {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 p {
@@ -140,4 +171,24 @@ h3 {
     left: 0px;
     width: 100%;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 1339px) {
+    .player {
+        position: unset;
+        bottom: unset;
+        left: unset;
+    }
+}
+
+.hearThis {
+    width: 100%;
+    height: 13rem;
+}
+
+@media (max-width: 1339px) {
+    .hearThis {
+        width: 95%;
+        margin-top: 2rem;
+    }
 }

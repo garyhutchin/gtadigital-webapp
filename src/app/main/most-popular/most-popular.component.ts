@@ -21,7 +21,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
                 style({opacity: .5, transform: 'translateY(35px)', offset: 0.3}),
                 style({opacity: 1, transform: 'translateY(0px)', offset: 1}),
               ]))
-            ]))
+            ]), {optional: true})
   
           ])
  
@@ -39,7 +39,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
                 style({opacity: .5, transform: 'translateY(35px)', offset: 0.3}),
                 style({opacity: 1, transform: 'translateY(0px)', offset: 1}),
               ]))
-            ]))
+            ]), {optional: true})
   
           ])
  
@@ -59,9 +59,5 @@ export class MostPopularComponent implements OnInit {
     ngOnInit() {
         this.releaseItems = this.mostPopularService.getReleaseItems()
         this.podcastItems = this.mostPopularService.getPodcastItems()
-    }
-
-    goToGTA20() {
-        this.router.navigate(['/releases/gta19'])
     }
 }

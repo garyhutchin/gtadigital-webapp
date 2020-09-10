@@ -40,7 +40,7 @@
 @media (max-width: 801px) {
     .listContainer {
         flex-wrap: nowrap !important;
-        width: 144rem;
+        min-width: 144rem;
     }
 }
 

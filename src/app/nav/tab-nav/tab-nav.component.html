@@ -11,7 +11,7 @@
         <div class="tabNav-MenuItems" @fadeIn *ngIf="!isCollapsed">
             <ul>
                 <li (mouseup)="toggleTabNav()"><a [routerLink]="['home']">Home</a></li>
-                <li (mouseup)="toggleTabNav()"><a href="#">About</a></li>
+                <li (mouseup)="toggleTabNav()"><a [routerLink]="['about']">About</a></li>
                 <li (mouseup)="toggleTabNav()"><a [routerLink]="['music']">Music</a></li>
                 <li (mouseup)="toggleTabNav()"><a href="#">Merch</a></li>
                 <li (mouseup)="toggleTabNav()"><a href="#">Contact</a></li>
