@@ -26,7 +26,7 @@ export class YouMayLikeComponent implements OnInit {
     this.releases = this.route.snapshot.data['releaseDetails']
 
     this.activatedRoute.url.subscribe(activeUrl =>{
-      this.url=window.location.pathname.split(";")[0].split('/music/releases/gta').pop();
+      this.url=window.location.pathname.split(";")[0].split('/music/releases/').pop();
     });
     
     this.releaseNumber = parseInt(this.url, 10)
