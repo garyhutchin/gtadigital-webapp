@@ -44,6 +44,8 @@ import { ReleaseListResolver } from './music/releases/shared/release-list-resolv
 import { AboutComponent } from './about/about.component';
 import { ContentService } from './shared/content.service';
 
+import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component'
+
 import { GTA20Component } from './music/releases/release-details/gta020/gta020.component';
 import { GTA19Component } from './music/releases/release-details/gta019/gta019.component';
 import { GTA18Component } from './music/releases/release-details/gta018/gta018.component';
@@ -117,7 +119,8 @@ import { GTA1Component } from './music/releases/release-details/gta001/gta001.co
     GTA3Component,
     GTA2Component,
     GTA1Component,
-    NoSanitizePipe
+    NoSanitizePipe,
+    ReleaseDetailsComponent
   ],
 
   providers: [

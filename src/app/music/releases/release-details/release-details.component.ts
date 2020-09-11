@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Track } from 'ngx-audio-player';
-import { ReleaseService } from '../../shared/releases.service';
+import { ReleaseService } from '../shared/releases.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component ({
-    selector: 'gta20-details',
-    templateUrl: 'gta020.component.html',
-    styleUrls: ['../release-details.component.css']
+    selector: 'release-details',
+    templateUrl: 'release-details.component.html',
+    styleUrls: ['release-details.component.css']
 })
 
-export class GTA20Component implements OnInit {
+export class ReleaseDetailsComponent implements OnInit {
     release:any
 
     constructor(private releaseService:ReleaseService, private route:ActivatedRoute) {

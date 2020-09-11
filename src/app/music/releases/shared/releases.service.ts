@@ -9,14 +9,14 @@ export class ReleaseService {
         return subject
     }
 
-    getRelease(id:string) {
+    getRelease(id:number) {
         return RELEASES.find(release => release.id === id)
     }
 }
 
 const RELEASES = [
     {
-        id: 'gta20',
+        id: 20,
         title: 'Purist EP',
         artistName: 'Ungrateful Ambassador',
         catNo: '[GTA020]',
@@ -28,11 +28,19 @@ const RELEASES = [
         releaseInfoP3: '',
         releaseInfoP4: '',
         releaseInfoP5: '',
-        releaseDate: ''
+        releaseDate: '',
+        track1Title: 'Mv (Original Mix) by Gary The Apprentice',
+        clip1Url: './assets/audio/samples/unixEP/mv.mp3',
+        track2Title: 'Grep (Original Mix) by Gary The Apprentice',
+        clip2Url: './assets/audio/samples/unixEP/grep.mp3',
+        track3Title: 'TraceRoute (Original Mix) by Gary The Apprentice',
+        clip3Url: './assets/audio/samples/unixEP/traceroute.mp3',
+        track4Title: 'TraceRoute (DJ Ze MigL Remix) by Gary The Apprentice',
+        clip4Url: './assets/audio/samples/unixEP/tracerouteZeMigL.mp3',
     
     },
     {
-        id: 'gta19',
+        id: 19,
         title: 'Unix EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA019]',
@@ -44,7 +52,15 @@ const RELEASES = [
         releaseInfoP3: 'Track 4 written by Gary The Apprentice and DJ Ze MigL',
         releaseInfoP4: 'Mastered by Jon Doe CLSM Mastering',
         releaseInfoP5: '',
-        releaseDate: '13 May 2019'
+        releaseDate: '13 May 2019',
+        track1Title: 'Mv (Original Mix) by Gary The Apprentice',
+        clip1Url: './assets/audio/samples/unixEP/mv.mp3',
+        track2Title: 'Grep (Original Mix) by Gary The Apprentice',
+        clip2Url: './assets/audio/samples/unixEP/grep.mp3',
+        track3Title: 'TraceRoute (Original Mix) by Gary The Apprentice',
+        clip3Url: './assets/audio/samples/unixEP/traceroute.mp3',
+        track4Title: 'TraceRoute (DJ Ze MigL Remix) by Gary The Apprentice',
+        clip4Url: './assets/audio/samples/unixEP/tracerouteZeMigL.mp3',
     },
     {
         id: 'gta18',
