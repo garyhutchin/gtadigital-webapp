@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component ({
     selector: 'music-main',
@@ -10,8 +11,9 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 export class MusicMainComponent implements OnInit {
 
     releases:any
+    musicContent: any
 
-    constructor(private router: Router, private route: ActivatedRoute) {
+    constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService) {
         
     }
 
@@ -24,6 +26,8 @@ export class MusicMainComponent implements OnInit {
         });
 
         this.releases = this.route.snapshot.data['musicReleases']
+
+        this.musicContent = this.contentService.getMusicContent('music')
     }
 
 }

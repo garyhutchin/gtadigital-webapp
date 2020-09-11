@@ -40,7 +40,7 @@
     }
 }
 
-.navbar a {
+.nav {
     font-size: 16px;
     color: white;
     text-align: center;
@@ -50,11 +50,11 @@
     display: inline-block;
 }
 
-.navbar a:hover {
+.nav a:hover {
     cursor: pointer;
 }
 
-.navbar a::after {
+.nav a::after {
     content: '';
     width: 0px;
     height: 2px;
@@ -63,7 +63,7 @@
     transition: 300ms;
 }
 
-.navbar a:hover:after {
+.nav a:hover:after {
     width: 100%;
 }
 
@@ -72,6 +72,11 @@
     display: inline-block;
     vertical-align: top;
     padding: 0;
+}
+
+.navItem {
+    list-style-type: none;
+    display: inline;
 }
 
 .navbar li {

@@ -14,7 +14,7 @@ export class MostPopularService {
 
 const RELEASEITEMS = [
     {   /*Add latest release first*/
-        id: 'gta20',
+        id: 20,
         cardHeader: 'Latest Release',
         title: 'Purist EP',
         artistName: 'Ungrateful Ambassador',
@@ -22,7 +22,7 @@ const RELEASEITEMS = [
         imageUrl: './assets/images/card-images/most-popular-images/newRelease.jpg'
     },
     {
-        id: 'gta02',
+        id: 0o2,
         cardHeader: 'Most Popular Release',
         title: 'The Brass Continent',
         artistName: 'Jamie Ball',
@@ -33,7 +33,7 @@ const RELEASEITEMS = [
     
 const PODCASTITEMS = [
     {
-        id: 'podcast30',
+        id: 30,
         cardHeader: 'Latest Podcast',
         title: 'GTA Digital Podcast #30',
         artistName: 'mixed by Gary The Apprentice',
@@ -41,7 +41,7 @@ const PODCASTITEMS = [
         imageUrl: './assets/images/card-images/most-popular-images/newPodcast.jpg'
     },
     {
-        id: 'podcast7',
+        id: 7,
         cardHeader: 'Most Popular Podcast',
         title: 'GTA Digital Podcast #7',
         artistName: 'mixed by Gary The Apprentice',

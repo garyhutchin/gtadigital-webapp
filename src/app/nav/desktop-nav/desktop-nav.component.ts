@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component ({
     selector: 'desktop-nav',
@@ -6,6 +7,16 @@ import { Component } from '@angular/core';
     styleUrls: ['desktop-nav.component.css']
 })
 
-export class DesktopNavComponent {
+export class DesktopNavComponent implements OnInit {
+
+    navItems: any[]
+
+    constructor(private contentService: ContentService) {
+
+    }
+
+    ngOnInit() {
+        this.navItems = this.contentService.getNavItems()
+    }
 
 }

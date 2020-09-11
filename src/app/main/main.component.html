@@ -1,14 +1,14 @@
 <div class="pageHeroWrapper">
     <div class="heroContainer" @heroAnim>
         <div class="heroText">
-            <h1>Underground Techno</h1>
-            <p>GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has grown, with the addition of a podcast series and more recently a monthly show on Fnoob Techno Radio</p>
+            <h1 [innerHTML]="homeContent.heroHeader"></h1>
+            <p [innerHTML]="homeContent.heroText"></p>
 
-            <span class="listenNow-button" (click)="listenNow()">Listen Now</span>
+            <span class="listenNow-button" (click)="listenNow()" [innerHTML]="homeContent.heroButton"></span>
 
         </div>
         <div class="heroLogo">
-            <img src="../../assets/images/logo.png">
+            <img [src]="homeContent.heroImage" alt="GTA Digital Logo">
         </div>
     </div>
 </div>
@@ -18,7 +18,7 @@
         <div @headerAnim>
         <span class="borderTop"></span>  
         <div class="secondaryHeader">
-            <h3>Latest News</h3>
+            <h3 [innerHTML]="homeContent.header1"></h3>
         </div>
         </div>
         <latest-news></latest-news>
@@ -29,7 +29,7 @@
     <div class="componentContent-white" @liveStreamAnim>
         <span class="borderTop"></span>
         <div class="secondaryHeader">
-            <h3>GTA Digital Live</h3>
+            <h3 [innerHTML]="homeContent.header2"></h3>
         </div>
         <live-stream></live-stream>
     </div>
