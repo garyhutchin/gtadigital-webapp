@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component({
   selector: 'live-stream',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LiveStreamComponent implements OnInit {
 
-  constructor() { }
+  homeContent: any
 
-  ngOnInit(): void {
+  constructor(private contentService: ContentService) { 
+
+  }
+
+  ngOnInit() {
+    this.homeContent = this.contentService.getHomeContent('home')
   }
 
 }

@@ -21,7 +21,7 @@ export class GTA1Component {
   // Material Style Advance Audio Player Playlist
   msaapPlaylist: Track[] = [
       {
-          title: 'Mv (Original Mix) by Gary The Apprentice',
+          title: '',
           link: './assets/audio/samples/unixEP/mv.mp3'
       },
       {

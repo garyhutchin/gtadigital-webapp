@@ -26,7 +26,7 @@ import { PageNotFoundComponent } from './error/page-not-found/page-not-found.com
 import { ReleaseListResolver } from './music/releases/shared/release-list-resolver.service';
 import { GTA20Component } from './music/releases/release-details/gta020/gta020.component';
 import { AboutComponent } from './about/about.component';
-import { Podcast30Component } from './music/podcasts/podcast-details/podcast30/podcast30.component';
+import { PodcastDetailsComponent } from './music/podcasts/podcast-details/podcast-details.component';
 
 export const appRoutes:Routes = [
     { path: '', component: MainComponent },
@@ -57,7 +57,7 @@ export const appRoutes:Routes = [
     { path: 'music/releases/gta02', component: GTA2Component, resolve: {releaseDetails:ReleaseListResolver} },
     { path: 'music/releases/gta01', component: GTA1Component, resolve: {releaseDetails:ReleaseListResolver} },
 
-    { path: 'music/podcasts/podcast-30', component: Podcast30Component },
+    { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent },
     
     { path: '', redirectTo: '/home', pathMatch: 'full'},
 

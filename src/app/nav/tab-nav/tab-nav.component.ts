@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
+import { ContentService } from 'src/app/shared/content.service';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component ({
     selector: 'tab-nav',
@@ -17,12 +20,22 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ]
 })
 
-export class TabNavComponent {
+export class TabNavComponent implements OnInit {
+    
+    navItems: any[]
+
+    constructor(private contentService: ContentService) {
+
+    }
 
     isCollapsed: boolean = true;
 
     toggleTabNav() {
         this.isCollapsed = !this.isCollapsed;
+    }
+
+    ngOnInit() {
+      this.navItems = this.contentService.getNavItems()
     }
 
 }

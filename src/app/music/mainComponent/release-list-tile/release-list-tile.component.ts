@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ReleaseService } from '../../releases/shared/releases.service';
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component ({
     selector: 'release-list-tile',
@@ -10,13 +11,16 @@ import { ReleaseService } from '../../releases/shared/releases.service';
 
 export class ReleaseListTileComponent implements OnInit {
     releases:any
+    musicContent: any
 
-    constructor(private router:Router, private releaseService: ReleaseService, private route: ActivatedRoute){
+    constructor(private router:Router, private route: ActivatedRoute, private contentService: ContentService) {
 
     }
 
     ngOnInit() {
         this.releases = this.route.snapshot.data['musicReleases']
+
+        this.musicContent = this.contentService.getMusicContent('music')
     }
 
     viewReleases() {

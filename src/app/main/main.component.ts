@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
+import { ContentService } from '../shared/content.service';
 
 @Component ({
     selector: 'app-main',
@@ -66,7 +67,10 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 })
 
 export class MainComponent implements OnInit {
-    constructor(private router:Router) {
+  
+    homeContent: any
+    
+    constructor(private router:Router, private contentService: ContentService) {
 
     }
 
@@ -77,6 +81,10 @@ export class MainComponent implements OnInit {
             }
             window.scrollTo(0, 0)
         });
+
+
+        this.homeContent = this.contentService.getHomeContent('home')
+
     }
 
     listenNow() {
