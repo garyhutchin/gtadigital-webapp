@@ -15,6 +15,7 @@ export class ReleaseService {
 }
 
 const RELEASES = [
+
     {
         id: 20,
         title: 'Purist EP',
@@ -63,7 +64,7 @@ const RELEASES = [
         clip4Url: './assets/audio/samples/unixEP/tracerouteZeMigL.mp3',
     },
     {
-        id: 'gta18',
+        id: 18,
         title: 'What Have We Become',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA018]',
@@ -75,10 +76,18 @@ const RELEASES = [
         releaseInfoP3: '',
         releaseInfoP4: '',
         releaseInfoP5: '',
-        releaseDate: ''
+        releaseDate: '',
+        track1Title: 'Mv (Original Mix) by Gary The Apprentice',
+        clip1Url: './assets/audio/samples/unixEP/mv.mp3',
+        track2Title: 'Grep (Original Mix) by Gary The Apprentice',
+        clip2Url: './assets/audio/samples/unixEP/grep.mp3',
+        track3Title: 'TraceRoute (Original Mix) by Gary The Apprentice',
+        clip3Url: './assets/audio/samples/unixEP/traceroute.mp3',
+        track4Title: '',
+        clip4Url: '',
     },
     {
-        id: 'gta17',
+        id: 17,
         title: 'Longitudinal Axis EP',
         artistName: 'Twistedbrain74',
         catNo: '[GTA017]',
@@ -93,7 +102,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta16',
+        id: 16,
         title: 'Of Little Significance',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA016]',
@@ -108,7 +117,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta15',
+        id: 15,
         title: 'A New Dimension',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA015]',
@@ -123,7 +132,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta14',
+        id: 14,
         title: 'Back In The Burgh EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA014]',
@@ -138,7 +147,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta13',
+        id: 13,
         title: 'Mindfulness EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA013]',
@@ -153,7 +162,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta12',
+        id: 12,
         title: 'Roffa EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA012]',
@@ -168,7 +177,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta11',
+        id: 11,
         title: 'Abstrakt Riddims EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA011]',
@@ -183,7 +192,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta10',
+        id: 10,
         title: 'The Next Chapter EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA010]',
@@ -198,7 +207,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta09',
+        id: 9,
         title: 'Open Box EP',
         artistName: 'Krowne',
         catNo: '[GTA009]',
@@ -213,7 +222,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta08',
+        id: 8,
         title: 'Mornaaan! EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA008]',
@@ -228,7 +237,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta07',
+        id: 0o7,
         title: 'Mind Warp EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA007]',
@@ -243,7 +252,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta06',
+        id: 0o6,
         title: 'Organised Kaos EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA006]',
@@ -258,7 +267,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta05',
+        id: 0o5,
         title: 'Mechanical Lifeforms EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA005]',
@@ -273,7 +282,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta04',
+        id: 0o4,
         title: 'The Dunny Collection',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA004]',
@@ -288,7 +297,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta03',
+        id: 0o3,
         title: 'Timespace EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA003]',
@@ -303,7 +312,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta02',
+        id: 0o2,
         title: 'The Brass Continent',
         artistName: 'Jamie Ball',
         catNo: '[GTA002]',
@@ -318,7 +327,7 @@ const RELEASES = [
         releaseDate: ''
     },
     {
-        id: 'gta01',
+        id: 0o1,
         title: 'Recharged EP',
         artistName: 'Gary The Apprentice',
         catNo: '[GTA001]',
