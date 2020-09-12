@@ -1,3 +1,5 @@
+import { Inject } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 import { ContentService } from 'src/app/shared/content.service';
@@ -13,7 +15,7 @@ export class MusicMainComponent implements OnInit {
     releases:any
     musicContent: any
 
-    constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService) {
+    constructor(@Inject(WINDOW) private window: Window, private router: Router, private route: ActivatedRoute, private contentService: ContentService) {
         
     }
 
@@ -22,7 +24,7 @@ export class MusicMainComponent implements OnInit {
             if (!(evt instanceof NavigationEnd)) {
                 return;
             }
-            window.scrollTo(0, 0)
+            this.window.scrollTo(0, 0)
         });
 
         this.releases = this.route.snapshot.data['musicReleases']

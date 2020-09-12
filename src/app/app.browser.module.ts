@@ -1,7 +1,5 @@
-import { NgtUniversalModule } from '@ng-toolkit/universal';
-import { HttpClientModule } from '@angular/common/http';
-import { TransferHttpCacheModule } from '@nguniversal/common';
-import { CommonModule } from '@angular/common';
+import { BrowserTransferStateModule } from '@angular/platform-browser';
+import { AppModule } from './app.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -51,40 +49,6 @@ import { ContentService } from './shared/content.service';
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component'
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainComponent,
-    DesktopNavComponent,
-    NavItems,
-    TabNavComponent,
-    TabNavItems,
-    BottomNavComponent,
-    MostPopularComponent,
-    MostPopularReleaseThumbnail,
-    MostPopularPodcastThumbnail,
-    MusicMainComponent,
-    ReleaseListTileComponent,
-    ReleaseListThumbnail,
-    ReleaseListComponent,
-    ReleaseThumbnailComponent,
-    ReleaseContainerComponent,
-    LatestNewsComponent,
-    LatestNewsThumbnail,
-    YouMayLikeComponent,
-    LiveStreamComponent,
-    PodcastTileComponent,
-    PodcastTileThumbnail,
-    LiveStreamArchiveComponent,
-    PodcastsListComponent,
-    PodcastDetailsComponent,
-    PodcastsContainerComponent,
-    PodcastThumbnailComponent,
-    YouMayLikeThumbnailComponent,
-    PageNotFoundComponent,
-    AboutComponent,
-    NoSanitizePipe,
-    ReleaseDetailsComponent
-  ],
 
   providers: [
     ReleaseService,
@@ -96,7 +60,7 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
   ],
 
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    
     RouterModule.forRoot(appRoutes),
     NgxAudioPlayerModule,
     BrowserAnimationsModule
@@ -104,4 +68,4 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppBrowserModule { }

@@ -1,3 +1,5 @@
+import { Inject } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
@@ -70,7 +72,7 @@ export class MainComponent implements OnInit {
   
     homeContent: any
     
-    constructor(private router:Router, private contentService: ContentService) {
+    constructor(@Inject(WINDOW) private window: Window, private router:Router, private contentService: ContentService) {
 
     }
 
@@ -79,7 +81,7 @@ export class MainComponent implements OnInit {
             if (!(evt instanceof NavigationEnd)) {
                 return;
             }
-            window.scrollTo(0, 0)
+            this.window.scrollTo(0, 0)
         });
 
 

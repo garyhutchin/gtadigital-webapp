@@ -1,15 +1,10 @@
 {
   "hosting": {
-    "public": "dist/gtadigital-app",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "public": "functions/dist",
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "function": "http"
       }
     ]
   },

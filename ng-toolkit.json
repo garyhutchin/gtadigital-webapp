@@ -1,0 +1,34 @@
+{
+  "serverless": {
+    "provider": "firebase",
+    "firebaseProject": "gta-digital-web-app",
+    "project": "gtadigital-app",
+    "skipInstall": true,
+    "directory": ".",
+    "lambdaTS": false,
+    "offline": false,
+    "clientProject": "gtadigital-app",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  },
+  "universal": {
+    "clientProject": "gtadigital-app",
+    "directory": ".",
+    "skipInstall": false,
+    "http": true,
+    "appId": "serverApp",
+    "main": "main.server.ts",
+    "serverFileName": "server.ts",
+    "serverPort": 4000,
+    "tsconfigFileName": "tsconfig.server",
+    "testTsconfigFileName": "tsconfig.spec",
+    "appDir": "app",
+    "rootModuleFileName": "app.server.module.ts",
+    "rootModuleClassName": "AppServerModule",
+    "skipServer": false,
+    "skipUniversal": false,
+    "webpack": true
+  }
+}
