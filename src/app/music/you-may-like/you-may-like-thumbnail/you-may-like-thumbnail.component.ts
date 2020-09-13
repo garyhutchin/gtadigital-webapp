@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ReleaseService } from '../../releases/shared/releases.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'you-may-like-thumbnail',
@@ -10,11 +9,12 @@ import { ReleaseService } from '../../releases/shared/releases.service';
 export class YouMayLikeThumbnailComponent implements OnInit {
   
   @Input() release:any
-  @Input() urlId: any
+  urlId: any
 
   url: string
 
-  constructor(private activatedRoute: ActivatedRoute, private releaseService: ReleaseService) { 
+  constructor(private activatedRoute: ActivatedRoute) {
+
   }
 
   ngOnInit() {
