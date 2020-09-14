@@ -10,7 +10,6 @@ import { PodcastDetailsComponent } from './music/podcasts/podcast-details/podcas
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
 
 export const appRoutes:Routes = [
-    { path: '', component: MainComponent },
     { path: 'home', component: MainComponent },
     { path: 'music', component: MusicMainComponent, resolve: {musicReleases:ReleaseListResolver} },
     { path: 'music/releases', component: ReleaseContainerComponent, resolve: {releases:ReleaseListResolver} },
