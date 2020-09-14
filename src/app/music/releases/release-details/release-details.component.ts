@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ReleaseService } from '../shared/releases.service';
 import { ActivatedRoute } from '@angular/router';
+import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
+import { Observable } from 'rxjs';
+import { Content } from '../../../models/content-interface';
 
 @Component ({
     selector: 'release-details',
