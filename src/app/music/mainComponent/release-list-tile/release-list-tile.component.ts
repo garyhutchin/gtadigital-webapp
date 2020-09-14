@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ReleaseService } from '../../releases/shared/releases.service';
 import { ContentService } from 'src/app/shared/content.service';
 
 @Component ({

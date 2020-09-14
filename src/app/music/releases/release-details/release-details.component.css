@@ -1,6 +1,6 @@
 .releaseDetailsWrapper {
     max-width: 144rem;
-    margin: 80px auto 5px auto;
+    margin: 100px auto 5px auto;
 }
 
 .releaseDetailsContainer {
@@ -20,6 +20,7 @@
 .text {
     flex-basis: 60%;
     margin-left: 20px;
+    position: relative;
 }
 
 .artwork {
@@ -42,11 +43,24 @@ h3 {
     color: rgb(121, 121, 121);
 }
 
-.mat-slider-thumb {
-    border: 3px solid solid;
+.player {
+    position: absolute;
+    bottom: 4rem;
+    left: 0rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-.mat-card {
-    font-family: 'Titillium Web', sans-serif !important;
-    font-size: 2rem !important; 
+@media (max-width: 1356px) {
+    .player {
+        position: unset;
+        bottom: unset;
+        left: unset;
+    }
+}
+
+.bandcamp {
+    width: 700px;
+    height: 120px;
+    border-width: 0px;
 }

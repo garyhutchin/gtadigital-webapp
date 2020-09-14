@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ReleaseService } from '../../releases/shared/releases.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'you-may-like-thumbnail',
@@ -10,19 +10,20 @@ import { ReleaseService } from '../../releases/shared/releases.service';
 export class YouMayLikeThumbnailComponent implements OnInit {
   
   @Input() release:any
-  @Input() urlId: any
+  urlId: any
 
   url: string
 
-  constructor(private activatedRoute: ActivatedRoute, private releaseService: ReleaseService) { 
+  constructor(private activatedRoute: ActivatedRoute, private router:Router, private location:Location) {
+
   }
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(activeUrl =>{
+    this.activatedRoute.url.subscribe(url =>{
       this.url=window.location.pathname.split(";")[0].split('/music/releases/').pop();
+      console.log(this.url)
+      this.urlId = this.url
     });
-    
-    this.urlId = this.url
   }
 
 }

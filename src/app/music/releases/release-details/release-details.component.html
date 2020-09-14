@@ -8,9 +8,7 @@
             <p class="releaseDate">Released: {{release.releaseDate}} <a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
             <p>{{release.releaseInfoP1}}</p>
             <p>{{release.releaseInfoP2}}<br>{{release.releaseInfoP3}}<br>{{release.releaseInfoP4}}<br>{{release.releaseInfoP5}}</p>
-                <mat-advanced-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" 
-                [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions" 
-                [displayVolumeControls]="msaapDisplayVolumeControls" [expanded]="true"></mat-advanced-audio-player>
+            <span class="player" [innerHTML]="release.releasePlayer | noSanitize"></span>
         </div>
     </div>
 </div>
