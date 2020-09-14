@@ -8,7 +8,7 @@ import { NoSanitizePipe } from './shared/sanitize.pipe';
 import { environment } from '../environments/environment';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFirestoreModule } from 'angularfire2/firestore'
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -101,8 +101,7 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase, 'gtadigital-app'),
     AngularFirestoreModule
-
-  ],
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

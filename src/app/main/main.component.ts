@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 import { ContentService } from '../shared/content.service';
+import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
+import { Observable } from 'rxjs';
+import { Content } from '../models/content-interface';
 
 @Component ({
     selector: 'app-main',
@@ -68,9 +71,10 @@ import { ContentService } from '../shared/content.service';
 
 export class MainComponent implements OnInit {
   
-    homeContent: any
+    homeContentCollection: AngularFirestoreCollection<Content>;
+    homeContent: Observable<Content[]>;
     
-    constructor(private router:Router, private contentService: ContentService) {
+    constructor(private router:Router, private contentService: ContentService, private afs: AngularFirestore) {
 
     }
 
@@ -82,9 +86,8 @@ export class MainComponent implements OnInit {
             window.scrollTo(0, 0)
         });
 
-
-        this.homeContent = this.contentService.getHomeContent('home')
-
+        this.homeContentCollection = this.afs.collection('main-content')
+        this.homeContent = this.homeContentCollection.valueChanges()
     }
 
     listenNow() {
