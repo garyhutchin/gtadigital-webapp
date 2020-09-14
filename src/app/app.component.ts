@@ -8,7 +8,6 @@ import { Router, NavigationStart, NavigationEnd, Event } from '@angular/router';
 
 })
 export class AppComponent {
-  title = 'gtadigital-app';
 
   showLoading = true
   constructor(private router: Router) {

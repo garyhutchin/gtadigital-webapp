@@ -48,17 +48,6 @@ const NAVITEMS = [
 
 const MAINCONTENT = [
     {
-        id: 'home',
-        heroHeader: 'Underground Techno',
-        heroImage: '../../assets/images/logo.png',
-        heroText: 'GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has grown, with the addition of a podcast series and more recently a monthly show on Fnoob Techno Radio',
-        heroButton: 'Listen Now',
-        header1: 'Latest News',
-        header2: 'GTA Digital Live',
-        gtaDigitalLiveHeader: 'GTA Digital Live Presents',
-        gtaDigitalLiveText: 'Tune into the GTA Digital Live stream to check out Gary The Apprentice playing all things techno, in full HD and crystal clear audio.</p><p>Head over to the live stream archive to check out recordings of all past streams.</p><p>Click the subscribe button below to stay notified.'
-    },
-    {
         id: 'about',
         heroHeader: 'GTA Digital',
         heroImage: '../../assets/images/logo.png',
