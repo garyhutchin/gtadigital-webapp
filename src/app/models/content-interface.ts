@@ -14,3 +14,14 @@ export interface Content {
     aboutText?: string;
     aboutImage?: string;
 }
+
+export interface LatestNews {
+    title?: string;
+    info?: string;
+    moreInfo?: string;
+    imageUrl?: string;   
+    internalUrl?: string;
+    internalUrlTitle?: string; 
+    externalUrl?: string;
+    externalUrlTitle?: string; 
+}

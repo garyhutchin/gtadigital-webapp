@@ -55,7 +55,7 @@ import { Content } from '../models/content-interface';
               query(':self', style({ opacity: 0}), {optional: true}),
     
               query(':self', stagger('300ms', [
-                animate('0.5s 3.5s ease-in', keyframes([
+                animate('0.5s 3s ease-in', keyframes([
                   style({opacity: 0, transform: 'translateX(0px)', offset: 0}),
                   style({opacity: .5, transform: 'translateX(0px)', offset: 0.3}),
                   style({opacity: 1, transform: 'translateX(0px)', offset: 1}),

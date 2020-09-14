@@ -8,10 +8,6 @@ export class ContentService {
         return NAVITEMS
     }
 
-    getHomeContent(id:string) {
-        return MAINCONTENT.find(home => home.id === id)
-    }
-
     getAboutContent(id:string) {
         return MAINCONTENT.find(about => about.id === id)
     }
