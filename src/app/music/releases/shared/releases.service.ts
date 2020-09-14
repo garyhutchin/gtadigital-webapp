@@ -30,15 +30,7 @@ const RELEASES = [
         releaseInfoP4: '',
         releaseInfoP5: '',
         releaseDate: '',
-        track1Title: 'Mv (Original Mix) by Gary The Apprentice',
-        clip1Url: './assets/audio/samples/unixEP/mv.mp3',
-        track2Title: 'Grep (Original Mix) by Gary The Apprentice',
-        clip2Url: './assets/audio/samples/unixEP/grep.mp3',
-        track3Title: 'TraceRoute (Original Mix) by Gary The Apprentice',
-        clip3Url: './assets/audio/samples/unixEP/traceroute.mp3',
-        track4Title: 'TraceRoute (DJ Ze MigL Remix) by Gary The Apprentice',
-        clip4Url: './assets/audio/samples/unixEP/tracerouteZeMigL.mp3',
-    
+        releasePlayer: '<iframe class="bandcamp" style="width: 700px; height: 120px; border: 0px;" src="https://bandcamp.com/EmbeddedPlayer/album=2747614855/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=none/transparent=true/" seamless><a href="https://gtadigital.bandcamp.com/album/gta019-unix-ep">[GTA019] Unix EP by Gary The Apprentice</a></iframe>'    
     },
     {
         id: 19,
@@ -54,14 +46,7 @@ const RELEASES = [
         releaseInfoP4: 'Mastered by Jon Doe CLSM Mastering',
         releaseInfoP5: '',
         releaseDate: '13 May 2019',
-        track1Title: 'Mv (Original Mix) by Gary The Apprentice',
-        clip1Url: './assets/audio/samples/unixEP/mv.mp3',
-        track2Title: 'Grep (Original Mix) by Gary The Apprentice',
-        clip2Url: './assets/audio/samples/unixEP/grep.mp3',
-        track3Title: 'TraceRoute (Original Mix) by Gary The Apprentice',
-        clip3Url: './assets/audio/samples/unixEP/traceroute.mp3',
-        track4Title: 'TraceRoute (DJ Ze MigL Remix) by Gary The Apprentice',
-        clip4Url: './assets/audio/samples/unixEP/tracerouteZeMigL.mp3',
+        releasePlayer: '<iframe class="bandcamp" style="width: 700px; height: 120px; border: 0px;" src="https://bandcamp.com/EmbeddedPlayer/album=2747614855/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=none/transparent=true/" seamless><a href="https://gtadigital.bandcamp.com/album/gta019-unix-ep">[GTA019] Unix EP by Gary The Apprentice</a></iframe>'
     },
     {
         id: 18,
@@ -77,14 +62,7 @@ const RELEASES = [
         releaseInfoP4: '',
         releaseInfoP5: '',
         releaseDate: '',
-        track1Title: 'Mv (Original Mix) by Gary The Apprentice',
-        clip1Url: './assets/audio/samples/unixEP/mv.mp3',
-        track2Title: 'Grep (Original Mix) by Gary The Apprentice',
-        clip2Url: './assets/audio/samples/unixEP/grep.mp3',
-        track3Title: 'TraceRoute (Original Mix) by Gary The Apprentice',
-        clip3Url: './assets/audio/samples/unixEP/traceroute.mp3',
-        track4Title: '',
-        clip4Url: '',
+        releasePlayer: '<iframe class="bandcamp" style="width: 700px; height: 120px; border: 0px;" src="https://bandcamp.com/EmbeddedPlayer/album=2762695312/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=none/transparent=true/" seamless><a href="https://gtadigital.bandcamp.com/album/gta018-what-have-we-become">[GTA018] What Have We Become by Gary The Apprentice</a></iframe>'
     },
     {
         id: 17,

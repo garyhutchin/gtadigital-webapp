@@ -18,14 +18,16 @@ export class YouMayLikeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.releases = this.route.snapshot.data['releaseDetails']
-
-    this.releaseNumber = this.activatedRoute.snapshot.params['id']
-
-    if (this.releaseNumber > 15) {
-      return this.end = 6
-    }
-  }
+    this.activatedRoute.url.subscribe(url =>{
+      this.releases = this.route.snapshot.data['releaseDetails']
   
+      this.releaseNumber = this.activatedRoute.snapshot.params['id']
+  
+      if (this.releaseNumber > 15) {
+        return this.end = 6
+      }
+  });
+  }
+ 
 }
 

@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NoSanitizePipe } from './shared/sanitize.pipe';
@@ -93,8 +92,7 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
 
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    NgxAudioPlayerModule,
+    RouterModule.forRoot(appRoutes, {onSameUrlNavigation: 'reload'}),
     BrowserAnimationsModule
 
   ],
