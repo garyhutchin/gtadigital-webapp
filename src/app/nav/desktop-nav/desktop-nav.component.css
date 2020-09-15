@@ -116,3 +116,15 @@
     height: 55px;
     cursor: pointer;
 }
+
+.under-construction {
+    color: white;
+    background-color: red;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}

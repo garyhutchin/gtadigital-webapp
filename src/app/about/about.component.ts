@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../shared/content.service';
+import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
+import { Observable } from 'rxjs';
+import { Content } from '../models/content-interface';
 
 
 @Component({
@@ -9,15 +12,17 @@ import { ContentService } from '../shared/content.service';
 })
 export class AboutComponent implements OnInit {
 
-  aboutContent: any
+  aboutContentDoc: AngularFirestoreDocument<Content>;
+  aboutContent: Observable<Content>;
 
-  constructor(private contentService: ContentService) { 
+  constructor(private contentService: ContentService, private afs: AngularFirestore) { 
 
   }
 
   ngOnInit() {
 
-    this.aboutContent = this.contentService.getAboutContent('about')
+    this.aboutContentDoc = this.afs.doc('main-content/about')
+    this.aboutContent = this.aboutContentDoc.valueChanges()
 
   }
 
