@@ -1,11 +1,10 @@
-<div class="live-stream-wrapper" *ngFor="let homeContent of homeContent | async">
+<div class="live-stream-wrapper" *ngIf="homeContent | async as homeContent">
     <div class="youTube-vid-desktop">
         <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/6xTieGgxjDQ?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class="youTube-vid-text">
         <h3 [innerHTML]="homeContent.gtaDigitalLiveHeader"></h3>
-        <p [innerHTML]="homeContent.gtaDigitalLiveText"></p> 
-        <div class="g-ytsubscribe" data-channelid="UCi7G9ij_Hm7UBEuZjCRUmAw" data-layout="default" data-count="default"></div>    
+        <p [innerHTML]="homeContent.gtaDigitalLiveText"></p>   
     </div>
 </div>

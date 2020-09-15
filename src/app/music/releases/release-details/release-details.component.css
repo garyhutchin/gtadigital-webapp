@@ -1,6 +1,12 @@
 .releaseDetailsWrapper {
     max-width: 144rem;
-    margin: 100px auto 5px auto;
+    margin: 12rem auto 0.5rem auto;
+}
+
+@media (max-width: 800px) {
+    .releaseDetailsWrapper {
+        margin: 10rem auto 10rem auto;
+    }
 }
 
 .releaseDetailsContainer {
@@ -11,21 +17,60 @@
     background-color: white;
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     margin: 0 2rem 5rem 2rem;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 1356px) {
+    .releaseDetailsContainer {
+        flex-direction: column;
+    }
 }
 
 .image {
     flex-basis: 30%;
 }
 
+@media (max-width: 1356px) {
+    .image {
+        flex-basis: 100%;
+    }
+}
+
 .text {
     flex-basis: 60%;
-    margin-left: 20px;
+    margin-left: 2rem;
     position: relative;
+}
+
+@media (max-width: 1356px) {
+    .text {
+        position: unset;
+        margin: auto 2rem 2rem 2rem;
+
+    }
 }
 
 .artwork {
     width: 500px;
     display: block;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+@media (max-width: 1356px) {
+    .artwork {
+        margin: 4rem auto 4rem auto;
+        border-radius: 0.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .artwork {
+        width: 100%;
+        margin: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 p {
@@ -45,22 +90,24 @@ h3 {
 
 .player {
     position: absolute;
-    bottom: 4rem;
-    left: 0rem;
+    bottom: 3rem;
+    left: 0px;
     width: 100%;
     margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 @media (max-width: 1356px) {
     .player {
         position: unset;
         bottom: unset;
-        left: unset;
+        left: 0rem;
+        width: 90%;
     }
 }
 
 .bandcamp {
-    width: 700px;
+    width: 90%;
     height: 120px;
     border-width: 0px;
 }

@@ -11,8 +11,8 @@ import { Content } from '../../models/content-interface';
 })
 export class LiveStreamComponent implements OnInit {
 
-  homeContentCollection: AngularFirestoreCollection<Content>;
-  homeContent: Observable<Content[]>;
+  homeContentDoc: AngularFirestoreDocument<Content>;
+  homeContent: Observable<Content>;
 
   constructor(private contentService: ContentService, private afs: AngularFirestore) { 
 
@@ -20,8 +20,8 @@ export class LiveStreamComponent implements OnInit {
 
   ngOnInit() {
 
-    this.homeContentCollection = this.afs.collection('main-content')
-    this.homeContent = this.homeContentCollection.valueChanges()
+    this.homeContentDoc = this.afs.doc('main-content/home')
+    this.homeContent = this.homeContentDoc.valueChanges()
 
   }
 
