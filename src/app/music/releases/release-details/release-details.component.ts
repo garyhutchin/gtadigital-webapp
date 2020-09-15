@@ -12,7 +12,6 @@ import { Release } from '../../../models/content-interface';
 })
 
 export class ReleaseDetailsComponent implements OnInit {
-    //release:any
     releaseDoc: AngularFirestoreDocument<Release>;
     release: Observable<Release>
 
@@ -21,7 +20,6 @@ export class ReleaseDetailsComponent implements OnInit {
 
     ngOnInit() {
         this.activatedRoute.url.subscribe(url =>{
-            //this.release = this.releaseService.getRelease(+this.activatedRoute.snapshot.params['id'])
             this.releaseDoc = this.afs.doc('releases/'+this.activatedRoute.snapshot.params['id'])
             this.release = this.releaseDoc.valueChanges()
             
