@@ -3,13 +3,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common'
 
 @Component({
-  selector: 'you-may-like-thumbnail',
-  templateUrl: 'you-may-like-thumbnail.component.html',
-  styleUrls: ['you-may-like-thumbnail.component.css']
+  selector: 'you-may-like-podcast-thumbnail',
+  templateUrl: './you-may-like-podcast-thumbnail.component.html',
+  styleUrls: ['./you-may-like-podcast-thumbnail.component.css']
 })
-export class YouMayLikeThumbnailComponent implements OnInit {
+export class YouMayLikePodcastThumbnailComponent implements OnInit {
   
-  @Input() release:any
+  @Input() podcast:any
   urlId: any
 
   url: string
@@ -20,7 +20,7 @@ export class YouMayLikeThumbnailComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.url.subscribe(url =>{
-      this.url=window.location.pathname.split(";")[0].split('/music/releases/release/').pop();
+      this.url=window.location.pathname.split(";")[0].split('/music/podcasts/podcast/').pop();
       console.log(this.url)
       this.urlId = this.url
     });

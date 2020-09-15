@@ -61,7 +61,7 @@ const PODCASTS = [
         duration: '1hr',
         releaseDate: '18 August 2020',
         player: '<iframe class="hearThis" width="95%" scrolling="no" id="hearthis_at_track_4970726" src="https://app.hearthis.at/embed/4970726/transparent/?hcolor=333333&color=0193b7&style=1&block_size=2&block_space=1&background=0&waveform=0&cover=1&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"></iframe>',
-        tracksBy: 'The Divide, Mattias Fridell, Lars Klein, Vincent de Wit, Bas Mooy & The Anxious. Full track list available',
+        tracksBy: 'The Divide, Mattias Fridell, Lars Klein, Vincent de Wit, Bas Mooy & The Anxious.',
         track1: 'Estetika Stroja - Luka Baumann',
         track2: 'Scroll Lock - Concrete Djz',
         track3: 'In Your Mind - The Divide',
@@ -91,7 +91,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #28',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast28.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast28.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast28.jpg',
         style: 'Hard Groove/Tough Tribal Techno',
         duration: '1hr'
     },
@@ -100,7 +100,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #27',
         artistName: 'Kyle Horne',
         thumbnailUrl: './assets/images/card-images/podcast/podcast27.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast27.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast27.jpg',
         style: 'Techno/Hard Techno',
         duration: '1hr'
     },
@@ -109,7 +109,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #26',
         artistName: 'Bushby',
         thumbnailUrl: './assets/images/card-images/podcast/podcast26.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast26.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast26.jpg',
         style: 'Straight Up/Hypnotic Techno',
         duration: '1hr'
     },
@@ -118,7 +118,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #25',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast25.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast25.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast25.jpg',
         style: 'Hard Techno',
         duration: '1hr'
     },
@@ -127,7 +127,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #24',
         artistName: 'Mallory',
         thumbnailUrl: './assets/images/card-images/podcast/podcast24.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast24.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast24.jpg',
         style: 'Tough/Chunky/Hypnotic Techno',
         duration: '1hr'
     },
@@ -136,7 +136,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #23',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast23.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast23.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast23.jpg',
         style: 'Deep/Hypnotic Techno',
         duration: '1hr'
     },
@@ -145,7 +145,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #22',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast22.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast22.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast22.jpg',
         style: 'Hard Techno/Schranz/Industrial',
         duration: '1hr'
     },
@@ -154,7 +154,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #21',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast21.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast21.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast21.jpg',
         style: 'Wonky/Jackin Techno',
         duration: '1hr'
     },
@@ -163,7 +163,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #20',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast20.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast20.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast20.jpg',
         style: 'Techno - Live PA',
         duration: '1hr'
     },
@@ -172,7 +172,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #19',
         artistName: 'Lee Malice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast19.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast19.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast19.jpg',
         style: 'Jacked Up Techno',
         duration: '1hr'
     },
@@ -181,7 +181,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #18',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast18.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast18.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast18.jpg',
         style: 'Techno/Hard Techno',
         duration: '1hr'
     },
@@ -190,7 +190,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #17',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast17.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast17.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast17.jpg',
         style: 'Techno/Hard Techno',
         duration: '1hr'
     },
@@ -199,7 +199,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #16',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast16.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast16.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast16.jpg',
         style: 'Hypnotic Techno',
         duration: '1hr'
     },
@@ -208,7 +208,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #15',
         artistName: 'Horror Brawl',
         thumbnailUrl: './assets/images/card-images/podcast/podcast15.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast15.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast15.jpg',
         style: 'Techno',
         duration: '2hr'
     },
@@ -217,7 +217,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #14',
         artistName: 'Owen Ni',
         thumbnailUrl: './assets/images/card-images/podcast/podcast14.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast14.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast14.jpg',
         style: 'Techno',
         duration: '1hr'
     },
@@ -226,7 +226,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #13',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast13.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast13.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast13.jpg',
         style: 'Hypnotic Techno',
         duration: '1hr 16m'
     },
@@ -235,7 +235,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #12',
         artistName: 'Deep Audio',
         thumbnailUrl: './assets/images/card-images/podcast/podcast12.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast12.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast12.jpg',
         style: 'Techno',
         duration: '1hr'
     },
@@ -244,7 +244,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #11',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast11.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast11.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast11.jpg',
         style: 'Techno',
         duration: '1hr'
     },
@@ -253,7 +253,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #10',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast10.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast10.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast10.jpg',
         style: 'Straight Up Techno',
         duration: '1hr'
     },
@@ -262,7 +262,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #9',
         artistName: 'LBM12',
         thumbnailUrl: './assets/images/card-images/podcast/podcast9.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast9.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast9.jpg',
         style: 'Hypnotic Techno',
         duration: '1hr'
     },
@@ -271,7 +271,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #8',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast8.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast8.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast8.jpg',
         style: 'Jackin Techno - Vinyl Set',
         duration: '1hr'
     },
@@ -280,7 +280,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #7',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast7.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast7.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast7.jpg',
         style: 'Techno',
         duration: '2hr'
     },
@@ -289,7 +289,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #6',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast6.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast6.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast6.jpg',
         style: 'Techno',
         duration: '1hr'
     },
@@ -298,7 +298,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #5',
         artistName: 'Nizzy',
         thumbnailUrl: './assets/images/card-images/podcast/podcast5.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast5.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast5.jpg',
         style: 'Dark Techno',
         duration: '1hr'
     },
@@ -307,7 +307,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #4',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast4.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast4.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast4.jpg',
         style: 'Techno',
         duration: '1hr'
     },
@@ -316,7 +316,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #3',
         artistName: 'Krowne',
         thumbnailUrl: './assets/images/card-images/podcast/podcast3.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast3.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast3.jpg',
         style: 'Deep Techno',
         duration: '1hr'
     },
@@ -325,7 +325,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #2',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast2.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast2.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast2.jpg',
         style: 'Techno - Own Productions Set',
         duration: '1hr'
     },
@@ -334,7 +334,7 @@ const PODCASTS = [
         title: 'GTA Digital Podcast #1',
         artistName: 'Gary The Apprentice',
         thumbnailUrl: './assets/images/card-images/podcast/podcast1.jpg',
-        imageUrl: './assets/images/artwork/podcasts/podcast1.jpg',
+        artwork: './assets/images/artwork/podcasts/podcast1.jpg',
         style: 'Hard Groove/Jackin Techno',
         duration: '1hr'
     }

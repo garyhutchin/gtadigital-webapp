@@ -1,6 +1,6 @@
 .podcastDetailsWrapper {
     max-width: 144rem;
-    margin: 12rem auto 5px auto;
+    margin: 12rem auto 0.5rem auto;
 }
 
 @media (max-width: 800px) {
@@ -15,8 +15,8 @@
     flex-wrap: wrap;
     height: 100%;
     background-color: white;
-    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
-    margin: 0 2rem 5rem 2rem;
+    box-shadow: 0 1px 6px 0 hsla(0, 0%, 0%, 0.3);
+    margin: 0 2rem 2rem 2rem;
     border-radius: 0.5rem;
 }
 
