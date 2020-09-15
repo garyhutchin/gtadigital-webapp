@@ -16,7 +16,7 @@ export class ReleaseService {
 
 const RELEASES = [
 
-    {
+    /*{
         id: 20,
         title: 'Purist EP',
         artistName: 'Ungrateful Ambassador',
@@ -318,5 +318,5 @@ const RELEASES = [
         releaseInfoP4: '',
         releaseInfoP5: '',
         releaseDate: ''
-    },
+    },*/
 ]

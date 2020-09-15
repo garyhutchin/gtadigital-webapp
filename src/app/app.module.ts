@@ -48,7 +48,9 @@ import { ReleaseListResolver } from './music/releases/shared/release-list-resolv
 import { AboutComponent } from './about/about.component';
 import { ContentService } from './shared/content.service';
 
-import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component'
+import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
+import { YouMayLikePodcastComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast.component';
+import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast-thumbnail/you-may-like-podcast-thumbnail.component'
 
 @NgModule({
   declarations: [
@@ -83,7 +85,9 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
     PageNotFoundComponent,
     AboutComponent,
     NoSanitizePipe,
-    ReleaseDetailsComponent
+    ReleaseDetailsComponent,
+    YouMayLikePodcastComponent,
+    YouMayLikePodcastThumbnailComponent
   ],
 
   providers: [
@@ -102,6 +106,7 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
     AngularFireModule.initializeApp(environment.firebase, 'gtadigital-app'),
     AngularFirestoreModule
     ],
+    
   bootstrap: [AppComponent]
 })
 export class AppModule { }

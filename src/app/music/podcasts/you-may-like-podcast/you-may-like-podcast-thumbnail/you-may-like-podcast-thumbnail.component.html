@@ -1,0 +1,5 @@
+<div class="pageElement" *ngIf="podcast.id!=urlId">
+    <div class="routerLink" [routerLink]="['/music/podcasts/podcast', podcast.id]">
+        <img class="youMayAlsoLikeImg" img [src]="podcast.artwork" [alt]="podcast.title">
+    </div>
+</div>

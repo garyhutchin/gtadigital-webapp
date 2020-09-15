@@ -4,8 +4,9 @@
             <img class="artwork" [src]="release.artwork">
         </div>
         <div class="text">
-            <h3>{{release.catNo}} {{release.title}}</h3>
-            <p class="releaseDate">Released: {{release.releaseDate}} <a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
+            <h3>{{release.catNo}} {{release.title}} by {{release.artistName}}</h3>
+            <p class="releaseDate">Released: {{release.releaseDate}} <br><a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
+            <p class="codeWrapper" *ngIf="release?.discountCode" class="discount-code">Enter code "{{release.discountCode}}" for 50% off</p>
             <p>{{release.releaseInfoP1}}</p>
             <p>{{release.releaseInfoP2}}<br>{{release.releaseInfoP3}}<br>{{release.releaseInfoP4}}<br>{{release.releaseInfoP5}}</p>
             <span class="player" [innerHTML]="release.releasePlayer | noSanitize"></span>

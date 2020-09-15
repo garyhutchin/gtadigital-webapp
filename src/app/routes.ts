@@ -16,7 +16,7 @@ export const appRoutes:Routes = [
     { path: 'music/podcasts', component:PodcastsContainerComponent },
     { path: 'about', component: AboutComponent },
 
-    { path: 'music/releases/:id', component: ReleaseDetailsComponent, resolve: {releaseDetails:ReleaseListResolver} },
+    { path: 'music/releases/release/:id', component: ReleaseDetailsComponent, resolve: {releaseDetails:ReleaseListResolver} },
 
     { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent },
     
