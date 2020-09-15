@@ -1,4 +1,4 @@
-<div class="releaseDetailsWrapper">
+<div class="releaseDetailsWrapper" *ngIf="release | async as release">
     <div class="releaseDetailsContainer">
         <div class="image">
             <img class="artwork" [src]="release.artwork">

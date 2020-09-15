@@ -1,6 +1,12 @@
 .you-may-like-wrapper {
-    max-width: 1440px;
-    margin: auto;
+    max-width: 144rem;
+    margin: 1rem auto 2rem auto;
+}
+
+@media (max-width: 1356px) {
+    .you-may-like-wrapper {
+        display: none;
+    }
 }
 
 .inner-wrapper {
@@ -11,13 +17,15 @@
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     /*background-color: rgb(240, 240, 240) !important;*/
     background-color: white;
-    margin: 5px auto 5px auto;
+    margin: 0.5rem 2rem 0.5rem 2rem;
     padding-left: 80px;
+    border-radius: 0.5rem;
 }
 
 .header {
     width: 100%;
     margin-top: 50px;
+    margin-left: 2rem;
 }
 
 .header h3 {

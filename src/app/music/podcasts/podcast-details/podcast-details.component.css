@@ -3,6 +3,12 @@
     margin: 12rem auto 5px auto;
 }
 
+@media (max-width: 800px) {
+    .podcastDetailsWrapper {
+        margin: 10rem auto 10rem auto;
+    }
+}
+
 .podcastDetailsContainer {
     display: flex;
     flex-direction: row;
@@ -58,7 +64,7 @@
 
 @media (max-width: 800px) {
     .artwork {
-        width: 100%;
+        width: 100% !important;
         margin: 0;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;

@@ -55,7 +55,7 @@ import { Content } from '../models/content-interface';
               query(':self', style({ opacity: 0}), {optional: true}),
     
               query(':self', stagger('300ms', [
-                animate('0.5s 3.5s ease-in', keyframes([
+                animate('0.5s 3s ease-in', keyframes([
                   style({opacity: 0, transform: 'translateX(0px)', offset: 0}),
                   style({opacity: .5, transform: 'translateX(0px)', offset: 0.3}),
                   style({opacity: 1, transform: 'translateX(0px)', offset: 1}),
@@ -71,8 +71,8 @@ import { Content } from '../models/content-interface';
 
 export class MainComponent implements OnInit {
   
-    homeContentCollection: AngularFirestoreCollection<Content>;
-    homeContent: Observable<Content[]>;
+    homeContentDoc: AngularFirestoreDocument<Content>;
+    homeContent: Observable<Content>;
     
     constructor(private router:Router, private contentService: ContentService, private afs: AngularFirestore) {
 
@@ -86,8 +86,8 @@ export class MainComponent implements OnInit {
             window.scrollTo(0, 0)
         });
 
-        this.homeContentCollection = this.afs.collection('main-content')
-        this.homeContent = this.homeContentCollection.valueChanges()
+        this.homeContentDoc = this.afs.doc('main-content/home')
+        this.homeContent = this.homeContentDoc.valueChanges()
     }
 
     listenNow() {

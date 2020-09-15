@@ -14,3 +14,31 @@ export interface Content {
     aboutText?: string;
     aboutImage?: string;
 }
+
+export interface LatestNews {
+    title?: string;
+    info?: string;
+    moreInfo?: string;
+    imageUrl?: string;   
+    internalUrl?: string;
+    internalUrlTitle?: string; 
+    externalUrl?: string;
+    externalUrlTitle?: string; 
+}
+
+export interface Release {
+    id?: number;
+    title?: string;
+    artistName?: string;
+    catNo?: string;
+    imageUrl?: string;
+    artwork?: string;
+    releaseUrl?: string;        
+    releaseInfoP1?: string;
+    releaseInfoP2?: string;
+    releaseInfoP3?: string;
+    releaseInfoP4?: string;
+    releaseInfoP5?: string;
+    releaseDate?: string;
+    releasePlayer?: string
+}
