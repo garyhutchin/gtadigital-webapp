@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PodcastService } from '../../podcasts/shared/podcast.service'
 import { ContentService } from 'src/app/shared/content.service';
+import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
+import { Observable } from 'rxjs';
+import { Podcast } from '../../../models/content-interface';
 
 @Component ({
     selector: 'podcast-tile',
@@ -11,15 +13,19 @@ import { ContentService } from 'src/app/shared/content.service';
 
 export class PodcastTileComponent implements OnInit {
     
-    podcasts:any[]
+    podcastsCollection: AngularFirestoreCollection<Podcast>
+    podcasts: Observable<Podcast[]>
     musicContent:any
 
-    constructor(private router: Router, private podcastService: PodcastService, private contentService: ContentService) {
+    constructor(private router: Router, private contentService: ContentService, private afs: AngularFirestore) {
 
     }
 
     ngOnInit() {
-        this.podcasts = this.podcastService.getPodcasts()
+        this.podcastsCollection = this.afs.collection('podcasts', ref => {
+            return ref.orderBy('id', 'desc')
+        })
+        this.podcasts = this.podcastsCollection.valueChanges()
 
         this.musicContent = this.contentService.getMusicContent('music')
     }

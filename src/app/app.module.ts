@@ -41,7 +41,6 @@ import { PodcastsListComponent } from './music/podcasts/podcasts-list/podcasts-l
 import { PodcastDetailsComponent } from './music/podcasts/podcast-details/podcast-details.component'
 import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.component';
 import { PodcastThumbnailComponent } from './music/podcasts/podcasts-list/podcast-thumbnail/podcast-thumbnail.component';
-import { PodcastService } from './music/podcasts/shared/podcast.service';
 import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-thumbnail/you-may-like-thumbnail.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 import { ReleaseListResolver } from './music/releases/shared/release-list-resolver.service';
@@ -94,7 +93,6 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
     ReleaseService,
     MostPopularService,
     LatestNewsService,
-    PodcastService,
     ReleaseListResolver,
     ContentService
   ],

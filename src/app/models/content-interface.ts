@@ -42,3 +42,61 @@ export interface Release {
     releaseDate?: string;
     releasePlayer?: string
 }
+
+export interface Podcast {
+    id?: number;
+    title?: string;
+    artistName?: string;
+    thumbnailUrl?: string;
+    artwork?: string;
+    style?: string;
+    duration?: string;
+    releaseDate?: string;
+    player?: string;
+    tracksBy?: string;
+    track1?: string;
+    track2?: string;
+    track3?: string;
+    track4?: string;
+    track5?: string;
+    track6?: string;
+    track7?: string;
+    track8?: string;
+    track9?: string;
+    track10?: string;
+    track11?: string;
+    track12?: string;
+    track13?: string;
+    track14?: string;
+    track15?: string;
+    track16?: string;
+    track17?: string;
+    track18?: string;
+    track19?: string;
+    track20?: string;
+    track21?: string;
+    track22?: string;
+    track23?: string;
+    track24?: string;
+    track25?: string;
+    track26?: string;
+    track27?: string;
+    track28?: string;
+    track29?: string;
+    track30?: string;
+    track31?: string;
+    track32?: string;
+    track33?: string;
+    track34?: string;
+    track35?: string;
+    track36?: string;
+    track37?: string;
+    track38?: string;
+    track39?: string;
+    track40?: string;
+    track41?: string;
+    track42?: string;
+    track43?: string;
+    track44?: string;
+    track45?: string;
+}
