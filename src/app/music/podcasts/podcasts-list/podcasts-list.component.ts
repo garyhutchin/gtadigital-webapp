@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PodcastService } from '../shared/podcast.service';
+import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
+import { Observable } from 'rxjs';
+import { Podcast } from '../../../models/content-interface';
 
 @Component({
   selector: 'podcasts-list',
@@ -7,12 +9,17 @@ import { PodcastService } from '../shared/podcast.service';
   styleUrls: ['../../../css/card-structure.component.css']
 })
 export class PodcastsListComponent implements OnInit {
-podcasts:any[]
 
-  constructor(private podcastService: PodcastService) { }
+  podcastsCollection: AngularFirestoreCollection<Podcast>
+  podcasts: Observable<Podcast[]>
+
+  constructor( private afs: AngularFirestore) { }
 
   ngOnInit() {
-      this.podcasts = this.podcastService.getPodcasts()
+    this.podcastsCollection = this.afs.collection('podcasts', ref => {
+      return ref.orderBy('id', 'desc')
+  })
+  this.podcasts = this.podcastsCollection.valueChanges()
   }
 
 }

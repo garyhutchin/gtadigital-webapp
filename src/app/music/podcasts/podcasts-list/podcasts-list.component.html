@@ -1,6 +1,6 @@
 <div class="list-wrapper">
     <div class="listContainer">
-        <div class="cardElement" *ngFor="let podcast of podcasts">
+        <div class="cardElement" *ngFor="let podcast of podcasts | async">
             <podcast-thumbnail [podcast]="podcast"></podcast-thumbnail>
         </div>
     </div>

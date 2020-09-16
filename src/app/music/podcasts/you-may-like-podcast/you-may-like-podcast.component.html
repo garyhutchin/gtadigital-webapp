@@ -3,7 +3,7 @@
         <h3 class="youMayAlsoLike">You May Also Like</h3>
     </div>
     <div class="inner-wrapper">
-        <ng-container *ngFor="let podcast of podcasts | slice:start:end; let i=index">
+        <ng-container *ngFor="let podcast of podcasts | async | slice:start:end; let i=index">
             <you-may-like-podcast-thumbnail [podcast]="podcast"></you-may-like-podcast-thumbnail>
         </ng-container>
     </div>

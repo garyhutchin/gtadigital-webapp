@@ -2,7 +2,7 @@
 
     <div class="listContainer">
 
-        <div class="cardElement" *ngFor="let podcast of podcasts | slice:0:4; let i=index">
+        <div class="cardElement" *ngFor="let podcast of podcasts | async | slice:0:4; let i=index">
             <podcast-tile-thumbnail [podcast]="podcast"></podcast-tile-thumbnail>
         </div>
         

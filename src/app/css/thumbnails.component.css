@@ -1,5 +1,5 @@
-.routerLink:active {
-    outline: 0;
+.routerLink:active, :focus {
+    outline: 0.1rem dashed rgb(133, 133, 133);
 }
 
 .cardHeader {
