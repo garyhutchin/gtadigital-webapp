@@ -1,3 +1,8 @@
+export interface Navigation {
+    title?: string;
+    route?: string;
+}
+
 export interface Content {
     id?: string;
     heroText?: string;

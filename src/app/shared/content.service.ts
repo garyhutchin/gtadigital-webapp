@@ -4,43 +4,10 @@ import { Injectable } from '@angular/core';
 
 export class ContentService {
 
-    getNavItems() {
-        return NAVITEMS
-    }
-
-    getAboutContent(id:string) {
-        return MAINCONTENT.find(about => about.id === id)
-    }
-
     getMusicContent(id:string) {
         return MAINCONTENT.find(music => music.id === id)
     }
 }
-
-const NAVITEMS = [
-
-    {
-        title: 'Home',
-        route: 'home'
-    },
-    {
-        title: 'About',
-        route: 'about'
-    },
-    {
-        title: 'Music',
-        route: 'music'
-    },
-    {
-        title: 'Store',
-        route: 'store'
-    },
-    {
-        title: 'Contact',
-        route: 'contact'
-    }
-
-]
 
 const MAINCONTENT = [
 

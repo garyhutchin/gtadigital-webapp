@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { Content } from '@angular/compiler/src/render3/r3_ast';
-import { ContentService } from 'src/app/shared/content.service';
-import { ThrowStmt } from '@angular/compiler';
+import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
+import { Observable } from 'rxjs';
+import { Navigation } from '../../models/content-interface';
 
 @Component ({
     selector: 'tab-nav',
@@ -22,20 +22,24 @@ import { ThrowStmt } from '@angular/compiler';
 
 export class TabNavComponent implements OnInit {
     
-    navItems: any[]
+  navItemsCollection: AngularFirestoreCollection<Navigation>
+  navItems: Observable<Navigation[]>
 
-    constructor(private contentService: ContentService) {
+  constructor(private afs: AngularFirestore) {
 
-    }
+  }
 
-    isCollapsed: boolean = true;
+  ngOnInit() {
+      this.navItemsCollection = this.afs.collection('navigation', ref => {
+          return ref.orderBy('id', 'asc')
+      })
+      this.navItems = this.navItemsCollection.valueChanges()
+  }
 
-    toggleTabNav() {
-        this.isCollapsed = !this.isCollapsed;
-    }
+  isCollapsed: boolean = true;
 
-    ngOnInit() {
-      this.navItems = this.contentService.getNavItems()
-    }
+  toggleTabNav() {
+      this.isCollapsed = !this.isCollapsed;
+  }
 
 }

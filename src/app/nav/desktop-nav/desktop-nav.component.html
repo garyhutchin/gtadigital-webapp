@@ -6,7 +6,7 @@
             </div>
             <div class="navbar">
                 <ul>
-                    <li class="navItem" *ngFor="let navItem of navItems">
+                    <li class="navItem" *ngFor="let navItem of navItems | async">
                         <nav-items [navItem]="navItem"></nav-items>
                     </li>
                 </ul>

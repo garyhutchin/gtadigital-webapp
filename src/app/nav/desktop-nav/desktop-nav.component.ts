@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentService } from 'src/app/shared/content.service';
+import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
+import { Observable } from 'rxjs';
+import { Navigation } from '../../models/content-interface';
 
 @Component ({
     selector: 'desktop-nav',
@@ -9,14 +11,18 @@ import { ContentService } from 'src/app/shared/content.service';
 
 export class DesktopNavComponent implements OnInit {
 
-    navItems: any[]
+    navItemsCollection: AngularFirestoreCollection<Navigation>
+    navItems: Observable<Navigation[]>
 
-    constructor(private contentService: ContentService) {
+    constructor(private afs: AngularFirestore) {
 
     }
 
     ngOnInit() {
-        this.navItems = this.contentService.getNavItems()
+        this.navItemsCollection = this.afs.collection('navigation', ref => {
+            return ref.orderBy('id', 'asc')
+        })
+        this.navItems = this.navItemsCollection.valueChanges()
     }
 
 }

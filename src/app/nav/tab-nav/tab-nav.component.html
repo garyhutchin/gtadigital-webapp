@@ -10,7 +10,7 @@
         </div>
         <div class="tabNav-MenuItems" @fadeIn *ngIf="!isCollapsed">
             <ul>
-                <li (mouseup)="toggleTabNav()" *ngFor="let navItem of navItems">
+                <li *ngFor="let navItem of navItems | async" (mouseup)="toggleTabNav()">
                     <tab-nav-items [navItem]="navItem"></tab-nav-items>
                 </li>
             </ul>
