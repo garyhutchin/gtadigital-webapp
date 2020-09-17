@@ -1,6 +1,6 @@
 <div class="live-stream-wrapper" *ngIf="homeContent | async as homeContent">
     <div class="youTube-vid-desktop">
-        <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/6xTieGgxjDQ?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="youTubeEmbed" [src]="homeContent.gtaDigitalLiveSrc | noSanitizeUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class="youTube-vid-text">

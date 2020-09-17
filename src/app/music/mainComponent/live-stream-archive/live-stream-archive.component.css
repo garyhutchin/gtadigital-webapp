@@ -1,3 +1,8 @@
+.live-stream-wrapper {
+    max-height: 34rem;
+    overflow-y: hidden;
+}
+
 .live-stream-container {
     display: flex;
     flex-wrap: wrap;

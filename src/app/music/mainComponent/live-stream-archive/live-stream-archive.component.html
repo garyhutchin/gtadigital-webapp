@@ -1,59 +1,62 @@
-<div class="live-stream-container">
+<div class="live-stream-wrapper" [ngStyle]="{'max-height':changeHeight+'%'}">
+    <div class="live-stream-container">
 
-    <div class="youTube-vid-desktop">
-        <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/MwU0oS0LKGs?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    
-    <div class="youTube-vid-text">
-        <h3>GTA Digital Live Presents: Gary The Apprentice</h3>
-        <p>19 April 2020</p>
-        <p>Style:</p>
-        <p>Tracks by:</p>      
+        <div class="youTube-vid-desktop">
+            <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/MwU0oS0LKGs?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <div class="youTube-vid-text">
+            <h3>GTA Digital Live Presents: Gary The Apprentice</h3>
+            <p>19 April 2020</p>
+            <p>Style:</p>
+            <p>Tracks by:</p>      
+        </div>
+
     </div>
 
+    <div class="live-stream-container">
+
+        <div class="youTube-vid-desktop">
+            <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/4PaRduQyIls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <div class="youTube-vid-text">
+            <h3>GTA Digital Live Presents: Gary The Apprentice</h3>
+            <p>5 April 2020</p>
+            <p>Style:</p>
+            <p>Tracks by:</p>     
+        </div>
+
+    </div>
+
+    <div class="live-stream-container">
+
+        <div class="youTube-vid-desktop">
+            <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/jHSndN1TfVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <div class="youTube-vid-text">
+            <h3>GTA Digital Live Presents: Gary The Apprentice</h3>
+            <p>24 August 2018</p>
+            <p>Style:</p>
+            <p>Tracks by:</p>     
+        </div>
+
+    </div>
+
+    <div class="live-stream-container">
+
+        <div class="youTube-vid-desktop">
+            <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/SyklycdUPsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <div class="youTube-vid-text">
+            <h3>GTA Digital Live Presents: Gary The Apprentice</h3>
+            <p>29 July 2018</p>
+            <p>Style:</p>
+            <p>Tracks by:</p>     
+        </div>
+
+    </div>
 </div>
-
-<div class="live-stream-container">
-
-    <div class="youTube-vid-desktop">
-        <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/4PaRduQyIls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    
-    <div class="youTube-vid-text">
-        <h3>GTA Digital Live Presents: Gary The Apprentice</h3>
-        <p>5 April 2020</p>
-        <p>Style:</p>
-        <p>Tracks by:</p>     
-    </div>
-
-</div>
-
-<div class="live-stream-container">
-
-    <div class="youTube-vid-desktop">
-        <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/jHSndN1TfVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    
-    <div class="youTube-vid-text">
-        <h3>GTA Digital Live Presents: Gary The Apprentice</h3>
-        <p>24 August 2018</p>
-        <p>Style:</p>
-        <p>Tracks by:</p>     
-    </div>
-
-</div>
-
-<div class="live-stream-container">
-
-    <div class="youTube-vid-desktop">
-        <iframe class="youTubeEmbed" src="https://www.youtube.com/embed/SyklycdUPsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    
-    <div class="youTube-vid-text">
-        <h3>GTA Digital Live Presents: Gary The Apprentice</h3>
-        <p>29 July 2018</p>
-        <p>Style:</p>
-        <p>Tracks by:</p>     
-    </div>
-
-</div>
+<button *ngIf="!maxHeight" (click)="changeHeightBtn()">Expand</button>

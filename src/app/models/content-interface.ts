@@ -3,6 +3,12 @@ export interface Navigation {
     route?: string;
 }
 
+export interface SocialMedia {
+    id?: number;
+    image?: string;
+    url?: string;
+}
+
 export interface Content {
     id?: string;
     heroText?: string;
@@ -18,6 +24,7 @@ export interface Content {
     button2?: string;
     aboutText?: string;
     aboutImage?: string;
+    text?: string;
 }
 
 export interface LatestNews {

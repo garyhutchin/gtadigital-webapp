@@ -2,7 +2,7 @@
     <div class="navContainer">
         <div class="nav-bar-element">
             <div class="headerLogo">
-                <a [routerLink]="['/home']"><img class="navLogo" src="./assets/images/small-images/gtaDigital-Header.jpg"></a>
+                <a [routerLink]="['/home']"><img class="navLogo" src="https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2FgtaDigital-Header.jpg?alt=media&token=d98d203a-8472-441b-85b0-4729311b2909"></a>
             </div>
             <div class="navbar">
                 <ul>
@@ -13,15 +13,12 @@
             </div>
             <div class="socialMediaIcons">
                 <ul>
-                    <li><a href="https://facebook.com/gtadigital" target="blank"><img src="./assets/images/small-images/icons/facebookIcon.png" alt="Facebook"></a></li>
-                    <li><a href="https://twitter.com/gta_digital" target="blank"><img src="./assets/images/small-images/icons/twitterIcon.png" alt="Twitter"></a></li>
-                    <li><a href="https://www.instagram.com/gtadigital_techno" target="blank"><img src="./assets/images/small-images/icons/instagramIcon.png" alt="Instagram"></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCi7G9ij_Hm7UBEuZjCRUmAw" target="blank"><img src="./assets/images/small-images/icons/youtubeIcon.png" alt="YouTube"></a></li>
-                    <li><a href="https://soundcloud.com/gtadigital" target="blank"><img src="./assets/images/small-images/icons/soundcloudIcon.png" alt="SoundCloud"></a></li>
-                    <li><a href="https://hearthis.at/gtadigital-podcast-series/" target="blank"><img src="./assets/images/small-images/icons/hearthisIcon.png" alt="Hearthis"></a></li>
+                    <li *ngFor="let socialMediaLink of socialMediaLinks | async"><a [href]="socialMediaLink.url" target="blank"><img [src]="socialMediaLink.image" [alt]="socialMediaLink.alt"></a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="under-construction">This app is still in development - some content has been added as a placeholder</div>
+    <div *ngIf="underConstruction | async as underConstruction">
+        <div class="under-construction" *ngIf="underConstruction?.text">{{ underConstruction.text }}</div>
+    </div>
 </div>
