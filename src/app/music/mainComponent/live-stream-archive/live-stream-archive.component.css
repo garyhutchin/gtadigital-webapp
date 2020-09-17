@@ -3,6 +3,11 @@
     overflow-y: hidden;
 }
 
+.live-stream-wrapper-expanded {
+    max-width: 100%;
+    overflow-y: hidden;
+}
+
 .live-stream-container {
     display: flex;
     flex-wrap: wrap;
@@ -64,4 +69,24 @@
         margin-top: 0;
 
     }
+}
+
+.viewAll-button {
+    padding: 0 0 0 1rem;
+    border-left: 0.3rem solid #0193B7;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 540;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+    letter-spacing: 0.2rem;
+    margin: 1rem 2rem 2rem 2rem;
+}
+
+.element-wrapper {
+    margin-bottom: 2rem;
 }

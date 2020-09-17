@@ -8,19 +8,18 @@ import { Component, OnInit } from '@angular/core';
 
 export class LiveStreamArchiveComponent implements OnInit {
     
-    changeHeight: any;
-    maxHeight: boolean;
+    isWrapperExpanded: boolean;
 
     ngOnInit() {
-        
+        this.isWrapperExpanded = false; 
     }
 
-    changeHeightBtn() {
-        this.changeHeight = 100;
-        console.log(this.changeHeight)
-        if (this.changeHeight = 100)
-        return this.maxHeight = true;
-        console.log(this.maxHeight)
+    expandLiveStream() {
+        this.isWrapperExpanded = true;
+    }
+
+    collapseLiveStream() {
+        this.isWrapperExpanded = false;
     }
 
 }
