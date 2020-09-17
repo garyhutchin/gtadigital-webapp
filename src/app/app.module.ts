@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NoSanitizePipe } from './shared/sanitize.pipe';
+import { NoSanitizeHtmlPipe } from './shared/sanitize-html.pipe';
+import { NoSanitizeUrlPipe } from './shared/sanitize-url.pipe';
 
 import { environment } from '../environments/environment';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore'
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -83,7 +84,8 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
     YouMayLikeThumbnailComponent,
     PageNotFoundComponent,
     AboutComponent,
-    NoSanitizePipe,
+    NoSanitizeHtmlPipe,
+    NoSanitizeUrlPipe,
     ReleaseDetailsComponent,
     YouMayLikePodcastComponent,
     YouMayLikePodcastThumbnailComponent

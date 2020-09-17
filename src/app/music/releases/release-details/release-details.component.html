@@ -9,7 +9,7 @@
             <p class="codeWrapper" *ngIf="release?.discountCode" class="discount-code">Enter code "{{release.discountCode}}" for 50% off</p>
             <p>{{release.releaseInfoP1}}</p>
             <p>{{release.releaseInfoP2}}<br>{{release.releaseInfoP3}}<br>{{release.releaseInfoP4}}<br>{{release.releaseInfoP5}}</p>
-            <span class="player" [innerHTML]="release.releasePlayer | noSanitize"></span>
+            <span class="player" [innerHTML]="release.releasePlayer | noSanitizeHtml"></span>
         </div>
     </div>
 </div>

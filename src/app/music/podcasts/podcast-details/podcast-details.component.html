@@ -14,7 +14,7 @@
             <p *ngIf="podcast?.releaseInfoP5">{{podcast?.releaseInfoP5}}</p>
             <p *ngIf="podcast?.tracksBy">Tracks by the likes of: {{podcast.tracksBy}}</p>
             <span *ngIf="podcast?.track1" class="tracklist-open-button" (click)="OpenModal()">Track List</span>
-            <span class="player" [innerHTML]="podcast.player | noSanitize"></span>
+            <span class="player" [innerHTML]="podcast.player | noSanitizeHtml"></span>
         </div>
     </div>
 

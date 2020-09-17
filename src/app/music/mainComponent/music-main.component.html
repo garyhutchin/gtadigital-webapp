@@ -1,4 +1,4 @@
-<div class="pageHeroWrapper">
+<div class="pageHeroWrapper" *ngIf="musicContent | async as musicContent">
     <div class="heroContainer">
         <div class="heroText">
             <h1 [innerHTML]="musicContent.heroHeader"></h1>
@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="componentContainer">
+<div class="componentContainer" *ngIf="musicContent | async as musicContent">
 
     <div class="componentContent">
 

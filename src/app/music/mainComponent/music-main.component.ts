@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 import { ContentService } from 'src/app/shared/content.service';
-import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
+import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
-import { Release } from '../../models/content-interface';
+import { Release, Content } from '../../models/content-interface';
+
 
 @Component ({
     selector: 'music-main',
@@ -15,8 +16,10 @@ export class MusicMainComponent implements OnInit {
 
     releasesCollection: AngularFirestoreCollection<Release>
     releases: Observable<Release[]>
-    musicContent: any
 
+    musicContentDoc: AngularFirestoreDocument<Content>
+    musicContent: Observable<Content>
+    
     constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService, private afs: AngularFirestore) {
         
     }
@@ -34,7 +37,10 @@ export class MusicMainComponent implements OnInit {
         })
         this.releases = this.releasesCollection.valueChanges()
 
-        this.musicContent = this.contentService.getMusicContent('music')
+        this.musicContentDoc = this.afs.doc('main-content/music')
+        this.musicContent = this.musicContentDoc.valueChanges()
+
+        //this.musicContent = this.contentService.getMusicContent('music')
     }
 
 }
