@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import { Podcast } from '../../../models/content-interface';
 
@@ -10,16 +10,14 @@ import { Podcast } from '../../../models/content-interface';
 })
 export class PodcastsListComponent implements OnInit {
 
-  podcastsCollection: AngularFirestoreCollection<Podcast>
+  podcastsList: AngularFireList<Podcast>
   podcasts: Observable<Podcast[]>
 
-  constructor( private afs: AngularFirestore) { }
+  constructor( private afd: AngularFireDatabase) { }
 
   ngOnInit() {
-    this.podcastsCollection = this.afs.collection('podcasts', ref => {
-      return ref.orderBy('id', 'desc')
-  })
-  this.podcasts = this.podcastsCollection.valueChanges()
+    this.podcastsList = this.afd.list('podcasts')
+  this.podcasts = this.podcastsList.valueChanges()
   }
 
 }

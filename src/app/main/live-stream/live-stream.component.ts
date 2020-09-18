@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from 'src/app/shared/content.service';
-import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
 import { Content } from '../../models/content-interface';
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 
 @Component({
   selector: 'live-stream',
@@ -11,16 +11,16 @@ import { Content } from '../../models/content-interface';
 })
 export class LiveStreamComponent implements OnInit {
 
-  homeContentDoc: AngularFirestoreDocument<Content>;
+  homeContentDoc: AngularFireObject<Content>;
   homeContent: Observable<Content>;
 
-  constructor(private contentService: ContentService, private afs: AngularFirestore) { 
+  constructor(private contentService: ContentService, private afd: AngularFireDatabase) { 
 
   }
 
   ngOnInit() {
 
-    this.homeContentDoc = this.afs.doc('main-content/home')
+    this.homeContentDoc = this.afd.object('main-content/home')
     this.homeContent = this.homeContentDoc.valueChanges()
 
   }

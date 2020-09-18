@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LatestNewsService } from '../shared/latest-news.service';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
-import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
+import { AngularFireDatabase, AngularFireList} from 'angularfire2/database'
 import { Observable } from 'rxjs';
 import { Content } from '../../models/content-interface';
 
@@ -34,18 +34,20 @@ import { Content } from '../../models/content-interface';
 
 export class LatestNewsComponent implements OnInit {
 
-    newsItemsCollection: AngularFirestoreCollection<Content>;
-    newsItems: Observable<Content[]>;
 
-    constructor(private latestNewsService: LatestNewsService, private afs: AngularFirestore){
+    newsItemsList: AngularFireList<Content>
+    newsItems: Observable<Content[]>
+
+    constructor(private latestNewsService: LatestNewsService, private afd: AngularFireDatabase){
 
     }
 
     ngOnInit() {
-      this.newsItemsCollection = this.afs.collection('latest-news', ref => {
-        return ref.orderBy('newsItem', 'desc')
-      })
-      this.newsItems = this.newsItemsCollection.valueChanges()
+
+      this.newsItemsList = this.afd.list('latest-news')
+      this.newsItems = this.newsItemsList.valueChanges()
+
+
 
     }
 }
