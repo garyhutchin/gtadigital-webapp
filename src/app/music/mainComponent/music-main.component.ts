@@ -4,6 +4,7 @@ import { ContentService } from 'src/app/shared/content.service';
 import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
 import { Release, Content } from '../../models/content-interface';
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 
 
 @Component ({
@@ -14,13 +15,13 @@ import { Release, Content } from '../../models/content-interface';
 
 export class MusicMainComponent implements OnInit {
 
-    releasesCollection: AngularFirestoreCollection<Release>
+    releasesList: AngularFireList<Release>
     releases: Observable<Release[]>
 
-    musicContentDoc: AngularFirestoreDocument<Content>
+    musicContentObject: AngularFireObject<Content>
     musicContent: Observable<Content>
     
-    constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService, private afs: AngularFirestore) {
+    constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService, private afs: AngularFirestore, private afd: AngularFireDatabase) {
         
     }
 
@@ -32,15 +33,11 @@ export class MusicMainComponent implements OnInit {
             window.scrollTo(0, 0)
         });
 
-        this.releasesCollection = this.afs.collection('releases', ref => {
-            return ref.orderBy('id', 'desc')
-        })
-        this.releases = this.releasesCollection.valueChanges()
+        this.releasesList = this.afd.list('releases')
+        this.releases = this.releasesList.valueChanges()
 
-        this.musicContentDoc = this.afs.doc('main-content/music')
-        this.musicContent = this.musicContentDoc.valueChanges()
-
-        //this.musicContent = this.contentService.getMusicContent('music')
+        this.musicContentObject = this.afd.object('main-content/music')
+        this.musicContent = this.musicContentObject.valueChanges()
     }
 
 }

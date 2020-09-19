@@ -1,6 +1,6 @@
 <div class="list-wrapper">
     <div class="listContainer">
-        <div class="cardElement" *ngFor="let release of releases | async">
+        <div class="cardElement" *ngFor="let release of releases | async | reverse">
             <release-thumbnail [release]="release"></release-thumbnail>
         </div>
     </div>

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ContentService } from 'src/app/shared/content.service';
-import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
-import { Release } from '../../../models/content-interface';
+import { Release, Content } from '../../../models/content-interface';
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 
 @Component ({
     selector: 'release-list-tile',
@@ -12,21 +11,24 @@ import { Release } from '../../../models/content-interface';
 })
 
 export class ReleaseListTileComponent implements OnInit {
-    releasesCollection: AngularFirestoreCollection<Release>
+   
+    releasesList: AngularFireList<Release>
     releases: Observable<Release[]>
-    musicContent: any
 
-    constructor(private router:Router, private route: ActivatedRoute, private contentService: ContentService, private afs: AngularFirestore) {
+    musicContentObject: AngularFireObject<Content>
+    musicContent: Observable<Content>
+
+    constructor(private router:Router, private route: ActivatedRoute, private afd: AngularFireDatabase) {
 
     }
 
     ngOnInit() {
-        this.releasesCollection = this.afs.collection('releases', ref => {
-            return ref.orderBy('id', 'desc')
-        })
-        this.releases = this.releasesCollection.valueChanges()
+        
+        this.releasesList = this.afd.list('releases')
+        this.releases = this.releasesList.valueChanges()
 
-        this.musicContent = this.contentService.getMusicContent('music')
+        this.musicContentObject = this.afd.object('main-content/music')
+        this.musicContent = this.musicContentObject.valueChanges()
     }
 
     viewReleases() {

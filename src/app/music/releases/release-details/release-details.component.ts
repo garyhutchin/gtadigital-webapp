@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ReleaseService } from '../shared/releases.service';
 import { ActivatedRoute } from '@angular/router';
-import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
 import { Release } from '../../../models/content-interface';
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 
 @Component ({
     selector: 'release-details',
@@ -12,16 +12,19 @@ import { Release } from '../../../models/content-interface';
 })
 
 export class ReleaseDetailsComponent implements OnInit {
-    releaseDoc: AngularFirestoreDocument<Release>;
+    
+    id = this.activatedRoute.snapshot.params['id']
+    
+    releaseObject: AngularFireObject<Release>;
     release: Observable<Release>
 
-    constructor(private releaseService:ReleaseService, private activatedRoute: ActivatedRoute, private afs: AngularFirestore) {
+    constructor(private releaseService:ReleaseService, private activatedRoute: ActivatedRoute, private afd: AngularFireDatabase) {
     }
 
     ngOnInit() {
         this.activatedRoute.url.subscribe(url =>{
-            this.releaseDoc = this.afs.doc('releases/'+this.activatedRoute.snapshot.params['id'])
-            this.release = this.releaseDoc.valueChanges()
+            this.releaseObject = this.afd.object('releases/'+`${this.id}`)
+            this.release = this.releaseObject.valueChanges()
             
         });
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore'
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import { Content } from '../models/content-interface';
 
@@ -11,16 +11,16 @@ import { Content } from '../models/content-interface';
 })
 export class AboutComponent implements OnInit {
 
-  aboutContentDoc: AngularFirestoreDocument<Content>;
+  aboutContentDoc: AngularFireObject<Content>;
   aboutContent: Observable<Content>;
 
-  constructor(private afs: AngularFirestore) { 
+  constructor(private afd: AngularFireDatabase) { 
 
   }
 
   ngOnInit() {
 
-    this.aboutContentDoc = this.afs.doc('main-content/about')
+    this.aboutContentDoc = this.afd.object('main-content/about')
     this.aboutContent = this.aboutContentDoc.valueChanges()
 
   }

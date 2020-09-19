@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database'
 import { Observable } from 'rxjs';
 import { Navigation, SocialMedia, Content } from '../../models/content-interface';
 
@@ -11,32 +11,36 @@ import { Navigation, SocialMedia, Content } from '../../models/content-interface
 
 export class DesktopNavComponent implements OnInit {
 
-    navItemsCollection: AngularFirestoreCollection<Navigation>
+    //navItemsCollection: AngularFirestoreCollection<Navigation>
+    //navItems: Observable<Navigation[]>
+
+    navItemsList: AngularFireList<Navigation>
     navItems: Observable<Navigation[]>
 
-    socialMediaLinksCollection: AngularFirestoreCollection<SocialMedia>
+    socialMediaLinksList: AngularFireList<SocialMedia>
     socialMediaLinks: Observable<SocialMedia[]>
 
-    underConstructionDoc: AngularFirestoreDocument<Content>
+    underConstructionObject: AngularFireObject<Content>
     underConstruction: Observable<Content>
 
-    constructor(private afs: AngularFirestore) {
+    constructor(private afd: AngularFireDatabase) {
 
     }
 
     ngOnInit() {
-        this.navItemsCollection = this.afs.collection('navigation', ref => {
-            return ref.orderBy('id', 'asc')
-        })
-        this.navItems = this.navItemsCollection.valueChanges()
+        //this.navItemsCollection = this.afs.collection('navigation', ref => {
+        //    return ref.orderBy('id', 'asc')
+        //})
+        //this.navItems = this.navItemsCollection.valueChanges()
 
-        this.socialMediaLinksCollection = this.afs.collection('social-media-links', ref => {
-            return ref.orderBy('id', 'asc')
-        })
-        this.socialMediaLinks = this.socialMediaLinksCollection.valueChanges()
+        this.navItemsList = this.afd.list('navigation')
+        this.navItems = this.navItemsList.valueChanges()
 
-        this.underConstructionDoc = this.afs.doc('main-content/under-construction-banner')
-        this.underConstruction = this.underConstructionDoc.valueChanges()
+        this.socialMediaLinksList = this.afd.list('social-media-links')
+        this.socialMediaLinks = this.socialMediaLinksList.valueChanges()
+
+        this.underConstructionObject = this.afd.object('main-content/under-construction-banner')
+        this.underConstruction = this.underConstructionObject.valueChanges()
     }
 
 }

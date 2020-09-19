@@ -5,11 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NoSanitizeHtmlPipe } from './shared/sanitize-html.pipe';
 import { NoSanitizeUrlPipe } from './shared/sanitize-url.pipe';
+import { ReversePipe } from './shared/reverse.pipe';
 
 import { environment } from '../environments/environment';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -86,6 +87,7 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
     AboutComponent,
     NoSanitizeHtmlPipe,
     NoSanitizeUrlPipe,
+    ReversePipe,
     ReleaseDetailsComponent,
     YouMayLikePodcastComponent,
     YouMayLikePodcastThumbnailComponent
@@ -100,11 +102,11 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
   ],
 
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes, {onSameUrlNavigation: 'reload'}),
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'reload', initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase, 'gtadigital-app'),
-    AngularFirestoreModule
+    AngularFireDatabaseModule
     ],
     
   bootstrap: [AppComponent]

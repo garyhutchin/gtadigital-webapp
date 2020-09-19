@@ -1,7 +1,7 @@
 <div class="list-wrapper">
     <ng-container *ngIf="newsItems | async as newsItemsFromContainer">
         <div class="listContainer" [@newsAnimation]="newsItemsFromContainer.length">
-            <div class="news-cardElement" *ngFor="let newsItem of newsItemsFromContainer | slice:0:4; let i=index">
+            <div class="news-cardElement" *ngFor="let newsItem of newsItemsFromContainer | reverse | slice:0:4; let i=index">
                 <latest-news-thumbnail [newsItem]="newsItem"></latest-news-thumbnail>
             </div>
         </div>
