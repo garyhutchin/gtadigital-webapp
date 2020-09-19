@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import { Navigation } from '../../models/content-interface';
 
@@ -22,18 +22,16 @@ import { Navigation } from '../../models/content-interface';
 
 export class TabNavComponent implements OnInit {
     
-  navItemsCollection: AngularFirestoreCollection<Navigation>
+  navItemsList: AngularFireList<Navigation>
   navItems: Observable<Navigation[]>
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afd: AngularFireDatabase) {
 
   }
 
   ngOnInit() {
-      this.navItemsCollection = this.afs.collection('navigation', ref => {
-          return ref.orderBy('id', 'asc')
-      })
-      this.navItems = this.navItemsCollection.valueChanges()
+    this.navItemsList = this.afd.list('navigation')
+    this.navItems = this.navItemsList.valueChanges()
   }
 
   isCollapsed: boolean = true;

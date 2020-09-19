@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
-import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
 import { Podcast } from '../../../models/content-interface';
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 
 @Component({
   selector: 'podcast-details',
@@ -31,7 +31,8 @@ import { Podcast } from '../../../models/content-interface';
 })
 export class PodcastDetailsComponent implements OnInit {
 
-  podcastDoc: AngularFirestoreDocument<Podcast>;
+  id = +this.activatedRoute.snapshot.params['id']
+  podcastObject: AngularFireObject<Podcast>;
   podcast: Observable<Podcast>
 
   isClosed: boolean = true; 
@@ -40,13 +41,13 @@ export class PodcastDetailsComponent implements OnInit {
     this.isClosed = !this.isClosed;
   }
 
-  constructor(private activatedRoute: ActivatedRoute, private afs: AngularFirestore) {
+  constructor(private activatedRoute: ActivatedRoute, private afd: AngularFireDatabase) {
   }
 
   ngOnInit() {
     this.activatedRoute.url.subscribe(url =>{
-      this.podcastDoc = this.afs.doc('podcasts/'+this.activatedRoute.snapshot.params['id'])
-      this.podcast = this.podcastDoc.valueChanges()
+      this.podcastObject = this.afd.object('podcasts/'+`${this.id}`)
+      this.podcast = this.podcastObject.valueChanges()
       
   });
   }

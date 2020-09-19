@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContentService } from 'src/app/shared/content.service';
-import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
-import { Podcast } from '../../../models/content-interface';
+import { Podcast, Content } from '../../../models/content-interface';
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 
 @Component ({
     selector: 'podcast-tile',
@@ -13,21 +13,24 @@ import { Podcast } from '../../../models/content-interface';
 
 export class PodcastTileComponent implements OnInit {
     
-    podcastsCollection: AngularFirestoreCollection<Podcast>
+    podcastsList: AngularFireList<Podcast>
     podcasts: Observable<Podcast[]>
-    musicContent:any
+    
+    musicContentObject: AngularFireObject<Content>
+    musicContent: Observable<Content>
 
-    constructor(private router: Router, private contentService: ContentService, private afs: AngularFirestore) {
+    constructor(private router: Router, private contentService: ContentService, private afd: AngularFireDatabase) {
 
     }
 
     ngOnInit() {
-        this.podcastsCollection = this.afs.collection('podcasts', ref => {
-            return ref.orderBy('id', 'desc')
-        })
-        this.podcasts = this.podcastsCollection.valueChanges()
+        this.podcastsList = this.afd.list('podcasts')
+        this.podcasts = this.podcastsList.valueChanges()
 
-        this.musicContent = this.contentService.getMusicContent('music')
+        this.musicContentObject = this.afd.object('main-content/music')
+        this.musicContent = this.musicContentObject.valueChanges()
+
+        
     }
 
     viewPodcasts() {

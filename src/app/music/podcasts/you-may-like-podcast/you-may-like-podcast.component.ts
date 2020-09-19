@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AngularFirestore ,AngularFirestoreCollection } from 'angularfire2/firestore'
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import { Podcast } from '../../../models/content-interface';
 
@@ -11,23 +11,21 @@ import { Podcast } from '../../../models/content-interface';
 })
 export class YouMayLikePodcastComponent implements OnInit {
 
-  podcastsCollection: AngularFirestoreCollection<Podcast>
+  podcastsList: AngularFireList<Podcast>
   podcasts: Observable<Podcast[]>
 
   start : number = 0;
   end : number = 5;
   releaseNumber: number;
 
-  constructor( private activatedRoute: ActivatedRoute, private route: ActivatedRoute, private router: Router, private afs: AngularFirestore) {
+  constructor( private activatedRoute: ActivatedRoute, private route: ActivatedRoute, private router: Router, private afd: AngularFireDatabase) {
 
   }
 
   ngOnInit() {
     this.activatedRoute.url.subscribe(url =>{
-      this.podcastsCollection = this.afs.collection('podcasts', ref => {
-        return ref.orderBy('id', 'desc')
-    })
-    this.podcasts = this.podcastsCollection.valueChanges()
+      this.podcastsList = this.afd.list('podcasts')
+    this.podcasts = this.podcastsList.valueChanges()
   
       this.releaseNumber = this.activatedRoute.snapshot.params['id']
   
