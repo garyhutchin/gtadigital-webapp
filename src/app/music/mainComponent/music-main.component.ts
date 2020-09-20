@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 import { ContentService } from 'src/app/shared/content.service';
-import { AngularFirestore ,AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs';
 import { Release, Content } from '../../models/content-interface';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
@@ -21,17 +20,11 @@ export class MusicMainComponent implements OnInit {
     musicContentObject: AngularFireObject<Content>
     musicContent: Observable<Content>
     
-    constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService, private afs: AngularFirestore, private afd: AngularFireDatabase) {
+    constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService, private afd: AngularFireDatabase) {
         
     }
 
     ngOnInit() {
-        this.router.events.subscribe((evt) => {
-            if (!(evt instanceof NavigationEnd)) {
-                return;
-            }
-            window.scrollTo(0, 0)
-        });
 
         this.releasesList = this.afd.list('releases')
         this.releases = this.releasesList.valueChanges()
