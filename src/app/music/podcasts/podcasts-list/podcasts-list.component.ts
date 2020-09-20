@@ -17,7 +17,7 @@ export class PodcastsListComponent implements OnInit {
 
   ngOnInit() {
     this.podcastsList = this.afd.list('podcasts')
-  this.podcasts = this.podcastsList.valueChanges()
+    this.podcasts = this.podcastsList.valueChanges()
   }
 
 }

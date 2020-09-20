@@ -22,16 +22,17 @@ export class YouMayLikeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(url =>{
-      this.releasesList = this.afd.list('releases')
+
+    this.releasesList = this.afd.list('releases')
     this.releases = this.releasesList.valueChanges()
-  
+
+    this.activatedRoute.url.subscribe(url =>{
       this.releaseNumber = this.activatedRoute.snapshot.params['id']
-  
       if (this.releaseNumber > 15) {
         return this.end = 6
       }
   });
+
   }
  
 }

@@ -31,7 +31,6 @@ import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 })
 export class PodcastDetailsComponent implements OnInit {
 
-  id = +this.activatedRoute.snapshot.params['id']
   podcastObject: AngularFireObject<Podcast>;
   podcast: Observable<Podcast>
 
@@ -46,7 +45,7 @@ export class PodcastDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.url.subscribe(url =>{
-      this.podcastObject = this.afd.object('podcasts/'+`${this.id}`)
+      this.podcastObject = this.afd.object('podcasts/'+this.activatedRoute.snapshot.params['id'])
       this.podcast = this.podcastObject.valueChanges()
       
   });

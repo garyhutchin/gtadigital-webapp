@@ -102,7 +102,7 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
   ],
 
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'reload', initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase, 'gtadigital-app'),

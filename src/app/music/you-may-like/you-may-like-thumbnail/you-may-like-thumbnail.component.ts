@@ -20,7 +20,7 @@ export class YouMayLikeThumbnailComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.url.subscribe(url =>{
-      this.url=window.location.pathname.split(";")[0].split('/music/releases/release/').pop();
+      this.url = this.activatedRoute.snapshot.params['id']
       console.log(this.url)
       this.urlId = this.url
     });

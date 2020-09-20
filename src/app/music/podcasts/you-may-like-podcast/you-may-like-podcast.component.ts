@@ -23,15 +23,18 @@ export class YouMayLikePodcastComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(url =>{
-      this.podcastsList = this.afd.list('podcasts')
+
+    this.podcastsList = this.afd.list('podcasts')
     this.podcasts = this.podcastsList.valueChanges()
+
+    this.activatedRoute.url.subscribe(url =>{
   
       this.releaseNumber = this.activatedRoute.snapshot.params['id']
   
       if (this.releaseNumber > 25) {
         return this.end = 6
       }
+      
   });
   }
  

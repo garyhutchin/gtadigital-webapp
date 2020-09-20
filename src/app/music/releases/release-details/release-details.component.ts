@@ -13,7 +13,6 @@ import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 
 export class ReleaseDetailsComponent implements OnInit {
     
-    id = this.activatedRoute.snapshot.params['id']
     
     releaseObject: AngularFireObject<Release>;
     release: Observable<Release>
@@ -23,9 +22,8 @@ export class ReleaseDetailsComponent implements OnInit {
 
     ngOnInit() {
         this.activatedRoute.url.subscribe(url =>{
-            this.releaseObject = this.afd.object('releases/'+`${this.id}`)
-            this.release = this.releaseObject.valueChanges()
-            
+            this.releaseObject = this.afd.object('releases/'+this.activatedRoute.snapshot.params['id'])
+            this.release = this.releaseObject.valueChanges() 
         });
 
     }
