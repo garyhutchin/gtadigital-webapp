@@ -1,4 +1,6 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 import { MainComponent } from './main/main.component';
 import { MusicMainComponent } from './music/mainComponent/music-main.component';
 import { ReleaseContainerComponent } from './music/releases/release-container.component';
@@ -9,7 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { PodcastDetailsComponent } from './music/podcasts/podcast-details/podcast-details.component';
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
 
-export const appRoutes:Routes = [
+const appRoutes:Routes = [
+    { path: '', component: MainComponent },
     { path: 'home', component: MainComponent },
     { path: 'music', component: MusicMainComponent, resolve: {musicReleases:ReleaseListResolver} },
     { path: 'music/releases', component: ReleaseContainerComponent, resolve: {releases:ReleaseListResolver} },
@@ -24,4 +27,10 @@ export const appRoutes:Routes = [
 
     { path: 'page-not-found', component: PageNotFoundComponent },
     { path: '**', redirectTo: '/page-not-found' }
-]
+];
+
+@NgModule({
+    imports: [ RouterModule.forRoot(appRoutes) ],
+    exports: [ RouterModule ]
+})
+export class AppRoutingModule {}

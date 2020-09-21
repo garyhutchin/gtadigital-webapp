@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ReleaseService } from '../shared/releases.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Release } from '../../../models/content-interface';
-import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 
 @Component ({
     selector: 'release-details',
@@ -17,7 +16,7 @@ export class ReleaseDetailsComponent implements OnInit {
     releaseObject: AngularFireObject<Release>;
     release: Observable<Release>
 
-    constructor(private releaseService:ReleaseService, private activatedRoute: ActivatedRoute, private afd: AngularFireDatabase) {
+    constructor(private activatedRoute: ActivatedRoute, private afd: AngularFireDatabase) {
     }
 
     ngOnInit() {

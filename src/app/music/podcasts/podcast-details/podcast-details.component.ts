@@ -3,7 +3,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Podcast } from '../../../models/content-interface';
-import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 
 @Component({
   selector: 'podcast-details',
