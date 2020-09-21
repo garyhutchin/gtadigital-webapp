@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LatestNewsService } from '../shared/latest-news.service';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
-import { AngularFireDatabase, AngularFireList} from 'angularfire2/database'
+import { AngularFireDatabase, AngularFireList} from '@angular/fire/database'
 import { Observable } from 'rxjs';
 import { Content } from '../../models/content-interface';
 

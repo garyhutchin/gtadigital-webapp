@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 import { ContentService } from 'src/app/shared/content.service';
 import { Observable } from 'rxjs';
 import { Release, Content } from '../../models/content-interface';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
 
 
 @Component ({

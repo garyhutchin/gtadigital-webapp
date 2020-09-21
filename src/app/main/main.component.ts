@@ -4,8 +4,8 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 import { ContentService } from '../shared/content.service';
 import { Observable } from 'rxjs';
 import { Content } from '../models/content-interface';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireObject } from 'angularfire2/database';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireObject } from '@angular/fire/database';
 
 
 @Component ({

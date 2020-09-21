@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContentService } from 'src/app/shared/content.service';
 import { Observable } from 'rxjs';
 import { Content } from '../../models/content-interface';
-import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 
 @Component({
   selector: 'live-stream',

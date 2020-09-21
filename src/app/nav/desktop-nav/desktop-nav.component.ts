@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database'
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database'
 import { Observable } from 'rxjs';
 import { Navigation, SocialMedia, Content } from '../../models/content-interface';
 

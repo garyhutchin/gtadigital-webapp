@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Release, Podcast } from '../../models/content-interface'
 import { Observable } from 'rxjs';
 

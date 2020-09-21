@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { NoSanitizeHtmlPipe } from './shared/sanitize-html.pipe';
 import { NoSanitizeUrlPipe } from './shared/sanitize-url.pipe';
 import { ReversePipe } from './shared/reverse.pipe';
@@ -14,7 +16,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
-import { appRoutes } from './routes';
 import { DesktopNavComponent } from './nav/desktop-nav/desktop-nav.component';
 import { NavItems } from './nav/desktop-nav/nav-items/nav-items.component';
 import { TabNavComponent } from './nav/tab-nav/tab-nav.component';
@@ -103,7 +104,7 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
 
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'reload', initialNavigation: 'enabled' }),
+    AppRoutingModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase, 'gtadigital-app'),
     AngularFireDatabaseModule
