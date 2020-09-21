@@ -19,6 +19,10 @@ export class ContentService {
     getMusicContent(id:string) {
         return MAINCONTENT.find(music => music.id === id)
     }
+
+    getSocialMediaLinks() {
+        return SOCIALMEDIALINKS
+    }
 }
 
 const NAVITEMS = [
@@ -77,5 +81,48 @@ const MAINCONTENT = [
         header3: 'GTA Digital Live Archive',
         button1: 'View All Releases',
         button2: 'View All Podcasts'
+    },
+    {
+        id: "under-construction",
+        text: "This app is still in development - some content has been added as a placeholder"
     }
+]
+
+const SOCIALMEDIALINKS = [
+    {
+        id: 'facebook',
+        alt: 'Facebook',
+        image: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FfacebookIcon.png?alt=media&token=3e188cda-78d5-4683-989c-a1495e6791e1',
+        url: 'https://facebook.com/gtadigital'
+    },
+    {
+        id: 'twitter',
+        alt: 'Twitter',
+        image: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FtwitterIcon.png?alt=media&token=e63c4b3c-e8ff-4d8b-94c6-3c164c87c3f7',
+        url: 'https://twitter.com/gta_digital'
+    },
+    {
+        id: 'instagram',
+        alt: 'Instagram',
+        image: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FinstagramIcon.png?alt=media&token=0ad9ac4d-898e-467d-9d2a-55a95ed816a4',
+        url: 'https://www.instagram.com/gtadigital_techno'
+    },
+    {
+        id: 'youtube',
+        alt: 'YouTube',
+        image: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FyoutubeIcon.png?alt=media&token=947fe02d-4321-4b3e-8988-fb28162b53a7',
+        url: 'https://www.youtube.com/channel/UCi7G9ij_Hm7UBEuZjCRUmAw'
+    },
+    {
+        id: 'soundcloud',
+        alt: 'SoundCloud',
+        image: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FsoundcloudIcon.png?alt=media&token=39283971-d3c1-40df-98bc-511939186d66',
+        url: 'https://soundcloud.com/gtadigital'
+    },
+    {
+        id: 'hearthis',
+        alt: 'HearThis',
+        image: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FhearthisIcon.png?alt=media&token=e19258ac-f6e7-4cb9-83ec-c2e5a8a320da',
+        url: 'https://hearthis.at/gtadigital-podcast-series/'
+    },
 ]

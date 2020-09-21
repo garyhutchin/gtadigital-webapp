@@ -4,13 +4,13 @@
             <h1 [innerHTML]="musicContent.heroHeader"></h1>
             <p [innerHTML]="musicContent.heroText"></p>
 
-            <!--<span class="listenNow-button" *ngFor="let release of releases | slice:0:1; let i=index" [routerLink]="['/music/releases/release', release.id]" [innerHTML]="musicContent.heroButton"></span>-->
+            <span class="listenNow-button" *ngFor="let release of releases | slice:0:1; let i=index" [routerLink]="['/music/releases/release', release.id]" [innerHTML]="musicContent.heroButton"></span>
 
         </div>
 
-        <!--<div class="heroLogo" *ngFor="let release of releases | slice:0:1; let i=index">
+        <div class="heroLogo" *ngFor="let release of releases | slice:0:1; let i=index">
             <img [src]="release.artwork" [alt]="release.title" style="box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3); cursor: pointer;" [routerLink]="['/music/releases/release', release.id]">
-        </div>-->
+        </div>
     </div>
 </div>
 

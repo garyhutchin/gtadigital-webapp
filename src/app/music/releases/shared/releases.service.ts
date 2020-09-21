@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core'
-import { Subject } from 'rxjs'
 
 @Injectable()
 export class ReleaseService {
     getReleases() {
-        let subject = new Subject()
-        setTimeout(() => {subject.next(RELEASES); subject.complete(); }, 100)
-        return subject
+        return RELEASES
     }
 
     getRelease(id:number) {
@@ -16,7 +13,7 @@ export class ReleaseService {
 
 const RELEASES = [
 
-    /*{
+    {
         id: 20,
         title: 'Purist EP',
         artistName: 'Ungrateful Ambassador',
@@ -318,5 +315,5 @@ const RELEASES = [
         releaseInfoP4: '',
         releaseInfoP5: '',
         releaseDate: ''
-    },*/
+    }
 ]

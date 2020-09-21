@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { Podcast } from '../../../models/content-interface';
-import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
+import { PodcastService } from '../shared/podcast.service';
+
 
 @Component({
   selector: 'podcast-details',
@@ -31,8 +30,7 @@ import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 })
 export class PodcastDetailsComponent implements OnInit {
 
-  podcastObject: AngularFireObject<Podcast>;
-  podcast: Observable<Podcast>
+  podcast:any
 
   isClosed: boolean = true; 
 
@@ -40,14 +38,12 @@ export class PodcastDetailsComponent implements OnInit {
     this.isClosed = !this.isClosed;
   }
 
-  constructor(private activatedRoute: ActivatedRoute, private afd: AngularFireDatabase) {
+  constructor(private activatedRoute: ActivatedRoute, private podcastService: PodcastService ) {
   }
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(url =>{
-      this.podcastObject = this.afd.object('podcasts/'+this.activatedRoute.snapshot.params['id'])
-      this.podcast = this.podcastObject.valueChanges()
-      
+    this.activatedRoute.url.subscribe(url =>{   
+      this.podcast = this.podcastService.getPodcast(+this.activatedRoute.snapshot.params['id'])
   });
   }
 

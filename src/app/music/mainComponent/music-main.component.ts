@@ -13,7 +13,7 @@ import { ReleaseService } from '../releases/shared/releases.service';
 export class MusicMainComponent implements OnInit {
 
     musicContent: any
-    releases:any[]
+    releases:any
     
     constructor(private router:Router, private contentService: ContentService, private releaseService: ReleaseService) {
   
