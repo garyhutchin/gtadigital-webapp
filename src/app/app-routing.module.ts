@@ -14,7 +14,7 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
 const appRoutes:Routes = [
     { path: '', component: MainComponent },
     { path: 'home', component: MainComponent },
-    { path: 'music', component: MusicMainComponent, resolve: {musicReleases:ReleaseListResolver} },
+    { path: 'music', component: MusicMainComponent },
     { path: 'music/releases', component: ReleaseContainerComponent, resolve: {releases:ReleaseListResolver} },
     { path: 'music/podcasts', component:PodcastsContainerComponent },
     { path: 'about', component: AboutComponent },

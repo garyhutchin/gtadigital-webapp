@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database'
 import { Observable } from 'rxjs';
+import { ContentService } from 'src/app/shared/content.service';
 import { Navigation, SocialMedia, Content } from '../../models/content-interface';
 
 @Component ({
@@ -10,12 +11,8 @@ import { Navigation, SocialMedia, Content } from '../../models/content-interface
 })
 
 export class DesktopNavComponent implements OnInit {
-
-    //navItemsCollection: AngularFirestoreCollection<Navigation>
-    //navItems: Observable<Navigation[]>
-
-    navItemsList: AngularFireList<Navigation>
-    navItems: Observable<Navigation[]>
+    
+    navItems: any[]
 
     socialMediaLinksList: AngularFireList<SocialMedia>
     socialMediaLinks: Observable<SocialMedia[]>
@@ -23,18 +20,13 @@ export class DesktopNavComponent implements OnInit {
     underConstructionObject: AngularFireObject<Content>
     underConstruction: Observable<Content>
 
-    constructor(private afd: AngularFireDatabase) {
+    constructor(private afd: AngularFireDatabase, private contentService: ContentService) {
 
     }
 
     ngOnInit() {
-        //this.navItemsCollection = this.afs.collection('navigation', ref => {
-        //    return ref.orderBy('id', 'asc')
-        //})
-        //this.navItems = this.navItemsCollection.valueChanges()
 
-        this.navItemsList = this.afd.list('navigation')
-        this.navItems = this.navItemsList.valueChanges()
+        this.navItems = this.contentService.getNavItems()
 
         this.socialMediaLinksList = this.afd.list('social-media-links')
         this.socialMediaLinks = this.socialMediaLinksList.valueChanges()

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { Release, Content } from '../../../models/content-interface';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
+import { ContentService } from 'src/app/shared/content.service';
+import { ReleaseService } from '../../releases/shared/releases.service';
 
 @Component ({
     selector: 'release-list-tile',
@@ -12,23 +11,17 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angula
 
 export class ReleaseListTileComponent implements OnInit {
    
-    releasesList: AngularFireList<Release>
-    releases: Observable<Release[]>
+    musicContent: any
+    releases: any
 
-    musicContentObject: AngularFireObject<Content>
-    musicContent: Observable<Content>
-
-    constructor(private router:Router, private route: ActivatedRoute, private afd: AngularFireDatabase) {
+    constructor(private router:Router, private route: ActivatedRoute, private contentService: ContentService, private releaseService: ReleaseService) {
 
     }
 
     ngOnInit() {
         
-        this.releasesList = this.afd.list('releases')
-        this.releases = this.releasesList.valueChanges()
-
-        this.musicContentObject = this.afd.object('main-content/music')
-        this.musicContent = this.musicContentObject.valueChanges()
+        this.musicContent = this.contentService.getMusicContent('music')
+        this.releases = this.releaseService.getReleases()
     }
 
     viewReleases() {

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { Release, Podcast } from '../../models/content-interface'
-import { Observable } from 'rxjs';
+import { MostPopularService } from '../shared/most-pop.service';
 
 @Component ({
     selector: 'most-popular',
@@ -52,23 +50,17 @@ import { Observable } from 'rxjs';
 
 export class MostPopularComponent implements OnInit {
 
-    releaseItemsList: AngularFireList<Release>
-    releaseItems: Observable<Release[]>
+  releaseItems:any[]
+  podcastItems:any[]
 
-    podcastItemsList: AngularFireList<Podcast>
-    podcastItems: Observable<Podcast[]>
-
-    constructor(private router:Router, private afd: AngularFireDatabase) {
+    constructor(private router:Router, private mostPopularService: MostPopularService) {
 
     }
 
     ngOnInit() {
 
-        this.releaseItemsList = this.afd.list('most-popular-releases')
-        this.releaseItems = this.releaseItemsList.valueChanges()
-
-        this.podcastItemsList = this.afd.list('most-popular-podcasts')
-        this.podcastItems = this.podcastItemsList.valueChanges()
+      this.releaseItems = this.mostPopularService.getReleaseItems()
+      this.podcastItems = this.mostPopularService.getPodcastItems()
 
     }
 }

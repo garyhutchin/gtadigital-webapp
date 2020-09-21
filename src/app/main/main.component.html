@@ -1,4 +1,4 @@
-<div class="pageHeroWrapper" *ngIf="homeContent | async as homeContent">
+<div class="pageHeroWrapper">
     <div class="heroContainer" @heroAnim>
         <div class="heroText">
             <h1 [innerHTML]="homeContent.heroHeader"></h1>
@@ -13,7 +13,7 @@
     </div>
 </div>
 <div class="componentContainer">
-    <div class="componentContent" *ngIf="homeContent | async as homeContent">
+    <div class="componentContent">
 
         <div @headerAnim>
         <span class="borderTop"></span>  
@@ -26,7 +26,7 @@
 </div>
 
 <div class="componentContainer-white">
-    <div class="componentContent-white" @liveStreamAnim *ngIf="homeContent | async as homeContent">
+    <div class="componentContent-white" @liveStreamAnim>
         <span class="borderTop"></span>
         <div class="secondaryHeader">
             <h3 [innerHTML]="homeContent.header2"></h3>
