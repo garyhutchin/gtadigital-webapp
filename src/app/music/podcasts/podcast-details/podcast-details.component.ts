@@ -51,7 +51,12 @@ export class PodcastDetailsComponent implements OnInit {
 
       this.podcast = this.podcastService.getPodcast(+this.activatedRoute.snapshot.params['id'])
 
+      //set tags for SEO
       this.title.setTitle(this.podcast.title + " by " + this.podcast.artistName);
+      this.meta.updateTag({ name: 'description', content: this.podcast.shortDescription });
+      this.meta.updateTag({ name: 'robots', content: 'index, follow'  });
+
+      //set tags for Twitter
       this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
       this.meta.updateTag({ name: 'twitter:site', content: '@gta_digital' });
       this.meta.updateTag({ name: 'twitter:title', content: this.podcast.title + " by " + this.podcast.artistName });
@@ -59,6 +64,7 @@ export class PodcastDetailsComponent implements OnInit {
       this.meta.updateTag({ name: 'twitter:image', content: this.podcast.artwork });
       this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
 
+      //set tags for Facebook
       this.meta.updateTag({ property: 'og:type', content: 'article' });
       this.meta.updateTag({ property: 'og:site_name', content: 'gtadigital' });
       this.meta.updateTag({ property: 'og:title', content: this.podcast.title + " by " + this.podcast.artistName });

@@ -49,7 +49,10 @@ import { PodcastService } from './music/podcasts/shared/podcast.service';
 
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
 import { YouMayLikePodcastComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast.component';
-import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast-thumbnail/you-may-like-podcast-thumbnail.component'
+import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast-thumbnail/you-may-like-podcast-thumbnail.component';
+import { StoreComponent } from './store/store.component';
+import { StoreThumbnailsComponent } from './store/store-thumbnails/store-thumbnails.component';
+import { StoreListComponent } from './store/store-list/store-list.component'
 
 @NgModule({
   declarations: [
@@ -88,7 +91,10 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
     ReversePipe,
     ReleaseDetailsComponent,
     YouMayLikePodcastComponent,
-    YouMayLikePodcastThumbnailComponent
+    YouMayLikePodcastThumbnailComponent,
+    StoreComponent,
+    StoreThumbnailsComponent,
+    StoreListComponent
   ],
 
   providers: [

@@ -17,7 +17,6 @@ export class ReleaseListComponent implements OnInit {
 
     ngOnInit() {
         this.releases = this.releaseService.getReleases()
-        this.title.setTitle("Releases");
     }
 
 }

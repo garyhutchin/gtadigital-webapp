@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './error/page-not-found/page-not-found.com
 import { AboutComponent } from './about/about.component';
 import { PodcastDetailsComponent } from './music/podcasts/podcast-details/podcast-details.component';
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
+import { StoreComponent } from './store/store.component';
 
 const appRoutes:Routes = [
     { path: '', component: MainComponent },
@@ -17,10 +18,9 @@ const appRoutes:Routes = [
     { path: 'music/releases', component: ReleaseContainerComponent },
     { path: 'music/podcasts', component:PodcastsContainerComponent },
     { path: 'about', component: AboutComponent },
-
     { path: 'music/releases/release/:id', component: ReleaseDetailsComponent },
-
     { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent },
+    { path: 'store', component: StoreComponent },
     
     { path: '', redirectTo: '/home', pathMatch: 'full'},
 
@@ -30,7 +30,7 @@ const appRoutes:Routes = [
 
 @NgModule({
     imports: [ RouterModule.forRoot(appRoutes, {
-    initialNavigation: 'enabled'
+    initialNavigation: 'enabled', scrollPositionRestoration: 'enabled'
 }) ],
     exports: [ RouterModule ]
 })

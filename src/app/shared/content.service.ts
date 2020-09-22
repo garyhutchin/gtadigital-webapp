@@ -23,6 +23,10 @@ export class ContentService {
     getSocialMediaLinks() {
         return SOCIALMEDIALINKS
     }
+
+    getStoreItems() {
+        return STOREITEMS
+    }
 }
 
 const NAVITEMS = [
@@ -52,6 +56,7 @@ const NAVITEMS = [
 
 const MAINCONTENT = [
     {
+        description: 'GTA Digital is a label, podcast series and online radio show with a focus on underground techno.',
         id: 'home',
         gtaDigitalLiveHeader : "GTA Digital Live Presents",
         gtaDigitalLiveSrc : "https://www.youtube.com/embed/6xTieGgxjDQ?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1",
@@ -65,6 +70,7 @@ const MAINCONTENT = [
         title: "GTA Digital - Label, Radio Show and Podcast Series"
     },
     {
+        description: 'Find out more about GTA Digital',
         id: "about",
         aboutImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2FaboutMe-header.jpg?alt=media&token=056609e0-72eb-4727-91a3-9e5150455c9b",
         aboutText : "GTA Digital is a net label and Podcast series, set up by Gary The Apprentice, to provide the world with proper, underground Techno, staying clear of the more popular sound that is being churned out by bigger labels.</p><p>Here at GTA Digital, we are wanting to keep things real, releasing proper Techno, by proper Techno heads. We are always on the look out for new artists to get involved, so if you like what we are doing, and feel your music fits, please get in touch with a demo for us to consider releasing on the label.</p><p>This page will be used as our main platform for all of the Podcasts on the GTA Digital Podcast Series, if you would like to get involved, and provide a mix for the Podcast, please do get in touch.</p><p>To check out our full back catalogue of releases, to get information on the artists involved, and to check out the merchandise we have on sale.",
@@ -74,6 +80,7 @@ const MAINCONTENT = [
         title: "About"
     },
     {
+        description: 'Check out all of the releases, podcasts and past live streams',
         id: 'music',
         button1 : "View All Releases",
         button2 : "View All Podcasts",
@@ -127,5 +134,62 @@ const SOCIALMEDIALINKS = [
         alt: 'HearThis',
         image: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FhearthisIcon.png?alt=media&token=e19258ac-f6e7-4cb9-83ec-c2e5a8a320da',
         url: 'https://hearthis.at/gtadigital-podcast-series/'
+    },
+]
+
+const STOREITEMS = [
+    {
+        id: 'logo-hoodie',
+        alt: 'Logo Hoodie',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-hoodie.png?alt=media&token=032a91fe-b2c7-49d6-811b-7c25376f3814',
+        description: 'GTA Digital Logo Hoodie',
+        price: '',
+        colours: '',
+        shopUrl: 'https://www.dizzyjam.com/products/175476/'
+    },
+    {
+        id: 'type-hoodie',
+        alt: 'Type Hoodie',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-hoodie.png?alt=media&token=7154489a-daaa-4318-b418-ab37c7d22eda',
+        description: 'GTA Digital Stacked Type Hoodie',
+        price: '',
+        colours: '',
+        shopUrl: 'https://www.dizzyjam.com/products/131952/'
+    },
+    {
+        id: 'logo-tshirt-regular',
+        alt: 'Logo T-Shirt Regular Fit',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-male-tshirt.png?alt=media&token=39d9efb3-4944-42ee-8b95-5134249f72c8',
+        description: 'GTA Digital Logo T-Shirt - Regular Fit',
+        price: '',
+        colours: '',
+        shopUrl: 'https://www.dizzyjam.com/products/175475/'
+    },
+    {
+        id: 'type-tshirt-regular',
+        alt: 'Type T-Shirt Regular Fit',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-male-tshirt.png?alt=media&token=7698aa27-68b5-40b2-a5e7-846854d84d14',
+        description: 'GTA Digital Stacked Type T-Shirt - Regular Fit',
+        price: '',
+        colours: '',
+        shopUrl: 'https://www.dizzyjam.com/products/131951/'
+    },
+    {
+        id: 'logo-tshirt-fitted',
+        alt: 'Logo T-Shirt Fitted',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-female-tshirt.png?alt=media&token=d615e87f-2a75-4c4b-ab9d-c7386f7e3e60',
+        description: 'GTA Digital Logo T-Shirt - Fitted',
+        price: '',
+        colours: '',
+        shopUrl: 'https://www.dizzyjam.com/products/175474/'
+    },
+    {
+        id: 'type-tshirt-fitted',
+        alt: 'Type T-Shirt Fitted',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-female-tshirt.png?alt=media&token=a45a8521-9899-4314-a410-a2f237842f4e',
+        description: 'GTA Digital Stacked Type T-Shirt - Fitted',
+        price: '',
+        colours: '',
+        shopUrl: 'https://www.dizzyjam.com/products/131949/'
     },
 ]
