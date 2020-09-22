@@ -100,7 +100,7 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
   ],
 
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     ],
