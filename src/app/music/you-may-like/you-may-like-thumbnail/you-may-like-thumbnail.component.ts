@@ -21,7 +21,6 @@ export class YouMayLikeThumbnailComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.url.subscribe(url =>{
       this.url = this.activatedRoute.snapshot.params['id']
-      console.log(this.url)
       this.urlId = this.url
     });
   }

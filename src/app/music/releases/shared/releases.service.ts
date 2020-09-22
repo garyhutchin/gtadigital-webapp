@@ -27,6 +27,7 @@ const RELEASES = [
         releaseInfoP4 : "",
         releaseInfoP5 : "",
         releasePlayer : "",
+        shortDescription: "Jacked up techno, with an outstanding remix by DJ Ze Mig L. Supported by the likes of Perc, Patrick DSP, Wetworks & Ike Dusk",
         title : "Purist EP"  
     },
     {
@@ -43,6 +44,7 @@ const RELEASES = [
         releaseInfoP5 : "",
         releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=2747614855/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "https://gtadigital.bandcamp.com/album/gta019-unix-ep",
+        shortDescription: "Jacked up techno, with an outstanding remix by DJ Ze Mig L. Supported by the likes of Perc Patrick DSP, Wetworks & Ike Dusk",
         title : "Unix EP"
     },
     {

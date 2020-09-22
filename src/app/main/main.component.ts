@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 import { ContentService } from '../shared/content.service';
+import { Title, Meta } from '@angular/platform-browser'
 
 
 @Component ({
@@ -71,12 +72,13 @@ export class MainComponent implements OnInit {
 
   homeContent: any
     
-  constructor(private router:Router, private contentService: ContentService) {
+  constructor(private router:Router, private contentService: ContentService, private title: Title, private meta: Meta) {
 
   }
 
   ngOnInit() {
     this.homeContent = this.contentService.getHomeContent('home')
+    this.title.setTitle(this.homeContent.title);
   }
 
   listenNow() {
