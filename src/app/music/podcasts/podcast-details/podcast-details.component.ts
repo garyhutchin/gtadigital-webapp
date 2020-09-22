@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PodcastService } from '../shared/podcast.service';
+import { Title, Meta } from '@angular/platform-browser'
 
 
 @Component({
@@ -34,16 +35,37 @@ export class PodcastDetailsComponent implements OnInit {
 
   isClosed: boolean = true; 
 
+  url:any
+
   OpenModal() {
     this.isClosed = !this.isClosed;
   }
 
-  constructor(private activatedRoute: ActivatedRoute, private podcastService: PodcastService ) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private podcastService: PodcastService, private title: Title, private meta: Meta) {
   }
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(url =>{   
+    this.activatedRoute.url.subscribe(url =>{
+
+      this.url = this.router.url
+
       this.podcast = this.podcastService.getPodcast(+this.activatedRoute.snapshot.params['id'])
+
+      this.title.setTitle(this.podcast.title + " by " + this.podcast.artistName);
+      this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
+      this.meta.updateTag({ name: 'twitter:site', content: '@gta_digital' });
+      this.meta.updateTag({ name: 'twitter:title', content: this.podcast.title + " by " + this.podcast.artistName });
+      this.meta.updateTag({ name: 'twitter:description', content: this.podcast.shortDescription });
+      this.meta.updateTag({ name: 'twitter:image', content: this.podcast.artwork });
+      this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
+
+      this.meta.updateTag({ property: 'og:type', content: 'article' });
+      this.meta.updateTag({ property: 'og:site_name', content: 'gtadigital' });
+      this.meta.updateTag({ property: 'og:title', content: this.podcast.title + " by " + this.podcast.artistName });
+      this.meta.updateTag({ property: 'og:description', content: this.podcast.shortDescription });
+      this.meta.updateTag({ property: 'og:image', content: this.podcast.thumbnailUrl });
+      this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
+
   });
   }
 
