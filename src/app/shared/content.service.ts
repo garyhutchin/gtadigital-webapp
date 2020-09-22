@@ -61,7 +61,8 @@ const MAINCONTENT = [
         heroButton : "Listen Now",
         heroHeader : "Underground Techno",
         heroImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
-        heroText : "GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has grown, with the addition of a podcast series and more recently a monthly show on Fnoob Techno Radio"
+        heroText : "GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has grown, with the addition of a podcast series and more recently a monthly show on Fnoob Techno Radio",
+        title: "GTA Digital - Label, Radio Show and Podcast Series"
     },
     {
         id: "about",
@@ -69,7 +70,8 @@ const MAINCONTENT = [
         aboutText : "GTA Digital is a net label and Podcast series, set up by Gary The Apprentice, to provide the world with proper, underground Techno, staying clear of the more popular sound that is being churned out by bigger labels.</p><p>Here at GTA Digital, we are wanting to keep things real, releasing proper Techno, by proper Techno heads. We are always on the look out for new artists to get involved, so if you like what we are doing, and feel your music fits, please get in touch with a demo for us to consider releasing on the label.</p><p>This page will be used as our main platform for all of the Podcasts on the GTA Digital Podcast Series, if you would like to get involved, and provide a mix for the Podcast, please do get in touch.</p><p>To check out our full back catalogue of releases, to get information on the artists involved, and to check out the merchandise we have on sale.",
         heroHeader : "GTA Digital",
         heroImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
-        heroText : "Label, podcast series & radio show.<br>Releasing underground techno since 2013..."
+        heroText : "Label, podcast series & radio show.<br>Releasing underground techno since 2013...",
+        title: "About"
     },
     {
         id: 'music',
@@ -80,7 +82,8 @@ const MAINCONTENT = [
         header3 : "GTA Digital Live Archive",
         heroButton : "Check out the latest release",
         heroHeader : "Music",
-        heroText : "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams..."
+        heroText : "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...",
+        title: 'Music'
     },
     {
         id: "under-construction",
