@@ -1,4 +1,4 @@
-<div class="pageHeroWrapper" *ngIf="aboutContent | async as aboutContent">
+<div class="pageHeroWrapper">
     <div class="heroContainer">
         <div class="heroText">
             <h1 [innerHTML]="aboutContent.heroHeader"></h1>
@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<div class="componentContainer" *ngIf="aboutContent | async as aboutContent">
+<div class="componentContainer">
 
     <most-popular></most-popular>
 

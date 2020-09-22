@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
-import { Observable } from 'rxjs';
-import { Content } from '../models/content-interface';
+import { ContentService } from '../shared/content.service';
+
 
 
 @Component({
@@ -11,18 +10,14 @@ import { Content } from '../models/content-interface';
 })
 export class AboutComponent implements OnInit {
 
-  aboutContentDoc: AngularFireObject<Content>;
-  aboutContent: Observable<Content>;
+  aboutContent: any
 
-  constructor(private afd: AngularFireDatabase) { 
+  constructor(private contentService: ContentService) { 
 
   }
 
   ngOnInit() {
-
-    this.aboutContentDoc = this.afd.object('main-content/about')
-    this.aboutContent = this.aboutContentDoc.valueChanges()
-
+    this.aboutContent = this.contentService.getAboutContent('about')
   }
 
 }

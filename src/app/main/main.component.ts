@@ -1,11 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 import { ContentService } from '../shared/content.service';
-import { Observable } from 'rxjs';
-import { Content } from '../models/content-interface';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { AngularFireObject } from '@angular/fire/database';
 
 
 @Component ({
@@ -72,28 +68,19 @@ import { AngularFireObject } from '@angular/fire/database';
 })
 
 export class MainComponent implements OnInit {
-  
-    homeContentObject: AngularFireObject<Content>
-    homeContent: Observable<Content>
+
+  homeContent: any
     
-    constructor(private router:Router, private contentService: ContentService, private afd: AngularFireDatabase) {
+  constructor(private router:Router, private contentService: ContentService) {
 
-    }
+  }
 
-    ngOnInit() {
-        this.router.events.subscribe((evt) => {
-            if (!(evt instanceof NavigationEnd)) {
-                return;
-            }
-            window.scrollTo(0, 0)
-        });
+  ngOnInit() {
+    this.homeContent = this.contentService.getHomeContent('home')
+  }
 
-        this.homeContentObject = this.afd.object('main-content/home')
-        this.homeContent = this.homeContentObject.valueChanges()
-    }
-
-    listenNow() {
+  listenNow() {
         this.router.navigate(['music'])
-    }
+  }
 
 }

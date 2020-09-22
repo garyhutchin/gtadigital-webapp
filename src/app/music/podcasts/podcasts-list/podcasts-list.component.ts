@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { Observable } from 'rxjs';
-import { Podcast } from '../../../models/content-interface';
+import { PodcastService } from '../shared/podcast.service';
 
 @Component({
   selector: 'podcasts-list',
@@ -10,14 +8,12 @@ import { Podcast } from '../../../models/content-interface';
 })
 export class PodcastsListComponent implements OnInit {
 
-  podcastsList: AngularFireList<Podcast>
-  podcasts: Observable<Podcast[]>
+  podcasts:any
 
-  constructor( private afd: AngularFireDatabase) { }
+  constructor( private podcastService: PodcastService) { }
 
   ngOnInit() {
-    this.podcastsList = this.afd.list('podcasts')
-    this.podcasts = this.podcastsList.valueChanges()
+    this.podcasts = this.podcastService.getPodcasts()  
   }
 
 }

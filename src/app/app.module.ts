@@ -11,9 +11,6 @@ import { ReversePipe } from './shared/reverse.pipe';
 
 import { environment } from '../environments/environment';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { DesktopNavComponent } from './nav/desktop-nav/desktop-nav.component';
@@ -46,9 +43,9 @@ import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.
 import { PodcastThumbnailComponent } from './music/podcasts/podcasts-list/podcast-thumbnail/podcast-thumbnail.component';
 import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-thumbnail/you-may-like-thumbnail.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
-import { ReleaseListResolver } from './music/releases/shared/release-list-resolver.service';
 import { AboutComponent } from './about/about.component';
 import { ContentService } from './shared/content.service';
+import { PodcastService } from './music/podcasts/shared/podcast.service';
 
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
 import { YouMayLikePodcastComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast.component';
@@ -96,9 +93,9 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
 
   providers: [
     ReleaseService,
+    PodcastService,
     MostPopularService,
     LatestNewsService,
-    ReleaseListResolver,
     ContentService
   ],
 
@@ -106,8 +103,6 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase, 'gtadigital-app'),
-    AngularFireDatabaseModule
     ],
     
   bootstrap: [AppComponent]

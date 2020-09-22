@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Release } from '../../../models/content-interface';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { ReleaseService } from '../shared/releases.service';
 
 @Component ({
     selector: 'release-list',
@@ -10,15 +8,14 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 })
 
 export class ReleaseListComponent implements OnInit {
-    releasesList: AngularFireList<Release>
-    releases: Observable<Release[]>
 
-    constructor(private afd: AngularFireDatabase) {
+    releases:any
+
+    constructor(private releaseService: ReleaseService) {
     }
 
     ngOnInit() {
-        this.releasesList = this.afd.list('releases')
-        this.releases = this.releasesList.valueChanges()
+        this.releases = this.releaseService.getReleases()
     }
 
 }
