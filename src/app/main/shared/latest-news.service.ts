@@ -22,6 +22,7 @@ const NEWSITEMS = [
         externalLinkImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2Fexternal-link.png?alt=media&token=cd7f4861-315a-4c83-9bab-502bc919a029",
         externalUrl : "https://fnoobtechno.com",
         externalUrlTitle : "Fnoob Techno Radio",
+        externalUrlImage: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2Fexternal-link.png?alt=media&token=cd7f4861-315a-4c83-9bab-502bc919a029",
         imageUrl : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2FfnoobCover.jpg?alt=media&token=ff2cdb44-30ad-4fcd-bb6d-c1ae64326a51",
         info : "GTA Digital Presents returns for the September installment of the show. If you have tuned in to previous shows you know what to expect by now, straight up, solid techno. The show airs on 15 September from 10-11pm, over at ",
         newsItem : 5,

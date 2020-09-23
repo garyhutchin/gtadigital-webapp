@@ -9,12 +9,14 @@ import { ContentService } from '../shared/content.service';
 export class StoreComponent implements OnInit {
 
   storeItems: any
+  storeContent: any
 
   constructor(private contentService: ContentService) { }
 
   ngOnInit() {
 
     this.storeItems = this.contentService.getStoreItems()
+    this.storeContent = this.contentService.getStoreContent('store')
 
   }
 

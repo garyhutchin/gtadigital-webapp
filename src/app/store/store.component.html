@@ -1,12 +1,12 @@
 <div class="pageHeroWrapper">
     <div class="heroContainer">
         <div class="heroText">
-            <h1>Hero Header</h1>
-            <p>Hero Text</p>
+            <h1>{{storeContent.heroHeader}}</h1>
+            <p>{{storeContent.heroText}}</p>
         </div>
         
         <div class="heroLogo">
-            <p>Hero Image Here</p>
+            <img [src]="storeContent.heroImage" [alt]="storeContent.heroImageAlt">
         </div>
     </div>
 </div>
