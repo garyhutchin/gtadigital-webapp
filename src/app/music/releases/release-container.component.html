@@ -4,7 +4,7 @@
             <h1>Releases</h1>
             <p>Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...</p>
 
-            <span class="listenNow-button" *ngFor="let release of releases | slice:0:1; let i=index" [routerLink]="['/music/releases', release.id]">Check out the latest release</span>
+            <span class="listenNow-button" *ngFor="let release of releases | slice:0:1; let i=index" [routerLink]="['/music/releases/release', release.id]">Check out the latest release</span>
 
         </div>
         

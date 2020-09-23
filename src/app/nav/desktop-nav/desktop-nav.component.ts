@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database'
-import { Observable } from 'rxjs';
-import { Navigation, SocialMedia, Content } from '../../models/content-interface';
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component ({
     selector: 'desktop-nav',
@@ -10,37 +8,23 @@ import { Navigation, SocialMedia, Content } from '../../models/content-interface
 })
 
 export class DesktopNavComponent implements OnInit {
+    
+    navItems: any
 
-    //navItemsCollection: AngularFirestoreCollection<Navigation>
-    //navItems: Observable<Navigation[]>
+    socialMediaLinks: any
 
-    navItemsList: AngularFireList<Navigation>
-    navItems: Observable<Navigation[]>
+    underConstruction: any
 
-    socialMediaLinksList: AngularFireList<SocialMedia>
-    socialMediaLinks: Observable<SocialMedia[]>
-
-    underConstructionObject: AngularFireObject<Content>
-    underConstruction: Observable<Content>
-
-    constructor(private afd: AngularFireDatabase) {
+    constructor(private contentService: ContentService) {
 
     }
 
     ngOnInit() {
-        //this.navItemsCollection = this.afs.collection('navigation', ref => {
-        //    return ref.orderBy('id', 'asc')
-        //})
-        //this.navItems = this.navItemsCollection.valueChanges()
 
-        this.navItemsList = this.afd.list('navigation')
-        this.navItems = this.navItemsList.valueChanges()
+        this.navItems = this.contentService.getNavItems()
+        this.socialMediaLinks = this.contentService.getSocialMediaLinks()      
+        this.underConstruction = this.contentService.getHomeContent('under-construction')
 
-        this.socialMediaLinksList = this.afd.list('social-media-links')
-        this.socialMediaLinks = this.socialMediaLinksList.valueChanges()
-
-        this.underConstructionObject = this.afd.object('main-content/under-construction-banner')
-        this.underConstruction = this.underConstructionObject.valueChanges()
     }
 
 }

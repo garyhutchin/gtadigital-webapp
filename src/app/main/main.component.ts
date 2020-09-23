@@ -1,11 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 import { ContentService } from '../shared/content.service';
-import { Observable } from 'rxjs';
-import { Content } from '../models/content-interface';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireObject } from 'angularfire2/database';
+import { Title, Meta } from '@angular/platform-browser'
 
 
 @Component ({
@@ -21,7 +18,7 @@ import { AngularFireObject } from 'angularfire2/database';
               query(':self', style({ opacity: 0}), {optional: true}),
     
               query(':self', stagger('300ms', [
-                animate('1.5s ease-in', keyframes([
+                animate('.5s ease-in', keyframes([
                   style({opacity: 0, transform: 'translateX(0px)', offset: 0}),
                   style({opacity: .5, transform: 'translateX(0px)', offset: 0.3}),
                   style({opacity: 1, transform: 'translateX(0px)', offset: 1}),
@@ -72,28 +69,45 @@ import { AngularFireObject } from 'angularfire2/database';
 })
 
 export class MainComponent implements OnInit {
-  
-    homeContentObject: AngularFireObject<Content>
-    homeContent: Observable<Content>
+
+  homeContent: any
+  url:any
     
-    constructor(private router:Router, private contentService: ContentService, private afd: AngularFireDatabase) {
+  constructor(private router:Router, private contentService: ContentService, private title: Title, private meta: Meta) {
 
-    }
+  }
 
-    ngOnInit() {
-        this.router.events.subscribe((evt) => {
-            if (!(evt instanceof NavigationEnd)) {
-                return;
-            }
-            window.scrollTo(0, 0)
-        });
+  ngOnInit() {
 
-        this.homeContentObject = this.afd.object('main-content/home')
-        this.homeContent = this.homeContentObject.valueChanges()
-    }
+    this.url = this.router.url
 
-    listenNow() {
+    this.homeContent = this.contentService.getHomeContent('home')
+
+    //set tags for SEO
+    this.title.setTitle(this.homeContent.title);
+    this.meta.updateTag({ name: 'description', content: this.homeContent.description });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
+
+    //set tags for Twitter
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
+    this.meta.updateTag({ name: 'twitter:site', content: '@gta_digital' });
+    this.meta.updateTag({ name: 'twitter:title', content: 'GTA Digital - Underground Techno' });
+    this.meta.updateTag({ name: 'twitter:description', content: this.homeContent.description });
+    this.meta.updateTag({ name: 'twitter:image', content: this.homeContent.heroImage });
+    this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
+
+    //set tags for Facebook
+    this.meta.updateTag({ property: 'og:type', content: 'article' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'gtadigital' });
+    this.meta.updateTag({ property: 'og:title', content: 'GTA Digital - Underground Techno' });
+    this.meta.updateTag({ property: 'og:description', content: this.homeContent.description });
+    this.meta.updateTag({ property: 'og:image', content: this.homeContent.heroImage });
+    this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
+
+  }
+
+  listenNow() {
         this.router.navigate(['music'])
-    }
+  }
 
 }

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
+import { Router } from '@angular/router'
 import { ContentService } from 'src/app/shared/content.service';
-import { Observable } from 'rxjs';
-import { Release, Content } from '../../models/content-interface';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
+import { ReleaseService } from '../releases/shared/releases.service';
+import { Title, Meta } from '@angular/platform-browser'
 
 
 @Component ({
@@ -14,23 +13,43 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angular
 
 export class MusicMainComponent implements OnInit {
 
-    releasesList: AngularFireList<Release>
-    releases: Observable<Release[]>
-
-    musicContentObject: AngularFireObject<Content>
-    musicContent: Observable<Content>
+    musicContent: any
+    homeContent: any
+    releases:any
+    url:any
     
-    constructor(private router: Router, private route: ActivatedRoute, private contentService: ContentService, private afd: AngularFireDatabase) {
-        
+    constructor(private router:Router, private contentService: ContentService, private releaseService: ReleaseService, private title: Title, private meta: Meta) {
+  
     }
-
+  
     ngOnInit() {
+      this.musicContent = this.contentService.getMusicContent('music')
+      this.homeContent = this.contentService.getHomeContent('home')
+      this.releases = this.releaseService.getReleases()
 
-        this.releasesList = this.afd.list('releases')
-        this.releases = this.releasesList.valueChanges()
+      this.url = this.router.url
 
-        this.musicContentObject = this.afd.object('main-content/music')
-        this.musicContent = this.musicContentObject.valueChanges()
+      //set tags for SEO
+      this.title.setTitle('GTA Digital - Music');
+      this.meta.updateTag({ name: 'description', content: this.musicContent.description });
+      this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
+
+      //set tags for Twitter
+      this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
+      this.meta.updateTag({ name: 'twitter:site', content: '@gta_digital' });
+      this.meta.updateTag({ name: 'twitter:title', content: 'GTA Digital ' + this.musicContent.title });
+      this.meta.updateTag({ name: 'twitter:description', content: this.musicContent.description });
+      this.meta.updateTag({ name: 'twitter:image', content: this.homeContent.heroImage });
+      this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
+
+      //set tags for Facebook
+      this.meta.updateTag({ property: 'og:type', content: 'article' });
+      this.meta.updateTag({ property: 'og:site_name', content: 'gtadigital' });
+      this.meta.updateTag({ property: 'og:title', content: 'GTA Digital ' + this.musicContent.title });
+      this.meta.updateTag({ property: 'og:description', content: this.musicContent.description });
+      this.meta.updateTag({ property: 'og:image', content: this.homeContent.heroImage });
+      this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
+    
     }
 
 }

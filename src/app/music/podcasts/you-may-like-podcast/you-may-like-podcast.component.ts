@@ -1,8 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { Observable } from 'rxjs';
-import { Podcast } from '../../../models/content-interface';
+import { PodcastService } from '../shared/podcast.service';
 
 @Component({
   selector: 'you-may-like-podcast',
@@ -11,21 +9,19 @@ import { Podcast } from '../../../models/content-interface';
 })
 export class YouMayLikePodcastComponent implements OnInit {
 
-  podcastsList: AngularFireList<Podcast>
-  podcasts: Observable<Podcast[]>
+  podcasts:any
 
   start : number = 0;
   end : number = 5;
   releaseNumber: number;
 
-  constructor( private activatedRoute: ActivatedRoute, private route: ActivatedRoute, private router: Router, private afd: AngularFireDatabase) {
+  constructor( private activatedRoute: ActivatedRoute, private route: ActivatedRoute, private router: Router, private podcastService: PodcastService) {
 
   }
 
   ngOnInit() {
 
-    this.podcastsList = this.afd.list('podcasts')
-    this.podcasts = this.podcastsList.valueChanges()
+    this.podcasts = this.podcastService.getPodcasts()
 
     this.activatedRoute.url.subscribe(url =>{
   

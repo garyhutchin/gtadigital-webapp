@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { Observable } from 'rxjs';
-import { Navigation } from '../../models/content-interface';
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component ({
     selector: 'tab-nav',
@@ -22,16 +20,14 @@ import { Navigation } from '../../models/content-interface';
 
 export class TabNavComponent implements OnInit {
     
-  navItemsList: AngularFireList<Navigation>
-  navItems: Observable<Navigation[]>
+  navItems: any[]
 
-  constructor(private afd: AngularFireDatabase) {
+  constructor(private contentService: ContentService) {
 
   }
 
   ngOnInit() {
-    this.navItemsList = this.afd.list('navigation')
-    this.navItems = this.navItemsList.valueChanges()
+    this.navItems = this.contentService.getNavItems()
   }
 
   isCollapsed: boolean = true;

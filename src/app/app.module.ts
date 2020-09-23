@@ -3,18 +3,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { NoSanitizeHtmlPipe } from './shared/sanitize-html.pipe';
 import { NoSanitizeUrlPipe } from './shared/sanitize-url.pipe';
 import { ReversePipe } from './shared/reverse.pipe';
 
 import { environment } from '../environments/environment';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
-import { appRoutes } from './routes';
 import { DesktopNavComponent } from './nav/desktop-nav/desktop-nav.component';
 import { NavItems } from './nav/desktop-nav/nav-items/nav-items.component';
 import { TabNavComponent } from './nav/tab-nav/tab-nav.component';
@@ -45,13 +43,16 @@ import { PodcastsContainerComponent } from './music/podcasts/podcasts-container.
 import { PodcastThumbnailComponent } from './music/podcasts/podcasts-list/podcast-thumbnail/podcast-thumbnail.component';
 import { YouMayLikeThumbnailComponent } from './music/you-may-like/you-may-like-thumbnail/you-may-like-thumbnail.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
-import { ReleaseListResolver } from './music/releases/shared/release-list-resolver.service';
 import { AboutComponent } from './about/about.component';
 import { ContentService } from './shared/content.service';
+import { PodcastService } from './music/podcasts/shared/podcast.service';
 
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
 import { YouMayLikePodcastComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast.component';
-import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast-thumbnail/you-may-like-podcast-thumbnail.component'
+import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast-thumbnail/you-may-like-podcast-thumbnail.component';
+import { StoreComponent } from './store/store.component';
+import { StoreThumbnailsComponent } from './store/store-thumbnails/store-thumbnails.component';
+import { StoreListComponent } from './store/store-list/store-list.component'
 
 @NgModule({
   declarations: [
@@ -90,23 +91,24 @@ import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-li
     ReversePipe,
     ReleaseDetailsComponent,
     YouMayLikePodcastComponent,
-    YouMayLikePodcastThumbnailComponent
+    YouMayLikePodcastThumbnailComponent,
+    StoreComponent,
+    StoreThumbnailsComponent,
+    StoreListComponent
   ],
 
   providers: [
     ReleaseService,
+    PodcastService,
     MostPopularService,
     LatestNewsService,
-    ReleaseListResolver,
     ContentService
   ],
 
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes, { onSameUrlNavigation: 'reload', initialNavigation: 'enabled' }),
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase, 'gtadigital-app'),
-    AngularFireDatabaseModule
     ],
     
   bootstrap: [AppComponent]

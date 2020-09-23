@@ -1,20 +1,16 @@
 <div class="list-wrapper">
     
     <div class="listContainer">
-        <ng-container *ngIf="releaseItems | async as releaseItemsFromContainer">
-            <div class="item1" [@mostPopReleaseAnim]="releaseItemsFromContainer.length">
-                <div class="cardElement-most-pop" *ngFor="let releaseItem of releaseItemsFromContainer | reverse | slice:0:4; let i=index">
-                    <most-pop-release-thumbnail [releaseItem]="releaseItem"></most-pop-release-thumbnail>
-                </div>
+        <div class="item1" [@mostPopReleaseAnim]="releaseItems.length" *ngIf="releaseItems.length > 0">
+            <div class="cardElement-most-pop" *ngFor="let releaseItem of releaseItems">
+                <most-pop-release-thumbnail [releaseItem]="releaseItem"></most-pop-release-thumbnail>
             </div>
-        </ng-container>
-        <ng-container *ngIf="podcastItems | async as podcastItemsFromContainer">
-            <div class="item2" [@mostPopPodcastAnim]="podcastItemsFromContainer.length">
-                <div class="cardElement-most-pop" *ngFor="let podcastItem of podcastItemsFromContainer | reverse | slice:0:4; let i=index">
-                    <most-pop-podcast-thumbnail [podcastItem]="podcastItem"></most-pop-podcast-thumbnail>
-                </div>
+        </div>    
+        <div class="item2" [@mostPopPodcastAnim]="podcastItems.length">
+            <div class="cardElement-most-pop" *ngFor="let podcastItem of podcastItems">
+                <most-pop-podcast-thumbnail [podcastItem]="podcastItem"></most-pop-podcast-thumbnail>
             </div>
-        </ng-container>
+        </div>        
     </div>
 
 </div>

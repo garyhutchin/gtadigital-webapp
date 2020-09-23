@@ -6,19 +6,19 @@
             </div>
             <div class="navbar">
                 <ul>
-                    <li class="navItem" *ngFor="let navItem of navItems | async">
+                    <li class="navItem" *ngFor="let navItem of navItems">
                         <nav-items [navItem]="navItem"></nav-items>
                     </li>
                 </ul>
             </div>
             <div class="socialMediaIcons">
                 <ul>
-                    <li *ngFor="let socialMediaLink of socialMediaLinks | async"><a [href]="socialMediaLink.url" target="blank"><img [src]="socialMediaLink.image" [alt]="socialMediaLink.alt"></a></li>
+                    <li *ngFor="let socialMediaLink of socialMediaLinks"><a [href]="socialMediaLink.url" target="blank"><img [src]="socialMediaLink.image" [alt]="socialMediaLink.alt"></a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div *ngIf="underConstruction | async as underConstruction">
+    <div>
         <div class="under-construction" *ngIf="underConstruction?.text">{{ underConstruction.text }}</div>
     </div>
 </div>

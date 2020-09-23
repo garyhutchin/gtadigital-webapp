@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LatestNewsService } from '../shared/latest-news.service';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
-import { AngularFireDatabase, AngularFireList} from 'angularfire2/database'
-import { Observable } from 'rxjs';
-import { Content } from '../../models/content-interface';
 
 @Component({
     selector: 'latest-news',
@@ -35,19 +32,13 @@ import { Content } from '../../models/content-interface';
 export class LatestNewsComponent implements OnInit {
 
 
-    newsItemsList: AngularFireList<Content>
-    newsItems: Observable<Content[]>
+  newsItems:any[]
 
-    constructor(private latestNewsService: LatestNewsService, private afd: AngularFireDatabase){
+  constructor(private latestNewsService: LatestNewsService){
 
-    }
+  }
 
-    ngOnInit() {
-
-      this.newsItemsList = this.afd.list('latest-news')
-      this.newsItems = this.newsItemsList.valueChanges()
-
-
-
-    }
+  ngOnInit() {
+    this.newsItems = this.latestNewsService.getNewsItems()
+  }
 }

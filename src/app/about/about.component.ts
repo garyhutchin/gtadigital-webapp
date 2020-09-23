@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
-import { Observable } from 'rxjs';
-import { Content } from '../models/content-interface';
+import { ContentService } from '../shared/content.service';
+import { Title, Meta } from '@angular/platform-browser';
+import { Router } from '@angular/router'
+
 
 
 @Component({
@@ -11,17 +12,39 @@ import { Content } from '../models/content-interface';
 })
 export class AboutComponent implements OnInit {
 
-  aboutContentDoc: AngularFireObject<Content>;
-  aboutContent: Observable<Content>;
+  aboutContent: any
+  url:any
 
-  constructor(private afd: AngularFireDatabase) { 
+  constructor(private contentService: ContentService, private title: Title, private meta: Meta, private router:Router) { 
 
   }
 
   ngOnInit() {
 
-    this.aboutContentDoc = this.afd.object('main-content/about')
-    this.aboutContent = this.aboutContentDoc.valueChanges()
+    this.url = this.router.url
+
+    this.aboutContent = this.contentService.getAboutContent('about')
+
+    //set tags for SEO
+    this.title.setTitle(this.aboutContent.title);
+    this.meta.updateTag({ name: 'description', content: this.aboutContent.description });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
+
+    //set tags for Twitter
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
+    this.meta.updateTag({ name: 'twitter:site', content: '@gta_digital' });
+    this.meta.updateTag({ name: 'twitter:title', content: 'Find out more about GTA Digital' });
+    this.meta.updateTag({ name: 'twitter:description', content: this.aboutContent.description });
+    this.meta.updateTag({ name: 'twitter:image', content: this.aboutContent.heroImage });
+    this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
+
+    //set tags for Facebook
+    this.meta.updateTag({ property: 'og:type', content: 'article' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'gtadigital' });
+    this.meta.updateTag({ property: 'og:title', content: 'Find out more about GTA Digital' });
+    this.meta.updateTag({ property: 'og:description', content: this.aboutContent.description });
+    this.meta.updateTag({ property: 'og:image', content: this.aboutContent.heroImage });
+    this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
 
   }
 

@@ -1,4 +1,4 @@
-<div class="releaseDetailsWrapper" *ngIf="release | async as release">
+<div class="releaseDetailsWrapper">
     <div class="releaseDetailsContainer">
         <div class="image">
             <img class="artwork" [src]="release.artwork">
@@ -9,7 +9,9 @@
             <p class="codeWrapper" *ngIf="release?.discountCode" class="discount-code">Enter code "{{release.discountCode}}" for 50% off</p>
             <p>{{release.releaseInfoP1}}</p>
             <p>{{release.releaseInfoP2}}<br>{{release.releaseInfoP3}}<br>{{release.releaseInfoP4}}<br>{{release.releaseInfoP5}}</p>
-            <span class="player" [innerHTML]="release.releasePlayer | noSanitizeHtml"></span>
+            <span class="player">
+                <iframe style="border: 0; width: 100%; height: 120px;" [src]="release.releasePlayer | noSanitizeUrl"><a [href]="release.releaseUrl">{{release.catNo}} {{release.title}} by {{release.artistName}}</a></iframe>
+            </span>
         </div>
     </div>
 </div>

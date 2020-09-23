@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContentService } from 'src/app/shared/content.service';
-import { Observable } from 'rxjs';
-import { Podcast, Content } from '../../../models/content-interface';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
+import { PodcastService } from '../../podcasts/shared/podcast.service';
 
 @Component ({
     selector: 'podcast-tile',
@@ -13,24 +11,16 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angular
 
 export class PodcastTileComponent implements OnInit {
     
-    podcastsList: AngularFireList<Podcast>
-    podcasts: Observable<Podcast[]>
-    
-    musicContentObject: AngularFireObject<Content>
-    musicContent: Observable<Content>
+    musicContent: any
+    podcasts:any
 
-    constructor(private router: Router, private contentService: ContentService, private afd: AngularFireDatabase) {
+    constructor(private router: Router, private contentService: ContentService, private podcastService: PodcastService) {
 
     }
 
     ngOnInit() {
-        this.podcastsList = this.afd.list('podcasts')
-        this.podcasts = this.podcastsList.valueChanges()
-
-        this.musicContentObject = this.afd.object('main-content/music')
-        this.musicContent = this.musicContentObject.valueChanges()
-
-        
+        this.musicContent = this.contentService.getMusicContent('music')
+        this.podcasts = this.podcastService.getPodcasts()        
     }
 
     viewPodcasts() {
