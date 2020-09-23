@@ -2,37 +2,37 @@
 
     <form (ngSubmit)="submitForm()" #contactForm="ngForm">
 
-        <div class="field">
-            <label class="label">Name</label>
-            <input 
-            type="text" 
-            name="name" 
-            class="input" 
-            [(ngModel)]="name"
-            #nameInput="ngModel" 
-            required>
+        <div class="small-inputs">
+            <div class="field-small">
+                <label class="label">Name</label>
+                <input 
+                type="text" 
+                name="name" 
+                class="input" 
+                [(ngModel)]="name"
+                #nameInput="ngModel" 
+                required>
 
-            <div class="error" *ngIf="nameInput.invalid && nameInput.touched">
-                Your name is required.
+                <div class="error" *ngIf="nameInput.invalid && nameInput.touched">
+                    Your name is required.
+                </div>
             </div>
 
-        </div>
+            <div class="field-small">
+                <label class="label">Email</label>
+                <input 
+                type="email" 
+                name="email" 
+                class="input" 
+                [(ngModel)]="email"
+                #emailInput="ngModel"
+                required
+                email>
 
-        <div class="field">
-            <label class="label">Email</label>
-            <input 
-            type="email" 
-            name="email" 
-            class="input" 
-            [(ngModel)]="email"
-            #emailInput="ngModel"
-            required
-            email>
-
-            <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
-                Your email address is required and it must be a valid email address.
+                <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
+                    Your email address is required and it must be a valid email address.
+                </div>
             </div>
-
         </div>
 
         <div class="field">

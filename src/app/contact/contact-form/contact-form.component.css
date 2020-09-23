@@ -5,37 +5,45 @@
 
 label {
     font-size: 1.5rem;
+    display: block;
 }
 
-.field {
-    margin-top: 1.6rem;
+.small-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3rem;
 }
 
-.input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+.field-small, input select, textarea {
+    flex-basis: 100%;
     border-radius: 4px;
-    box-sizing: border-box;
     margin-top: 6px;
-    resize: vertical;
-    outline: none;
     font-family: Titillium Web, sans-serif;    
     font-size: 1.5rem;
+}
+.input {
+    width: 98.5%;
+    box-sizing: border-box;
+    resize: vertical;
+    outline: none;
+    padding: 1.2rem;
+    border: 0.1rem solid rgb(196, 196, 196);
+    border-radius: 0.4rem;
+    margin-top: 1rem;
 }
 
-.input, select, textarea {
-    width: 100%;
-    padding: 1.2rem;
-    border: 1px solid #ccc;
-    border-radius: 0.4rem;
-    box-sizing: border-box;
-    margin-top: 0.6rem;
-    resize: vertical;
-    outline: none;
-    font-family: Titillium Web, sans-serif;    
-    font-size: 1.5rem;
+.field, select, textarea {
+    margin-top: 1rem;
+    width: 98.5%;
 }
+
+.textarea {
+    border: 0.1rem solid rgb(196, 196, 196);
+    height: 12rem;
+    padding: 1.2rem;
+}
+
 
 .error {
     margin: 0.2rem 0 1.6rem 0.2rem;
