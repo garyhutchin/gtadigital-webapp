@@ -31,6 +31,11 @@
     color: white;
 }
 
+.item {
+    width: 100%;
+    margin: 0;
+}
+
 .tabNavItem1 {
     flex-basis: 10%;
     cursor: pointer;

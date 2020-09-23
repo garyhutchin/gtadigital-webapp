@@ -24,6 +24,10 @@ export class ContentService {
         return MAINCONTENT.find(store => store.id === id)
     }
 
+    getContactContent(id:string) {
+        return MAINCONTENT.find(contact => contact.id === id)
+    }
+
     getSocialMediaLinks() {
         return SOCIALMEDIALINKS
     }
@@ -109,6 +113,15 @@ const MAINCONTENT = [
         heroImageAlt: 'GTA Digital Logo',
         heroText: 'If you are a fan of GTA Digital, why not purchase one of the items below.',
         title: 'Store'
+    },
+    {
+        description: 'Description for contact page',
+        id: 'contact',
+        heroHeader: 'Get in touch!',
+        heroImage: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1',
+        heroImageAlt: 'GTA Digital Logo',
+        heroText: 'If you would like to get in touch, please complete the form below...',
+        title: 'Contact'
     }
 ]
 

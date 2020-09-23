@@ -1,0 +1,67 @@
+.form-container {
+    width: 70%;
+    margin: auto;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+.field {
+    margin-top: 1.6rem;
+}
+
+.input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    resize: vertical;
+    outline: none;
+    font-family: Titillium Web, sans-serif;    
+    font-size: 1.5rem;
+}
+
+.input, select, textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    margin-top: 0.6rem;
+    resize: vertical;
+    outline: none;
+    font-family: Titillium Web, sans-serif;    
+    font-size: 1.5rem;
+}
+
+.error {
+    margin: 0.2rem 0 1.6rem 0.2rem;
+    color: rgb(172, 33, 33);
+    font-weight: 600;
+}
+  
+.submit-button {
+    background-color: #0193B7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-top: 1.6rem;
+    font-family: Titillium Web, sans-serif;    
+}
+  
+.submit-button:hover {
+    background-color: #006c86;
+}
+
+.submit-button:disabled {
+    background-color:#0193b74b;
+    cursor: not-allowed;
+}
