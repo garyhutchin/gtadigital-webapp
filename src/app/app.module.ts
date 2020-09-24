@@ -9,6 +9,9 @@ import { NoSanitizeHtmlPipe } from './shared/sanitize-html.pipe';
 import { NoSanitizeUrlPipe } from './shared/sanitize-url.pipe';
 import { ReversePipe } from './shared/reverse.pipe';
 
+import { AngularFireModule} from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore'
+
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { DesktopNavComponent } from './nav/desktop-nav/desktop-nav.component';
@@ -53,6 +56,7 @@ import { StoreThumbnailsComponent } from './store/store-thumbnails/store-thumbna
 import { StoreListComponent } from './store/store-list/store-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component'
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -112,7 +116,9 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
     ],
     
   bootstrap: [AppComponent]

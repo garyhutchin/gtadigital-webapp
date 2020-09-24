@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "gta-digital-web-app"
+  },
+  "targets": {
+    "gta-digital-web-app": {
+      "hosting": {
+        "gtadigital-app": [
+          "gta-digital-web-app"
+        ]
+      }
+    }
   }
 }

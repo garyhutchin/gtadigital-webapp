@@ -13,6 +13,8 @@ label {
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 3rem;
+    font-family: Titillium Web, sans-serif; 
+    font-size: 1.5rem;
 }
 
 .field-small, input select, textarea {
@@ -31,7 +33,10 @@ label {
     border: 0.1rem solid rgb(196, 196, 196);
     border-radius: 0.4rem;
     margin-top: 1rem;
+    font-family: Titillium Web, sans-serif;  
+    font-size: 1.5rem;
 }
+
 
 .field, select, textarea {
     margin-top: 1rem;

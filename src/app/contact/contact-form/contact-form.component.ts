@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore'
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'contact-form',
@@ -11,12 +13,16 @@ export class ContactFormComponent implements OnInit {
   email: string;
   message: string;
 
-  submitForm() {
-    const formSubmission = `My name is ${this.name}. My email address is ${this.email}. Message: ${this.message}`
-    alert(formSubmission)
+  contactFormCollection: AngularFirestoreCollection<any>
+
+  constructor(private afs: AngularFirestore, private activatedRoute: ActivatedRoute, private router: Router) {
   }
 
-  constructor() { }
+  submitForm() {
+
+    this.contactFormCollection = this.afs.collection('contact-form-submissions')
+    this.contactFormCollection.add({ name: this.name, email: this.email, message: this.message })
+  }
 
   ngOnInit() {
   }
