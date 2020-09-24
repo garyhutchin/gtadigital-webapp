@@ -86,7 +86,7 @@ const MAINCONTENT = [
         heroHeader : "GTA Digital",
         heroImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
         heroText : "Label, podcast series & radio show.<br>Releasing underground techno since 2013...",
-        title: "About"
+        title: "GTA Digital - About"
     },
     {
         description: 'Check out all of the releases, podcasts and past live streams',
@@ -99,7 +99,7 @@ const MAINCONTENT = [
         heroButton : "Check out the latest release",
         heroHeader : "Music",
         heroText : "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...",
-        title: 'Music'
+        title: 'GTA Digital - Music'
     },
     {
         id: "under-construction",
@@ -112,7 +112,7 @@ const MAINCONTENT = [
         heroImage: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1',
         heroImageAlt: 'GTA Digital Logo',
         heroText: 'If you are a fan of GTA Digital, why not purchase one of the items below.',
-        title: 'Store'
+        title: 'GTA Digital - Store'
     },
     {
         description: 'Description for contact page',
@@ -121,7 +121,7 @@ const MAINCONTENT = [
         heroImage: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1',
         heroImageAlt: 'GTA Digital Logo',
         heroText: 'If you would like to get in touch, please complete the form below...',
-        title: 'Contact'
+        title: 'GTA Digital - Contact'
     }
 ]
 
