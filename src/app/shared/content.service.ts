@@ -19,6 +19,14 @@ export class ContentService {
     getMusicContent(id:string) {
         return MAINCONTENT.find(music => music.id === id)
     }
+    
+    getStoreContent(id:string) {
+        return MAINCONTENT.find(store => store.id === id)
+    }
+
+    getContactContent(id:string) {
+        return MAINCONTENT.find(contact => contact.id === id)
+    }
 
     getSocialMediaLinks() {
         return SOCIALMEDIALINKS
@@ -67,6 +75,7 @@ const MAINCONTENT = [
         heroHeader : "Underground Techno",
         heroImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
         heroText : "GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has grown, with the addition of a podcast series and more recently a monthly show on Fnoob Techno Radio",
+        heroImageAlt: "GTA Digital Logo",
         title: "GTA Digital - Label, Radio Show and Podcast Series"
     },
     {
@@ -77,7 +86,7 @@ const MAINCONTENT = [
         heroHeader : "GTA Digital",
         heroImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
         heroText : "Label, podcast series & radio show.<br>Releasing underground techno since 2013...",
-        title: "About"
+        title: "GTA Digital - About"
     },
     {
         description: 'Check out all of the releases, podcasts and past live streams',
@@ -90,11 +99,29 @@ const MAINCONTENT = [
         heroButton : "Check out the latest release",
         heroHeader : "Music",
         heroText : "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...",
-        title: 'Music'
+        title: 'GTA Digital - Music'
     },
     {
         id: "under-construction",
         text: "This app is still in development - some content has been added as a placeholder"
+    },
+    {
+        description: 'If you are a fan of GTA Digital, there are hoodies and t-shirts available to purchase, if you would like to show even more support.',
+        id: 'store',
+        heroHeader: 'Show Even More Support!',
+        heroImage: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1',
+        heroImageAlt: 'GTA Digital Logo',
+        heroText: 'If you are a fan of GTA Digital, why not purchase one of the items below.',
+        title: 'GTA Digital - Store'
+    },
+    {
+        description: 'Description for contact page',
+        id: 'contact',
+        heroHeader: 'Get in touch!',
+        heroImage: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1',
+        heroImageAlt: 'GTA Digital Logo',
+        heroText: 'If you would like to get in touch, please complete the form below...',
+        title: 'GTA Digital - Contact'
     }
 ]
 
@@ -151,7 +178,7 @@ const STOREITEMS = [
         id: 'type-hoodie',
         alt: 'Type Hoodie',
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-hoodie.png?alt=media&token=7154489a-daaa-4318-b418-ab37c7d22eda',
-        description: 'GTA Digital Stacked Type Hoodie',
+        description: 'GTA Digital Type Hoodie',
         price: '',
         colours: '',
         shopUrl: 'https://www.dizzyjam.com/products/131952/'
@@ -169,7 +196,7 @@ const STOREITEMS = [
         id: 'type-tshirt-regular',
         alt: 'Type T-Shirt Regular Fit',
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-male-tshirt.png?alt=media&token=7698aa27-68b5-40b2-a5e7-846854d84d14',
-        description: 'GTA Digital Stacked Type T-Shirt - Regular Fit',
+        description: 'GTA Digital Type T-Shirt - Regular Fit',
         price: '',
         colours: '',
         shopUrl: 'https://www.dizzyjam.com/products/131951/'
@@ -187,7 +214,7 @@ const STOREITEMS = [
         id: 'type-tshirt-fitted',
         alt: 'Type T-Shirt Fitted',
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-female-tshirt.png?alt=media&token=a45a8521-9899-4314-a410-a2f237842f4e',
-        description: 'GTA Digital Stacked Type T-Shirt - Fitted',
+        description: 'GTA Digital Type T-Shirt - Fitted',
         price: '',
         colours: '',
         shopUrl: 'https://www.dizzyjam.com/products/131949/'

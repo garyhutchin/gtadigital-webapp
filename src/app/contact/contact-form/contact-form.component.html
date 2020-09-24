@@ -1,0 +1,66 @@
+<div class="form-container">
+
+    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+
+        <div class="small-inputs">
+            <div class="field-small">
+                <label class="label">Name</label>
+                <input
+                placeholder="Name..." 
+                type="text" 
+                name="name" 
+                class="input" 
+                [(ngModel)]="name"
+                #nameInput="ngModel" 
+                required>
+
+                <div class="error" *ngIf="nameInput.invalid && nameInput.touched">
+                    Your name is required.
+                </div>
+            </div>
+
+            <div class="field-small">
+                <label class="label">Email</label>
+                <input 
+                placeholder="Email Address..." 
+                type="email" 
+                name="email" 
+                class="input" 
+                [(ngModel)]="email"
+                #emailInput="ngModel"
+                required
+                email>
+
+                <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
+                    Your email address is required and it must be a valid email address.
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Message</label>
+            <textarea 
+            placeholder="Enter your message..."
+            name="message" 
+            class="textarea" 
+            [(ngModel)]="message"
+            #messageField="ngModel"
+            required>
+            </textarea>
+
+            <div class="error" *ngIf="messageField.invalid && messageField.touched">
+                You forgot to type a message.
+            </div>
+
+        </div>
+
+        <button 
+        type="submit" 
+        class="submit-button"
+        [disabled]="contactForm.invalid">
+        Submit
+        </button>
+
+    </form>
+
+</div>

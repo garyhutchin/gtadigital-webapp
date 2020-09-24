@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -9,7 +9,8 @@ import { NoSanitizeHtmlPipe } from './shared/sanitize-html.pipe';
 import { NoSanitizeUrlPipe } from './shared/sanitize-url.pipe';
 import { ReversePipe } from './shared/reverse.pipe';
 
-import { environment } from '../environments/environment';
+import { AngularFireModule} from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore'
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -52,7 +53,11 @@ import { YouMayLikePodcastComponent } from './music/podcasts/you-may-like-podcas
 import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast-thumbnail/you-may-like-podcast-thumbnail.component';
 import { StoreComponent } from './store/store.component';
 import { StoreThumbnailsComponent } from './store/store-thumbnails/store-thumbnails.component';
-import { StoreListComponent } from './store/store-list/store-list.component'
+import { StoreListComponent } from './store/store-list/store-list.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component'
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -94,7 +99,9 @@ import { StoreListComponent } from './store/store-list/store-list.component'
     YouMayLikePodcastThumbnailComponent,
     StoreComponent,
     StoreThumbnailsComponent,
-    StoreListComponent
+    StoreListComponent,
+    ContactComponent,
+    ContactFormComponent
   ],
 
   providers: [
@@ -109,6 +116,9 @@ import { StoreListComponent } from './store/store-list/store-list.component'
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
     ],
     
   bootstrap: [AppComponent]

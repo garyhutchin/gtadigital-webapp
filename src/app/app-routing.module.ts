@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { PodcastDetailsComponent } from './music/podcasts/podcast-details/podcast-details.component';
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
 import { StoreComponent } from './store/store.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes:Routes = [
     { path: '', component: MainComponent },
@@ -21,6 +22,7 @@ const appRoutes:Routes = [
     { path: 'music/releases/release/:id', component: ReleaseDetailsComponent },
     { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent },
     { path: 'store', component: StoreComponent },
+    { path: 'contact', component: ContactComponent },
     
     { path: '', redirectTo: '/home', pathMatch: 'full'},
 
