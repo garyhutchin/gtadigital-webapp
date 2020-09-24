@@ -6,7 +6,7 @@ import { ReleaseService } from '../../releases/shared/releases.service';
 @Component ({
     selector: 'release-list-tile',
     templateUrl: 'release-list-tile.component.html',
-    styleUrls: ['../../../css/card-structure.component.css']
+    styleUrls: ['../../../css/card-structure.component.css', '../../../css/main-structure.component.css']
 })
 
 export class ReleaseListTileComponent implements OnInit {

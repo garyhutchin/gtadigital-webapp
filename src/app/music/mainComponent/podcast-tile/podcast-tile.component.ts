@@ -6,7 +6,7 @@ import { PodcastService } from '../../podcasts/shared/podcast.service';
 @Component ({
     selector: 'podcast-tile',
     templateUrl: 'podcast-tile.component.html',
-    styleUrls: ['../../../css/card-structure.component.css']
+    styleUrls: ['../../../css/card-structure.component.css', '../../../css/main-structure.component.css']
 })
 
 export class PodcastTileComponent implements OnInit {
