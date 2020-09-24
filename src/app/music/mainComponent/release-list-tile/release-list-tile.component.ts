@@ -20,7 +20,7 @@ export class ReleaseListTileComponent implements OnInit {
 
     ngOnInit() {
         
-        this.musicContent = this.contentService.getMusicContent('music')
+        this.musicContent = this.contentService.getMainContent('music')
         this.releases = this.releaseService.getReleases()
     }
 

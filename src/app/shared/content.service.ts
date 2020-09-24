@@ -8,24 +8,8 @@ export class ContentService {
         return NAVITEMS
     }
 
-    getHomeContent(id:string) {
-        return MAINCONTENT.find(home => home.id === id)
-    }
-
-    getAboutContent(id:string) {
-        return MAINCONTENT.find(about => about.id === id)
-    }
-
-    getMusicContent(id:string) {
-        return MAINCONTENT.find(music => music.id === id)
-    }
-    
-    getStoreContent(id:string) {
-        return MAINCONTENT.find(store => store.id === id)
-    }
-
-    getContactContent(id:string) {
-        return MAINCONTENT.find(contact => contact.id === id)
+    getMainContent(id:string) {
+        return MAINCONTENT.find(content => content.id === id)
     }
 
     getSocialMediaLinks() {

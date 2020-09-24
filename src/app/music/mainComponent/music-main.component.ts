@@ -23,8 +23,8 @@ export class MusicMainComponent implements OnInit {
     }
   
     ngOnInit() {
-      this.musicContent = this.contentService.getMusicContent('music')
-      this.homeContent = this.contentService.getHomeContent('home')
+      this.musicContent = this.contentService.getMainContent('music')
+      this.homeContent = this.contentService.getMainContent('home')
       this.releases = this.releaseService.getReleases()
 
       this.url = this.router.url
