@@ -2,12 +2,12 @@
     
     <div class="listContainer">
         <div class="item1" [@mostPopReleaseAnim]="releaseItems.length" *ngIf="releaseItems.length > 0">
-            <div class="cardElement-most-pop" *ngFor="let releaseItem of releaseItems">
+            <div class="cardElement-most-pop" *ngFor="let releaseItem of releaseItems | slice:0:2; let i=index">
                 <most-pop-release-thumbnail [releaseItem]="releaseItem"></most-pop-release-thumbnail>
             </div>
         </div>    
         <div class="item2" [@mostPopPodcastAnim]="podcastItems.length">
-            <div class="cardElement-most-pop" *ngFor="let podcastItem of podcastItems">
+            <div class="cardElement-most-pop" *ngFor="let podcastItem of podcastItems | slice:0:2; let i=index">
                 <most-pop-podcast-thumbnail [podcastItem]="podcastItem"></most-pop-podcast-thumbnail>
             </div>
         </div>        

@@ -13,7 +13,7 @@ export class ReleaseService {
 
 const RELEASES = [
 
-    {
+    /*{
         artistName : "Ungrateful Ambassador",
         artwork : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta020.jpg?alt=media&token=c336a640-1c9b-4632-9223-c859acbee140",
         catNo : "[GTA020]",
@@ -29,7 +29,7 @@ const RELEASES = [
         releasePlayer : "",
         shortDescription: "Jacked up techno, with an outstanding remix by DJ Ze Mig L. Supported by the likes of Perc, Patrick DSP, Wetworks & Ike Dusk",
         title : "Purist EP"  
-    },
+    },*/
     {
         artistName : "Gary The Apprentice",
         artwork : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta019.jpg?alt=media&token=2f361b13-7e52-44f3-be1e-41ed73e041fa",
