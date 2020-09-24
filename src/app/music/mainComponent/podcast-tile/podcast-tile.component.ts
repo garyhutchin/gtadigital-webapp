@@ -6,7 +6,7 @@ import { PodcastService } from '../../podcasts/shared/podcast.service';
 @Component ({
     selector: 'podcast-tile',
     templateUrl: 'podcast-tile.component.html',
-    styleUrls: ['../../../css/card-structure.component.css']
+    styleUrls: ['../../../css/card-structure.component.css', '../../../css/main-structure.component.css']
 })
 
 export class PodcastTileComponent implements OnInit {
@@ -19,7 +19,7 @@ export class PodcastTileComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.musicContent = this.contentService.getMusicContent('music')
+        this.musicContent = this.contentService.getMainContent('music')
         this.podcasts = this.podcastService.getPodcasts()        
     }
 

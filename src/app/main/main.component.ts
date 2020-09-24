@@ -81,7 +81,7 @@ export class MainComponent implements OnInit {
 
     this.url = this.router.url
 
-    this.homeContent = this.contentService.getHomeContent('home')
+    this.homeContent = this.contentService.getMainContent('home')
 
     //set tags for SEO
     this.title.setTitle(this.homeContent.title);

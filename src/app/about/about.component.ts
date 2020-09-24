@@ -23,7 +23,7 @@ export class AboutComponent implements OnInit {
 
     this.url = this.router.url
 
-    this.aboutContent = this.contentService.getAboutContent('about')
+    this.aboutContent = this.contentService.getMainContent('about')
 
     //set tags for SEO
     this.title.setTitle(this.aboutContent.title);

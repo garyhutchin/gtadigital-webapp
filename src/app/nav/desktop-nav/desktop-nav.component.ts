@@ -23,7 +23,7 @@ export class DesktopNavComponent implements OnInit {
 
         this.navItems = this.contentService.getNavItems()
         this.socialMediaLinks = this.contentService.getSocialMediaLinks()      
-        this.underConstruction = this.contentService.getHomeContent('under-construction')
+        this.underConstruction = this.contentService.getMainContent('under-construction')
 
     }
 

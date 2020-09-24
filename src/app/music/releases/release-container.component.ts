@@ -22,7 +22,7 @@ export class ReleaseContainerComponent implements OnInit {
 
     ngOnInit() {
         this.releases = this.releaseService.getReleases()
-        this.homeContent = this.contentService.getHomeContent('home')
+        this.homeContent = this.contentService.getMainContent('home')
 
         this.url = this.router.url
   

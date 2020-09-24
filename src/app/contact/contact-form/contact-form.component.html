@@ -2,65 +2,72 @@
 
     <form (ngSubmit)="submitForm()" #contactForm="ngForm">
 
-        <div class="small-inputs">
-            <div class="field-small">
-                <label class="label">Name</label>
-                <input
-                placeholder="Name..." 
-                type="text" 
-                name="name" 
-                class="input" 
-                [(ngModel)]="name"
-                #nameInput="ngModel" 
-                required>
+        <p>
+            <label>Name</label>
+            <input
+            placeholder="Name..." 
+            type="text" 
+            name="name" 
+            [(ngModel)]="name"
+            #nameInput="ngModel" 
+            required>
 
-                <div class="error" *ngIf="nameInput.invalid && nameInput.touched">
-                    Your name is required.
-                </div>
-            </div>
+            <span class="error" *ngIf="nameInput.invalid && nameInput.touched">
+                Your name is required.</span>
 
-            <div class="field-small">
-                <label class="label">Email</label>
-                <input 
-                placeholder="Email Address..." 
-                type="email" 
-                name="email" 
-                class="input" 
-                [(ngModel)]="email"
-                #emailInput="ngModel"
-                required
-                email>
+        </p>
 
-                <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
-                    Your email address is required and it must be a valid email address.
-                </div>
-            </div>
-        </div>
+        <p>
+            <label>Email</label>
+            <input 
+            placeholder="Email Address..." 
+            type="email" 
+            name="email"  
+            [(ngModel)]="email"
+            #emailInput="ngModel"
+            required
+            email>
 
-        <div class="field">
-            <label class="label">Message</label>
+            <span class="error" *ngIf="emailInput.invalid && emailInput.touched">
+                Your email address is required and it must be a valid email address.
+            </span>
+
+        </p>
+
+        <p class="full">
+            <label>Message</label>
             <textarea 
             placeholder="Enter your message..."
             name="message" 
+            rows="5"
             class="textarea" 
             [(ngModel)]="message"
             #messageField="ngModel"
             required>
             </textarea>
-
-            <div class="error" *ngIf="messageField.invalid && messageField.touched">
+            
+            <span class="error" *ngIf="messageField.invalid && messageField.touched">
                 You forgot to type a message.
-            </div>
+            </span>
 
-        </div>
+        </p>
 
-        <button 
-        type="submit" 
-        class="submit-button"
-        [disabled]="contactForm.invalid">
-        Submit
-        </button>
+        <p class="full">
+            <button 
+            type="submit" 
+            class="submit-button"
+            [disabled]="contactForm.invalid">
+            Submit
+            </button>
+        </p>
 
     </form>
 
+</div>
+
+<div class="message-sent-container" *ngIf="giveConfirmation" @formSubmittedAnim>
+    <div class="message-sent">
+        <p class="success">Your message has been received, you will receive a response ASAP.</p>
+        <button class="close" (click)="closeConfirmation()">Close and return to home page</button>
+    </div>
 </div>
