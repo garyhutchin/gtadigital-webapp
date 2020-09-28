@@ -25,7 +25,7 @@ export class PodcastsContainerComponent implements OnInit {
     this.url = this.router.url
   
     //set tags for SEO
-    this.title.setTitle("GTA Digital - Podcasts")
+    this.title.setTitle("GTA Digital - Techno - Podcasts")
     this.meta.updateTag({ name: 'description', content: 'Browse and listen to all of the mixes that have been released on the GTA Digital Podcast Series' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow'  });
 

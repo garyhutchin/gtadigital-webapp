@@ -59,7 +59,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=2762695312/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "https://gtadigital.bandcamp.com/album/gta019-unix-ep",
         title : "What Have We Become"
     },
@@ -75,7 +75,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=2098967616/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Longitudinal Axis EP"
     },
@@ -91,7 +91,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=596705501/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Of Little Significance"
     },
@@ -107,7 +107,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=1191201557/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "A New Dimension"
     },
@@ -123,7 +123,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=2308701589/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Back In The Burgh EP"
     },
@@ -139,7 +139,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=1431840101/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Mindfulness EP"
     },
@@ -155,7 +155,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=4152153140/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Roffa EP"
     },
@@ -171,7 +171,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=206006158/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Abstrakt Riddims EP"
     },
@@ -187,7 +187,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=1969661319/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "The Next Chapter EP"
     },
@@ -203,7 +203,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=64643918/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Open Box EP"
     },
@@ -219,7 +219,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=2041778642/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Mornaaan! EP"
     },
@@ -235,7 +235,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=369268153/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Mind Warp EP"
     },
@@ -251,14 +251,14 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=860283510/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Organised Kaos EP"
     },
     {
         artistName : "Gary The Apprentice",
         artwork : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta005.jpg?alt=media&token=e5d5ccc2-411b-494b-abd4-2f59dc90576e",
-        catN : "[GTA005]",
+        catNo : "[GTA005]",
         id : 5,
         imageUrl : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Frelease-artwork%2Fgta005.jpg?alt=media&token=a86d1a8a-dfe2-4916-9e7e-642bfa3393da",
         releaseDate : "",
@@ -267,7 +267,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=3600579290/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Mechanical Lifeforms EP"
     },
@@ -283,7 +283,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=1142553020/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "The Dunny Collection"
     },
@@ -299,7 +299,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=44053965/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Timespace EP"
     },
@@ -315,7 +315,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=3386793062/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "The Brass Continent"
     },
@@ -331,7 +331,7 @@ const RELEASES = [
         releaseInfoP3 : "",
         releaseInfoP4 : "",
         releaseInfoP5 : "",
-        releasePlayer : "",
+        releasePlayer : 'https://bandcamp.com/EmbeddedPlayer/album=4083688477/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless',
         releaseUrl : "",
         title : "Recharged EP"
     }

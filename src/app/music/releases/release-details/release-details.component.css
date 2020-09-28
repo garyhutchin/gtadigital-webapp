@@ -1,6 +1,6 @@
 .releaseDetailsWrapper {
     max-width: 144rem;
-    margin: 12rem auto 0.5rem auto;
+    margin: 0 auto 0.5rem auto;
 }
 
 @media (max-width: 800px) {
@@ -45,7 +45,7 @@
 @media (max-width: 1356px) {
     .text {
         position: unset;
-        margin: auto 2rem 2rem 2rem;
+        margin: auto 1rem 2rem 1rem;
 
     }
 }
@@ -103,6 +103,7 @@ h3 {
         bottom: unset;
         left: 0rem;
         width: 90%;
+        margin-left: 0;
     }
 }
 
@@ -114,4 +115,28 @@ h3 {
     border-radius: 0.5rem;
     margin-top: 1rem;
     width: 20rem;
+}
+
+.breadcrumbs-wrapper {
+    max-width: 144rem;
+    margin: 8.5rem auto 1.5rem auto;
+}
+
+.breadcrumbs-container {
+    margin: 0 2rem 0 2rem;
+}
+
+.breadcrumbs-item {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: rgb(134, 134, 134);
+    font-size: 1.6rem;
+}
+
+@media (max-width: 800px) {
+    .breadcrumbs-wrapper {
+        display: none;
+    }
 }

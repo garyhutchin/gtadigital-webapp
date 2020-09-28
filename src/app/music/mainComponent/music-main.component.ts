@@ -30,7 +30,7 @@ export class MusicMainComponent implements OnInit {
       this.url = this.router.url
 
       //set tags for SEO
-      this.title.setTitle('GTA Digital - Music');
+      this.title.setTitle('GTA Digital - Techno - Music');
       this.meta.updateTag({ name: 'description', content: this.musicContent.description });
       this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
 
