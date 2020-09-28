@@ -1,8 +1,8 @@
 <div class="pageHeroWrapper">
     <div class="heroContainer">
         <div class="heroText">
-            <h1>{{storeContent.heroHeader}}</h1>
-            <p>{{storeContent.heroText}}</p>
+            <h1>{{ storeContent.heroHeader }}</h1>
+            <p>{{ storeContent.heroText }}</p>
         </div>
         
         <div class="heroLogo">
@@ -15,7 +15,164 @@
 
     <div class="componentContent">
 
-        <store-list></store-list>
+        <div class="list-wrapper">
+            <div class="listContainer">
+
+                <div class="cardElement-store">
+                    <div class="routerLink">
+
+                            <img [src]="logoHoodie.imageUrlGrey" [alt]="logoHoodie.alt" class="artwork" *ngIf=" isGreyLogoHoodieSelected">
+
+                            <img [src]="logoHoodie.imageUrlNavy" [alt]="logoHoodie.alt" class="artwork" *ngIf=" isNavyLogoHoodieSelected">
+
+                            <img [src]="logoHoodie.imageUrlBlack" [alt]="logoHoodie.alt" class="artwork" *ngIf=" isBlackLogoHoodieSelected">
+
+                        <h3 class="cardHeader">{{ logoHoodie.description }}</h3>
+                        <div class="cardDetails">
+                            <p>Colour:</p>
+                            <span class="grey" (click)="colourLogoHoodieGrey()"></span>
+                            <span class="navy" (click)="colourLogoHoodieNavy()"></span>
+                            <span class="black"(click)="colourLogoHoodieBlack()"></span>
+                            <p class="store-item-price">Price: {{ logoHoodie.price }}</p>
+                            <a [href]="logoHoodie.shopUrl" target="blank"><button class="buy-item">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardElement-store">
+                    <div class="routerLink">
+
+                            <img [src]="typeHoodie.imageUrlBlack" [alt]="typeHoodie.alt" class="artwork" *ngIf="isBlackTypeHoodieSelected">
+
+                            <img [src]="typeHoodie.imageUrlGrey" [alt]="typeHoodie.alt" class="artwork" *ngIf="isGreyTypeHoodieSelected">
+
+                            <img [src]="typeHoodie.imageUrlNavy" [alt]="typeHoodie.alt" class="artwork" *ngIf="isNavyTypeHoodieSelected">
+
+                            <img [src]="typeHoodie.imageUrlRed" [alt]="typeHoodie.alt" class="artwork" *ngIf="isRedTypeHoodieSelected">
+
+                        <h3 class="cardHeader">{{ typeHoodie.description }}</h3>
+                        <div class="cardDetails">
+                            <p>Colour:</p>
+                            <span class="black"(click)="colourTypeHoodieBlack()"></span>
+                            <span class="grey" (click)="colourTypeHoodieGrey()"></span>
+                            <span class="navy" (click)="colourTypeHoodieNavy()"></span>
+                            <span class="red" (click)="colourTypeHoodieRed()"></span>
+                            <p class="store-item-price">Price: {{ typeHoodie.price }}</p>
+                            <a [href]="typeHoodie.shopUrl" target="blank"><button class="buy-item">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardElement-store">
+                    <div class="routerLink">
+
+                            <img [src]="logoTshirtRegular.imageUrlGrey" [alt]="logoTshirtRegular.alt" class="artwork" *ngIf="isGreyLogoTshirtSelected">
+
+                            <img [src]="logoTshirtRegular.imageUrlBlack" [alt]="logoTshirtRegular.alt" class="artwork" *ngIf="isBlackLogoTshirtSelected">
+
+                            <img [src]="logoTshirtRegular.imageUrlWhite" [alt]="logoTshirtRegular.alt" class="artwork" *ngIf="isWhiteLogoTshirtSelected">
+
+                        <h3 class="cardHeader">{{ logoTshirtRegular.description }}</h3>
+                        <div class="cardDetails">
+                            <p>Colour:</p>
+                            <span class="grey"(click)="colourLogoTshirtGrey()"></span>
+                            <span class="black" (click)="colourLogoTshirtBlack()"></span>
+                            <span class="white" (click)="colourLogoTshirtWhite()"></span>
+                            <p class="store-item-price">Price: {{ logoTshirtRegular.price }}</p>
+                            <a [href]="logoTshirtRegular.shopUrl" target="blank"><button class="buy-item">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardElement-store">
+                    <div class="routerLink">
+
+                            <img [src]="typeTshirtRegular.imageUrlBlack" [alt]="typeTshirtRegular.alt" class="artwork" *ngIf="isBlackTypeTshirtSelected">
+
+                            <img [src]="typeTshirtRegular.imageUrlGrey" [alt]="typeTshirtRegular.alt" class="artwork" *ngIf="isGreyTypeTshirtSelected">
+
+                            <img [src]="typeTshirtRegular.imageUrlWhite" [alt]="typeTshirtRegular.alt" class="artwork" *ngIf="isWhiteTypeTshirtSelected">
+
+                        <h3 class="cardHeader">{{ typeTshirtRegular.description }}</h3>
+                        <div class="cardDetails">
+                            <p>Colour:</p>
+                            <span class="black" (click)="colourTypeTshirtBlack()"></span>
+                            <span class="grey"(click)="colourTypeTshirtGrey()"></span>
+                            <span class="white" (click)="colourTypeTshirtWhite()"></span>
+                            <p class="store-item-price">Price: {{ typeTshirtRegular.price }}</p>
+                            <a [href]="typeTshirtRegular.shopUrl" target="blank"><button class="buy-item">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardElement-store">
+                    <div class="routerLink">
+
+                            <img [src]="logoTshirtFitted.imageUrlWhite" [alt]="logoTshirtFitted.alt" class="artwork" *ngIf="isWhiteLogoFittedSelected">
+
+                            <img [src]="logoTshirtFitted.imageUrlBlack" [alt]="logoTshirtFitted.alt" class="artwork" *ngIf="isBlackLogoFittedSelected">
+
+                        <h3 class="cardHeader">{{ logoTshirtFitted.description }}</h3>
+                        <div class="cardDetails">
+                            <p>Colour:</p>
+                            <span class="white" (click)="colourLogoFittedWhite()"></span>
+                            <span class="black" (click)="colourLogoFittedBlack()"></span>
+                            <p class="store-item-price">Price: {{ logoTshirtFitted.price }}</p>
+                            <a [href]="logoTshirtFitted.shopUrl" target="blank"><button class="buy-item">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardElement-store">
+                    <div class="routerLink">
+
+                            <img [src]="typeTshirtFitted.imageUrlWhite" [alt]="typeTshirtFitted.alt" class="artwork" *ngIf="isWhiteTypeFittedSelected">
+
+                            <img [src]="typeTshirtFitted.imageUrlBlack" [alt]="typeTshirtFitted.alt" class="artwork" *ngIf="isBlackTypeFittedSelected">
+
+                        <h3 class="cardHeader">{{ typeTshirtFitted.description }}</h3>
+                        <div class="cardDetails">
+                            <p>Colour:</p>
+                            <span class="white" (click)="colourTypeFittedWhite()"></span>
+                            <span class="black" (click)="colourTypeFittedBlack()"></span>
+                            <p class="store-item-price">Price: {{ typeTshirtFitted.price }}</p>
+                            <a [href]="typeTshirtFitted.shopUrl" target="blank"><button class="buy-item">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardElement-store">
+                    <div class="routerLink">
+
+                            <img [src]="gtaDigitalMug.imageUrl" [alt]="gtaDigitalMug.alt" class="artwork">
+
+                        <h3 class="cardHeader">{{ gtaDigitalMug.description }}</h3>
+                        <div class="cardDetails">
+                            <p>Colour:</p>
+                            <span class="white"></span>
+                            <p class="store-item-price">Price: {{ gtaDigitalMug.price }}</p>
+                            <a [href]="gtaDigitalMug.shopUrl" target="blank"><button class="buy-item">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardElement-store">
+                    <div class="routerLink">
+
+                            <img [src]="gtaDigitalToteBag.imageUrl" [alt]="gtaDigitalToteBag.alt" class="artwork">
+
+                        <h3 class="cardHeader">{{ gtaDigitalToteBag.description }}</h3>
+                        <div class="cardDetails">
+                            <p>Colour:</p>
+                            <span class="black"></span>
+                            <p class="store-item-price">Price: {{ gtaDigitalToteBag.price }}</p>
+                            <a [href]="gtaDigitalToteBag.shopUrl" target="blank"><button class="buy-item">Buy Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         
     </div>
 

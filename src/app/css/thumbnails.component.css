@@ -21,9 +21,24 @@
     letter-spacing: 0.05rem;
     font-size: 1.4rem;
     font-weight: 500;
+    position: relative;
 }
 
 .cardDetails p {
+    margin: 0;
+}
+
+.news-cardDetails {
+    text-align: left !important;
+    padding: 1.7rem;
+    letter-spacing: 0.05rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    position: relative;
+    min-height: 19rem;
+}
+
+.news-cardDetails p {
     margin: 0;
 }
 
@@ -70,18 +85,23 @@ img {
 }
 
 .internalUrl {
-    padding: 0.9rem 0 1rem 0;
+    background-color: #0193b7;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    bottom: 0;
 }
 
 .internalUrl a {
-    color: #B72501;
-    display: inline-block;
+    color: white;
     padding-top: 0;
     height: 1.5rem;
     cursor: pointer;
     letter-spacing: 0.2rem;
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .externalUrl {
