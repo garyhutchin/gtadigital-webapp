@@ -27,7 +27,7 @@ export class ReleaseContainerComponent implements OnInit {
         this.url = this.router.url
   
         //set tags for SEO
-        this.title.setTitle("GTA Digital - Releases")
+        this.title.setTitle("GTA Digital - Techno - Releases")
         this.meta.updateTag({ name: 'description', content: 'Browse and listen to all of the music that has been released on the GTA Digital' });
         this.meta.updateTag({ name: 'robots', content: 'index, follow'  });
     

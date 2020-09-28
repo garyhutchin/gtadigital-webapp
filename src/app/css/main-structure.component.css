@@ -273,6 +273,6 @@ h3 {
     outline: none;
   }
   
-  .buy-item:hover {
+.buy-item:hover {
     background-color: #00a1c9;
-  }
+}

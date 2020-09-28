@@ -65,7 +65,7 @@ const MAINCONTENT = [
         heroImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
         heroText : "GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has grown, with the addition of a podcast series and more recently a monthly show on Fnoob Techno Radio",
         heroImageAlt: "GTA Digital Logo",
-        title: "GTA Digital - Label, Radio Show and Podcast Series"
+        title: "GTA Digital - Techno - Label, Radio Show and Podcast Series"
     },
     {
         description: 'Find out more about GTA Digital',
@@ -75,7 +75,7 @@ const MAINCONTENT = [
         heroHeader : "GTA Digital",
         heroImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
         heroText : "Label, podcast series & radio show.<br>Releasing underground techno since 2013...",
-        title: "GTA Digital - About"
+        title: "GTA Digital - Techno - About"
     },
     {
         description: 'Check out all of the releases, podcasts and past live streams',
@@ -88,12 +88,12 @@ const MAINCONTENT = [
         heroButton : "Check out the latest release",
         heroHeader : "Music",
         heroText : "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...",
-        title: 'GTA Digital - Music'
+        title: 'GTA Digital - Techno - Music'
     },
-    {
+    /*{
         id: "under-construction",
         text: "This app is still in development - some content has been added as a placeholder"
-    },
+    },*/
     {
         description: 'If you are a fan of GTA Digital, there are hoodies and t-shirts available to purchase, if you would like to show even more support.',
         id: 'store',
@@ -101,7 +101,7 @@ const MAINCONTENT = [
         heroImage: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1',
         heroImageAlt: 'GTA Digital Logo',
         heroText: 'If you are a fan of GTA Digital, why not purchase one of the items below.',
-        title: 'GTA Digital - Store'
+        title: 'GTA Digital - Techno - Store'
     },
     {
         description: 'Description for contact page',
@@ -110,7 +110,7 @@ const MAINCONTENT = [
         heroImage: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1',
         heroImageAlt: 'GTA Digital Logo',
         heroText: 'If you would like to get in touch, please complete the form below...',
-        title: 'GTA Digital - Contact'
+        title: 'GTA Digital - Techno - Contact'
     }
 ]
 
