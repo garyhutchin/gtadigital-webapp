@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 
@@ -18,6 +19,10 @@ export class ContentService {
 
     getStoreItems() {
         return STOREITEMS
+    }
+
+    getStoreItem(id: string) {
+        return STOREITEMS.find(item => item.id === id)
     }
 }
 
@@ -152,55 +157,76 @@ const STOREITEMS = [
     {
         id: 'logo-hoodie',
         alt: 'Logo Hoodie',
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-hoodie.png?alt=media&token=032a91fe-b2c7-49d6-811b-7c25376f3814',
+        imageUrlGrey: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-hoodie.png?alt=media&token=032a91fe-b2c7-49d6-811b-7c25376f3814',
+        imageUrlBlack: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-hoodie-blk.png?alt=media&token=a47aef4d-f398-44f2-9446-88244ceb4812',
+        imageUrlNavy: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-hoodie-navy.png?alt=media&token=7c479617-e2ef-4ead-800b-a2fd438abf01',
         description: 'GTA Digital Logo Hoodie',
-        price: '',
-        colours: '',
+        price: '£25.00',
         shopUrl: 'https://www.dizzyjam.com/products/175476/'
     },
     {
         id: 'type-hoodie',
         alt: 'Type Hoodie',
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-hoodie.png?alt=media&token=7154489a-daaa-4318-b418-ab37c7d22eda',
+        imageUrlBlack: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-hoodie.png?alt=media&token=7154489a-daaa-4318-b418-ab37c7d22eda',
+        imageUrlGrey: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-hoodie-grey.png?alt=media&token=27bb5eaf-8038-4e2b-9320-208eca22c6b3',
+        imageUrlNavy: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-hoodie-navy.png?alt=media&token=f4695cd4-d6c8-4399-85b3-b335f40f3fbe',
+        imageUrlRed: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-hoodie-red.png?alt=media&token=abfa7344-e426-49b7-951a-b1c3237b0b1d',
         description: 'GTA Digital Type Hoodie',
-        price: '',
-        colours: '',
+        price: '£25.00',
         shopUrl: 'https://www.dizzyjam.com/products/131952/'
     },
     {
         id: 'logo-tshirt-regular',
         alt: 'Logo T-Shirt Regular Fit',
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-male-tshirt.png?alt=media&token=39d9efb3-4944-42ee-8b95-5134249f72c8',
-        description: 'GTA Digital Logo T-Shirt - Regular Fit',
-        price: '',
-        colours: '',
+        imageUrlGrey: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-tshirt-grey.png?alt=media&token=9e8499d5-82b2-4363-8b9e-12cda1bc33e8',
+        imageUrlBlack: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-tshirt-blk.png?alt=media&token=97698df4-6a1a-4c2a-9052-8fa61d1cd0e5',
+        imageUrlWhite: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-tshirt-white.png?alt=media&token=487f223f-417d-45a4-99fc-cd24611d4b5a',
+        description: 'GTA Digital Logo T-Shirt',
+        price: '£15.00',
         shopUrl: 'https://www.dizzyjam.com/products/175475/'
     },
     {
         id: 'type-tshirt-regular',
         alt: 'Type T-Shirt Regular Fit',
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-male-tshirt.png?alt=media&token=7698aa27-68b5-40b2-a5e7-846854d84d14',
-        description: 'GTA Digital Type T-Shirt - Regular Fit',
-        price: '',
-        colours: '',
+        imageUrlWhite: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-tshirt-white.png?alt=media&token=431e52ed-9f80-4c0e-be81-97dfb7df7a37',
+        imageUrlGrey: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-tshirt-grey.png?alt=media&token=79e21dd2-45f9-42b3-93cb-999a2a9e291f',
+        imageUrlBlack: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-tshirt-blk.png?alt=media&token=636af480-78af-4dff-a0bf-9fa717834c18',
+        description: 'GTA Digital Type T-Shirt',
+        price: '£15.00',
         shopUrl: 'https://www.dizzyjam.com/products/131951/'
     },
     {
         id: 'logo-tshirt-fitted',
         alt: 'Logo T-Shirt Fitted',
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-female-tshirt.png?alt=media&token=d615e87f-2a75-4c4b-ab9d-c7386f7e3e60',
+        imageUrlWhite: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-tshirt-fitted-white.png?alt=media&token=f53447c8-87f1-422e-b898-1f74ceb64145',
+        imageUrlBlack: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Flogo-tshirt-fitted-black.png?alt=media&token=0e2190a9-b5e5-45d3-9e37-07b1a106f91e',
         description: 'GTA Digital Logo T-Shirt - Fitted',
-        price: '',
-        colours: '',
+        price: '£15.00',
         shopUrl: 'https://www.dizzyjam.com/products/175474/'
     },
     {
         id: 'type-tshirt-fitted',
         alt: 'Type T-Shirt Fitted',
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-female-tshirt.png?alt=media&token=a45a8521-9899-4314-a410-a2f237842f4e',
+        imageUrlWhite: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-tshirt-fitted-white.png?alt=media&token=ec87c90f-0894-4491-9b5d-048ed4102c1b',
+        imageUrlBlack: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftype-tshirt-fitted-blk.png?alt=media&token=c1b72963-9d40-4c98-99f4-139be4c63ed9',
         description: 'GTA Digital Type T-Shirt - Fitted',
-        price: '',
-        colours: '',
+        price: '£15.00',
         shopUrl: 'https://www.dizzyjam.com/products/131949/'
+    },
+    {
+        id: 'gtadigital-mug',
+        alt: 'GTA Digital Mug',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Fmug.png?alt=media&token=5970aff9-9bda-49fe-8700-81bd24f24cac',
+        description: 'GTA Digital Mug',
+        price: '£9.99',
+        shopUrl: 'https://www.dizzyjam.com/products/175846/'
+    },
+    {
+        id: 'gtadigital-tote-bag',
+        alt: 'GTA Digital Tote Bag',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftote-bag.png?alt=media&token=27de7275-fd78-4668-8c89-fb8b521d2113',
+        description: 'GTA Digital Tote Bag',
+        price: '£8.99',
+        shopUrl: 'https://www.dizzyjam.com/products/175847/'
     },
 ]
