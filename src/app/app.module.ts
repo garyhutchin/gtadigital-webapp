@@ -52,8 +52,6 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
 import { YouMayLikePodcastComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast.component';
 import { YouMayLikePodcastThumbnailComponent } from './music/podcasts/you-may-like-podcast/you-may-like-podcast-thumbnail/you-may-like-podcast-thumbnail.component';
 import { StoreComponent } from './store/store.component';
-import { StoreThumbnailsComponent } from './store/store-thumbnails/store-thumbnails.component';
-import { StoreListComponent } from './store/store-list/store-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component'
 import { environment } from 'src/environments/environment';
@@ -98,8 +96,6 @@ import { environment } from 'src/environments/environment';
     YouMayLikePodcastComponent,
     YouMayLikePodcastThumbnailComponent,
     StoreComponent,
-    StoreThumbnailsComponent,
-    StoreListComponent,
     ContactComponent,
     ContactFormComponent
   ],

@@ -21,7 +21,7 @@ const appRoutes:Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'music/releases/release/:id', component: ReleaseDetailsComponent },
     { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent },
-    { path: 'store', component: StoreComponent },
+    { path: 'merch', component: StoreComponent },
     { path: 'contact', component: ContactComponent },
     
     { path: '', redirectTo: '/home', pathMatch: 'full'},

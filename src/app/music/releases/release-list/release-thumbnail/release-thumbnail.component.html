@@ -1,10 +1,11 @@
 <div class="routerLink" [routerLink]="['/music/releases/release', release.id]">
-    <img [src]="release.imageUrl" [alt]="release.title" class="artwork">
+    <img [src]="release.artwork" [alt]="release.title" class="artwork">
     <h3 class="cardHeader">{{release.title}}</h3>
     <div class="cardDetails">
         <p class="catNo">{{release.catNo}}</p>
         <h3 class="title">{{release.title}}</h3>
         <p class="artistName">{{release.artistName}}</p>
+        <a class="listenNow" [routerLink]="['/music/releases/release', release.id]">&#8594; Listen Now</a>
     </div>
 </div>
 

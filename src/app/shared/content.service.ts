@@ -41,8 +41,8 @@ const NAVITEMS = [
         route: 'music'
     },
     {
-        title: 'Store',
-        route: 'store'
+        title: 'Merch',
+        route: 'merch'
     },
     {
         title: 'Contact',

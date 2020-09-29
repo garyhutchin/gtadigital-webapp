@@ -1,14 +1,15 @@
 .pageElement {
     flex-basis: 10%;
     height: 19.7rem;
-    padding: 10px;
+    padding: 1rem 1rem 0 1rem;
     cursor: pointer;
-    margin: 0 1em 0 1em;
+    margin: 0 1rem 0 1rem;
 }
 
 .routerLink {
-    max-width: 100%;
-    height: 100%;
+    max-width: 90%;
+    height: 85%;
+    margin-left: 15%;
 }
 
 .routerLink:active, :focus {
@@ -16,5 +17,5 @@
 }
 
 .youMayAlsoLikeImg {
-    width: 197px;
+    width: 185px;
 }
