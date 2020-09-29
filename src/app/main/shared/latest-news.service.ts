@@ -22,7 +22,7 @@ const NEWSITEMS = [
         imageUrl: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast31.jpg?alt=media&token=965c65c2-4810-4773-9b8f-4fd56eeb26ce",
         info: "The next installment in the GTA Digital Podcast Series is online now. An all vinyl hard techno set this time around.",
         internalUrl: "/music/podcasts/podcast/31",
-        internalUrlTitle: "Listen Now",
+        internalUrlTitle: "Find out more",
         moreInfo: "Tracks by the likes of Mike Humphries, W.J Henze, DJ Mika, Patrick DSP, Dirty Bass & Kay D Smith",
         newsItem: 5,
         title: "GTA Digital Podcast #31"  
@@ -31,7 +31,7 @@ const NEWSITEMS = [
         imageUrl: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2Fpodcast30.jpg?alt=media&token=b272a779-720a-42ff-973e-5373787cc218",
         info: "The GTA Digital Podcast is back with the 30th installment. As always you can expect an hour of straight up, straight forward, hard banging techno.",
         internalUrl: "/music/podcasts/podcast/30",
-        internalUrlTitle: "Listen Now",
+        internalUrlTitle: "Find out more",
         moreInfo: "Tracks by the likes of Vincent de Wit, Mattias Fridell, Lars Klein & Concrete Djz.",
         newsItem: 4,
         title: "GTA Digital Podcast #30"  

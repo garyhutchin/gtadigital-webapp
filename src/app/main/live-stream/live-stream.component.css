@@ -31,6 +31,8 @@
 .youTubeEmbed {
     width: 56rem; 
     height: 31.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3);
 }
 
 @media (max-width: 1422px) {
@@ -48,12 +50,30 @@
 }
 
 .youTube-vid-text {
-    flex-basis: 59%;
+    flex-basis: 57%;
     margin: 0;
     letter-spacing: 0.05rem;
     font-size: 1.4rem; 
     font-weight: 500;   
-    padding: 1rem 0 1rem 1rem;
+    padding: 0;
+    box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);
+    border-radius: 0.5rem;
+
+}
+
+.youTube-vid-text h3 {
+    background-color: #0193b7;
+    color: white;
+    padding: 1rem 2rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+
+.youTube-vid-text p {
+    padding: 2rem 2rem 0.5rem 2rem;
+    margin-bottom: 0;
 }
 
 @media (max-width: 801px) {
@@ -70,4 +90,8 @@
 
 h3 {
     margin: 0 auto 0 auto;
+}
+
+.yt-subscribe {
+    padding-left: 2rem;
 }
