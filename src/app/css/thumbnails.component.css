@@ -22,6 +22,7 @@
     font-size: 1.4rem;
     font-weight: 500;
     position: relative;
+    max-height: 15rem;
 }
 
 .cardDetails p {
@@ -110,4 +111,17 @@ img {
 
 .moreInfo {
     padding-top: 1rem;
+}
+
+.listenNow {
+    display: inline-block;
+    background-color: #0193b7;
+    color: white;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.listenNow a {
+    margin-top: 3rem;
 }

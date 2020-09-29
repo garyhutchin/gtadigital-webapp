@@ -17,7 +17,10 @@
             <p class="releaseDate">Released: {{release.releaseDate}} <br><a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
             <p class="codeWrapper" *ngIf="release?.discountCode" class="discount-code">Enter code "{{release.discountCode}}" for 50% off</p>
             <p>{{release.releaseInfoP1}}</p>
-            <p>{{release.releaseInfoP2}}<br>{{release.releaseInfoP3}}<br>{{release.releaseInfoP4}}<br>{{release.releaseInfoP5}}</p>
+            <p>{{release.releaseInfoP2}}</p>
+            <p>{{release.releaseInfoP3}}</p>
+            <p>{{release.releaseInfoP4}}</p>
+            <p>{{release.releaseInfoP5}}</p>
             <span class="player">
                 <iframe style="border: 0; width: 100%; height: 120px;" [src]="release.releasePlayer | noSanitizeUrl"><a [href]="release.releaseUrl">{{release.catNo}} {{release.title}} by {{release.artistName}}</a></iframe>
             </span>

@@ -41,8 +41,8 @@ const NAVITEMS = [
         route: 'music'
     },
     {
-        title: 'Store',
-        route: 'store'
+        title: 'Merch',
+        route: 'merch'
     },
     {
         title: 'Contact',
@@ -65,7 +65,7 @@ const MAINCONTENT = [
         heroImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
         heroText : "GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has grown, with the addition of a podcast series and more recently a monthly show on Fnoob Techno Radio",
         heroImageAlt: "GTA Digital Logo",
-        title: "GTA Digital - Techno - Label, Radio Show and Podcast Series"
+        title: "Underground Techno - Label - Radio Show - Podcast Series"
     },
     {
         description: 'Find out more about GTA Digital',
@@ -101,7 +101,7 @@ const MAINCONTENT = [
         heroImage: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1',
         heroImageAlt: 'GTA Digital Logo',
         heroText: 'If you are a fan of GTA Digital, why not purchase one of the items below.',
-        title: 'GTA Digital - Techno - Store'
+        title: 'GTA Digital - Techno - Merch'
     },
     {
         description: 'Description for contact page',
