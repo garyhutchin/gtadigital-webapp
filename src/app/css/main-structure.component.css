@@ -182,7 +182,21 @@ h3 {
     padding: 1.7rem;
 }
 
-.textBoxt-text {
+@media (max-width: 1110px) {
+    .textBox {
+        margin-left: 1%;
+        margin-right: 2%;
+    }
+}
+
+@media (max-width: 801px) {
+    .textBox {
+        margin-right: 1%;
+        padding: 1rem;
+    }
+}
+
+.textBox-text {
     flex-basis: 70%;
     max-width: 100%;
     margin: 2.5rem 1.3% 2.5rem 2rem;
@@ -190,6 +204,18 @@ h3 {
     font-weight: 500;
     letter-spacing: 0.05rem;
 
+}
+
+@media (max-width: 1271px) {
+    .textBox-text {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 801px) {
+    .textBox-text {
+        margin: 1rem;
+    }
 }
 
 .textBoxt-text p {
@@ -201,6 +227,14 @@ h3 {
     flex-basis: 20%;
     padding-top: 1.5rem;
     padding-left: 2rem;
+}
+
+@media (max-width: 1271px) {
+    .textBox-image {
+        margin: auto;
+        padding-left: 0rem;
+        padding-bottom: 3rem;
+    }
 }
 
 .routerLink {
@@ -274,14 +308,9 @@ h3 {
     text-decoration: none;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.2s ease;
     outline: none;
     letter-spacing: 0.05rem;
     font-size: 1.4rem;
     font-weight: 500;
     font-family: 'Titillium Web', sans-serif;
-  }
-  
-.buy-item:hover {
-    background-color: #00a1c9;
 }

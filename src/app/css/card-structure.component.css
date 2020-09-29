@@ -100,7 +100,7 @@
 
 .cardElement-store {
     flex-basis: 24%;
-    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;

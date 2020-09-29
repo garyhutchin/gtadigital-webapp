@@ -112,3 +112,15 @@ a:active a:focus {
     margin-left: 2%;
   }
 }
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(187, 187, 187, 0.192);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+}
