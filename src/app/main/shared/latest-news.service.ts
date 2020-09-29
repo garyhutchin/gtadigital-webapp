@@ -10,7 +10,7 @@ export class LatestNewsService {
 
 const NEWSITEMS = [
     {
-        imageUrl: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2Fshow013Poster.jpg?alt=media&token=be82650a-cdb7-4dcc-b000-73a6e24fa3bf",
+        imageUrl: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2FfnoobCover-October.jpg?alt=media&token=d11c93d4-db4f-4cd5-bf66-617b7d8521c0",
         info: "GTA Digital Presents returns for the October installment of the show on 6 October. From this show onwards, GTA Digital Presents will air from 6-7pm, every 4 weeks. I plan on playing tracks by the likes of Wetworks, Henry Cullen, J-T Kyrke, David Moleon & Rowlanz to name just a few. So as always, expect an hour of seriously banging techno. You can tune into the show over at ",
         externalUrl : "https://fnoobtechno.com",
         externalUrlTitle : "Fnoob Techno Radio",
