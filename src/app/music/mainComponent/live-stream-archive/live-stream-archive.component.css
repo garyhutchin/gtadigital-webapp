@@ -3,9 +3,22 @@
     overflow-y: hidden;
 }
 
+@media (max-width: 1110px) {
+    .live-stream-wrapper {
+        margin: 1rem;
+    }
+}
+
 .live-stream-wrapper-expanded {
     max-width: 100%;
+    margin: auto;
     overflow-y: hidden;
+}
+
+@media (max-width: 1110px) {
+    .live-stream-wrapper-expanded {
+        max-width: 98.3%;
+    }
 }
 
 .live-stream-container {
@@ -20,8 +33,9 @@
 }
 
 @media (max-width: 1110px) {
-    .live-stream-wrapper {
-        margin: 1rem;
+    .live-stream-container {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
     }
 }
 
@@ -47,6 +61,8 @@
 
     .youTubeEmbed {
         width: 100%;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0rem;
     }
 
     .youTube-vid-text {
@@ -88,6 +104,13 @@
     transition: box-shadow 0.2s ease;
     letter-spacing: 0.2rem;
     margin: 1rem 2rem 2rem 2rem;
+}
+
+
+@media (max-width: 1110px) {
+    .viewAll-button {
+        margin-left: 1rem;
+    }
 }
 
 .element-wrapper {

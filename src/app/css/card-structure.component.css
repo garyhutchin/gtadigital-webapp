@@ -6,7 +6,7 @@
 
 @media (max-width: 1110px) {
     .list-wrapper {
-        padding: 0px 0 10px 0;
+        padding: 0 0 4rem 0;
     }
 }
 
@@ -36,6 +36,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: left;
+    position: relative;
 }
 
 @media (max-width: 1110px) {
