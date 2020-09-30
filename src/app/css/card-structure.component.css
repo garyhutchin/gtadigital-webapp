@@ -20,8 +20,15 @@
 
 @media (max-width: 801px) {
     .list-wrapper::-webkit-scrollbar {
-        width: 0;
+        width: 0rem !important;
     }
+    .list-wrapper::-webkit-scrollbar-track {
+        background-color: unset;
+      }
+      
+    .list-wrapper::-webkit-scrollbar-thumb {
+        background-color: unset;
+      }
 }
 
 .listContainer {
@@ -100,12 +107,12 @@
 
 .cardElement-store {
     flex-basis: 24%;
-
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;
     margin: 0 1% 1% 0;
     border-radius: 5px;
+    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
 }
 
 @media (max-width: 1110px) {
