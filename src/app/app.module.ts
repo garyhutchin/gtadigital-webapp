@@ -56,6 +56,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component'
 import { environment } from 'src/environments/environment';
 import { LiveStreamArchiveThumbnailComponent } from './music/mainComponent/live-stream-archive/live-stream-archive-thumbnail/live-stream-archive-thumbnail.component';
+import { CmsModule } from './cms/cms.module';
+import { AuthService } from './cms/login/auth.service';
+import { AuthGuard } from './cms/login/auth-guard.service';
 
 
 @NgModule({
@@ -107,11 +110,14 @@ import { LiveStreamArchiveThumbnailComponent } from './music/mainComponent/live-
     PodcastService,
     MostPopularService,
     LatestNewsService,
-    ContentService
+    ContentService,
+    AuthService,
+    AuthGuard
   ],
 
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    CmsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,

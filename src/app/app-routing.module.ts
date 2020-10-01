@@ -27,6 +27,7 @@ const appRoutes:Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
 
     { path: 'page-not-found', component: PageNotFoundComponent },
+    { path: 'cms', loadChildren: './cms/cms.module#CmsModule' },
     { path: '**', redirectTo: '/page-not-found' }
 ];
 

@@ -8,7 +8,7 @@
             placeholder="Name..." 
             type="text" 
             name="name" 
-            [(ngModel)]="name"
+            (ngModel)="name"
             #nameInput="ngModel" 
             required>
 
@@ -23,7 +23,7 @@
             placeholder="example@email.com" 
             type="email" 
             name="email"  
-            [(ngModel)]="email"
+            (ngModel)="email"
             #emailInput="ngModel"
             required
             email>
@@ -41,7 +41,7 @@
             name="message" 
             rows="5"
             class="textarea" 
-            [(ngModel)]="message"
+            (ngModel)="message"
             #messageField="ngModel"
             required>
             </textarea>
