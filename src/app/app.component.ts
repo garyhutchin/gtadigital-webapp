@@ -1,27 +1,32 @@
-import { Component } from '@angular/core';
-import { Router, NavigationStart, NavigationEnd, Event } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators'
 
+declare let gtag;
+ 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css']
 
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  showLoading = true
+  navEndEvents: any;
+
   constructor(private router: Router) {
+  }
 
-    this.router.events.subscribe((routerEvent: Event) => {
-      if(routerEvent instanceof NavigationStart) {
-        this.showLoading = true
-      }
+  ngOnInit() {
+    this.navEndEvents = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+    );
+    this.navEndEvents.subscribe((event: NavigationEnd) => {
+      gtag('config', 'UA-134474308-1', {
+        'page_path': event.urlAfterRedirects
+      });
 
-      if(routerEvent instanceof NavigationEnd) {
-        this.showLoading = false
-      }
-      
-    })
+    });
   }
 
 }
