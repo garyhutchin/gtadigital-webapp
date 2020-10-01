@@ -55,6 +55,7 @@ import { StoreComponent } from './store/store.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component'
 import { environment } from 'src/environments/environment';
+import { LiveStreamArchiveThumbnailComponent } from './music/mainComponent/live-stream-archive/live-stream-archive-thumbnail/live-stream-archive-thumbnail.component';
 
 
 @NgModule({
@@ -97,7 +98,8 @@ import { environment } from 'src/environments/environment';
     YouMayLikePodcastThumbnailComponent,
     StoreComponent,
     ContactComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    LiveStreamArchiveThumbnailComponent
   ],
 
   providers: [

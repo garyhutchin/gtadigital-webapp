@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
 
 @Injectable()
 
@@ -23,6 +22,10 @@ export class ContentService {
 
     getStoreItem(id: string) {
         return STOREITEMS.find(item => item.id === id)
+    }
+
+    getLiveStreamItems() {
+        return LIVESTREAM
     }
 }
 
@@ -228,5 +231,40 @@ const STOREITEMS = [
         description: 'GTA Digital Tote Bag',
         price: '£8.99',
         shopUrl: 'https://www.dizzyjam.com/products/175847/'
+    },
+]
+
+const LIVESTREAM = [
+    {
+        id: '4',
+        videoUrl: 'https://www.youtube.com/embed/MwU0oS0LKGs?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1',
+        title: 'GTA Digital Live Presents: Gary The Apprentice',
+        date: '19 April 2020',
+        style: 'Hard Techno',
+        tracksBy: ''
+    },
+    {
+        id: '3',
+        videoUrl: 'https://www.youtube.com/embed/4PaRduQyIls?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1',
+        title: 'GTA Digital Live Presents: Gary The Apprentice',
+        date: '5 April 2020',
+        style: 'Jackin and Tough Tribal/Hard Techno',
+        tracksBy: ''
+    },
+    {
+        id: '2',
+        videoUrl: 'https://www.youtube.com/embed/jHSndN1TfVc?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1',
+        title: 'GTA Digital Live Presents: Gary The Apprentice',
+        date: '24 August 2018',
+        style: 'Funky/Tribal Techno',
+        tracksBy: ''
+    },
+    {
+        id: '1',
+        videoUrl: 'https://www.youtube.com/embed/SyklycdUPsw?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1',
+        title: 'GTA Digital Live Presents: Gary The Apprentice',
+        date: '29 July 2018',
+        style: 'Straight Up/Hypnotic Techno',
+        tracksBy: ''
     },
 ]
