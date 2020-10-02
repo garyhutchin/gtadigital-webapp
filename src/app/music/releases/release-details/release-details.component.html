@@ -8,6 +8,11 @@
     </div>
 </div>
 <div class="releaseDetailsWrapper">
+    <div class="loading" *ngIf="isFetching"></div>
+    <div class="alert" *ngIf="error">
+        <h1 class="error-header">An Error Occured</h1>
+        <p class="error-text">An error occured when trying to load this module, please refresh or try again later.<br>HTTP response status code: {{ error }}</p>
+    </div>
     <div class="releaseDetailsContainer">
         <div class="image">
             <img class="artwork" [src]="release.artwork" [alt]="release.title">

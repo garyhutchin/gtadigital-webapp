@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser'
 @Component ({
     selector: 'music-main',
     templateUrl: 'music-main.component.html',
-    styleUrls: ['../../css/main-structure.component.css']
+    styleUrls: ['../../css/main-structure.component.css', '../../css/features.component.css']
 })
 
 export class MusicMainComponent implements OnInit {
@@ -17,6 +17,8 @@ export class MusicMainComponent implements OnInit {
     homeContent: any
     releases:any
     url:any
+    isFetching: boolean = false;
+    error = null;
     
     constructor(private router:Router, private contentService: ContentService, private releaseService: ReleaseService, private title: Title, private meta: Meta) {
   
@@ -25,7 +27,11 @@ export class MusicMainComponent implements OnInit {
     ngOnInit() {
       this.musicContent = this.contentService.getMainContent('music')
       this.homeContent = this.contentService.getMainContent('home')
-      this.releases = this.releaseService.getReleases()
+      this.isFetching = true;
+      this.releaseService.getReleases().subscribe(releaseItems => {
+        this.isFetching = false;
+        this.releases = releaseItems
+      })
 
       this.url = this.router.url
 

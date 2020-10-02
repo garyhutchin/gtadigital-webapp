@@ -21,7 +21,9 @@ export class YouMayLikePodcastComponent implements OnInit {
 
   ngOnInit() {
 
-    this.podcasts = this.podcastService.getPodcasts()
+    this.podcastService.getPodcasts().subscribe(podcastItems => {
+      this.podcasts = podcastItems
+    })
 
     this.activatedRoute.url.subscribe(url =>{
   

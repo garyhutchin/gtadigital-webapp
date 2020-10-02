@@ -19,7 +19,9 @@ export class PodcastsContainerComponent implements OnInit {
 
   ngOnInit() {
 
-    this.podcasts = this.podcastService.getPodcasts()
+    this.podcastService.getPodcasts().subscribe(podcastItems => {
+      this.podcasts = podcastItems
+    })
     this.homeContent = this.contentService.getMainContent('home')
 
     this.url = this.router.url

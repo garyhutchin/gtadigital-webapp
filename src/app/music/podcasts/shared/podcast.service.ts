@@ -1,13 +1,31 @@
 import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { catchError } from 'rxjs/operators'
+
+import { Podcast } from '../../../models/content-interface'
+import { Observable, of } from 'rxjs'
 
 @Injectable()
 export class PodcastService {
-    getPodcasts() {
-        return PODCASTS
+
+    constructor(private http: HttpClient) {
+
+    }
+    getPodcasts():Observable<Podcast[]> {
+        return this.http.get<Podcast[]>('https://gta-digital-web-app.firebaseio.com/podcasts.json')
+            .pipe(catchError(this.handleError<Podcast[]>('getPodcasts',[])))
     }
 
-    getPodcast(id:number) {
-        return PODCASTS.find(podcast => podcast.id === id)
+    getPodcast(id:number):Observable<Podcast> {
+        return this.http.get<Podcast>(`https://gta-digital-web-app.firebaseio.com/podcasts/${+id}.json`)
+            .pipe(catchError(this.handleError<Podcast>('getPodcast')))
+    }
+
+    private handleError<T> (operation = 'operation', result?: T) {
+        return (error: any): Observable<T> => {
+            console.error(error);
+            return of(result as T);
+        }
     }
 }
 

@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { TransferHttpCacheModule } from '@nguniversal/common'
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -117,6 +119,8 @@ import { AuthGuard } from './cms/login/auth-guard.service';
 
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    TransferHttpCacheModule,
+    HttpClientModule,
     CmsModule,
     AppRoutingModule,
     BrowserAnimationsModule,

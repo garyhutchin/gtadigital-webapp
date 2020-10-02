@@ -36,13 +36,16 @@ export interface LatestNews {
     internalUrlTitle?: string; 
     externalUrl?: string;
     externalUrlTitle?: string; 
+    id?: string;
+    newsItem?: number;
 }
 
 export interface Release {
-    id?: number;
+    id?: any;
     title?: string;
     artistName?: string;
     catNo?: string;
+    discountCode?: string;
     imageUrl?: string;
     artwork?: string;
     releaseUrl?: string;        
@@ -52,7 +55,8 @@ export interface Release {
     releaseInfoP4?: string;
     releaseInfoP5?: string;
     releaseDate?: string;
-    releasePlayer?: string
+    releasePlayer?: string;
+    shortDescription?: string;
 }
 
 export interface Podcast {

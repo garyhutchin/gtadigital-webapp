@@ -4,11 +4,11 @@
             <h1 [innerHTML]="musicContent.heroHeader"></h1>
             <p [innerHTML]="musicContent.heroText"></p>
 
-            <span class="listenNow-button" *ngFor="let release of releases | slice:0:1; let i=index" [routerLink]="['/music/releases/release', release.id]" [innerHTML]="musicContent.heroButton"></span>
+            <span class="listenNow-button" *ngFor="let release of releases | reverse | slice:0:1; let i=index" [routerLink]="['/music/releases/release', release.id]" [innerHTML]="musicContent.heroButton"></span>
 
         </div>
 
-        <div class="heroLogo" *ngFor="let release of releases | slice:0:1; let i=index">
+        <div class="heroLogo" *ngFor="let release of releases | reverse | slice:0:1; let i=index">
             <img [src]="release.artwork" [alt]="release.title" style="box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3); cursor: pointer;" [routerLink]="['/music/releases/release', release.id]">
         </div>
     </div>
@@ -17,6 +17,12 @@
 <div class="componentContainer">
 
     <div class="componentContent">
+
+        <div class="loading" *ngIf="isFetching"></div>
+        <div class="alert" *ngIf="error">
+            <h1 class="error-header">An Error Occured</h1>
+            <p class="error-text">An error occured when trying to load this module, please refresh or try again later.<br>HTTP response status code: {{ error }}</p>
+        </div>
 
         <span class="borderTop"></span>
         <div class="secondaryHeader">

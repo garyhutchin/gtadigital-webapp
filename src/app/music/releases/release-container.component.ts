@@ -3,16 +3,19 @@ import { ActivatedRoute, Router } from '@angular/router'
 import { ReleaseService } from './shared/releases.service';
 import { Title, Meta } from '@angular/platform-browser'
 import { ContentService } from 'src/app/shared/content.service';
+import { Release } from 'src/app/models/content-interface';
 
 @Component ({
     selector: 'release-container',
     templateUrl: 'release-container.component.html',
-    styleUrls: ['../../css/main-structure.component.css']
+    styleUrls: ['../../css/main-structure.component.css', '../../css/features.component.css']
 })
 
 export class ReleaseContainerComponent implements OnInit {
-
-    releases:any
+    
+    releases: any
+    isFetching: boolean = false;
+    error = null;
     url: any
     homeContent: any
 
@@ -21,7 +24,13 @@ export class ReleaseContainerComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.releases = this.releaseService.getReleases()
+        
+        this.isFetching = true;
+        this.releaseService.getReleases().subscribe(releaseItems => {
+          this.isFetching = false;
+          this.releases = releaseItems;
+        })
+
         this.homeContent = this.contentService.getMainContent('home')
 
         this.url = this.router.url

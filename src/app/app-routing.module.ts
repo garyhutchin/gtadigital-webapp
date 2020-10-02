@@ -11,6 +11,7 @@ import { PodcastDetailsComponent } from './music/podcasts/podcast-details/podcas
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
 import { StoreComponent } from './store/store.component';
 import { ContactComponent } from './contact/contact.component';
+import { ReleaseResolver } from './music/releases/release-details/release-resolver.service';
 
 const appRoutes:Routes = [
     { path: '', component: MainComponent },
@@ -19,7 +20,7 @@ const appRoutes:Routes = [
     { path: 'music/releases', component: ReleaseContainerComponent },
     { path: 'music/podcasts', component:PodcastsContainerComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'music/releases/release/:id', component: ReleaseDetailsComponent },
+    { path: 'music/releases/release/:id', component: ReleaseDetailsComponent, resolve: {release: ReleaseResolver} },
     { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent },
     { path: 'merch', component: StoreComponent },
     { path: 'contact', component: ContactComponent },
