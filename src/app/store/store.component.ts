@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../shared/content.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-store',
@@ -20,7 +21,7 @@ export class StoreComponent implements OnInit {
 
   storeContent: any
 
-  constructor(private contentService: ContentService, private title: Title, private meta: Meta) { }
+  constructor(private contentService: ContentService, private title: Title, private meta: Meta, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
 
@@ -56,15 +57,11 @@ export class StoreComponent implements OnInit {
       this.gtaDigitalToteBag = storeItem
     })
 
-
-    this.contentService.getStorePageContent().subscribe(storePageContent => {
-      this.storeContent = storePageContent
+      this.storeContent = this.activatedRoute.snapshot.data['merch']
 
       this.title.setTitle(this.storeContent.title);
       this.meta.updateTag({ name: 'description', content: this.storeContent.description });
       this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
-
-    })
 
   }
 

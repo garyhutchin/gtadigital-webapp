@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 import { ContentService } from '../shared/content.service';
 import { Title, Meta } from '@angular/platform-browser'
@@ -73,7 +73,7 @@ export class MainComponent implements OnInit {
   homeContent: any
   url:any
     
-  constructor(private router:Router, private contentService: ContentService, private title: Title, private meta: Meta) {
+  constructor(private router:Router, private activatedRoute: ActivatedRoute, private contentService: ContentService, private title: Title, private meta: Meta) {
 
   }
 
@@ -81,8 +81,7 @@ export class MainComponent implements OnInit {
 
     this.url = this.router.url
 
-    this.contentService.getHomePageContent().subscribe(homePageContent => {
-      this.homeContent = homePageContent
+      this.homeContent = this.activatedRoute.snapshot.data['home']
 
       //set tags for SEO
       this.title.setTitle(this.homeContent.title);
@@ -104,8 +103,6 @@ export class MainComponent implements OnInit {
       this.meta.updateTag({ property: 'og:description', content: this.homeContent.description });
       this.meta.updateTag({ property: 'og:image', content: this.homeContent.heroImage });
       this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
-
-    })
 
   }
 

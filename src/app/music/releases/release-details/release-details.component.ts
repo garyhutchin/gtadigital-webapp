@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReleaseService } from '../../releases/shared/releases.service';
 import { Title, Meta } from '@angular/platform-browser';
-import { Release } from 'src/app/models/content-interface';
 
 @Component ({
     selector: 'release-details',

@@ -12,17 +12,19 @@ import { ReleaseDetailsComponent } from './music/releases/release-details/releas
 import { StoreComponent } from './store/store.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReleaseResolver } from './music/releases/release-details/release-resolver.service';
+import { HomePageResolver } from './main/home-resolver.service';
+import { StoreResolver } from './store/store-resolver.service';
 
 const appRoutes:Routes = [
-    { path: '', component: MainComponent },
-    { path: 'home', component: MainComponent },
+    { path: '', component: MainComponent, resolve: {home: HomePageResolver} },
+    { path: 'home', component: MainComponent, resolve: {home: HomePageResolver} },
     { path: 'music', component: MusicMainComponent },
     { path: 'music/releases', component: ReleaseContainerComponent },
     { path: 'music/podcasts', component:PodcastsContainerComponent },
     { path: 'about', component: AboutComponent },
     { path: 'music/releases/release/:id', component: ReleaseDetailsComponent, resolve: {release: ReleaseResolver} },
     { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent },
-    { path: 'merch', component: StoreComponent },
+    { path: 'merch', component: StoreComponent, resolve: {merch: StoreResolver} },
     { path: 'contact', component: ContactComponent },
     
     { path: '', redirectTo: '/home', pathMatch: 'full'},
