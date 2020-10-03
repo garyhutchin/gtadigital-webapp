@@ -6,14 +6,14 @@
             </div>
             <div class="navbar">
                 <ul>
-                    <li class="navItem" *ngFor="let navItem of navItems">
+                    <li class="navItem" *ngFor="let navItem of navItems | slice:1">
                         <nav-items [navItem]="navItem"></nav-items>
                     </li>
                 </ul>
             </div>
             <div class="socialMediaIcons">
                 <ul>
-                    <li *ngFor="let socialMediaLink of socialMediaLinks"><a [href]="socialMediaLink.url" target="blank"><img [src]="socialMediaLink.image" [alt]="socialMediaLink.alt"></a></li>
+                    <li *ngFor="let socialMediaLink of socialMediaLinks | slice:1"><a [href]="socialMediaLink.url" target="blank"><img [src]="socialMediaLink.image" [alt]="socialMediaLink.alt"></a></li>
                 </ul>
             </div>
         </div>

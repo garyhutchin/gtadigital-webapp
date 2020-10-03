@@ -29,7 +29,7 @@ export class PodcastService {
     }
 }
 
-const PODCASTS = [
+/*const PODCASTS = [
     {
         artistName : "Gary The Apprentice",
         artwork : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Fpodcasts%2Fpodcast31.jpg?alt=media&token=5b0e728f-4a21-4490-8b18-f9ae04ae785d",
@@ -990,4 +990,4 @@ const PODCASTS = [
         track9 : "Ben Sims - Slow Motion (Skudge Mix)",
         tracksBy : "Ben Sims, Mike Dehnert, Mark Broom, DJ Bam Bam, Minupren & Broken Rules"
     }
-]
+]*/

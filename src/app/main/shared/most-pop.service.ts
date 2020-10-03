@@ -1,14 +1,32 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { catchError } from 'rxjs/operators'
+import { Observable, of } from 'rxjs'
+import { Release, Podcast } from '../../models/content-interface'
 
 @Injectable()
 export class MostPopularService {
 
-    getReleaseItems() {
-        return RELEASEITEMS
+    constructor(private http: HttpClient) {}
+
+    //FETCH MOST POPULAR RELEASES FROM FIREBASE DATABASE
+    getReleaseItems():Observable<Release[]> {
+        return this.http.get<Release[]>('https://gta-digital-web-app.firebaseio.com/most-popular-release.json') 
+        .pipe(catchError(this.handleError<Release[]>('getReleaseItems', [])))       
     }
 
+    //FETCH MOST POPULAR RELEASES FROM FIREBASE DATABASE
     getPodcastItems() {
-        return PODCASTITEMS
+        return this.http.get<Podcast[]>('https://gta-digital-web-app.firebaseio.com/most-popular-podcast.json')
+        .pipe(catchError(this.handleError<Podcast[]>('getPodcastItems', [])))
+    }
+
+    //ERROR HANDLING, NOT YET UTILISED AND MAY BE REPLACED
+    private handleError<T> (operation = 'operation', result?: T) {
+        return (error: any): Observable<T> => {
+            console.error(error);
+            return of(result as T);
+        }
     }
 }
 

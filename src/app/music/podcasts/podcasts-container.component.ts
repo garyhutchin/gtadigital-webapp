@@ -22,7 +22,10 @@ export class PodcastsContainerComponent implements OnInit {
     this.podcastService.getPodcasts().subscribe(podcastItems => {
       this.podcasts = podcastItems
     })
-    this.homeContent = this.contentService.getMainContent('home')
+    
+    this.contentService.getHomePageContent().subscribe(homePageContent => {
+      this.homeContent = homePageContent
+  })
 
     this.url = this.router.url
   

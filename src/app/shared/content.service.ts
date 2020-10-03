@@ -1,35 +1,80 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { catchError } from 'rxjs/operators'
+import { Observable, of } from 'rxjs'
+import { Content, LiveStreamArchive, Navigation, SocialMedia, StoreItem } from '../models/content-interface'
 
 @Injectable()
 
 export class ContentService {
 
-    getNavItems() {
-        return NAVITEMS
+    constructor(private http: HttpClient) {}
+
+    //FETCH NAVIGATION (DESKTOP AND MOBILE) CONTENT FROM FIREBASE DATABASE
+    getNavItems():Observable<Navigation[]> {
+        return this.http.get<Navigation[]>('https://gta-digital-web-app.firebaseio.com/navigation.json')
+            .pipe(catchError(this.handleError<Navigation[]>('getNavItems', [])))
+    }
+    
+    //FETCH HOME PAGE CONTENT FROM FIREBASE DATABASE
+    getHomePageContent():Observable<Content> {
+        return this.http.get<Content>('https://gta-digital-web-app.firebaseio.com/main-content/home.json')
+            .pipe(catchError(this.handleError<Content>('getHomePageContent')))
     }
 
-    getMainContent(id:string) {
-        return MAINCONTENT.find(content => content.id === id)
+    //FETCH ABOUT PAGE CONTENT FROM FIREBASE DATABASE
+    getAboutPageContent():Observable<Content> {
+        return this.http.get<Content>('https://gta-digital-web-app.firebaseio.com/main-content/about.json')
+            .pipe(catchError(this.handleError<Content>('getAboutPageContent')))
+    }
+    
+    //FETCH MUSIC PAGE CONTENT FROM FIREBASE DATABASE
+    getMusicPageContent():Observable<Content> {
+        return this.http.get<Content>('https://gta-digital-web-app.firebaseio.com/main-content/music.json')
+            .pipe(catchError(this.handleError<Content>('getMusicPageContent')))
+    }
+    
+    //FETCH MERCH PAGE CONTENT FROM FIREBASE DATABASE
+    getStorePageContent():Observable<Content> {
+        return this.http.get<Content>('https://gta-digital-web-app.firebaseio.com/main-content/store.json')
+            .pipe(catchError(this.handleError<Content>('getStorePageContent')))
     }
 
-    getSocialMediaLinks() {
-        return SOCIALMEDIALINKS
+    //FETCH CONTACT PAGE CONTENT FROM FIREBASE DATABASE
+    getContactPageContent():Observable<Content> {
+        return this.http.get<Content>('https://gta-digital-web-app.firebaseio.com/main-content/contact.json')
+            .pipe(catchError(this.handleError<Content>('getContactPageContent')))
     }
 
-    getStoreItems() {
-        return STOREITEMS
+    //FETCH NAV BAR SOCIAL MEDIA IMAGES/LINKS FROM FIREBASE DATABASE
+    getSocialMediaLinks():Observable<SocialMedia[]> {
+        return this.http.get<SocialMedia[]>('https://gta-digital-web-app.firebaseio.com/social-media-links.json')
+            .pipe(catchError(this.handleError<SocialMedia[]>('getSocialMediaLinks', [])))
     }
 
-    getStoreItem(id: string) {
-        return STOREITEMS.find(item => item.id === id)
+    //FETCH MERCH ITEMS FROM FIREBASE DATABASE
+    getStoreItem(id:string):Observable<StoreItem> {
+        return this.http.get<StoreItem>(`https://gta-digital-web-app.firebaseio.com/store-items/${+id}.json`)
+            .pipe(catchError(this.handleError<StoreItem>('getStoreItems')))
     }
 
-    getLiveStreamItems() {
-        return LIVESTREAM
+    //FETCH LIVE STREAM ARCHIVE ITEMS FROM FIREBASE DATABASE
+    getLiveStreamItems():Observable<LiveStreamArchive[]> {
+        return this.http.get<LiveStreamArchive[]>('https://gta-digital-web-app.firebaseio.com/live-stream-archive.json')
+            .pipe(catchError(this.handleError<LiveStreamArchive[]>('getLiveStreamItems', [])))
+        
+    }
+
+    //ERROR HANDLING, NOT YET UTILISED AND MAY BE REPLACED
+    private handleError<T> (operation = 'operation', result?: T) {
+        return (error: any): Observable<T> => {
+            console.error(error);
+            return of(result as T);
+        }
     }
 }
 
-const NAVITEMS = [
+/*const NAVITEMS = [
 
     {
         title: 'Home',
@@ -52,9 +97,9 @@ const NAVITEMS = [
         route: 'contact'
     }
 
-]
+]*/
 
-const MAINCONTENT = [
+/*const MAINCONTENT = [
     {
         description: 'GTA Digital is a label, podcast series and online radio show with a focus on underground techno.',
         id: 'home',
@@ -93,10 +138,10 @@ const MAINCONTENT = [
         heroText : "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...",
         title: 'GTA Digital - Techno - Music'
     },
-    /*{
+    {
         id: "under-construction",
         text: "This app is still in development - some content has been added as a placeholder"
-    },*/
+    },
     {
         description: 'If you are a fan of GTA Digital, there are hoodies and t-shirts available to purchase, if you would like to show even more support.',
         id: 'store',
@@ -115,9 +160,9 @@ const MAINCONTENT = [
         heroText: 'If you would like to get in touch, please complete the form below...',
         title: 'GTA Digital - Techno - Contact'
     }
-]
+]*/
 
-const SOCIALMEDIALINKS = [
+/*const SOCIALMEDIALINKS = [
     {
         id: 'facebook',
         alt: 'Facebook',
@@ -154,9 +199,9 @@ const SOCIALMEDIALINKS = [
         image: 'https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FhearthisIcon.png?alt=media&token=e19258ac-f6e7-4cb9-83ec-c2e5a8a320da',
         url: 'https://hearthis.at/gtadigital-podcast-series/'
     },
-]
+]*/
 
-const STOREITEMS = [
+/*const STOREITEMS = [
     {
         id: 'logo-hoodie',
         alt: 'Logo Hoodie',
@@ -232,9 +277,9 @@ const STOREITEMS = [
         price: '£8.99',
         shopUrl: 'https://www.dizzyjam.com/products/175847/'
     },
-]
+]*/
 
-const LIVESTREAM = [
+/*const LIVESTREAM = [
     {
         id: '4',
         videoUrl: 'https://www.youtube.com/embed/MwU0oS0LKGs?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1',
@@ -267,4 +312,4 @@ const LIVESTREAM = [
         style: 'Straight Up/Hypnotic Techno',
         tracksBy: ''
     },
-]
+]*/

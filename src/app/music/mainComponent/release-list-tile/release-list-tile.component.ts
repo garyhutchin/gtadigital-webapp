@@ -22,7 +22,10 @@ export class ReleaseListTileComponent implements OnInit {
 
     ngOnInit() {
         
-        this.musicContent = this.contentService.getMainContent('music')
+        this.contentService.getMusicPageContent().subscribe(musicPageContent => {
+            this.musicContent = musicPageContent
+        })
+
         this.isFetching = true;
         this.releaseService.getReleases().subscribe(releaseItems => {
             this.isFetching = false;

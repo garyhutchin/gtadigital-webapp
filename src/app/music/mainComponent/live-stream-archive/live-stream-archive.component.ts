@@ -20,7 +20,9 @@ export class LiveStreamArchiveComponent implements OnInit {
 
         this.isWrapperExpanded = false; 
 
-        this.liveStreamItems = this.contentService.getLiveStreamItems()
+        this.contentService.getLiveStreamItems().subscribe(liveStream => {
+            this.liveStreamItems = liveStream;
+        })
 
     }
 

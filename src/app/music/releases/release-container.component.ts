@@ -31,7 +31,12 @@ export class ReleaseContainerComponent implements OnInit {
           this.releases = releaseItems;
         })
 
-        this.homeContent = this.contentService.getMainContent('home')
+        this.contentService.getHomePageContent().subscribe(homePageContent => {
+            this.homeContent = homePageContent
+
+            this.meta.updateTag({ name: 'twitter:image', content: this.homeContent.heroImage });
+            this.meta.updateTag({ property: 'og:image', content: this.homeContent.heroImage });
+        })
 
         this.url = this.router.url
   
@@ -45,7 +50,6 @@ export class ReleaseContainerComponent implements OnInit {
         this.meta.updateTag({ name: 'twitter:site', content: '@gta_digital' });
         this.meta.updateTag({ name: 'twitter:title', content: 'GTA Digital Releases' });
         this.meta.updateTag({ name: 'twitter:description', content: 'Browse and listen to all of the music that has been released on the GTA Digital' });
-        this.meta.updateTag({ name: 'twitter:image', content: this.homeContent.heroImage });
         this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
     
         //set tags for Facebook
@@ -53,7 +57,6 @@ export class ReleaseContainerComponent implements OnInit {
         this.meta.updateTag({ property: 'og:site_name', content: 'gtadigital' });
         this.meta.updateTag({ property: 'og:title', content: 'GTA Digital Releases' });
         this.meta.updateTag({ property: 'og:description', content: 'Browse and listen to all of the music that has been released on the GTA Digital' });
-        this.meta.updateTag({ property: 'og:image', content: this.homeContent.heroImage });
         this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
     }
 

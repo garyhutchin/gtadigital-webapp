@@ -4,7 +4,7 @@ export interface Navigation {
 }
 
 export interface SocialMedia {
-    id?: number;
+    alt?: string;
     image?: string;
     url?: string;
 }
@@ -57,6 +57,28 @@ export interface Release {
     releaseDate?: string;
     releasePlayer?: string;
     shortDescription?: string;
+}
+
+export interface StoreItem {
+    id?: string;
+    alt?: string;
+    imageUrlWhite?: string;
+    imageUrlRed?: string;
+    imageUrlGrey?: string;
+    imageUrlBlack?: string; 
+    imageUrlNavy?: string; 
+    description?: string;
+    price?: string;
+    shopUrl?: string;
+}
+
+export interface LiveStreamArchive {
+    id?: string;
+    date?: string;
+    style?: string;
+    title?: string;
+    tracksBy?: string;
+    videoUrl?: string
 }
 
 export interface Podcast {
