@@ -1,14 +1,35 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { map } from 'rxjs/operators'
+import { LatestNews } from '../../models/content-interface'
+import { ActivatedRoute } from '@angular/router';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 
 export class LatestNewsService {
-    getNewsItems() {
-        return NEWSITEMS
+    
+    constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {
     }
+
+    getNewsItems() {
+        return this.http.get<{ [key: string]: LatestNews }>('https://gta-digital-web-app.firebaseio.com/latest-news.json')
+        .pipe(map(responseData => {
+            const newsItemsArray: LatestNews[] = [];
+            for (const key in responseData) {
+                if (responseData.hasOwnProperty(key)) {
+                    newsItemsArray.push({ ...responseData[key], id: key })
+                }
+            }
+            return newsItemsArray;
+        })
+        );
+    }
+
 }
 
-const NEWSITEMS = [
+/*const NEWSITEMS = [
     {
         imageUrl: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2FfnoobCover-October.jpg?alt=media&token=d11c93d4-db4f-4cd5-bf66-617b7d8521c0",
         info: "GTA Digital Presents returns for the October installment of the show on 6 October. From this show onwards, GTA Digital Presents will air from 6-7pm, every 4 weeks. I plan on playing tracks by the likes of Wetworks, Henry Cullen, J-T Kyrke, David Moleon & Rowlanz to name just a few. So as always, expect an hour of seriously banging techno. You can tune into the show over at ",
@@ -70,4 +91,4 @@ const NEWSITEMS = [
         newsItem : 1,
         title : "News Item 4" 
     },
-]
+]*/

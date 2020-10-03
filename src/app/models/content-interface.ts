@@ -4,7 +4,7 @@ export interface Navigation {
 }
 
 export interface SocialMedia {
-    id?: number;
+    alt?: string;
     image?: string;
     url?: string;
 }
@@ -36,13 +36,16 @@ export interface LatestNews {
     internalUrlTitle?: string; 
     externalUrl?: string;
     externalUrlTitle?: string; 
+    id?: string;
+    newsItem?: number;
 }
 
 export interface Release {
-    id?: number;
+    id?: any;
     title?: string;
     artistName?: string;
     catNo?: string;
+    discountCode?: string;
     imageUrl?: string;
     artwork?: string;
     releaseUrl?: string;        
@@ -52,7 +55,30 @@ export interface Release {
     releaseInfoP4?: string;
     releaseInfoP5?: string;
     releaseDate?: string;
-    releasePlayer?: string
+    releasePlayer?: string;
+    shortDescription?: string;
+}
+
+export interface StoreItem {
+    id?: string;
+    alt?: string;
+    imageUrlWhite?: string;
+    imageUrlRed?: string;
+    imageUrlGrey?: string;
+    imageUrlBlack?: string; 
+    imageUrlNavy?: string; 
+    description?: string;
+    price?: string;
+    shopUrl?: string;
+}
+
+export interface LiveStreamArchive {
+    id?: string;
+    date?: string;
+    style?: string;
+    title?: string;
+    tracksBy?: string;
+    videoUrl?: string
 }
 
 export interface Podcast {

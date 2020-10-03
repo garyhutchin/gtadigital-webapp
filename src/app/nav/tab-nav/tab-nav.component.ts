@@ -20,14 +20,18 @@ import { ContentService } from 'src/app/shared/content.service';
 
 export class TabNavComponent implements OnInit {
     
-  navItems: any[]
+  navItems: any
 
   constructor(private contentService: ContentService) {
 
   }
 
   ngOnInit() {
-    this.navItems = this.contentService.getNavItems()
+
+    this.contentService.getNavItems().subscribe(navigationItems => {
+      this.navItems = navigationItems;
+  })
+  
   }
 
   isCollapsed: boolean = true;

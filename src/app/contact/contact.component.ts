@@ -14,12 +14,14 @@ export class ContactComponent implements OnInit {
   constructor(private contentService: ContentService, private title: Title, private meta: Meta) { }
 
   ngOnInit() {
-    this.contactContent = this.contentService.getMainContent('contact')
+    this.contentService.getContactPageContent().subscribe(contactPageContent => {
+      this.contactContent = contactPageContent
 
-    //set tags for SEO
-    this.title.setTitle(this.contactContent.title);
-    this.meta.updateTag({ name: 'description', content: this.contactContent.description });
-    this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
+      //set tags for SEO
+      this.title.setTitle(this.contactContent.title);
+      this.meta.updateTag({ name: 'description', content: this.contactContent.description });
+      this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
+    })
   }
 
 }

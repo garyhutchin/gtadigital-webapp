@@ -59,8 +59,12 @@ export class MostPopularComponent implements OnInit {
 
     ngOnInit() {
 
-      this.releaseItems = this.mostPopularService.getReleaseItems()
-      this.podcastItems = this.mostPopularService.getPodcastItems()
+      this.mostPopularService.getReleaseItems().subscribe(mostPopReleaseItems => {
+        this.releaseItems = mostPopReleaseItems
+      })
+      this.mostPopularService.getPodcastItems().subscribe(mostPopPodcastItems => {
+        this.podcastItems = mostPopPodcastItems
+      })
 
     }
 }

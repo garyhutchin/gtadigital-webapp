@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from 'src/app/shared/content.service';
 
 @Component ({
     selector: 'live-stream-archive',
@@ -8,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
 
 export class LiveStreamArchiveComponent implements OnInit {
     
+    liveStreamItems: any
     isWrapperExpanded: boolean;
 
+    constructor(private contentService: ContentService) {
+
+    }
+
     ngOnInit() {
+
         this.isWrapperExpanded = false; 
+
+        this.contentService.getLiveStreamItems().subscribe(liveStream => {
+            this.liveStreamItems = liveStream;
+        })
+
     }
 
     expandLiveStream() {

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { LatestNewsService } from '../shared/latest-news.service';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
+import { LatestNews } from 'src/app/models/content-interface';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Component({
     selector: 'latest-news',
     templateUrl: 'latest-news.component.html',
-    styleUrls: ['../../css/card-structure.component.css'],
+    styleUrls: ['../../css/card-structure.component.css', '../../css/features.component.css'],
     animations: [
 
       trigger('newsAnimation', [
@@ -31,14 +34,22 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 
 export class LatestNewsComponent implements OnInit {
 
+  fetchedNewsItems: LatestNews[] = [];
+  isFetching: boolean = false;
+  error = null;
 
-  newsItems:any[]
+    constructor(private latestNewsService :LatestNewsService) {
 
-  constructor(private latestNewsService: LatestNewsService){
-
-  }
+    }
 
   ngOnInit() {
-    this.newsItems = this.latestNewsService.getNewsItems()
+    this.isFetching = true;
+    this.latestNewsService.getNewsItems().subscribe(lastNewsItems => {
+      this.isFetching = false;
+      this.fetchedNewsItems = lastNewsItems;
+    }, error => {
+      this.error = error.status;
+      console.log(error)
+    });
   }
 }

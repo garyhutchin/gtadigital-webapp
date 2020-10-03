@@ -1,17 +1,35 @@
 import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { catchError } from 'rxjs/operators'
+
+import { Podcast } from '../../../models/content-interface'
+import { Observable, of } from 'rxjs'
 
 @Injectable()
 export class PodcastService {
-    getPodcasts() {
-        return PODCASTS
+
+    constructor(private http: HttpClient) {
+
+    }
+    getPodcasts():Observable<Podcast[]> {
+        return this.http.get<Podcast[]>('https://gta-digital-web-app.firebaseio.com/podcasts.json')
+            .pipe(catchError(this.handleError<Podcast[]>('getPodcasts',[])))
     }
 
-    getPodcast(id:number) {
-        return PODCASTS.find(podcast => podcast.id === id)
+    getPodcast(id:number):Observable<Podcast> {
+        return this.http.get<Podcast>(`https://gta-digital-web-app.firebaseio.com/podcasts/${+id}.json`)
+            .pipe(catchError(this.handleError<Podcast>('getPodcast')))
+    }
+
+    private handleError<T> (operation = 'operation', result?: T) {
+        return (error: any): Observable<T> => {
+            console.error(error);
+            return of(result as T);
+        }
     }
 }
 
-const PODCASTS = [
+/*const PODCASTS = [
     {
         artistName : "Gary The Apprentice",
         artwork : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Fpodcasts%2Fpodcast31.jpg?alt=media&token=5b0e728f-4a21-4490-8b18-f9ae04ae785d",
@@ -972,4 +990,4 @@ const PODCASTS = [
         track9 : "Ben Sims - Slow Motion (Skudge Mix)",
         tracksBy : "Ben Sims, Mike Dehnert, Mark Broom, DJ Bam Bam, Minupren & Broken Rules"
     }
-]
+]*/

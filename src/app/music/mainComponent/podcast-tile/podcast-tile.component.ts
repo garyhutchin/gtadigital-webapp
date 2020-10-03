@@ -19,8 +19,13 @@ export class PodcastTileComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.musicContent = this.contentService.getMainContent('music')
-        this.podcasts = this.podcastService.getPodcasts()        
+        this.contentService.getMusicPageContent().subscribe(musicPageContent => {
+            this.musicContent = musicPageContent
+        })
+
+        this.podcastService.getPodcasts().subscribe(podcastItems => {
+            this.podcasts = podcastItems
+        })        
     }
 
     viewPodcasts() {

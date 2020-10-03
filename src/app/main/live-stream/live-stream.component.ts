@@ -15,7 +15,9 @@ export class LiveStreamComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.homeContent = this.contentService.getMainContent('home')
+    this.contentService.getHomePageContent().subscribe(homePageContent => {
+      this.homeContent = homePageContent
+    })
   }
 
 }

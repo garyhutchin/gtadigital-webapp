@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { TransferHttpCacheModule } from '@nguniversal/common'
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -55,6 +57,10 @@ import { StoreComponent } from './store/store.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component'
 import { environment } from 'src/environments/environment';
+import { LiveStreamArchiveThumbnailComponent } from './music/mainComponent/live-stream-archive/live-stream-archive-thumbnail/live-stream-archive-thumbnail.component';
+import { CmsModule } from './cms/cms.module';
+import { AuthService } from './cms/login/auth.service';
+import { AuthGuard } from './cms/login/auth-guard.service';
 
 
 @NgModule({
@@ -97,7 +103,8 @@ import { environment } from 'src/environments/environment';
     YouMayLikePodcastThumbnailComponent,
     StoreComponent,
     ContactComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    LiveStreamArchiveThumbnailComponent
   ],
 
   providers: [
@@ -105,11 +112,16 @@ import { environment } from 'src/environments/environment';
     PodcastService,
     MostPopularService,
     LatestNewsService,
-    ContentService
+    ContentService,
+    AuthService,
+    AuthGuard
   ],
 
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    TransferHttpCacheModule,
+    HttpClientModule,
+    CmsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,

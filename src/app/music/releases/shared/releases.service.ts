@@ -1,19 +1,50 @@
 import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { catchError } from 'rxjs/operators'
+
+import { Release } from '../../../models/content-interface'
+import { Observable, of } from 'rxjs'
 
 @Injectable()
 export class ReleaseService {
-    getReleases() {
-        return RELEASES
+
+    constructor(private http: HttpClient) {}
+
+    /*getReleases() {
+        return this.http.get<{ [key: string]: Release }>('https://gta-digital-web-app.firebaseio.com/releases.json')
+        .pipe(map(responseData => {
+            const releasesArray: Release[] = [];
+            for (const key in responseData) {
+                if (responseData.hasOwnProperty(key)) {
+                    releasesArray.push({ ...responseData[key], id: key })
+                }
+            }
+            return releasesArray;
+        })
+        );
+    }*/
+
+    getReleases():Observable<Release[]> {
+        return this.http.get<Release[]>('https://gta-digital-web-app.firebaseio.com/releases.json')
+            .pipe(catchError(this.handleError<Release[]>('getReleases', [])))
     }
 
-    getRelease(id:number) {
-        return RELEASES.find(release => release.id === id)
+    getRelease(id:number):Observable<Release> {
+        return this.http.get<Release>(`https://gta-digital-web-app.firebaseio.com/releases/${+id}.json`)
+        .pipe(catchError(this.handleError<Release>('getReleases')))
+    }
+
+    private handleError<T> (operation = 'operation', result?: T) {
+        return (error: any): Observable<T> => {
+            console.error(error);
+            return of(result as T);
+        }
     }
 }
 
-const RELEASES = [
+/*const RELEASES:Release[] = [
 
-    /*{
+    {
         artistName : "Ungrateful Ambassador",
         artwork : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta020.jpg?alt=media&token=c336a640-1c9b-4632-9223-c859acbee140",
         catNo : "[GTA020]",
@@ -29,7 +60,7 @@ const RELEASES = [
         releasePlayer : "",
         shortDescription: "Jacked up techno, with an outstanding remix by DJ Ze Mig L. Supported by the likes of Perc, Patrick DSP, Wetworks & Ike Dusk",
         title : "Purist EP"  
-    },*/
+    },
     {
         artistName : "Gary The Apprentice",
         artwork : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta019.jpg?alt=media&token=2f361b13-7e52-44f3-be1e-41ed73e041fa",
@@ -335,4 +366,4 @@ const RELEASES = [
         releaseUrl : "https://gtadigital.bandcamp.com/album/gta001-recharged-ep",
         title : "Recharged EP"
     }
-]
+]*/

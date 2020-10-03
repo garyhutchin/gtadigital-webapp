@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Release } from 'src/app/models/content-interface';
 import { ReleaseService } from '../releases/shared/releases.service';
 
 @Component({
@@ -8,8 +9,11 @@ import { ReleaseService } from '../releases/shared/releases.service';
   styleUrls: ['./you-may-like.component.css']
 })
 export class YouMayLikeComponent implements OnInit {
-
-  releases:any
+  
+  releases: any
+  //releases: Release[] = [];
+  isFetching: boolean = false;
+  error = null;
 
   start : number = 0;
   end : number = 5;
@@ -21,9 +25,21 @@ export class YouMayLikeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.releases = this.releaseService.getReleases()
+    
+    /*
+    this.isFetching = true;
+    this.releaseService.getReleases().subscribe(releaseItems => {
+      this.isFetching = false;
+      this.releases = releaseItems;
+    }, error => {
+      this.error = error.status;
+      console.log(error)
+    });*/
     
     this.activatedRoute.url.subscribe(url =>{
+      this.releaseService.getReleases().subscribe(releaseItems => {
+        this.releases = releaseItems
+      })
       this.releaseNumber = this.activatedRoute.snapshot.params['id']
       if (this.releaseNumber > 15) {
         return this.end = 6

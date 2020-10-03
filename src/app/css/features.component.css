@@ -1,0 +1,36 @@
+.loading {
+    border: 16px solid #d3d3d3;
+    border-top: 16px solid #0193b7;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 700ms linear infinite;
+    top: 40%;
+    left: 47%;
+    position: absolute;
+    z-index: 1;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+.alert {
+    background-color: rgba(231, 152, 152, 0.568);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 0.3rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);
+}
+
+.error-header {
+    color: rgb(128, 33, 33);
+}
+
+.error-text {
+    color: rgb(128, 33, 33);
+    font-weight: 600;
+    font-size: 1.6rem; 
+}

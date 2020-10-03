@@ -1,9 +1,14 @@
 <div class="you-may-like-wrapper">
+    <div class="loading" *ngIf="isFetching && !error"></div>
+    <div class="alert" *ngIf="error">
+        <h1 class="error-header">An Error Occured</h1>
+        <p class="error-text">An error occured when trying to load this module, please refresh or try again later.<br>HTTP response status code: {{ error }}</p>
+    </div>
     <div class="header">
         <h3 class="youMayAlsoLike">You May Also Like</h3>
     </div>
     <div class="inner-wrapper">
-        <ng-container *ngFor="let release of releases | slice:start:end; let i=index">
+        <ng-container *ngFor="let release of releases | reverse | slice:start:end; let i=index">
             <you-may-like-thumbnail [release]="release"></you-may-like-thumbnail>
         </ng-container>
     </div>

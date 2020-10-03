@@ -14,7 +14,9 @@ export class PodcastsListComponent implements OnInit {
   constructor( private podcastService: PodcastService, private title: Title, private meta: Meta) { }
 
   ngOnInit() {
-    this.podcasts = this.podcastService.getPodcasts()
+    this.podcastService.getPodcasts().subscribe(podcastItems => {
+      this.podcasts = podcastItems
+    })
   }
 
 }

@@ -9,7 +9,7 @@ import { ContentService } from 'src/app/shared/content.service';
 
 export class DesktopNavComponent implements OnInit {
     
-    navItems: any
+    navItems: any[]
 
     socialMediaLinks: any
 
@@ -21,9 +21,15 @@ export class DesktopNavComponent implements OnInit {
 
     ngOnInit() {
 
-        this.navItems = this.contentService.getNavItems()
-        this.socialMediaLinks = this.contentService.getSocialMediaLinks()      
-        this.underConstruction = this.contentService.getMainContent('under-construction')
+        this.contentService.getNavItems().subscribe(navContent => {
+            this.navItems = navContent;
+        })
+
+        this.contentService.getSocialMediaLinks().subscribe(socialMediaLinkItems => {
+            this.socialMediaLinks = socialMediaLinkItems
+        })
+        
+        //this.underConstruction = this.contentService.getMainContent('under-construction')
 
     }
 

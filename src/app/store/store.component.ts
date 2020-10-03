@@ -24,20 +24,47 @@ export class StoreComponent implements OnInit {
 
   ngOnInit() {
 
-    this.logoHoodie = this.contentService.getStoreItem('logo-hoodie')
-    this.typeHoodie = this.contentService.getStoreItem('type-hoodie')
-    this.logoTshirtRegular = this.contentService.getStoreItem('logo-tshirt-regular')
-    this.typeTshirtRegular = this.contentService.getStoreItem('type-tshirt-regular')
-    this.logoTshirtFitted = this.contentService.getStoreItem('logo-tshirt-fitted')
-    this.typeTshirtFitted = this.contentService.getStoreItem('type-tshirt-fitted')
-    this.gtaDigitalMug = this.contentService.getStoreItem('gtadigital-mug')
-    this.gtaDigitalToteBag = this.contentService.getStoreItem('gtadigital-tote-bag')
+    this.contentService.getStoreItem('1').subscribe(storeItem => {
+      this.logoHoodie = storeItem
+    })
 
-    this.storeContent = this.contentService.getMainContent('store')
+    this.contentService.getStoreItem('2').subscribe(storeItem => {
+      this.typeHoodie = storeItem
+    })
 
-    this.title.setTitle(this.storeContent.title);
-    this.meta.updateTag({ name: 'description', content: this.storeContent.description });
-    this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
+    this.contentService.getStoreItem('3').subscribe(storeItem => {
+      this.logoTshirtRegular = storeItem
+    })
+
+    this.contentService.getStoreItem('4').subscribe(storeItem => {
+      this.typeTshirtRegular = storeItem
+    })
+
+    this.contentService.getStoreItem('5').subscribe(storeItem => {
+      this.logoTshirtFitted = storeItem
+    })
+    
+    this.contentService.getStoreItem('6').subscribe(storeItem => {
+      this.typeTshirtFitted = storeItem
+    })
+
+    this.contentService.getStoreItem('7').subscribe(storeItem => {
+      this.gtaDigitalMug = storeItem
+    })
+
+    this.contentService.getStoreItem('8').subscribe(storeItem => {
+      this.gtaDigitalToteBag = storeItem
+    })
+
+
+    this.contentService.getStorePageContent().subscribe(storePageContent => {
+      this.storeContent = storePageContent
+
+      this.title.setTitle(this.storeContent.title);
+      this.meta.updateTag({ name: 'description', content: this.storeContent.description });
+      this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
+
+    })
 
   }
 

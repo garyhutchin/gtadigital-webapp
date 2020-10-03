@@ -3,6 +3,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 import { ActivatedRoute, Router } from '@angular/router';
 import { PodcastService } from '../shared/podcast.service';
 import { Title, Meta } from '@angular/platform-browser'
+import { Podcast } from 'src/app/models/content-interface';
 
 
 @Component({
@@ -49,7 +50,9 @@ export class PodcastDetailsComponent implements OnInit {
 
       this.url = this.router.url
 
-      this.podcast = this.podcastService.getPodcast(+this.activatedRoute.snapshot.params['id'])
+      this.podcastService.getPodcast(+this.activatedRoute.snapshot.params['id']).subscribe((podcast: Podcast) => {
+        this.podcast = podcast
+
 
       //set tags for SEO
       this.title.setTitle(this.podcast.title + " by " + this.podcast.artistName);
@@ -71,7 +74,8 @@ export class PodcastDetailsComponent implements OnInit {
       this.meta.updateTag({ property: 'og:description', content: this.podcast.shortDescription });
       this.meta.updateTag({ property: 'og:image', content: this.podcast.thumbnailUrl });
       this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
-
+      
+    })
   });
   }
 
