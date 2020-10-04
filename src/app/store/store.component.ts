@@ -25,15 +25,23 @@ export class StoreComponent implements OnInit {
 
   ngOnInit() {
 
-    this.contentService.getStoreItem('1').subscribe(storeItem => {
-      this.logoHoodie = storeItem
-    })
+    this.logoHoodie = this.activatedRoute.snapshot.data['merchItem1']
 
-    this.contentService.getStoreItem('2').subscribe(storeItem => {
-      this.typeHoodie = storeItem
-    })
+    this.typeHoodie = this.activatedRoute.snapshot.data['merchItem2']
 
-    this.contentService.getStoreItem('3').subscribe(storeItem => {
+    this.logoTshirtRegular = this.activatedRoute.snapshot.data['merchItem3']
+
+    this.typeTshirtRegular = this.activatedRoute.snapshot.data['merchItem4']
+
+    this.logoTshirtFitted = this.activatedRoute.snapshot.data['merchItem5']
+
+    this.typeTshirtFitted = this.activatedRoute.snapshot.data['merchItem6']
+
+    this.gtaDigitalMug = this.activatedRoute.snapshot.data['merchItem7']
+
+    this.gtaDigitalToteBag = this.activatedRoute.snapshot.data['merchItem8']
+
+    /*this.contentService.getStoreItem('3').subscribe(storeItem => {
       this.logoTshirtRegular = storeItem
     })
 
@@ -55,7 +63,7 @@ export class StoreComponent implements OnInit {
 
     this.contentService.getStoreItem('8').subscribe(storeItem => {
       this.gtaDigitalToteBag = storeItem
-    })
+    })*/
 
       this.storeContent = this.activatedRoute.snapshot.data['merch']
 

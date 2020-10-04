@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PodcastService } from '../shared/podcast.service';
 import { Title, Meta } from '@angular/platform-browser'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'podcasts-list',
@@ -11,12 +12,10 @@ export class PodcastsListComponent implements OnInit {
 
   podcasts:any
 
-  constructor( private podcastService: PodcastService, private title: Title, private meta: Meta) { }
+  constructor( private podcastService: PodcastService, private title: Title, private meta: Meta, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.podcastService.getPodcasts().subscribe(podcastItems => {
-      this.podcasts = podcastItems
-    })
+    this.podcasts = this.activatedRoute.snapshot.data['podcastList']
   }
 
 }

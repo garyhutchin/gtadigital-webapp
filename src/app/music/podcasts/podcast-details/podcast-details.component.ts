@@ -50,8 +50,7 @@ export class PodcastDetailsComponent implements OnInit {
 
       this.url = this.router.url
 
-      this.podcastService.getPodcast(+this.activatedRoute.snapshot.params['id']).subscribe((podcast: Podcast) => {
-        this.podcast = podcast
+      this.podcast = this.activatedRoute.snapshot.data['podcast']
 
 
       //set tags for SEO
@@ -74,8 +73,7 @@ export class PodcastDetailsComponent implements OnInit {
       this.meta.updateTag({ property: 'og:description', content: this.podcast.shortDescription });
       this.meta.updateTag({ property: 'og:image', content: this.podcast.thumbnailUrl });
       this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
-      
-    })
+
   });
   }
 

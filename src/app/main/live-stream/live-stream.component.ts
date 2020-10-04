@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ContentService } from 'src/app/shared/content.service';
 
 @Component({
@@ -10,14 +11,12 @@ export class LiveStreamComponent implements OnInit {
 
   homeContent: any
     
-  constructor( private contentService: ContentService) {
+  constructor( private contentService: ContentService, private activatedRoute: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-    this.contentService.getHomePageContent().subscribe(homePageContent => {
-      this.homeContent = homePageContent
-    })
+    this.homeContent = this.activatedRoute.snapshot.data['homePage']
   }
 
 }

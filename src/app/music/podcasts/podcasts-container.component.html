@@ -1,10 +1,10 @@
 <div class="pageHeroWrapper">
     <div class="heroContainer">
         <div class="heroText">
-            <h1>Podcasts</h1>
-            <p>Check out all of the mixes released on the GTA Digital Podcast Series...</p>
+            <h1>{{ podcastContent.heroHeader }}</h1>
+            <p>{{ podcastContent.heroText }}</p>
 
-            <span class="listenNow-button" *ngFor="let podcast of podcasts | reverse | slice:0:1; let i=index" [routerLink]="['/music/podcasts/podcast', podcast.id]">Check out the latest podcast</span>
+            <span class="listenNow-button" *ngFor="let podcast of podcasts | reverse | slice:0:1; let i=index" [routerLink]="['/music/podcasts/podcast', podcast.id]">{{ podcastContent.heroButton }}</span>
 
         </div>
         

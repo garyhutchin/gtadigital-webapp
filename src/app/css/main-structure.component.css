@@ -252,6 +252,10 @@ h3 {
     outline: 0.1rem dashed rgb(133, 133, 133);
 }
 
+.store-item-image {
+    min-height: 34rem;
+}
+
 .grey {
     background-color: #A5A9AF;
     height: 2.5rem;

@@ -37,9 +37,7 @@ export class YouMayLikeComponent implements OnInit {
     });*/
     
     this.activatedRoute.url.subscribe(url =>{
-      this.releaseService.getReleases().subscribe(releaseItems => {
-        this.releases = releaseItems
-      })
+      this.releases = this.activatedRoute.snapshot.data['releaseList']
       this.releaseNumber = this.activatedRoute.snapshot.params['id']
       if (this.releaseNumber > 15) {
         return this.end = 6

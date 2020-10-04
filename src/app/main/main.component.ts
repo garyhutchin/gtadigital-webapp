@@ -36,7 +36,7 @@ import { Title, Meta } from '@angular/platform-browser'
             query(':self', style({ opacity: 0 }), {optional: true}),
   
             query(':self', stagger('300ms', [
-              animate('1s 0.2s ease-in', keyframes([
+              animate('1s ease-in', keyframes([
                 style({opacity: 0, transform: 'translateY(-50px)', offset: 0}),
                 style({opacity: .5, transform: 'translateY(35px)', offset: 0.3}),
                 style({opacity: 1, transform: 'translateY(0px)', offset: 1}),
@@ -81,7 +81,7 @@ export class MainComponent implements OnInit {
 
     this.url = this.router.url
 
-      this.homeContent = this.activatedRoute.snapshot.data['home']
+      this.homeContent = this.activatedRoute.snapshot.data['homePage']
 
       //set tags for SEO
       this.title.setTitle(this.homeContent.title);

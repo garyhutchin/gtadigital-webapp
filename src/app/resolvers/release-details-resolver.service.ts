@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { ActivatedRouteSnapshot, Resolve } from '@angular/router'
-import { ReleaseService } from '../shared/releases.service'
+import { ReleaseService } from '../music/releases/shared/releases.service'
 
 @Injectable({providedIn: 'root'})
 export class ReleaseResolver implements Resolve<any> {

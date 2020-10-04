@@ -16,7 +16,7 @@ export class ReleaseListTileComponent implements OnInit {
     isFetching: boolean = false;
     error = null;
 
-    constructor(private router:Router, private route: ActivatedRoute, private contentService: ContentService, private releaseService: ReleaseService) {
+    constructor(private router:Router, private activatedRoute: ActivatedRoute, private contentService: ContentService, private releaseService: ReleaseService) {
 
     }
 
@@ -26,11 +26,7 @@ export class ReleaseListTileComponent implements OnInit {
             this.musicContent = musicPageContent
         })
 
-        this.isFetching = true;
-        this.releaseService.getReleases().subscribe(releaseItems => {
-            this.isFetching = false;
-            this.releases = releaseItems
-        })
+        this.releases = this.activatedRoute.snapshot.data['releaseList']
     }
 
     viewReleases() {

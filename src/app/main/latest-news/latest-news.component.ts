@@ -4,6 +4,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 import { LatestNews } from 'src/app/models/content-interface';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'latest-news',
@@ -34,22 +35,15 @@ import { map } from 'rxjs/operators';
 
 export class LatestNewsComponent implements OnInit {
 
-  fetchedNewsItems: LatestNews[] = [];
+  fetchedNewsItems: any;
   isFetching: boolean = false;
   error = null;
 
-    constructor(private latestNewsService :LatestNewsService) {
+    constructor(private latestNewsService :LatestNewsService, private activatedRoute: ActivatedRoute) {
 
     }
 
   ngOnInit() {
-    this.isFetching = true;
-    this.latestNewsService.getNewsItems().subscribe(lastNewsItems => {
-      this.isFetching = false;
-      this.fetchedNewsItems = lastNewsItems;
-    }, error => {
-      this.error = error.status;
-      console.log(error)
-    });
+    this.fetchedNewsItems = this.activatedRoute.snapshot.data['latestNews']
   }
 }
