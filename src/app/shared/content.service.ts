@@ -33,6 +33,18 @@ export class ContentService {
         return this.http.get<Content>('https://gta-digital-web-app.firebaseio.com/main-content/music.json')
             .pipe(catchError(this.handleError<Content>('getMusicPageContent')))
     }
+
+    //FETCH RELEASE PAGE CONTENT FROM FIREBASE DATABASE
+    getReleasePageContent():Observable<Content> {
+        return this.http.get<Content>('https://gta-digital-web-app.firebaseio.com/main-content/release.json')
+            .pipe(catchError(this.handleError<Content>('getReleasePageContent')))
+    }
+
+    //FETCH PODCAST PAGE CONTENT FROM FIREBASE DATABASE
+    getPodcastPageContent():Observable<Content> {
+        return this.http.get<Content>('https://gta-digital-web-app.firebaseio.com/main-content/podcast.json')
+            .pipe(catchError(this.handleError<Content>('getPodcastPageContent')))
+    }
     
     //FETCH MERCH PAGE CONTENT FROM FIREBASE DATABASE
     getStorePageContent():Observable<Content> {

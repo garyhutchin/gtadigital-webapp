@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ContentService } from 'src/app/shared/content.service';
 import { PodcastService } from '../../podcasts/shared/podcast.service';
 
@@ -14,7 +14,7 @@ export class PodcastTileComponent implements OnInit {
     musicContent: any
     podcasts:any
 
-    constructor(private router: Router, private contentService: ContentService, private podcastService: PodcastService) {
+    constructor(private router: Router, private contentService: ContentService, private podcastService: PodcastService, private activatedRoute: ActivatedRoute) {
 
     }
 
@@ -23,9 +23,7 @@ export class PodcastTileComponent implements OnInit {
             this.musicContent = musicPageContent
         })
 
-        this.podcastService.getPodcasts().subscribe(podcastItems => {
-            this.podcasts = podcastItems
-        })        
+        this.podcasts = this.activatedRoute.snapshot.data['podcastList']       
     }
 
     viewPodcasts() {

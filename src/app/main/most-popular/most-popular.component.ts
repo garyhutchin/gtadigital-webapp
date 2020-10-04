@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 import { MostPopularService } from '../shared/most-pop.service';
 
@@ -53,18 +53,14 @@ export class MostPopularComponent implements OnInit {
   releaseItems:any[]
   podcastItems:any[]
 
-    constructor(private router:Router, private mostPopularService: MostPopularService) {
+    constructor(private router:Router, private mostPopularService: MostPopularService, private activatedRoute: ActivatedRoute) {
 
     }
 
     ngOnInit() {
 
-      this.mostPopularService.getReleaseItems().subscribe(mostPopReleaseItems => {
-        this.releaseItems = mostPopReleaseItems
-      })
-      this.mostPopularService.getPodcastItems().subscribe(mostPopPodcastItems => {
-        this.podcastItems = mostPopPodcastItems
-      })
+      this.releaseItems = this.activatedRoute.snapshot.data['mostPopRelease']
+      this.podcastItems = this.activatedRoute.snapshot.data['mostPopPodcast']
 
     }
 }

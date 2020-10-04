@@ -73,8 +73,7 @@
     "title" : "GTA Digital Live Presents: Gary The Apprentice",
     "tracksBy" : "",
     "videoUrl" : "https://www.youtube.com/embed/MwU0oS0LKGs?modestbranding=1;controls=1;showinfo=0;rel=0;fs=1"
-  }
-  ],
+  } ],
   "main-content" : {
     "about" : {
       "aboutImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2FaboutMe-header.jpg?alt=media&token=056609e0-72eb-4727-91a3-9e5150455c9b",
@@ -84,7 +83,7 @@
       "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
       "heroText" : "Label, podcast series & radio show.<br>Releasing underground techno since 2013...",
       "id" : "about",
-      "title" : "GTA Digital - Techno - About"
+      "title" : "About"
     },
     "contact" : {
       "description" : "Description for contact page",
@@ -93,7 +92,7 @@
       "heroImageAlt" : "GTA Digital Logo",
       "heroText" : "If you would like to get in touch, please complete the form below...",
       "id" : "contact",
-      "title" : "GTA Digital - Techno - Contact"
+      "title" : "Contact"
     },
     "home" : {
       "description" : "GTA Digital is a label, podcast series and online radio show with a focus on underground techno.",
@@ -121,7 +120,21 @@
       "heroHeader" : "Music",
       "heroText" : "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...",
       "id" : "music",
-      "title" : "GTA Digital - Techno - Music"
+      "title" : "Music"
+    },
+    "podcast" : {
+      "description" : "Browse and listen to all of the mixes that have been released on the GTA Digital Podcast Series",
+      "heroButton" : "Check out the latest podcast",
+      "heroHeader" : "Podcasts",
+      "heroText" : "Check out all of the mixes released on the GTA Digital Podcast Series...",
+      "title" : "Podcasts"
+    },
+    "release" : {
+      "description": "Browse and listen to all of the releases on GTA Digital",
+      "heroButton": "Check out the latest release",
+      "heroHeader": "Releases",
+      "heroText": "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...",
+      "title" : "Releases"
     },
     "store" : {
       "description" : "If you are a fan of GTA Digital, there are hoodies and t-shirts available to purchase, if you would like to show even more support.",
@@ -130,7 +143,7 @@
       "heroImageAlt" : "GTA Digital Logo",
       "heroText" : "If you are a fan of GTA Digital, why not purchase one of the items below.",
       "id" : "store",
-      "title" : "GTA Digital - Techno - Merch"
+      "title" : "Merch"
     },
     "under-construction-banner" : {
       "text" : "This app is still in development - some content has been added as a placeholder"
@@ -150,8 +163,7 @@
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast31.jpg?alt=media&token=965c65c2-4810-4773-9b8f-4fd56eeb26ce",
     "musicStyle" : "Style: Hard Techno",
     "title" : "GTA Digital Podcast #31"
-  }
-  ],
+  } ],
   "most-popular-release" : [ null, {
     "artistName" : "Jamie Ball",
     "cardHeader" : "Most Popular Release",
@@ -166,8 +178,7 @@
     "id" : 19,
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Frelease-artwork%2Fgta019.jpg?alt=media&token=a5771348-e5c5-4ea6-8b13-43ec273cf6ac",
     "title" : "Unix EP"
-  }
-  ],
+  } ],
   "navigation" : [ null, {
     "route" : "home",
     "title" : "Home"
@@ -183,8 +194,7 @@
   }, {
     "route" : "contact",
     "title" : "Contact"
-  }
-  ],
+  } ],
   "podcasts" : [ null, {
     "artistName" : "Gary The Apprentice",
     "artwork" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Fpodcasts%2Fpodcast1.jpg?alt=media&token=c037931c-916b-4d3d-83fa-36832dba7586",
@@ -1426,8 +1436,7 @@
     "alt" : "HearThis",
     "image" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2FhearthisIcon.png?alt=media&token=e19258ac-f6e7-4cb9-83ec-c2e5a8a320da",
     "url" : "https://hearthis.at/gtadigital-podcast-series/"
-  }
-  ],
+  } ],
   "store-items" : [ null, {
     "alt" : "Logo Hoodie",
     "description" : "GTA Digital Logo Hoodie",
@@ -1495,6 +1504,5 @@
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fstore-items%2Ftote-bag.png?alt=media&token=27de7275-fd78-4668-8c89-fb8b521d2113",
     "price" : "£8.99",
     "shopUrl" : "https://www.dizzyjam.com/products/175847/"
-  }
-  ]
+  } ]
 }

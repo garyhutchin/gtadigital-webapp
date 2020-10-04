@@ -1,6 +1,9 @@
 <desktop-nav></desktop-nav>
 <tab-nav></tab-nav>
 <div class="wrapper">
+    <div class="loading" *ngIf="showLoading">
+    <div class="loader"></div>
+    </div>
     <router-outlet></router-outlet>
 </div>
 <bottom-mob-nav></bottom-mob-nav>

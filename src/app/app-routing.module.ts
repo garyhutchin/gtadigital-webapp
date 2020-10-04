@@ -11,19 +11,49 @@ import { PodcastDetailsComponent } from './music/podcasts/podcast-details/podcas
 import { ReleaseDetailsComponent } from './music/releases/release-details/release-details.component';
 import { StoreComponent } from './store/store.component';
 import { ContactComponent } from './contact/contact.component';
-import { ReleaseResolver } from './music/releases/release-details/release-resolver.service';
+import { ReleaseResolver } from './resolvers/release-details-resolver.service';
+import { HomePageResolver } from './resolvers/home-page-resolver.service';
+import { StoreResolver } from './resolvers/store-page-resolver.service';
+import { StoreItemOneResolver } from './resolvers/store-items/store-item-1-resolver.service';
+import { StoreItemTwoResolver } from './resolvers/store-items/store-item-2-resolver.service';
+import { StoreItemThreeResolver } from './resolvers/store-items/store-item-3-resolver.service';
+import { StoreItemFourResolver } from './resolvers/store-items/store-item-4-resolver.service';
+import { StoreItemFiveResolver } from './resolvers/store-items/store-item-5-resolver.service';
+import { StoreItemSixResolver } from './resolvers/store-items/store-item-6-resolver.service';
+import { StoreItemSevenResolver } from './resolvers/store-items/store-item-7-resolver.service';
+import { StoreItemEightResolver } from './resolvers/store-items/store-item-8-resolver.service';
+import { LatestNewsResolver } from './resolvers/latest-news-resolver.service';
+import { ReleasePageResolver } from './resolvers/release-page-resolver.service';
+import { ReleaseListResolver } from './resolvers/release-list-resolver.service';
+import { PodcastPageResolver } from './resolvers/podcast-page-resolver.service';
+import { AboutPageResolver } from './resolvers/about-page-resolver.service';
+import { MostPopularPodcastResolver } from './resolvers/most-popular/most-pop-podcast-resolver.service';
+import { MostPopularReleaseResolver } from './resolvers/most-popular/most-pop-releases-resolver.service';
+import { ContactPageResolver } from './resolvers/contact-page-resolver.service';
+import { MusicPageResolver } from './resolvers/music-page-resolver.service';
+import { PodcastResolver } from './resolvers/podcast-details-resolver.service';
+import { PodcastListResolver } from './resolvers/podcast-list-resolver';
+import { LiveStreamItemsResolver } from './resolvers/live-stream-items-resolver.service';
 
 const appRoutes:Routes = [
-    { path: '', component: MainComponent },
-    { path: 'home', component: MainComponent },
-    { path: 'music', component: MusicMainComponent },
-    { path: 'music/releases', component: ReleaseContainerComponent },
-    { path: 'music/podcasts', component:PodcastsContainerComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'music/releases/release/:id', component: ReleaseDetailsComponent, resolve: {release: ReleaseResolver} },
-    { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent },
-    { path: 'merch', component: StoreComponent },
-    { path: 'contact', component: ContactComponent },
+    { path: '', component: MainComponent, resolve: {homePage: HomePageResolver, latestNews: LatestNewsResolver} },
+    { path: 'home', component: MainComponent, resolve: {homePage: HomePageResolver, latestNews: LatestNewsResolver} },
+    { path: 'music', component: MusicMainComponent, resolve: {musicPage: MusicPageResolver, releaseList: ReleaseListResolver, homePage: HomePageResolver, podcastList: PodcastListResolver, liveStream: LiveStreamItemsResolver} },
+    { path: 'music/releases', component: ReleaseContainerComponent, resolve: {releasePage: ReleasePageResolver, releaseList: ReleaseListResolver} },
+    { path: 'music/podcasts', component:PodcastsContainerComponent, resolve: {podcastPage: PodcastPageResolver, podcastList: PodcastListResolver} },
+    { path: 'about', component: AboutComponent, resolve: {aboutPage: AboutPageResolver, mostPopPodcast: MostPopularPodcastResolver, mostPopRelease: MostPopularReleaseResolver} },
+    { path: 'music/releases/release/:id', component: ReleaseDetailsComponent, resolve: {release: ReleaseResolver, releaseList: ReleaseListResolver} },
+    { path: 'music/podcasts/podcast/:id', component: PodcastDetailsComponent, resolve: {podcast: PodcastResolver, podcastList: PodcastListResolver} },
+    { path: 'merch', component: StoreComponent, resolve:   {merch: StoreResolver, 
+                                                            merchItem1: StoreItemOneResolver,
+                                                            merchItem2: StoreItemTwoResolver,
+                                                            merchItem3: StoreItemThreeResolver, 
+                                                            merchItem4: StoreItemFourResolver, 
+                                                            merchItem5: StoreItemFiveResolver, 
+                                                            merchItem6: StoreItemSixResolver, 
+                                                            merchItem7: StoreItemSevenResolver, 
+                                                            merchItem8: StoreItemEightResolver,} },
+    { path: 'contact', component: ContactComponent, resolve: {contactPage: ContactPageResolver} },
     
     { path: '', redirectTo: '/home', pathMatch: 'full'},
 

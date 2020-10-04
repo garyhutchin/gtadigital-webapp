@@ -15,18 +15,14 @@ export class YouMayLikePodcastComponent implements OnInit {
   end : number = 5;
   releaseNumber: number;
 
-  constructor( private activatedRoute: ActivatedRoute, private route: ActivatedRoute, private router: Router, private podcastService: PodcastService) {
+  constructor( private activatedRoute: ActivatedRoute, private router: Router, private podcastService: PodcastService) {
 
   }
 
   ngOnInit() {
 
-    this.podcastService.getPodcasts().subscribe(podcastItems => {
-      this.podcasts = podcastItems
-    })
-
     this.activatedRoute.url.subscribe(url =>{
-  
+      this.podcasts = this.activatedRoute.snapshot.data['podcastList']
       this.releaseNumber = this.activatedRoute.snapshot.params['id']
   
       if (this.releaseNumber > 25) {

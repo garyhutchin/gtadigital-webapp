@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReleaseService } from '../../releases/shared/releases.service';
 import { Title, Meta } from '@angular/platform-browser';
-import { Release } from 'src/app/models/content-interface';
 
 @Component ({
     selector: 'release-details',
@@ -14,7 +13,6 @@ export class ReleaseDetailsComponent implements OnInit {
     
     release:any
     url:any
-    isFetching: boolean = false;
     error = null;
     
     constructor(private activatedRoute: ActivatedRoute, private router: Router, private releaseService: ReleaseService, private title: Title, private meta: Meta) {
@@ -22,9 +20,8 @@ export class ReleaseDetailsComponent implements OnInit {
 
     ngOnInit() {
         this.activatedRoute.url.subscribe(url =>{
-            this.isFetching = true;
+
             this.release = this.activatedRoute.snapshot.data['release'];
-                this.isFetching = false;
             
 
             this.url = this.router.url

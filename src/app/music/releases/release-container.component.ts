@@ -5,59 +5,60 @@ import { Title, Meta } from '@angular/platform-browser'
 import { ContentService } from 'src/app/shared/content.service';
 import { Release } from 'src/app/models/content-interface';
 
-@Component ({
+@Component({
     selector: 'release-container',
     templateUrl: 'release-container.component.html',
     styleUrls: ['../../css/main-structure.component.css', '../../css/features.component.css']
 })
 
 export class ReleaseContainerComponent implements OnInit {
-    
+
     releases: any
     isFetching: boolean = false;
     error = null;
     url: any
     homeContent: any
+    releaseContent: any
 
-    constructor(private route: ActivatedRoute, private router: Router, private releaseService: ReleaseService, private contentService: ContentService, private title: Title, private meta: Meta) {
-        
+    constructor(private activatedRoute: ActivatedRoute, private router: Router, private releaseService: ReleaseService, private contentService: ContentService, private title: Title, private meta: Meta) {
+
     }
 
     ngOnInit() {
-        
-        this.isFetching = true;
-        this.releaseService.getReleases().subscribe(releaseItems => {
-          this.isFetching = false;
-          this.releases = releaseItems;
-        })
 
-        this.contentService.getHomePageContent().subscribe(homePageContent => {
-            this.homeContent = homePageContent
-
-            this.meta.updateTag({ name: 'twitter:image', content: this.homeContent.heroImage });
-            this.meta.updateTag({ property: 'og:image', content: this.homeContent.heroImage });
-        })
+        this.releaseContent = this.activatedRoute.snapshot.data['releasePage']
 
         this.url = this.router.url
-  
+
         //set tags for SEO
-        this.title.setTitle("GTA Digital - Techno - Releases")
-        this.meta.updateTag({ name: 'description', content: 'Browse and listen to all of the music that has been released on the GTA Digital' });
-        this.meta.updateTag({ name: 'robots', content: 'index, follow'  });
-    
+        this.title.setTitle('GTA Digital - Techno - ' + this.releaseContent.title)
+        this.meta.updateTag({ name: 'description', content: this.releaseContent.description });
+        this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
         //set tags for Twitter
         this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
         this.meta.updateTag({ name: 'twitter:site', content: '@gta_digital' });
-        this.meta.updateTag({ name: 'twitter:title', content: 'GTA Digital Releases' });
-        this.meta.updateTag({ name: 'twitter:description', content: 'Browse and listen to all of the music that has been released on the GTA Digital' });
-        this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
-    
+        this.meta.updateTag({ name: 'twitter:title', content: 'GTA Digital - Techno - ' + this.releaseContent.title });
+        this.meta.updateTag({ name: 'twitter:description', content: this.releaseContent.description });
+        this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk' + this.url });
+
         //set tags for Facebook
         this.meta.updateTag({ property: 'og:type', content: 'article' });
         this.meta.updateTag({ property: 'og:site_name', content: 'gtadigital' });
-        this.meta.updateTag({ property: 'og:title', content: 'GTA Digital Releases' });
-        this.meta.updateTag({ property: 'og:description', content: 'Browse and listen to all of the music that has been released on the GTA Digital' });
-        this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk'+ this.url });
+        this.meta.updateTag({ property: 'og:title', content: 'GTA Digital - Techno - ' + this.releaseContent.title });
+        this.meta.updateTag({ property: 'og:description', content: this.releaseContent.description });
+        this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk' + this.url });
+
+        this.isFetching = true;
+        this.releaseService.getReleases().subscribe(releaseItems => {
+            this.isFetching = false;
+            this.releases = releaseItems;
+        })
+
+        this.homeContent = this.activatedRoute.snapshot.data['homePage']
+
+        this.meta.updateTag({ name: 'twitter:image', content: this.homeContent.heroImage });
+        this.meta.updateTag({ property: 'og:image', content: this.homeContent.heroImage });
     }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReleaseService } from '../shared/releases.service';
 import { Title, Meta } from '@angular/platform-browser'
+import { ActivatedRoute } from '@angular/router';
 
 @Component ({
     selector: 'release-list',
@@ -14,15 +15,11 @@ export class ReleaseListComponent implements OnInit {
     isFetching: boolean = false;
     error = null;
 
-    constructor(private releaseService: ReleaseService, private title: Title, private meta: Meta) {
+    constructor(private releaseService: ReleaseService, private title: Title, private meta: Meta, private activatedRoute: ActivatedRoute) {
     }
 
     ngOnInit() {
-      this.isFetching = true;
-      this.releaseService.getReleases().subscribe(releaseItems => {
-        this.isFetching = false;
-        this.releases = releaseItems;
-      });
+      this.releases = this.activatedRoute.snapshot.data['releaseList']
       /*
         
         this.releaseService.getReleases().subscribe(releaseItems => {

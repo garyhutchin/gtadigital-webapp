@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ContentService } from 'src/app/shared/content.service';
 
 @Component ({
@@ -12,7 +13,7 @@ export class LiveStreamArchiveComponent implements OnInit {
     liveStreamItems: any
     isWrapperExpanded: boolean;
 
-    constructor(private contentService: ContentService) {
+    constructor(private contentService: ContentService, private activatedRoute: ActivatedRoute) {
 
     }
 
@@ -20,9 +21,7 @@ export class LiveStreamArchiveComponent implements OnInit {
 
         this.isWrapperExpanded = false; 
 
-        this.contentService.getLiveStreamItems().subscribe(liveStream => {
-            this.liveStreamItems = liveStream;
-        })
+        this.liveStreamItems = this.activatedRoute.snapshot.data['liveStream']
 
     }
 
