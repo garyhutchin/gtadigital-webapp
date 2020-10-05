@@ -4,6 +4,6 @@
             <live-stream-archive-thumbnail [liveStreamItem]="liveStreamItem"></live-stream-archive-thumbnail>
         </div>
     </div>
-    <span *ngIf="!isWrapperExpanded" class="viewAll-button" (click)="expandLiveStream()">View More</span>
-    <span *ngIf="isWrapperExpanded" class="viewAll-button" (click)="collapseLiveStream()">View Less</span>
+    <span *ngIf="!isWrapperExpanded" class="viewAll-button" (click)="expandLiveStream()">View All Live Streams</span>
+    <span *ngIf="isWrapperExpanded" class="viewAll-button" (click)="collapseLiveStream()">Close</span>
 </div>

@@ -13,7 +13,7 @@
 @media (max-width: 849px) {
     .tabNavContainer {
         display: block;
-        height: 60px;
+        height: 6rem;
         width: 100%;
     }
 }
@@ -23,11 +23,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 5px;
+    padding-top: 0.5rem;
 }
 
 .nav {
-    font-size: 20px;
+    font-size: 2rem;
     color: white;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .tabNavItem2 img {
-    height: 45px;
+    height: 4.5rem;
     cursor: pointer;
 }
 
@@ -60,10 +60,10 @@
 
 .tabNav-MenuItems ul {
     margin-top: 0;
-    padding: 0px 0px 1.5rem 1rem;
+    padding: 0rem 0rem 1.5rem 1rem;
 }
 
 .tabNav-MenuItems li {
     list-style-type: none;
-    margin: 0px 0px 20px 0px;
+    margin: 0rem 0rem 2rem 0rem;
 }

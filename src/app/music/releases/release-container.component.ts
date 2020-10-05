@@ -49,11 +49,7 @@ export class ReleaseContainerComponent implements OnInit {
         this.meta.updateTag({ property: 'og:description', content: this.releaseContent.description });
         this.meta.updateTag({ property: 'og:url', content: 'https://gtadigital.co.uk' + this.url });
 
-        this.isFetching = true;
-        this.releaseService.getReleases().subscribe(releaseItems => {
-            this.isFetching = false;
-            this.releases = releaseItems;
-        })
+        this.releases = this.activatedRoute.snapshot.data['releaseList']
 
         this.homeContent = this.activatedRoute.snapshot.data['homePage']
 
