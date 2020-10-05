@@ -2,11 +2,32 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReleaseService } from '../../releases/shared/releases.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 
 @Component ({
     selector: 'release-details',
     templateUrl: 'release-details.component.html',
-    styleUrls: ['release-details.component.css', '../../../css/features.component.css']
+    styleUrls: ['release-details.component.css', '../../../css/features.component.css'],
+    animations: [
+
+        trigger('releaseDetailsAnim', [
+
+            transition('* => *', [
+      
+              query(':self', style({ opacity: 0 }), { optional: true }),
+      
+              query(':self', stagger('200ms', [
+                animate('0.4s ease-in', keyframes([
+                  style({ opacity: 0, transform: 'translateX(0px)', offset: 0 }),
+                  style({ opacity: 1, transform: 'translateX(0px)', offset: 1 }),
+                ]))
+              ]), { optional: true })
+      
+            ])
+      
+          ])
+
+    ]
 })
 
 export class ReleaseDetailsComponent implements OnInit {

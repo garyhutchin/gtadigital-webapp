@@ -1,11 +1,11 @@
 <div class="list-wrapper">
 
-    <div class="listContainer">
+    <div class="listContainer" [@releaseTileAnim]="podcasts.length">
 
         <div class="cardElement" *ngFor="let podcast of podcasts | reverse | slice:0:4; let i=index">
             <podcast-tile-thumbnail [podcast]="podcast"></podcast-tile-thumbnail>
         </div>
     
     </div>
-    <span class="viewAll-button" (click)="viewPodcasts()" [innerHTML]="musicContent.button2"></span>
+    <span class="viewAll-button" (click)="viewPodcasts()" [innerHTML]="musicContent.button2" [@viewAllBtnAnim]></span>
 </div>

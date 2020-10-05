@@ -1,3 +1,4 @@
+<div @releaseDetailsAnim >
 <div class="breadcrumbs-wrapper">
     <div class="breadcrumbs-container">
         <a class="breadcrumbs-item" routerLink="/home">Home</a>
@@ -5,6 +6,8 @@
         <a class="breadcrumbs-item" routerLink="/music">Music</a>
         <p class="breadcrumbs-item">></p>
         <a class="breadcrumbs-item" routerLink="/music/releases">Releases</a>
+        <p class="breadcrumbs-item">></p>
+        <p class="breadcrumbs-item" style="margin-left: 0; font-weight: 300; font-size: 1.4rem;">{{ release.catNo }} {{ release.title }}</p>
     </div>
 </div>
 <div class="releaseDetailsWrapper">
@@ -33,4 +36,5 @@
 </div>
 <div class="youMayLike">
     <you-may-like></you-may-like>
+</div>
 </div>

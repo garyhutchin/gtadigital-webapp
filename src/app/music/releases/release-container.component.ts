@@ -3,12 +3,33 @@ import { ActivatedRoute, Router } from '@angular/router'
 import { ReleaseService } from './shared/releases.service';
 import { Title, Meta } from '@angular/platform-browser'
 import { ContentService } from 'src/app/shared/content.service';
-import { Release } from 'src/app/models/content-interface';
+import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 
 @Component({
     selector: 'release-container',
     templateUrl: 'release-container.component.html',
-    styleUrls: ['../../css/main-structure.component.css', '../../css/features.component.css']
+    styleUrls: ['../../css/main-structure.component.css', '../../css/features.component.css'],
+    animations: [
+
+        trigger('heroAnim', [
+
+            transition('* => *', [
+      
+              query(':self', style({ opacity: 0 }), { optional: true }),
+      
+              query(':self', stagger('300ms', [
+                animate('1s ease-in', keyframes([
+                  style({ opacity: 0, transform: 'translateX(0px)', offset: 0 }),
+                  style({ opacity: .5, transform: 'translateX(0px)', offset: 0.3 }),
+                  style({ opacity: 1, transform: 'translateX(0px)', offset: 1 }),
+                ]))
+              ]), { optional: true })
+      
+            ])
+      
+          ])
+
+    ]
 })
 
 export class ReleaseContainerComponent implements OnInit {
