@@ -4,7 +4,7 @@
         <h1 class="error-header">An Error Occured</h1>
         <p class="error-text">An error occured when trying to load this module, please refresh or try again later.<br>HTTP response status code: {{ error }}</p>
     </div>
-    <div class="listContainer">
+    <div class="listContainer" [@releaseListAnim]="releases.length">
         <div class="cardElement" *ngFor="let release of releases | slice:1 | reverse">
             <release-thumbnail [release]="release"></release-thumbnail>
         </div>

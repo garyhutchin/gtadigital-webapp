@@ -1,4 +1,4 @@
-<div class="element-wrapper">
+<div class="element-wrapper" [@liveStreamAnim]>
     <div [ngClass]="{'live-stream-wrapper-expanded': isWrapperExpanded, 'live-stream-wrapper': !isWrapperExpanded}">
         <div *ngFor="let liveStreamItem of liveStreamItems | slice:1 | reverse">
             <live-stream-archive-thumbnail [liveStreamItem]="liveStreamItem"></live-stream-archive-thumbnail>

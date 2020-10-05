@@ -1,5 +1,5 @@
 <div class="pageHeroWrapper">
-    <div class="heroContainer">
+    <div class="heroContainer" @heroAnim>
         <div class="heroText">
             <h1 [innerHTML]="aboutContent.heroHeader"></h1>
             <p [innerHTML]="aboutContent.heroText"></p>
@@ -15,7 +15,7 @@
     <most-popular></most-popular>
 
     <div class="componentContent">
-        <div class="textBox">
+        <div class="textBox" @aboutAnim>
             <div class="textBox-text">
                 <p [innerHTML]="aboutContent.aboutText"></p>
             </div>

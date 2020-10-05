@@ -1,12 +1,12 @@
 .list-wrapper {
     max-width: 100%;
     background-color: rgb(240, 240, 240) !important;
-    padding: 1rem 0.25% 4rem 2rem;
+    padding: 1rem 0.25% 0 2rem;
 }
 
 @media (max-width: 1110px) {
     .list-wrapper {
-        padding: 0 0 4rem 0;
+        padding: 0;
     }
 }
 
@@ -37,7 +37,6 @@
     flex-wrap: wrap;
     justify-content: left;
     position: relative;
-    margin-bottom: 1rem;
 }
 
 @media (max-width: 1110px) {
@@ -88,7 +87,7 @@
     box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);
     text-align: center;
     background-color: white;
-    margin: 0 1% 1% 0;
+    margin: 0 1% 0 0;
     border-radius: 0.5rem;
 }
 

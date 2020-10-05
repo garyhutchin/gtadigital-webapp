@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LatestNewsService } from '../shared/latest-news.service';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
-import { LatestNews } from 'src/app/models/content-interface';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -18,10 +15,10 @@ import { ActivatedRoute } from '@angular/router';
 
           query(':enter', style({ opacity: 0}), {optional: true}),
 
-          query(':enter', stagger('300ms', [
+          query(':enter', stagger('200ms', [
             animate('1s 0.5s ease-in', keyframes([
-              style({opacity: 0, transform: 'translateY(-50px)', offset: 0}),
-              style({opacity: .5, transform: 'translateY(35px)', offset: 0.3}),
+              style({opacity: 0, transform: 'translateY(0px)', offset: 0}),
+              style({opacity: .5, transform: 'translateY(0px)', offset: 0.3}),
               style({opacity: 1, transform: 'translateY(0px)', offset: 1}),
             ]))
           ]), {optional: true})
