@@ -22,9 +22,7 @@ export class ReleaseListTileComponent implements OnInit {
 
     ngOnInit() {
         
-        this.contentService.getMusicPageContent().subscribe(musicPageContent => {
-            this.musicContent = musicPageContent
-        })
+        this.musicContent = this.activatedRoute.snapshot.data['musicPage']
 
         this.releases = this.activatedRoute.snapshot.data['releaseList']
     }

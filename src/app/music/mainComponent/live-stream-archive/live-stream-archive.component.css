@@ -1,6 +1,7 @@
 .live-stream-wrapper {
     max-height: 34rem;
     overflow-y: hidden;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 1110px) {
@@ -30,9 +31,7 @@
     font-size: 1.6rem;
     font-weight: 540;
     cursor: pointer;
-    transition: background-color 0.2s ease;
     outline: none;
-    transition: box-shadow 0.2s ease;
     letter-spacing: 0.2rem;
     margin: 1rem 2rem 2rem 2rem;
 }

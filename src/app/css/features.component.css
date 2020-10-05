@@ -1,21 +1,3 @@
-.loading {
-    border: 16px solid #d3d3d3;
-    border-top: 16px solid #0193b7;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin 700ms linear infinite;
-    top: 40%;
-    left: 47%;
-    position: absolute;
-    z-index: 1;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg) }
-    100% { transform: rotate(360deg) }
-}
-
 .alert {
     background-color: rgba(231, 152, 152, 0.568);
     border-radius: 0.5rem;

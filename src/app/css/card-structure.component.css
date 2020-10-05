@@ -14,7 +14,7 @@
     .list-wrapper {
         overflow-x: scroll !important;
         max-width: unset !important;
-        min-height: 210px;
+        min-height: 21rem;
     }
 }
 
@@ -37,6 +37,7 @@
     flex-wrap: wrap;
     justify-content: left;
     position: relative;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 1110px) {
@@ -54,12 +55,12 @@
 
 .cardElement {
     flex-basis: 24%;
-    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;
     margin: 0 1% 1% 0;
-    border-radius: 5px;
+    border-radius: 0.5rem;
 }
 
 .cardElement:hover {
@@ -70,38 +71,38 @@
 @media (max-width: 1110px) {
     .cardElement {
         flex-basis: 47%;
-        margin: 10px;
+        margin: 1rem;
     }
 }
 
 @media (max-width: 801px) {
     .cardElement {
         flex-basis: unset;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         min-width: 34rem;
     }
 }
 
 .news-cardElement {
     flex-basis: 24%;
-    box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3);
+    box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);
     text-align: center;
     background-color: white;
     margin: 0 1% 1% 0;
-    border-radius: 5px;
+    border-radius: 0.5rem;
 }
 
 @media (max-width: 1110px) {
     .news-cardElement {
         flex-basis: 47%;
-        margin: 10px;
+        margin: 1rem;
     }
 }
 
 @media (max-width: 801px) {
     .news-cardElement {
         flex-basis: unset;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         min-width: 34rem;
     }
 }
@@ -112,21 +113,21 @@
     background-color: white;
     transition: background-color 0.2s ease;
     margin: 0 1% 1% 0;
-    border-radius: 5px;
-    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);
 }
 
 @media (max-width: 1110px) {
     .cardElement-store {
         flex-basis: 47%;
-        margin: 10px;
+        margin: 1rem;
     }
 }
 
 @media (max-width: 801px) {
     .cardElement-store {
         flex-basis: unset;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         min-width: 34rem;
     }
 }
@@ -175,12 +176,12 @@
 
 .cardElement-most-pop {
     flex-basis: 48%;
-    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);
     text-align: center;
     background-color: white;
     transition: background-color 0.2s ease;
     margin: 0 2% 2% 0;
-    border-radius: 5px;
+    border-radius: 0.5rem;
 }
 
 .cardElement-most-pop:hover {
@@ -191,14 +192,14 @@
 @media (max-width: 1110px) {
     .cardElement-most-pop {
         flex-basis: 94%;
-        margin: 10px;
+        margin: 1rem;
     }
 }
 
 @media (max-width: 801px) {
     .cardElement-most-pop {
         flex-basis: unset;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         min-width: 34rem;
     }
 }

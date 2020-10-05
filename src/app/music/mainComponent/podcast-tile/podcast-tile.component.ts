@@ -19,9 +19,7 @@ export class PodcastTileComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.contentService.getMusicPageContent().subscribe(musicPageContent => {
-            this.musicContent = musicPageContent
-        })
+        this.musicContent = this.activatedRoute.snapshot.data['musicPage']
 
         this.podcasts = this.activatedRoute.snapshot.data['podcastList']       
     }

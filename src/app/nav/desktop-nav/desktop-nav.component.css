@@ -28,7 +28,7 @@
     background-color: #0193B7;
     font-family: 'Titillium Web', sans-serif;
     margin-bottom: 0;
-    margin-left: 80px; 
+    margin-left: 8rem; 
     text-align: center;
 
 }
@@ -40,12 +40,12 @@
 }
 
 .nav {
-    font-size: 16px;
+    font-size: 1.6rem;
     color: white;
     text-align: center;
     text-decoration: none;
     margin-bottom: 0;
-    padding: 0px 16px;
+    padding: 0 1.6rem;
     display: inline-block;
 }
 
@@ -55,8 +55,8 @@
 
 .nav a::after {
     content: '';
-    width: 0px;
-    height: 2px;
+    width: 0rem;
+    height: 0.2rem;
     display: block;
     background-color: white;
     transition: 300ms;
@@ -100,7 +100,7 @@
 }
 
 .socialMediaIcons img {
-    height: 35px;
+    height: 3.5rem;
     padding: 0.8rem;
     opacity: 1;
     transition: opacity 0.2s ease;
@@ -112,7 +112,7 @@
 }
 
 .navLogo {
-    height: 55px;
+    height: 5.5rem;
     cursor: pointer;
 }
 
