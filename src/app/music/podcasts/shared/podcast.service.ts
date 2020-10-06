@@ -11,17 +11,17 @@ export class PodcastService {
     constructor(private http: HttpClient) {
 
     }
-    getPodcasts():Observable<Podcast[]> {
+    getPodcasts(): Observable<Podcast[]> {
         return this.http.get<Podcast[]>('https://gta-digital-web-app.firebaseio.com/podcasts.json')
-            .pipe(catchError(this.handleError<Podcast[]>('getPodcasts',[])))
+            .pipe(catchError(this.handleError<Podcast[]>('getPodcasts', [])))
     }
 
-    getPodcast(id:number):Observable<Podcast> {
+    getPodcast(id: number): Observable<Podcast> {
         return this.http.get<Podcast>(`https://gta-digital-web-app.firebaseio.com/podcasts/${+id}.json`)
             .pipe(catchError(this.handleError<Podcast>('getPodcast')))
     }
 
-    private handleError<T> (operation = 'operation', result?: T) {
+    private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
             console.error(error);
             return of(result as T);

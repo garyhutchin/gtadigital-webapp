@@ -8,33 +8,19 @@ import { Observable, of } from 'rxjs'
 @Injectable()
 export class ReleaseService {
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
-    /*getReleases() {
-        return this.http.get<{ [key: string]: Release }>('https://gta-digital-web-app.firebaseio.com/releases.json')
-        .pipe(map(responseData => {
-            const releasesArray: Release[] = [];
-            for (const key in responseData) {
-                if (responseData.hasOwnProperty(key)) {
-                    releasesArray.push({ ...responseData[key], id: key })
-                }
-            }
-            return releasesArray;
-        })
-        );
-    }*/
-
-    getReleases():Observable<Release[]> {
+    getReleases(): Observable<Release[]> {
         return this.http.get<Release[]>('https://gta-digital-web-app.firebaseio.com/releases.json')
             .pipe(catchError(this.handleError<Release[]>('getReleases', [])))
     }
 
-    getRelease(id:number):Observable<Release> {
+    getRelease(id: number): Observable<Release> {
         return this.http.get<Release>(`https://gta-digital-web-app.firebaseio.com/releases/${+id}.json`)
-        .pipe(catchError(this.handleError<Release>('getReleases')))
+            .pipe(catchError(this.handleError<Release>('getReleases')))
     }
 
-    private handleError<T> (operation = 'operation', result?: T) {
+    private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
             console.error(error);
             return of(result as T);
@@ -59,7 +45,7 @@ export class ReleaseService {
         releaseInfoP5 : "",
         releasePlayer : "",
         shortDescription: "Jacked up techno, with an outstanding remix by DJ Ze Mig L. Supported by the likes of Perc, Patrick DSP, Wetworks & Ike Dusk",
-        title : "Purist EP"  
+        title : "Purist EP"
     },
     {
         artistName : "Gary The Apprentice",

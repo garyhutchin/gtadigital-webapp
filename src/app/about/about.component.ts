@@ -30,16 +30,16 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 
     ]),
     trigger('aboutAnim', [
-  
+
       transition('* => *', [
 
-        query(':self', style({ opacity: 0}), {optional: true}),
+        query(':self', style({ opacity: 0 }), { optional: true }),
 
         query(':self', stagger('300ms', [
           animate('0.5s 2s ease-in', keyframes([
-            style({opacity: 0, transform: 'translateX(0px)', offset: 0}),
-            style({opacity: .5, transform: 'translateX(0px)', offset: 0.3}),
-            style({opacity: 1, transform: 'translateX(0px)', offset: 1}),
+            style({ opacity: 0, transform: 'translateX(0px)', offset: 0 }),
+            style({ opacity: .5, transform: 'translateX(0px)', offset: 0.3 }),
+            style({ opacity: 1, transform: 'translateX(0px)', offset: 1 }),
           ]))
         ]))
 

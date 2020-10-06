@@ -11,25 +11,25 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 
     trigger('formSubmittedAnim', [
 
-        transition('* => *', [
+      transition('* => *', [
 
-          query(':self', style({ opacity: 0}), {optional: true}),
+        query(':self', style({ opacity: 0 }), { optional: true }),
 
-          query(':self', stagger('300ms', [
-            animate('.5s ease-in', keyframes([
-              style({opacity: 0, transform: 'translateX(0px)', offset: 0}),
-              style({opacity: .5, transform: 'translateX(0px)', offset: 0.3}),
-              style({opacity: 1, transform: 'translateX(0px)', offset: 1}),
-            ]))
-          ]), {optional: true})
-
-        ])
+        query(':self', stagger('300ms', [
+          animate('.5s ease-in', keyframes([
+            style({ opacity: 0, transform: 'translateX(0px)', offset: 0 }),
+            style({ opacity: .5, transform: 'translateX(0px)', offset: 0.3 }),
+            style({ opacity: 1, transform: 'translateX(0px)', offset: 1 }),
+          ]))
+        ]), { optional: true })
 
       ])
-    ]
+
+    ])
+  ]
 })
 export class ContactFormComponent implements OnInit {
- 
+
   name: string;
   email: string;
   message: string;

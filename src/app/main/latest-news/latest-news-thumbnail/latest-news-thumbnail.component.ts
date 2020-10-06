@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 
 export class LatestNewsThumbnail {
-    @Input() newsItem:any
-    
+    @Input() newsItem: any
+
 }

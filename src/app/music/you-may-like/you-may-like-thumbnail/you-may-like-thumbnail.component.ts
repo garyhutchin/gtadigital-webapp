@@ -8,18 +8,18 @@ import { Location } from '@angular/common'
   styleUrls: ['you-may-like-thumbnail.component.css']
 })
 export class YouMayLikeThumbnailComponent implements OnInit {
-  
-  @Input() release:any
+
+  @Input() release: any
   urlId: any
 
   url: string
 
-  constructor(private activatedRoute: ActivatedRoute, private router:Router, private location:Location) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private location: Location) {
 
   }
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(url =>{
+    this.activatedRoute.url.subscribe(url => {
       this.url = this.activatedRoute.snapshot.params['id']
       this.urlId = this.url
     });

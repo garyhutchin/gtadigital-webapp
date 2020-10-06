@@ -2,10 +2,12 @@
 <h3 class="cardHeader">{{ newsItem.title }}</h3>
 <div class="news-cardDetails">
     <p>{{ newsItem.info }}
-        <a class="externalUrl" *ngIf="newsItem?.externalUrl" [href]="newsItem.externalUrl" target="blank">{{ newsItem.externalUrlTitle }} <img class="external-link" style="border-radius: 0rem !important;" [src]="newsItem.externalUrlImage" alt="External Url Icon"></a>
+        <a class="externalUrl" *ngIf="newsItem?.externalUrl" [href]="newsItem.externalUrl"
+            target="blank">{{ newsItem.externalUrlTitle }} <img class="external-link"
+                style="border-radius: 0rem !important;" [src]="newsItem.externalUrlImage" alt="External Url Icon"></a>
     </p>
     <p *ngIf="newsItem?.moreInfo" class="moreInfo">{{ newsItem.moreInfo }}</p>
-    <div class="button" *ngIf="newsItem?.internalUrl">     
+    <div class="button" *ngIf="newsItem?.internalUrl">
         <a [routerLink]="newsItem.internalUrl" class="linkText">{{ newsItem.internalUrlTitle }}</a>
     </div>
 </div>

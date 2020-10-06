@@ -31,11 +31,11 @@ export interface LatestNews {
     title?: string;
     info?: string;
     moreInfo?: string;
-    imageUrl?: string;   
+    imageUrl?: string;
     internalUrl?: string;
-    internalUrlTitle?: string; 
+    internalUrlTitle?: string;
     externalUrl?: string;
-    externalUrlTitle?: string; 
+    externalUrlTitle?: string;
     id?: string;
     newsItem?: number;
 }
@@ -48,7 +48,7 @@ export interface Release {
     discountCode?: string;
     imageUrl?: string;
     artwork?: string;
-    releaseUrl?: string;        
+    releaseUrl?: string;
     releaseInfoP1?: string;
     releaseInfoP2?: string;
     releaseInfoP3?: string;
@@ -65,8 +65,8 @@ export interface StoreItem {
     imageUrlWhite?: string;
     imageUrlRed?: string;
     imageUrlGrey?: string;
-    imageUrlBlack?: string; 
-    imageUrlNavy?: string; 
+    imageUrlBlack?: string;
+    imageUrlNavy?: string;
     description?: string;
     price?: string;
     shopUrl?: string;

@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core'
 })
 
 export class PodcastTileThumbnail {
-    @Input() podcast:any
+    @Input() podcast: any
 }

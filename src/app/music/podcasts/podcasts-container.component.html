@@ -1,15 +1,18 @@
 <div class="pageHeroWrapper">
-    <div class="heroContainer">
+    <div class="heroContainer" @heroAnim>
         <div class="heroText">
             <h1>{{ podcastContent.heroHeader }}</h1>
             <p>{{ podcastContent.heroText }}</p>
 
-            <span class="listenNow-button" *ngFor="let podcast of podcasts | reverse | slice:0:1; let i=index" [routerLink]="['/music/podcasts/podcast', podcast.id]">{{ podcastContent.heroButton }}</span>
+            <span class="listenNow-button" *ngFor="let podcast of podcasts | reverse | slice:0:1; let i=index"
+                [routerLink]="['/music/podcasts/podcast', podcast.id]">{{ podcastContent.heroButton }}</span>
 
         </div>
-        
+
         <div class="heroLogo" *ngFor="let podcast of podcasts | reverse | slice:0:1; let i=index">
-            <img [src]="podcast.artwork" [alt]="podcast.title" style="box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3); cursor: pointer;" [routerLink]="['/music/podcasts/podcast', podcast.id]">
+            <img [src]="podcast.artwork" [alt]="podcast.title"
+                style="box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3); cursor: pointer;"
+                [routerLink]="['/music/podcasts/podcast', podcast.id]">
         </div>
     </div>
 </div>
@@ -19,7 +22,7 @@
     <div class="componentContent">
 
         <podcasts-list></podcasts-list>
-        
+
     </div>
 
 </div>

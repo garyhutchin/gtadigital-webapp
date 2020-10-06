@@ -4,13 +4,7 @@
 
         <p>
             <label>Name</label>
-            <input
-            placeholder="Name..." 
-            type="text" 
-            name="name" 
-            (ngModel)="name"
-            #nameInput="ngModel" 
-            required>
+            <input placeholder="Name..." type="text" name="name" (ngModel)="name" #nameInput="ngModel" required>
 
             <span class="error" *ngIf="nameInput.invalid && nameInput.touched">
                 Your name is required.</span>
@@ -19,14 +13,8 @@
 
         <p>
             <label>Email</label>
-            <input 
-            placeholder="example@email.com" 
-            type="email" 
-            name="email"  
-            (ngModel)="email"
-            #emailInput="ngModel"
-            required
-            email>
+            <input placeholder="example@email.com" type="email" name="email" (ngModel)="email" #emailInput="ngModel"
+                required email>
 
             <span class="error" *ngIf="emailInput.invalid && emailInput.touched">
                 Your email address is required and it must be a valid email address.
@@ -36,16 +24,10 @@
 
         <p class="full">
             <label>Message</label>
-            <textarea 
-            placeholder="Enter your message..."
-            name="message" 
-            rows="5"
-            class="textarea" 
-            (ngModel)="message"
-            #messageField="ngModel"
-            required>
+            <textarea placeholder="Enter your message..." name="message" rows="5" class="textarea" (ngModel)="message"
+                #messageField="ngModel" required>
             </textarea>
-            
+
             <span class="error" *ngIf="messageField.invalid && messageField.touched">
                 You forgot to type a message.
             </span>
@@ -53,11 +35,8 @@
         </p>
 
         <p class="full">
-            <button 
-            type="submit" 
-            class="submit-button"
-            [disabled]="contactForm.invalid">
-            Submit
+            <button type="submit" class="submit-button" [disabled]="contactForm.invalid">
+                Submit
             </button>
         </p>
 

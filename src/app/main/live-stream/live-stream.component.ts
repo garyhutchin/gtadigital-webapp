@@ -10,8 +10,8 @@ import { ContentService } from 'src/app/shared/content.service';
 export class LiveStreamComponent implements OnInit {
 
   homeContent: any
-    
-  constructor( private contentService: ContentService, private activatedRoute: ActivatedRoute) {
+
+  constructor(private contentService: ContentService, private activatedRoute: ActivatedRoute) {
 
   }
 

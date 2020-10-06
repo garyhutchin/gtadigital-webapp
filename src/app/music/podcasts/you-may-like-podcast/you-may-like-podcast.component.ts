@@ -9,27 +9,27 @@ import { PodcastService } from '../shared/podcast.service';
 })
 export class YouMayLikePodcastComponent implements OnInit {
 
-  podcasts:any
+  podcasts: any
 
-  start : number = 0;
-  end : number = 5;
+  start: number = 0;
+  end: number = 5;
   releaseNumber: number;
 
-  constructor( private activatedRoute: ActivatedRoute, private router: Router, private podcastService: PodcastService) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private podcastService: PodcastService) {
 
   }
 
   ngOnInit() {
 
-    this.activatedRoute.url.subscribe(url =>{
+    this.activatedRoute.url.subscribe(url => {
       this.podcasts = this.activatedRoute.snapshot.data['podcastList']
       this.releaseNumber = this.activatedRoute.snapshot.params['id']
-  
+
       if (this.releaseNumber > 25) {
         return this.end = 6
       }
-      
-  });
+
+    });
   }
- 
+
 }

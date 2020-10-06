@@ -2,7 +2,8 @@
     <div class="listContainer" [@newsAnimation]="fetchedNewsItems.length">
         <div class="alert" *ngIf="error">
             <h1 class="error-header">An Error Occured</h1>
-            <p class="error-text">An error occured when trying to load this module, please refresh or try again later.<br>HTTP response status code: {{ error }}</p>
+            <p class="error-text">An error occured when trying to load this module, please refresh or try again
+                later.<br>HTTP response status code: {{ error }}</p>
         </div>
         <div class="news-cardElement" *ngFor="let newsItem of fetchedNewsItems | reverse | slice:0:4; let i=index">
             <latest-news-thumbnail [newsItem]="newsItem"></latest-news-thumbnail>

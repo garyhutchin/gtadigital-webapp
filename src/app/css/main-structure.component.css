@@ -126,7 +126,7 @@ img {
 
 .componentContainer {
     max-width: 144rem;
-    margin: 6rem auto;
+    margin: 6rem auto 1rem auto;
 }
 
 @media (max-width: 638px) {
@@ -147,7 +147,7 @@ img {
 
 .componentContainer-white {
     background-color: white;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
 }
 
