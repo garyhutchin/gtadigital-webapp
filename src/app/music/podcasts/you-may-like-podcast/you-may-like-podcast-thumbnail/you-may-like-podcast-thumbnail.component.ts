@@ -8,8 +8,8 @@ import { Location } from '@angular/common'
   styleUrls: ['./you-may-like-podcast-thumbnail.component.css']
 })
 export class YouMayLikePodcastThumbnailComponent implements OnInit {
-  
-  @Input() podcast:any
+
+  @Input() podcast: any
   urlId: any
 
   url: string
@@ -19,7 +19,7 @@ export class YouMayLikePodcastThumbnailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(url =>{
+    this.activatedRoute.url.subscribe(url => {
       this.url = this.activatedRoute.snapshot.params['id']
       this.urlId = this.url
     });

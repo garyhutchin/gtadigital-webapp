@@ -1,5 +1,5 @@
 <div class="list-wrapper">
-    <div class="listContainer">
+    <div class="listContainer" [@podcastListAnim]="podcasts.length">
         <div class="cardElement" *ngFor="let podcast of podcasts | slice:1 | reverse">
             <podcast-thumbnail [podcast]="podcast"></podcast-thumbnail>
         </div>

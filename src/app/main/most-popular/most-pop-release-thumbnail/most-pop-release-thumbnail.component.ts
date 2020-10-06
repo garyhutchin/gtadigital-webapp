@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class MostPopularReleaseThumbnail {
-    @Input() releaseItem:any
+    @Input() releaseItem: any
 }

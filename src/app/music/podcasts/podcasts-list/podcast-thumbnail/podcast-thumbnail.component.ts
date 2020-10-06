@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['../../../../css/thumbnails.component.css']
 })
 export class PodcastThumbnailComponent {
-@Input() podcast:any
+  @Input() podcast: any
 
 }

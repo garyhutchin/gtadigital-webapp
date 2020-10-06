@@ -1,40 +1,46 @@
-<div @releaseDetailsAnim >
-<div class="breadcrumbs-wrapper">
-    <div class="breadcrumbs-container">
-        <a class="breadcrumbs-item" routerLink="/home">Home</a>
-        <p class="breadcrumbs-item">></p>
-        <a class="breadcrumbs-item" routerLink="/music">Music</a>
-        <p class="breadcrumbs-item">></p>
-        <a class="breadcrumbs-item" routerLink="/music/releases">Releases</a>
-        <p class="breadcrumbs-item">></p>
-        <p class="breadcrumbs-item" style="margin-left: 0; font-weight: 300; font-size: 1.4rem;">{{ release.catNo }} {{ release.title }}</p>
-    </div>
-</div>
-<div class="releaseDetailsWrapper">
-    <div class="alert" *ngIf="error">
-        <h1 class="error-header">An Error Occured</h1>
-        <p class="error-text">An error occured when trying to load this module, please refresh or try again later.<br>HTTP response status code: {{ error }}</p>
-    </div>
-    <div class="releaseDetailsContainer">
-        <div class="image">
-            <img class="artwork" [src]="release.artwork" [alt]="release.title">
-        </div>
-        <div class="text">
-            <h3>{{release.catNo}} {{release.title}} by {{release.artistName}}</h3>
-            <p class="releaseDate">Released: {{release.releaseDate}} <br><a [href]="release.releaseUrl" target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
-            <p class="codeWrapper" *ngIf="release?.discountCode" class="discount-code">Enter code "{{release.discountCode}}" for 50% off</p>
-            <p>{{release.releaseInfoP1}}</p>
-            <p>{{release.releaseInfoP2}}</p>
-            <p>{{release.releaseInfoP3}}</p>
-            <p>{{release.releaseInfoP4}}</p>
-            <p>{{release.releaseInfoP5}}</p>
-            <span class="player">
-                <iframe style="border: 0; width: 100%; height: 120px;" [src]="release.releasePlayer | noSanitizeUrl"><a [href]="release.releaseUrl">{{release.catNo}} {{release.title}} by {{release.artistName}}</a></iframe>
-            </span>
+<div @releaseDetailsAnim>
+    <div class="breadcrumbs-wrapper">
+        <div class="breadcrumbs-container">
+            <a class="breadcrumbs-item" routerLink="/home">Home</a>
+            <p class="breadcrumbs-item">></p>
+            <a class="breadcrumbs-item" routerLink="/music">Music</a>
+            <p class="breadcrumbs-item">></p>
+            <a class="breadcrumbs-item" routerLink="/music/releases">Releases</a>
+            <p class="breadcrumbs-item">></p>
+            <p class="breadcrumbs-item" style="margin-left: 0; font-weight: 300; font-size: 1.4rem;">{{ release.catNo }}
+                {{ release.title }}</p>
         </div>
     </div>
-</div>
-<div class="youMayLike">
-    <you-may-like></you-may-like>
-</div>
+    <div class="releaseDetailsWrapper">
+        <div class="alert" *ngIf="error">
+            <h1 class="error-header">An Error Occured</h1>
+            <p class="error-text">An error occured when trying to load this module, please refresh or try again
+                later.<br>HTTP response status code: {{ error }}</p>
+        </div>
+        <div class="releaseDetailsContainer">
+            <div class="image">
+                <img class="artwork" [src]="release.artwork" [alt]="release.title">
+            </div>
+            <div class="text">
+                <h3>{{release.catNo}} {{release.title}} by {{release.artistName}}</h3>
+                <p class="releaseDate">Released: {{release.releaseDate}} <br><a [href]="release.releaseUrl"
+                        target="blank"><button type="button" class="buyNow">Buy Now</button></a></p>
+                <p class="codeWrapper" *ngIf="release?.discountCode" class="discount-code">Enter code
+                    "{{release.discountCode}}" for 50% off</p>
+                <p>{{release.releaseInfoP1}}</p>
+                <p>{{release.releaseInfoP2}}</p>
+                <p>{{release.releaseInfoP3}}</p>
+                <p>{{release.releaseInfoP4}}</p>
+                <p>{{release.releaseInfoP5}}</p>
+                <span class="player">
+                    <iframe style="border: 0; width: 100%; height: 120px;"
+                        [src]="release.releasePlayer | noSanitizeUrl"><a [href]="release.releaseUrl">{{release.catNo}}
+                            {{release.title}} by {{release.artistName}}</a></iframe>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="youMayLike">
+        <you-may-like></you-may-like>
+    </div>
 </div>

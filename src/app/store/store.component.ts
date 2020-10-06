@@ -2,11 +2,88 @@ import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../shared/content.service';
 import { Title, Meta } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations'
 
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
-  styleUrls: ['../css/main-structure.component.css', '../css/thumbnails.component.css', '../css/card-structure.component.css']
+  styleUrls: ['../css/main-structure.component.css', '../css/thumbnails.component.css', '../css/card-structure.component.css'],
+  animations: [
+
+    trigger('heroAnim', [
+
+      transition('* => *', [
+
+        query(':self', style({ opacity: 0 }), { optional: true }),
+
+        query(':self', stagger('300ms', [
+          animate('1s ease-in', keyframes([
+            style({ opacity: 0, transform: 'translateX(0px)', offset: 0 }),
+            style({ opacity: .5, transform: 'translateX(0px)', offset: 0.3 }),
+            style({ opacity: 1, transform: 'translateX(0px)', offset: 1 }),
+          ]))
+        ]), { optional: true })
+
+      ])
+
+    ]),
+
+    trigger('fade1', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1s 0.5s ease-in', style({ opacity: 1 }))
+      ])
+    ]),
+
+    trigger('fade2', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1s 0.7s ease-in', style({ opacity: 1 }))
+      ])
+    ]),
+
+    trigger('fade3', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1s 0.9s ease-in', style({ opacity: 1 }))
+      ])
+    ]),
+
+    trigger('fade4', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1s 1.1s ease-in', style({ opacity: 1 }))
+      ])
+    ]),
+
+    trigger('fade5', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1s 1.4s ease-in', style({ opacity: 1 }))
+      ])
+    ]),
+
+    trigger('fade6', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1s 1.7s ease-in', style({ opacity: 1 }))
+      ])
+    ]),
+
+    trigger('fade7', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1s 2s ease-in', style({ opacity: 1 }))
+      ])
+    ]),
+
+    trigger('fade8', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('1s 2.3s ease-in', style({ opacity: 1 }))
+      ])
+    ]),
+  ]
 })
 export class StoreComponent implements OnInit {
 
@@ -41,35 +118,11 @@ export class StoreComponent implements OnInit {
 
     this.gtaDigitalToteBag = this.activatedRoute.snapshot.data['merchItem8']
 
-    /*this.contentService.getStoreItem('3').subscribe(storeItem => {
-      this.logoTshirtRegular = storeItem
-    })
+    this.storeContent = this.activatedRoute.snapshot.data['merch']
 
-    this.contentService.getStoreItem('4').subscribe(storeItem => {
-      this.typeTshirtRegular = storeItem
-    })
-
-    this.contentService.getStoreItem('5').subscribe(storeItem => {
-      this.logoTshirtFitted = storeItem
-    })
-    
-    this.contentService.getStoreItem('6').subscribe(storeItem => {
-      this.typeTshirtFitted = storeItem
-    })
-
-    this.contentService.getStoreItem('7').subscribe(storeItem => {
-      this.gtaDigitalMug = storeItem
-    })
-
-    this.contentService.getStoreItem('8').subscribe(storeItem => {
-      this.gtaDigitalToteBag = storeItem
-    })*/
-
-      this.storeContent = this.activatedRoute.snapshot.data['merch']
-
-      this.title.setTitle(this.storeContent.title);
-      this.meta.updateTag({ name: 'description', content: this.storeContent.description });
-      this.meta.updateTag({ name: 'robots', content: 'index, follow'  })
+    this.title.setTitle(this.storeContent.title);
+    this.meta.updateTag({ name: 'description', content: this.storeContent.description });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' })
 
   }
 
@@ -154,19 +207,19 @@ export class StoreComponent implements OnInit {
   isGreyTypeTshirtSelected = false;
   isWhiteTypeTshirtSelected = false;
 
-  colourTypeTshirtBlack(){
+  colourTypeTshirtBlack() {
     this.isBlackTypeTshirtSelected = true;
     this.isGreyTypeTshirtSelected = false;
     this.isWhiteTypeTshirtSelected = false;
   }
 
-  colourTypeTshirtGrey(){
+  colourTypeTshirtGrey() {
     this.isBlackTypeTshirtSelected = false;
     this.isGreyTypeTshirtSelected = true;
     this.isWhiteTypeTshirtSelected = false;
   }
 
-  colourTypeTshirtWhite(){
+  colourTypeTshirtWhite() {
     this.isBlackTypeTshirtSelected = false;
     this.isGreyTypeTshirtSelected = false;
     this.isWhiteTypeTshirtSelected = true;

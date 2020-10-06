@@ -4,10 +4,11 @@
             <h1>{{ releaseContent.heroHeader }}</h1>
             <p>{{ releaseContent.heroText }}</p>
 
-            <span class="listenNow-button" *ngFor="let release of releases | reverse | slice:0:1; let i=index" [routerLink]="['/music/releases/release', release.id]">{{ releaseContent.heroButton }}</span>
+            <span class="listenNow-button" *ngFor="let release of releases | reverse | slice:0:1; let i=index"
+                [routerLink]="['/music/releases/release', release.id]">{{ releaseContent.heroButton }}</span>
 
         </div>
-        
+
         <div class="heroLogo" *ngFor="let release of releases | reverse | slice:0:1; let i=index">
             <img [src]="release.artwork" [alt]="release.title">
         </div>
@@ -19,7 +20,7 @@
     <div class="componentContent">
 
         <release-list></release-list>
-        
+
     </div>
 
 </div>

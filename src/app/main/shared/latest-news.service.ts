@@ -9,22 +9,22 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class LatestNewsService {
-    
+
     constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {
     }
 
     getNewsItems() {
         return this.http.get<{ [key: string]: LatestNews }>('https://gta-digital-web-app.firebaseio.com/latest-news.json')
-        .pipe(map(responseData => {
-            const newsItemsArray: LatestNews[] = [];
-            for (const key in responseData) {
-                if (responseData.hasOwnProperty(key)) {
-                    newsItemsArray.push({ ...responseData[key], id: key })
+            .pipe(map(responseData => {
+                const newsItemsArray: LatestNews[] = [];
+                for (const key in responseData) {
+                    if (responseData.hasOwnProperty(key)) {
+                        newsItemsArray.push({ ...responseData[key], id: key })
+                    }
                 }
-            }
-            return newsItemsArray;
-        })
-        );
+                return newsItemsArray;
+            })
+            );
     }
 
 }
@@ -37,7 +37,7 @@ export class LatestNewsService {
         externalUrlTitle : "Fnoob Techno Radio",
         externalUrlImage: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2Fexternal-link.png?alt=media&token=cd7f4861-315a-4c83-9bab-502bc919a029",
         newsItem: 6,
-        title: "GTA Digital Presents - October 2020"  
+        title: "GTA Digital Presents - October 2020"
     },
     {
         imageUrl: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast31.jpg?alt=media&token=965c65c2-4810-4773-9b8f-4fd56eeb26ce",
@@ -46,7 +46,7 @@ export class LatestNewsService {
         internalUrlTitle: "Find out more",
         moreInfo: "Tracks by the likes of Mike Humphries, W.J Henze, DJ Mika, Patrick DSP, Dirty Bass & Kay D Smith",
         newsItem: 5,
-        title: "GTA Digital Podcast #31"  
+        title: "GTA Digital Podcast #31"
     },
     {
         imageUrl: "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2Fpodcast30.jpg?alt=media&token=b272a779-720a-42ff-973e-5373787cc218",
@@ -55,7 +55,7 @@ export class LatestNewsService {
         internalUrlTitle: "Find out more",
         moreInfo: "Tracks by the likes of Vincent de Wit, Mattias Fridell, Lars Klein & Concrete Djz.",
         newsItem: 4,
-        title: "GTA Digital Podcast #30"  
+        title: "GTA Digital Podcast #30"
     },
     {
         externalLinkImage : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2Fexternal-link.png?alt=media&token=cd7f4861-315a-4c83-9bab-502bc919a029",
@@ -81,7 +81,7 @@ export class LatestNewsService {
         internalUrl : "/music/podcasts/podcast/29",
         internalUrlTitle : "Listen Now",
         newsItem : 2,
-        title : "News Item 3"   
+        title : "News Item 3"
     },
     {
         imageUrl : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2Fpodcast29.jpg?alt=media&token=9416cf60-d261-48f8-9163-d89a15af3167",
@@ -89,6 +89,6 @@ export class LatestNewsService {
         internalUrl : "/music/podcasts/podcast/29",
         internalUrlTitle : "Listen Now",
         newsItem : 1,
-        title : "News Item 4" 
+        title : "News Item 4"
     },
 ]*/

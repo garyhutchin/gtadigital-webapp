@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from 'src/app/shared/content.service';
 
-@Component ({
+@Component({
     selector: 'desktop-nav',
     templateUrl: 'desktop-nav.component.html',
     styleUrls: ['desktop-nav.component.css']
 })
 
 export class DesktopNavComponent implements OnInit {
-    
+
     navItems: any[]
 
     socialMediaLinks: any
@@ -28,7 +28,7 @@ export class DesktopNavComponent implements OnInit {
         this.contentService.getSocialMediaLinks().subscribe(socialMediaLinkItems => {
             this.socialMediaLinks = socialMediaLinkItems
         })
-        
+
         //this.underConstruction = this.contentService.getMainContent('under-construction')
 
     }
