@@ -1,7 +1,7 @@
 {
   "latest-news" : {
     "item1" : {
-      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2Fpodcast29.jpg?alt=media&token=9416cf60-d261-48f8-9163-d89a15af3167",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast29.jpg?alt=media&token=9416cf60-d261-48f8-9163-d89a15af3167",
       "info" : "Podcast 29, you know the score, straight up banging techno. For this podcast I put together an hour set using tracks released on Armatura Clandestine. Some real solid, seriously banging hard techno. ",
       "internalUrl" : "/music/podcasts/podcast/29",
       "internalUrlTitle" : "Listen Now",
@@ -9,7 +9,7 @@
       "title" : "GTA Digital Podcast #29"
     },
     "item2" : {
-      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2Fpodcast30.jpg?alt=media&token=b272a779-720a-42ff-973e-5373787cc218",
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast30.jpg?alt=media&token=b272a779-720a-42ff-973e-5373787cc218",
       "info" : "The GTA Digital Podcast is back with the 30th installment. As always you can expect an hour of straight up, straight forward, hard banging techno.",
       "internalUrl" : "/music/podcasts/podcast/30",
       "internalUrlTitle" : "Listen Now",
@@ -43,6 +43,15 @@
       "info" : "GTA Digital Presents returns for the October installment of the show on 6 October. From this show onwards, GTA Digital Presents will air from 6-7pm, every 4 weeks. I plan on playing tracks by the likes of Wetworks, Henry Cullen, J-T Kyrke, David Moleon & Rowlanz to name just a few. So as always, expect an hour of seriously banging techno. You can tune into the show over at ",
       "newsItem" : 5,
       "title" : "GTA Digital Presents - October 2020"
+    },
+    "item6" : {
+      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast32.jpg?alt=media&token=d142bc5f-5066-4553-9f9d-6d9e8655fc5c",
+      "info" : "Stream the latest GTA Digital Podcast now. Expect an hour of straight up bangers.",
+      "internalUrl" : "/music/podcasts/podcast/32",
+      "internalUrlTitle" : "Find out more",
+      "moreInfo" : "Tracks by the likes of Jamie Ball, Car-D, Robert Natus, Chris Noise, Gary The Apprentice & Wetworks, to name a few.",
+      "newsItem" : 6,
+      "title" : "GTA Digital Podcast #32"
     }
   },
   "live-stream-archive" : [ null, {
@@ -152,17 +161,17 @@
   "most-popular-podcast" : [ null, {
     "artistName" : "mixed by Gary The Apprentice",
     "cardHeader" : "Most Popular Podcast",
-    "id" : "7",
+    "id" : 7,
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast7.jpg?alt=media&token=cf233b89-4422-472b-aec1-ec98d1aa47d4",
     "musicStyle" : "Style: Chunky, Hypnotic Techno",
     "title" : "GTA Digital Podcast #7"
   }, {
     "artistName" : "mixed by Gary The Apprentice",
     "cardHeader" : "Latest Podcast",
-    "id" : "31",
-    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast31.jpg?alt=media&token=965c65c2-4810-4773-9b8f-4fd56eeb26ce",
+    "id" : 32,
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast32.jpg?alt=media&token=d142bc5f-5066-4553-9f9d-6d9e8655fc5c",
     "musicStyle" : "Style: Hard Techno",
-    "title" : "GTA Digital Podcast #31"
+    "title" : "GTA Digital Podcast #32"
   } ],
   "most-popular-release" : [ null, {
     "artistName" : "Jamie Ball",
@@ -1046,7 +1055,7 @@
     "duration" : "1hr",
     "id" : 29,
     "playerSrc" : "https://app.hearthis.at/embed/4970726/transparent/?hcolor=0193b7&color=c9c9c9&style=1&block_size=2&block_space=1&background=0&waveform=0&cover=1&autoplay=0&css=",
-    "releaseDate" : "18 August 2020",
+    "releaseDate" : "21 July 2020",
     "releaseInfoP1" : "For this podcast I put together an hour set using tracks released on Armatura Clandestine. Some real solid, seriously banging hard techno.",
     "style" : "Hard Techno",
     "thumbnailUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast29.jpg?alt=media&token=ef605108-d665-4268-a665-425ce6d34fa7",
@@ -1081,7 +1090,7 @@
     "duration" : "1hr",
     "id" : 30,
     "playerSrc" : "https://app.hearthis.at/embed/5049644/transparent/?hcolor=0193b7&color=c9c9c9&style=1&block_size=2&block_space=1&background=0&waveform=0&cover=1&autoplay=0&css=",
-    "releaseDate" : "18 August 2020",
+    "releaseDate" : "19 August 2020",
     "releaseInfoP1" : "The GTA Digital Podcast is back with the 30th installment. As always you can expect an hour of straight up, straight forward, hard banging techno.",
     "shortDescription" : "1 hour of hard banging techno. Tracks by the likes of The Divide, DJ Mike, Vincent de Wit, DJ Ogi, Lars Klein & The Anxious.",
     "style" : "Hard Techno",
@@ -1116,7 +1125,7 @@
     "duration" : "1hr",
     "id" : 31,
     "playerSrc" : "https://app.hearthis.at/embed/5131881/transparent/?hcolor=0193b7&color=c9c9c9&style=1&block_size=2&block_space=1&background=0&waveform=0&cover=1&autoplay=0&css=",
-    "releaseDate" : "18 August 2020",
+    "releaseDate" : "16 September 2020",
     "releaseInfoP1" : "This marks the 12th show on Fnoob Techno Radio, and of course podcast number 31 in the series.",
     "releaseInfoP2" : "For this set I stepped away from the digital realm of Serato and picked out a load of banging techno records.",
     "shortDescription" : "1 hour of hard banging techno. Tracks by the likes of Mike Humphries, W.J Henze, DJ Mika, Patrick DSP, Dirty Bass & Kay D Smith.",
@@ -1124,6 +1133,43 @@
     "thumbnailUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast31.jpg?alt=media&token=965c65c2-4810-4773-9b8f-4fd56eeb26ce",
     "title" : "GTA Digital Podcast #31",
     "tracksBy" : "Mike Humphries, W.J Henze, DJ Mika, Patrick DSP, Dirty Bass & Kay D Smith to name just a few. Some real bangers that I picked up over the years before jumping ship and using Serato."
+  }, {
+    "artistName" : "Gary The Apprentice",
+    "artwork" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Fpodcasts%2Fpodcast32.jpg?alt=media&token=d562f48c-b430-4bf5-b11a-824c82500beb",
+    "duration" : "1hr",
+    "id" : 32,
+    "playerSrc" : "https://app.hearthis.at/embed/5188776/transparent/?hcolor=0193b7&color=c9c9c9&style=1&block_size=2&block_space=1&background=0&waveform=0&cover=1&autoplay=0&css=",
+    "releaseDate" : "6 October 2020",
+    "releaseInfoP1" : "This set marks the 1 year anniversary of my show starting on Fnoob Techno Radio, and also the new slot time for my show.",
+    "releaseInfoP2" : "For this set I went through a selection of absolute bangers that I've collected over the years, but also included 3 out of the 4 tracks from my forthcoming release on Filth Infatuated, title Flavour of The Day. Previews and pre-orders of the EP are available on Beatport.",
+    "releaseInfoP3" : "Expect an hour of straight up, straight forward, no messing around techno.",
+    "shortDescription" : "1 hour of hard banging techno. Tracks by the likes of Jamie Ball, Car-D, Robert Natus, Chris Noise, Gary The Apprentice & Wetworks to name just a few.",
+    "style" : "Hard Techno",
+    "thumbnailUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast32.jpg?alt=media&token=d142bc5f-5066-4553-9f9d-6d9e8655fc5c",
+    "title" : "GTA Digital Podcast #32",
+    "track1" : "Silencer (Original Mix) - Alex Calver vs Matt K And KD",
+    "track10" : "4X4 Deep (Original Mix) - Jamie Ball",
+    "track11" : "Caramel Custard (Original Mix) - Gary The Apprentice",
+    "track12" : "Dark Raver (Original Mix) - Robert Natus",
+    "track13" : "I Should Violate You (Original Mix) - Wetworks",
+    "track14" : "Flavour Of The Day (Original Mix) - Gary The Apprentice",
+    "track15" : "See U In Tokyo (Original Mix) - Gunjack",
+    "track16" : "Radio Rock (Remix 1) - Jamie Ball",
+    "track17" : "Obsession (Original Mix) - Wetworks",
+    "track18" : "Raspberry Ripple (Original Mix) - Gary The Apprentice",
+    "track19" : "Raw 12 (Scott Kemix Remix) - Guy McAffer & Eddie Kovach",
+    "track2" : "Cherry crush (Original Mix) - Jamie Ball",
+    "track20" : "Family Affairs (Original Mix) - Chris Noise",
+    "track21" : "Cynic B (Original Mix) - Jamie Ball",
+    "track22" : "Unity (Original Mix) - Ryuji Takeuchi",
+    "track3" : "Dortmund 2007 (Original Mix) - Robert Natus",
+    "track4" : "Isolationist (Original Mix) - Gunjack",
+    "track5" : "Instinct (Original Mix) - Alen Sforzina vs DJ Ogi",
+    "track6" : "Sometimes I Just (Original Mix) - Brad Lee",
+    "track7" : "Shake It Baby (Original Mix) - DJ Bold",
+    "track8" : "01 Player 003 (DJ Bam Bam Remix) - Player ",
+    "track9" : "Resubmitted (Original Mix) - Car-D",
+    "tracksBy" : "Jamie Ball, Car-D, Robert Natus, Chris Noise, Gary The Apprentice & Wetworks to name just a few."
   } ],
   "releases" : [ null, {
     "artistName" : "Gary The Apprentice",
@@ -1384,13 +1430,13 @@
     "artistName" : "Gary The Apprentice",
     "artwork" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta018.jpg?alt=media&token=729e3706-b9b0-4749-9f63-a3be8a00d899",
     "catNo" : "[GTA018]",
+    "discountCode" : "gta50",
     "id" : 18,
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Frelease-artwork%2Fgta018.jpg?alt=media&token=1d0104e2-e0b3-4291-bcef-9502e6c453e1",
     "releaseDate" : "31 August 2018",
-    "releaseInfoP1" : "Supported by: Dax J (Monnom Black), Spartaque, Patrick DSP, Ian Void, DJ Ze Mig L, Dr Motte, Luigi Madonna, Tony Verdi, Gemma Furbank, A Morgan (Rhythm Theory), Clarkee (Area 51), DJ K.N (Mass United), DJ Warp (Japan) / Takashi Watanabe, Danny Slade (Zone Magazine/Herald Radio), Hidden Reflection, Jon E Thin Bremmar, Josh Moseley (Chicago Jaxxx), Kereni (Forte), Kerstin Eden (Electric Eden), Louk/Hidden Identity, Mark Greene, Matteo (Different Grooves), Vincent De Wit, Wayne DJC (Beyond Control), Zuni (Tribal Waves)",
-    "releaseInfoP2" : "Tracks 1, 4 & 5 Written by Gary Hutchin",
-    "releaseInfoP3" : "Tracks 2 & 3 Written by Gary Hutchin & Vincent de Wit",
-    "releaseInfoP4" : "Track 6 Written by Gary Hutchin & Nicola Scarano",
+    "releaseInfoP1" : "Supported by: Dax J (Monnom Black), Spartaque, Patrick DSP, Ian Void, DJ Ze Mig L, Dr Motte, Luigi Madonna, Tony Verdi, Gemma Furbank, Clarkee (Area 51), DJ Warp (Japan) / Takashi Watanabe, Hidden Reflection, Josh Moseley (Chicago Jaxxx), Kereni (Forte), Louk/Hidden Identity, Mark Greene, Vincent De Wit, Wayne DJC (Beyond Control), Zuni (Tribal Waves)",
+    "releaseInfoP2" : "Original versions written by Gary Hutchin",
+    "releaseInfoP3" : "Remixes written by Vincent de Wit & Nicola Scarano",
     "releaseInfoP5" : "Mastered by Steve Loss - Black Monolith Studio",
     "releasePlayer" : "https://bandcamp.com/EmbeddedPlayer/album=2762695312/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless",
     "releaseUrl" : "https://gtadigital.bandcamp.com/album/gta018-what-have-we-become",
@@ -1399,6 +1445,7 @@
     "artistName" : "Gary The Apprentice",
     "artwork" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta019.jpg?alt=media&token=2f361b13-7e52-44f3-be1e-41ed73e041fa",
     "catNo" : "[GTA019]",
+    "discountCode" : "gta50",
     "id" : 19,
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Frelease-artwork%2Fgta019.jpg?alt=media&token=a5771348-e5c5-4ea6-8b13-43ec273cf6ac",
     "releaseDate" : "13 May 2019",

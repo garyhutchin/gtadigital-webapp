@@ -120,7 +120,7 @@ export class StoreComponent implements OnInit {
 
     this.storeContent = this.activatedRoute.snapshot.data['merch']
 
-    this.title.setTitle(this.storeContent.title);
+    this.title.setTitle('GTA Digital - Techno - ' + this.storeContent.title);
     this.meta.updateTag({ name: 'description', content: this.storeContent.description });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' })
 
