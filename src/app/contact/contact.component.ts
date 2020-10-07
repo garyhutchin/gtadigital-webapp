@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
     this.contactContent = this.activatedRoute.snapshot.data['contactPage']
 
     //set tags for SEO
-    this.title.setTitle(this.contactContent.title);
+    this.title.setTitle('GTA Digital - Techno - ' + this.contactContent.title);
     this.meta.updateTag({ name: 'description', content: this.contactContent.description });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' })
   }
