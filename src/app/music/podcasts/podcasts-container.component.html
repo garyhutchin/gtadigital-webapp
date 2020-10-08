@@ -10,7 +10,7 @@
         </div>
 
         <div class="heroLogo" *ngFor="let podcast of podcasts | reverse | slice:0:1; let i=index">
-            <img [src]="podcast.artwork" [alt]="podcast.title"
+            <img [src]="podcast.artwork" alt="Podcast Cover Image"
                 style="box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3); cursor: pointer;"
                 [routerLink]="['/music/podcasts/podcast', podcast.id]">
         </div>
