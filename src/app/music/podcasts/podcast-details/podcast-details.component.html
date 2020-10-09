@@ -1,16 +1,18 @@
 <div @podcastDetailsAnim>
-    <div class="breadcrumbs-wrapper">
-        <div class="breadcrumbs-container">
-            <a class="breadcrumbs-item" routerLink="/home">Home</a>
-            <p class="breadcrumbs-item">></p>
-            <a class="breadcrumbs-item" routerLink="/music">Music</a>
-            <p class="breadcrumbs-item">></p>
-            <a class="breadcrumbs-item" routerLink="/music/podcasts">Podcasts</a>
-            <p class="breadcrumbs-item">></p>
-            <p class="breadcrumbs-item" style="margin-left: 0; font-weight: 300; font-size: 1.4rem;">{{ podcast.catNo }}
-                {{ podcast.title }}</p>
+    <nav>
+        <div class="breadcrumbs-wrapper">
+            <div class="breadcrumbs-container">
+                <a class="breadcrumbs-item" routerLink="/home">Home</a>
+                <p class="breadcrumbs-item">></p>
+                <a class="breadcrumbs-item" routerLink="/music">Music</a>
+                <p class="breadcrumbs-item">></p>
+                <a class="breadcrumbs-item" routerLink="/music/podcasts">Podcasts</a>
+                <p class="breadcrumbs-item">></p>
+                <p class="breadcrumbs-item" style="margin-left: 0; font-weight: 300; font-size: 1.4rem;">{{ podcast.catNo }}
+                    {{ podcast.title }}</p>
+            </div>
         </div>
-    </div>
+    </nav>
     <div class="podcastDetailsWrapper">
         <div class="podcastDetailsContainer">
             <div class="image">

@@ -3,7 +3,6 @@
     background-color: #0193B7;
     bottom: 0;
     position: fixed;
-    border-top: 0.2rem solid white;
 }
 
 @media (min-width: 801px) {
@@ -20,23 +19,29 @@
 
 .left {
     color: white;
-    background-color: #0193B7;
+    background-color: #005f77;
     border: none;
-    font-size: 2rem;
-    padding: 2rem 0 2rem 0;
+    font-size: 1.5rem;
+    padding: 1rem 2rem 1rem 2.1rem;
+    margin: 1.4rem 0 1rem 0;
     text-align: center;
     cursor: pointer;
+    border-radius: 2rem;
+    max-width: 10.2rem;
     
 }
 
 .right {
     color: white;
-    background-color: #0193B7;
+    background-color: #005f77;
     border: none;
-    font-size: 2rem;
-    padding: 2rem 0 2rem 0;
+    font-size: 1.5rem;
+    padding: 1rem 2rem 1rem 2.1rem;
+    margin: 1.4rem 0 1rem 0;
     text-align: center;
     cursor: pointer;
+    border-radius: 2rem;
+    min-width: 10.2rem;
     
 }
 

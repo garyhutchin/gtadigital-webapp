@@ -1,16 +1,18 @@
 <div @releaseDetailsAnim>
-    <div class="breadcrumbs-wrapper">
-        <div class="breadcrumbs-container">
-            <a class="breadcrumbs-item" routerLink="/home">Home</a>
-            <p class="breadcrumbs-item">></p>
-            <a class="breadcrumbs-item" routerLink="/music">Music</a>
-            <p class="breadcrumbs-item">></p>
-            <a class="breadcrumbs-item" routerLink="/music/releases">Releases</a>
-            <p class="breadcrumbs-item">></p>
-            <p class="breadcrumbs-item" style="margin-left: 0; font-weight: 300; font-size: 1.4rem;">{{ release.catNo }}
-                {{ release.title }}</p>
+    <nav>
+        <div class="breadcrumbs-wrapper">
+            <div class="breadcrumbs-container">
+                <a class="breadcrumbs-item" routerLink="/home">Home</a>
+                <p class="breadcrumbs-item">></p>
+                <a class="breadcrumbs-item" routerLink="/music">Music</a>
+                <p class="breadcrumbs-item">></p>
+                <a class="breadcrumbs-item" routerLink="/music/releases">Releases</a>
+                <p class="breadcrumbs-item">></p>
+                <p class="breadcrumbs-item" style="margin-left: 0; font-weight: 300; font-size: 1.4rem;">{{ release.catNo }}
+                    {{ release.title }}</p>
+            </div>
         </div>
-    </div>
+    </nav>
     <div class="releaseDetailsWrapper">
         <div class="alert" *ngIf="error">
             <h1 class="error-header">An Error Occured</h1>
