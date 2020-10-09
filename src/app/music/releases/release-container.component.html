@@ -10,7 +10,7 @@
         </div>
 
         <div class="heroLogo" *ngFor="let release of releases | reverse | slice:0:1; let i=index">
-            <img [src]="release.artwork" alt="Album Cover Image">
+            <img [src]="release.artwork" alt="Album Cover Image" style="box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3);">
         </div>
     </div>
 </div>

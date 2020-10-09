@@ -11,7 +11,7 @@
 
         <div class="heroLogo" *ngFor="let release of releases | reverse | slice:0:1; let i=index">
             <img [src]="release.artwork" alt="Album Cover Image"
-                style="box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3); cursor: pointer;"
+                style="box-shadow: 0 0.1rem 0.6rem 0 hsla(0, 0%, 0%, 0.3); cursor: pointer;"
                 [routerLink]="['/music/releases/release', release.id]">
         </div>
     </div>

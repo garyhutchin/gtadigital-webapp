@@ -46,21 +46,21 @@
 .title {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
-    color: rgb(65, 65, 65);
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 .catNo {
     margin-bottom: 0.1rem;
-    color: rgb(65, 65, 65);
     margin-top: 0;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 .artistName {
-    color: rgb(121, 121, 121);
     margin-bottom: 0;
     margin-top: 0;
+    font-size: 1.4rem;
 }
 
 .artwork {
@@ -75,14 +75,14 @@ img {
 
 .musicStyle {
     margin-bottom: 0.1rem;
-    color: rgb(121, 121, 121);
     margin-top: 0;
+    font-size: 1.4rem;
 }
 
 .duration {
     margin-bottom: 0.1rem;
-    color: rgb(121, 121, 121);
     margin-top: 0;
+    font-size: 1.4rem;
 }
 
 .button {

@@ -5,13 +5,15 @@
                 <a [routerLink]="['/home']"><img class="navLogo"
                         src="https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2FgtaDigital-Header.jpg?alt=media&token=d98d203a-8472-441b-85b0-4729311b2909"></a>
             </div>
-            <div class="navbar">
-                <ul>
-                    <li class="navItem" *ngFor="let navItem of navItems | slice:1">
-                        <nav-items [navItem]="navItem"></nav-items>
-                    </li>
-                </ul>
-            </div>
+            <nav>
+                <div class="navbar">
+                    <ul>
+                        <li class="navItem" *ngFor="let navItem of navItems | slice:1">
+                            <nav-items [navItem]="navItem"></nav-items>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
             <div class="socialMediaIcons">
                 <ul>
                     <li *ngFor="let socialMediaLink of socialMediaLinks | slice:1"><a [href]="socialMediaLink.url"
