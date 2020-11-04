@@ -101,8 +101,8 @@ h3 {
 .tracklist-content {
     background-color: white;
     width: 70rem;
-    height: 70vh !important;
-    margin: 10vh auto 10vh auto;
+    height: 60vh !important;
+    margin: 15vh auto 10vh auto;
     padding: 2rem;
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     border-radius: 0.5rem;
@@ -111,7 +111,7 @@ h3 {
 }
 
 .tracklist-content::-webkit-scrollbar {
-    width: 0;
+    width: 1rem;
 }
 
 @media (max-width: 758px) {

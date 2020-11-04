@@ -1,59 +1,52 @@
 {
-  "latest-news" : {
-    "item1" : {
-      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast29.jpg?alt=media&token=9416cf60-d261-48f8-9163-d89a15af3167",
-      "info" : "Podcast 29, you know the score, straight up banging techno. For this podcast I put together an hour set using tracks released on Armatura Clandestine. Some real solid, seriously banging hard techno. ",
-      "internalUrl" : "/music/podcasts/podcast/29",
-      "internalUrlTitle" : "Listen Now",
-      "newsItem" : 1,
-      "title" : "GTA Digital Podcast #29"
-    },
-    "item2" : {
-      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast30.jpg?alt=media&token=b272a779-720a-42ff-973e-5373787cc218",
-      "info" : "The GTA Digital Podcast is back with the 30th installment. As always you can expect an hour of straight up, straight forward, hard banging techno.",
-      "internalUrl" : "/music/podcasts/podcast/30",
-      "internalUrlTitle" : "Listen Now",
-      "moreInfo" : "Tracks by the likes of Vincent de Wit, Mattias Fridell, Lars Klein & Concrete Djz.",
-      "newsItem" : 2,
-      "title" : "GTA Digital Podcast #30"
-    },
-    "item3" : {
-      "externalUrl" : "https://fnoobtechno.com",
-      "externalUrlImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2Fexternal-link.png?alt=media&token=cd7f4861-315a-4c83-9bab-502bc919a029",
-      "externalUrlTitle" : "Fnoob Techno Radio",
-      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2FfnoobCover.jpg?alt=media&token=ff2cdb44-30ad-4fcd-bb6d-c1ae64326a51",
-      "info" : "GTA Digital Presents returns for the September installment of the show. If you have tuned in to previous shows you know what to expect by now, straight up, solid techno. The show airs on 15 September from 10-11pm, over at ",
-      "newsItem" : 3,
-      "title" : "GTA Digital Presents - September 2020"
-    },
-    "item4" : {
-      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast31.jpg?alt=media&token=965c65c2-4810-4773-9b8f-4fd56eeb26ce",
-      "info" : "The next installment in the GTA Digital Podcast Series is online now. An all vinyl hard techno set this time around.",
-      "internalUrl" : "/music/podcasts/podcast/31",
-      "internalUrlTitle" : "Find out more",
-      "moreInfo" : "Tracks by the likes of Mike Humphries, W.J Henze, DJ Mika, Patrick DSP, Dirty Bass & Kay D Smith",
-      "newsItem" : 4,
-      "title" : "GTA Digital Podcast #31"
-    },
-    "item5" : {
-      "externalUrl" : "https://fnoobtechno.com",
-      "externalUrlImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2Fexternal-link.png?alt=media&token=cd7f4861-315a-4c83-9bab-502bc919a029",
-      "externalUrlTitle" : "Fnoob Techno Radio",
-      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2FfnoobCover-October.jpg?alt=media&token=d11c93d4-db4f-4cd5-bf66-617b7d8521c0",
-      "info" : "GTA Digital Presents returns for the October installment of the show on 6 October. From this show onwards, GTA Digital Presents will air from 6-7pm, every 4 weeks. I plan on playing tracks by the likes of Wetworks, Henry Cullen, J-T Kyrke, David Moleon & Rowlanz to name just a few. So as always, expect an hour of seriously banging techno. You can tune into the show over at ",
-      "newsItem" : 5,
-      "title" : "GTA Digital Presents - October 2020"
-    },
-    "item6" : {
-      "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast32.jpg?alt=media&token=d142bc5f-5066-4553-9f9d-6d9e8655fc5c",
-      "info" : "Stream the latest GTA Digital Podcast now. Expect an hour of straight up bangers.",
-      "internalUrl" : "/music/podcasts/podcast/32",
-      "internalUrlTitle" : "Find out more",
-      "moreInfo" : "Tracks by the likes of Jamie Ball, Car-D, Robert Natus, Chris Noise, Gary The Apprentice & Wetworks, to name a few.",
-      "newsItem" : 6,
-      "title" : "GTA Digital Podcast #32"
-    }
-  },
+  "latest-news" : [ null, {
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast29.jpg?alt=media&token=9416cf60-d261-48f8-9163-d89a15af3167",
+    "info" : "Podcast 29, you know the score, straight up banging techno. For this podcast I put together an hour set using tracks released on Armatura Clandestine. Some real solid, seriously banging hard techno. ",
+    "internalUrl" : "/music/podcasts/podcast/29",
+    "internalUrlTitle" : "Listen Now",
+    "newsItem" : 1,
+    "title" : "GTA Digital Podcast #29"
+  }, {
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast30.jpg?alt=media&token=b272a779-720a-42ff-973e-5373787cc218",
+    "info" : "The GTA Digital Podcast is back with the 30th installment. As always you can expect an hour of straight up, straight forward, hard banging techno.",
+    "internalUrl" : "/music/podcasts/podcast/30",
+    "internalUrlTitle" : "Listen Now",
+    "moreInfo" : "Tracks by the likes of Vincent de Wit, Mattias Fridell, Lars Klein & Concrete Djz.",
+    "newsItem" : 2,
+    "title" : "GTA Digital Podcast #30"
+  }, {
+    "externalUrl" : "https://fnoobtechno.com",
+    "externalUrlImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2Fexternal-link.png?alt=media&token=cd7f4861-315a-4c83-9bab-502bc919a029",
+    "externalUrlTitle" : "Fnoob Techno Radio",
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2FfnoobCover.jpg?alt=media&token=ff2cdb44-30ad-4fcd-bb6d-c1ae64326a51",
+    "info" : "GTA Digital Presents returns for the September installment of the show. If you have tuned in to previous shows you know what to expect by now, straight up, solid techno. The show airs on 15 September from 10-11pm, over at ",
+    "newsItem" : 3,
+    "title" : "GTA Digital Presents - September 2020"
+  }, {
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast31.jpg?alt=media&token=965c65c2-4810-4773-9b8f-4fd56eeb26ce",
+    "info" : "The next installment in the GTA Digital Podcast Series is online now. An all vinyl hard techno set this time around.",
+    "internalUrl" : "/music/podcasts/podcast/31",
+    "internalUrlTitle" : "Find out more",
+    "moreInfo" : "Tracks by the likes of Mike Humphries, W.J Henze, DJ Mika, Patrick DSP, Dirty Bass & Kay D Smith",
+    "newsItem" : 4,
+    "title" : "GTA Digital Podcast #31"
+  }, {
+    "externalUrl" : "https://fnoobtechno.com",
+    "externalUrlImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Ficons%2Fexternal-link.png?alt=media&token=cd7f4861-315a-4c83-9bab-502bc919a029",
+    "externalUrlTitle" : "Fnoob Techno Radio",
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Flatest-news-images%2FfnoobCover-October.jpg?alt=media&token=d11c93d4-db4f-4cd5-bf66-617b7d8521c0",
+    "info" : "GTA Digital Presents returns for the October installment of the show on 6 October. From this show onwards, GTA Digital Presents will air from 6-7pm, every 4 weeks. I plan on playing tracks by the likes of Wetworks, Henry Cullen, J-T Kyrke, David Moleon & Rowlanz to name just a few. So as always, expect an hour of seriously banging techno. You can tune into the show over at ",
+    "newsItem" : 5,
+    "title" : "GTA Digital Presents - October 2020"
+  }, {
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast32.jpg?alt=media&token=d142bc5f-5066-4553-9f9d-6d9e8655fc5c",
+    "info" : "Stream the latest GTA Digital Podcast now. Expect an hour of straight up bangers.",
+    "internalUrl" : "/music/podcasts/podcast/32",
+    "internalUrlTitle" : "Find out more",
+    "moreInfo" : "Tracks by the likes of Jamie Ball, Car-D, Robert Natus, Chris Noise, Gary The Apprentice & Wetworks, to name a few.",
+    "newsItem" : "6",
+    "title" : "GTA Digital Podcast #32"
+  } ],
   "live-stream-archive" : [ null, {
     "date" : "29 July 2018",
     "id" : "1",
@@ -89,7 +82,8 @@
       "aboutText" : "GTA Digital is a net label and Podcast series, set up by Gary The Apprentice, to provide the world with proper, underground Techno, staying clear of the more popular sound that is being churned out by bigger labels.</p><p>Here at GTA Digital, we are wanting to keep things real, releasing proper Techno, by proper Techno heads. We are always on the look out for new artists to get involved, so if you like what we are doing, and feel your music fits, please get in touch with a demo for us to consider releasing on the label.</p><p>This page will be used as our main platform for all of the Podcasts on the GTA Digital Podcast Series, if you would like to get involved, and provide a mix for the Podcast, please do get in touch.</p><p>To check out our full back catalogue of releases, to get information on the artists involved, and to check out the merchandise we have on sale.",
       "description" : "Find out more about GTA Digital",
       "heroHeader" : "GTA Digital",
-      "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
+      "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=21a17b22-f1ce-493a-ae34-fcdc8c381ccc",
+      "heroImageAlt" : "GTA Digital Logo",
       "heroText" : "Label, podcast series & radio show.<br>Releasing underground techno since 2013...",
       "id" : "about",
       "title" : "About"
@@ -97,7 +91,7 @@
     "contact" : {
       "description" : "Description for contact page",
       "heroHeader" : "Get in touch!",
-      "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
+      "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=21a17b22-f1ce-493a-ae34-fcdc8c381ccc",
       "heroImageAlt" : "GTA Digital Logo",
       "heroText" : "If you would like to get in touch, please complete the form below...",
       "id" : "contact",
@@ -112,7 +106,7 @@
       "header2" : "GTA Digital Live",
       "heroButton" : "Check Out The Music",
       "heroHeader" : "Underground Techno",
-      "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
+      "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=21a17b22-f1ce-493a-ae34-fcdc8c381ccc",
       "heroImageAlt" : "GTA Digital Logo",
       "heroText" : "GTA Digital started in 2013 as a platform for Gary The Apprentice to release his own music. Since then the label has grown, with the addition of a podcast series and a monthly show on Fnoob Techno Radio",
       "id" : "home",
@@ -124,7 +118,7 @@
       "description" : "Check out all of the releases, podcasts and past live streams",
       "header1" : "Releases",
       "header2" : "Podcasts",
-      "header3" : "GTA Digital Live Archive",
+      "header3" : "GTA Digital Live Stream",
       "heroButton" : "Check out the latest release",
       "heroHeader" : "Music",
       "heroText" : "Check out all of the music on GTA Digital, releases, podcasts and also recordings from past live streams...",
@@ -148,7 +142,7 @@
     "store" : {
       "description" : "If you are a fan of GTA Digital, there are hoodies and t-shirts available to purchase, if you would like to show even more support.",
       "heroHeader" : "Show Even More Support!",
-      "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=899bcdcb-0a2f-4927-8930-bb8e6b509ee1",
+      "heroImage" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Flogo.png?alt=media&token=21a17b22-f1ce-493a-ae34-fcdc8c381ccc",
       "heroImageAlt" : "GTA Digital Logo",
       "heroText" : "If you are a fan of GTA Digital, why not purchase one of the items below.",
       "id" : "store",
@@ -1170,6 +1164,39 @@
     "track8" : "01 Player 003 (DJ Bam Bam Remix) - Player ",
     "track9" : "Resubmitted (Original Mix) - Car-D",
     "tracksBy" : "Jamie Ball, Car-D, Robert Natus, Chris Noise, Gary The Apprentice & Wetworks to name just a few."
+  }, {
+    "artistName" : "Gary The Apprentice",
+    "artwork" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Fpodcasts%2Fpodcast33.jpg?alt=media&token=2b98045f-da49-44a9-b608-27e165246d6f",
+    "duration" : "1hr",
+    "id" : "33",
+    "playerSrc" : "https://app.hearthis.at/embed/5274557/transparent/?hcolor=0193b7&color=c9c9c9&style=1&block_size=2&block_space=1&background=0&waveform=0&cover=1&autoplay=0&css=",
+    "releaseDate" : "3 November 2020",
+    "releaseInfoP1" : "For this installment of the GTA Digital Podcast Series, I decided to go through a selection of jacked up, bleepy wonky techno. A bit different than the past few months of full on, straight up, hard banging techno.",
+    "releaseInfoP2" : "Expect tracks by the likes of The Groove Asylum, Tico Torres, DJ Dro San, DJ Mem, Ruben A, Tobias Schmidt & DJ Ze MigL, to name just a few.",
+    "shortDescription" : "Tracks by the likes of The Groove Asylum, Tico Torres, DJ Dro San, DJ Mem, Ruben A, Tobias Schmidt & DJ Ze MigL, to name just a few.",
+    "style" : "Jackin/Wonky Techno",
+    "thumbnailUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast33-thumbnail.jpg?alt=media&token=f9b15529-5ecb-4b04-88e7-9e528413b531",
+    "title" : "GTA Digital Podcast #33",
+    "track1" : "Glue Stick (Original Mix) - Tico Torres",
+    "track10" : "Riffin (The Remix) - The Groove Asylum",
+    "track11" : "Battle Horn (Original Mix) - DJ Ze MigL",
+    "track12" : "BB Itches (Original Mix) - Lester Fitzpatrick & DJ Ze MigL",
+    "track13" : "Work That Sucker (Original Mix) - The Groove Asylum",
+    "track14" : "Hot Thing Goes Down (Original Mix) - DJ Mem",
+    "track15" : "Kick In Da Face (Original Mix) - Mark Hawkins",
+    "track16" : "Die Frage (Original Mix) - Carsten Rechenberger & Recall 8",
+    "track17" : "Spittle Sponge (Original Mix) - Paul Birken",
+    "track18" : "Can I Get A Break (Original Mix) - Lester Fitzpatrick",
+    "track19" : "Disharmonic (Original Mix) - NDK",
+    "track2" : "Let Me Hit That (Original Mix) - Robert Armani",
+    "track3" : "I (Original Mix) - Dj Dro San",
+    "track4" : "Nasty Jazz (Original Mix) - DJ Mem",
+    "track5" : "Twisted Organs (Original Mix) - Ruben A",
+    "track6" : "Restless Desire (Original Mix) - Tobias Schmidt",
+    "track7" : "Relentless (Original Mix) - Justin Berkovi",
+    "track8" : "Poping (Original Mix) - DJ Ze MigL",
+    "track9" : "You Got Da Funk (Original Mix) - Ruben A",
+    "tracksBy" : "The Groove Asylum, Tico Torres, DJ Dro San, DJ Mem, Ruben A, Tobias Schmidt & DJ Ze MigL, to name just a few."
   } ],
   "releases" : [ null, {
     "artistName" : "Gary The Apprentice",
@@ -1251,7 +1278,11 @@
     "artwork" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta006.jpg?alt=media&token=bfe76d8f-6529-4b49-8416-44bafc74967f",
     "catNo" : "[GTA006]",
     "id" : 6,
-    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Frelease-artwork%2Fgta006.jpg?alt=media&token=68a77fa5-ea23-48ac-9454-2759eeba720b",
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcard-images%2Fpodcast%2Fpodcast32.jpg?alt=media&token=d142bc5f-5066-4553-9f9d-6d9e8655fc5c",
+    "info" : "Stream the latest GTA Digital Podcast now. Expect an hour of straight up bangers.",
+    "internalUrl" : "/music/podcasts/podcast/32",
+    "internalUrlTitle" : "Find out more",
+    "moreInfo" : "Tracks by the likes of Jamie Ball, Car-D, Robert Natus, Chris Noise, Gary The Apprentice & Wetworks, to name a few.",
     "releaseDate" : "26 July 2013",
     "releaseInfoP1" : "Another bangin' EP by Gary The Apprentice.",
     "releaseInfoP2" : "Expect 3 straight up, hard, bangin' techno tracks! If you like hard kicks, hypnotic synths & rolling percussion, you will like this EP!",
@@ -1260,7 +1291,7 @@
     "releaseInfoP5" : "",
     "releasePlayer" : "https://bandcamp.com/EmbeddedPlayer/album=860283510/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/artwork=none/transparent=true/seamless",
     "releaseUrl" : "https://gtadigital.bandcamp.com/album/gta006-organised-kaos-ep",
-    "title" : "Organised Kaos EP"
+    "title" : "GTA Digital Podcast #32"
   }, {
     "artistName" : "Gary The Apprentice",
     "artwork" : "https://firebasestorage.googleapis.com/v0/b/gta-digital-web-app.appspot.com/o/main-content%2Fcover-images%2Freleases%2Fgta007.jpg?alt=media&token=11ef7fb8-83ec-424b-bf88-0197573ca604",
