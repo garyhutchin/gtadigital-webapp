@@ -11,16 +11,20 @@
 }
 
 .inner-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     border: 1px solid lightgrey;
     box-shadow: 0 1px 6px 0 hsla(0, 0%, 0%, 0.3);
     /*background-color: rgb(240, 240, 240) !important;*/
     background-color: white;
     margin: 0.5rem 2rem 0.5rem 2rem;
-    padding: 1rem 5% 1rem 5%;
     border-radius: 0.5rem;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 85%;
+    margin-left: 7.5vw;
 }
 
 .header {

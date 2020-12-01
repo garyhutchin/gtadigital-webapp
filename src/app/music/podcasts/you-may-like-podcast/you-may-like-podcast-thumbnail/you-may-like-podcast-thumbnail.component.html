@@ -1,5 +1,5 @@
 <div class="pageElement" *ngIf="podcast.id!=urlId">
-    <div class="routerLink" [routerLink]="['/music/podcasts/podcast', podcast.id]">
+    <a [routerLink]="['/music/podcasts/podcast', podcast.id]">
         <img class="youMayAlsoLikeImg" [src]="podcast.artwork" [alt]="podcast.title">
-    </div>
+    </a>
 </div>

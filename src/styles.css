@@ -3,6 +3,12 @@
 html {
   font-size: 62.5%;
 }
+
+@-moz-document url-prefix() {
+  html {
+      font-size: 71.5%;
+  }
+}
   
 .wrapper {
   padding-top: 0;
