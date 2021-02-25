@@ -25,7 +25,8 @@ export class YouMayLikePodcastComponent implements OnInit {
       this.podcasts = this.activatedRoute.snapshot.data['podcastList']
       this.releaseNumber = this.activatedRoute.snapshot.params['id']
 
-      if (this.releaseNumber > 25) {
+      if (this.releaseNumber > 31) {
+        console.log(this.releaseNumber)
         return this.end = 6
       }
 
